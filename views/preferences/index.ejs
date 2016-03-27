@@ -1,0 +1,65 @@
+<div class="content">
+	<h3><%= name %> Email Preferences</h3>
+	<div class="preference-section">
+		<h2>Your Profile</h2>
+		<div id="profileFields">
+			<% profile.forEach(function(prop) { %>
+				<div class="profile-field">
+					<label><%= prop.name %></label><br>
+					<input class="profile-input" type="text" data-property="<%= prop.property %>" value="<%= prop.value %>" /><br>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+
+	<div class="preference-section">
+		<h2>Your Email Lists</h2>
+		<div id="listSelection">
+			<% lists.forEach(function(list) { %>
+				<div class="list-option">
+					<input class="list-input" type="checkbox" data-property="<%= list.property %>" value="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> /><label><%= list.name %></label><br>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+	
+	<div>
+		<a id="btnSavePreferences" class='btn' href="#">Save Preferences</a>
+	</div>
+</div>
+
+<script>
+$("#btnSavePreferences").click(function() {
+  var preferences = {};
+
+	$(".profile-input").toArray().forEach(function(item) { 
+		var key = $(item).attr("data-property");
+		preferences[key] = $(item).val();
+	});
+	
+	$(".list-input").toArray().forEach(function(item) { 
+		var key = $(item).attr("data-property");
+		preferences[key] = item.checked ? "true": "false";
+	});
+	
+	var url = "/preferences/<%= customerId %>/users/<%= userId %>";
+	
+	$.ajax({
+		url: url,
+		method: 'POST',
+		data: JSON.stringify(preferences),
+		beforeSend: function(xhr, settings) {
+			xhr.setRequestHeader("Content-Type", "application/json");
+			xhr.setRequestHeader("Accept", "application/json");
+		},
+		success: function(data, status, xhr) {
+			alert("Preferences successfully updated.");
+		},
+		error: function(xhr, status, error) {
+			alert("An error occurred updating your preferences(" + error.message + ").  Please try again.");
+		}
+	});
+	
+	return false;
+});
+</script>

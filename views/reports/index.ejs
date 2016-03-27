@@ -1,0 +1,155 @@
+<div class="content">
+	<h3><%= name %> Reporting Dashboard</h3>
+	<div class="date-selection">
+			<div class="fields">
+				<div class="date-section">
+					<span>Start Date</span><br>
+					<input id="startDate" class="date-selector">
+				</div>
+				<div class="date-section">
+					<span>End Date</span><br>
+					<input id="endDate" class="date-selector">
+				</div>
+				<div class="date-section">
+					<span>Resolution</span><br>
+					<select id="resolution">
+			      <option selected='selected'>1 Day</option>
+			      <option>7 Days</option>
+			      <option>30 Days</option>
+			    </select>
+				</div>
+			</div>
+			<div>
+				<a id="btnRunReports" class='btn' href="#">Run Reports</a>
+			</div>
+	</div>
+	
+	<div class="reports">
+		<div id="totalMetricsChart"></div>
+		<br>
+		<div id="timeSeriesChart"></div>
+		<br>
+		<div id="timeSeriesChart2"></div>
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+	$(function() {
+	    $( ".date-selector" ).datepicker();
+	
+			var endDate = new Date(); //today
+			var formattedEndDate = formatDate(endDate);
+			$("#endDate").val(formattedEndDate);
+			
+			var startDate = endDate;
+			startDate.setDate(endDate.getDate() - 7);
+			var formattedStartDate = formatDate(startDate);
+			$("#startDate").val(formattedStartDate);
+			
+			runReports();
+	  });
+	
+	$("#btnRunReports").click(function() {
+		runReports();
+		return false;
+	});
+	
+		_bvl.initialize({
+			jwt: '<%= jwt %>',
+			apiKey: '<%= apiKey %>', 
+			appId: '<%= appId %>'
+		});
+		
+		function formatDate(date) {
+			 var dd = date.getDate();
+			 var mm = date.getMonth()+1; //January is 0!
+
+			 var yyyy = date.getFullYear();
+			 if(dd<10){
+			        dd='0'+dd
+			 } 
+			 if(mm<10){
+			        mm='0'+mm
+			 } 
+			
+			 return mm + '/' + dd + '/' + yyyy;
+		}
+		
+		function reformatDate(date) {
+			var components = date.split("/");
+			return components[2] + "-" + components[0] + "-" + components[1];
+		}
+		
+		function runReports() {
+			  var startDate = $("#startDate").val();
+			  var endDate = $("#endDate").val();
+			  var resolution = "1d";
+			
+				var resolutionIndex = $("#resolution")[0].selectedIndex
+				switch(resolutionIndex) {
+					case 0:
+						resolution = "1d";
+						break;
+					case 1: 
+						resolution = "7d";
+						break;
+					case 2:
+						resolution = "30d";
+						break;
+				}
+			
+
+			  startDate = reformatDate(startDate);
+			  endDate = reformatDate(endDate);
+
+				_bvl.drawTotalsMetrics({
+					divId: "totalMetricsChart",
+					startDate: startDate,
+					endDate: endDate,
+					viewWidth: '200px',
+					campaignId: 'total',
+					backgroundColor: '#934c4c',
+					primaryTextColor: '#EFEFEF', 
+					primarySubTextColor: '#EFEFEF', 
+					primaryVariable: 'lift', 
+					primaryString: '{primaryVariable}x', 
+					primarySubString: 'Higher CTOR for users receiving personalized content compared to users receiving popular content',
+					secondaryVariable: 'popularCtor', 
+					secondaryString: '{secondaryVariable}% of users opening your email receive personalized content', 
+					secondarySubTextColor: '#55EFEF'
+				});
+
+				_bvl.drawTimeSeries({
+					divId: "timeSeriesChart",
+					startDate: startDate,
+					endDate: endDate,
+					resolution: resolution,
+					viewWidth: '800px', 
+					campaignId: 'total', 
+					title: 'Personalized vs. Popular CTOR', 
+					series: ['ctor','popularCtor'], 
+					seriesLineColors: ['#336600','#e6b700'], 
+					seriesFillColors: ['#222222','#222222'], 
+					seriesFillAlpha: 0.1, 
+					backgroundColor: '#334c4c'
+				});
+				
+				_bvl.drawTimeSeries({
+					divId: "timeSeriesChart2",
+					startDate: startDate,
+					endDate: endDate,
+					resolution: resolution,
+					viewWidth: '800px', 
+					campaignId: 'total', 
+					title: 'Ctor vs. Personalized CTOR', 
+					series: ['ctor','personalizedCtor'], 
+					seriesLineColors: ['#336600','#e6b700'], 
+					seriesFillColors: ['#222222','#222222'], 
+					seriesFillAlpha: 0.1, 
+					backgroundColor: '#334c4c'
+				});
+
+		}
+		
+</script>
