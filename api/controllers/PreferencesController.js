@@ -11,33 +11,37 @@ module.exports = {
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 	
-	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
-		if(error == null) {
-			var userProperties = [];
-			customer.userProperties.forEach(function(prop) {
-				prop.value = module.exports.getUserPropertyValue(data, prop.property);
-				userProperties.push(prop);
-			});
-			
-			var userLists = [];
-			customer.userLists.forEach(function(list) {
-				list.value = module.exports.getUserPropertyValue(data, list.property);
-				userLists.push(list);
-			});
-			
-			return res.view('preferences/index', {
-				name: customer.name,
-				customerId: customerId,
-				userId: data.id,
-				profile: userProperties,
-				lists: userLists
-			});
-		}
-		else {
-			console.log(error.message);
-			//TODO: Handle Error Condition
-		}
-	});
+	if (customer) {
+		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+			if(error == null) {
+				var userProperties = [];
+				customer.userProperties.forEach(function(prop) {
+					prop.value = module.exports.getUserPropertyValue(data, prop.property);
+					userProperties.push(prop);
+				});
+
+				var userLists = [];
+				customer.userLists.forEach(function(list) {
+					list.value = module.exports.getUserPropertyValue(data, list.property);
+					userLists.push(list);
+				});
+
+				return res.view('preferences/index', {
+					name: customer.name,
+					customerId: customerId,
+					userId: data.id,
+					profile: userProperties,
+					lists: userLists
+				});
+			}
+			else {
+				return res.view('404');
+			}
+		});
+	}
+	else {
+		res.view('404');
+	}
   },
   update: function (req, res) {
 	var queryObject = url.parse(req.url,true).query

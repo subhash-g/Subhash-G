@@ -6,7 +6,7 @@
 			<% profile.forEach(function(prop) { %>
 				<div class="profile-field">
 					<label><%= prop.name %></label><br>
-					<input class="profile-input" type="text" data-property="<%= prop.property %>" value="<%= prop.value %>" /><br>
+					<input class="profile-input" type="text" placeholder="<%= prop.name %>" data-property="<%= prop.property %>" value="<%= prop.value %>" /><br>
 				</div>
 			<% }); %>
 		</div>
