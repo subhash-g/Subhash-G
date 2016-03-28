@@ -1,0 +1,84 @@
+body {
+	margin: 0px;
+	background: #F9F9F9
+}
+
+.header {
+	height: 50px; 
+	width: 100%; 
+	background: #E8F0F2;
+	margin-bottom: 20px;
+}
+
+.header .logo {
+	height: 30px; 
+	margin-top: 10px; 
+	margin-left: 20px
+}
+
+.btn {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+	background: #009EC5;
+	font-family: Lato;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.content {
+	margin: 20px;
+	margin-bottom: 50px;
+}
+
+.content h3 {
+	font-family: Lato;
+	font-size: 32px;
+}
+
+.content .date-selection {
+	height: 120px;
+	border-bottom: 1px solid #E8F0F2;
+}
+
+.content .date-selection .fields {
+	height: 80px
+}
+
+.content .date-selection .fields .date-section {
+	float: left;
+	margin-right: 50px;
+	font-size: 18px;
+	font-family: Lato;
+}
+
+.content .preference-section {
+	margin-bottom: 50px;
+}
+
+.content .preference-section h2 {
+	font-size: 18px;
+	font-family: Lato;
+	border-bottom: 1px solid #E8F0F2;
+}
+
+.content .preference-section .profile-field {
+	margin-bottom: 15px;
+}
+
+.content .preference-section .profile-field label {
+	font-size: 14px;
+	font-family: Lato;
+}
+
+.content .preference-section .list-option {
+	margin-bottom: 15px;
+}
+
+.content .preference-section .list-option label {
+	font-size: 14px;
+	font-family: Lato;
+}
+
