@@ -30,6 +30,7 @@ module.exports = {
 					name: customer.name,
 					customerId: customerId,
 					userId: data.id,
+					logo: customer.logo,
 					profile: userProperties,
 					lists: userLists
 				});

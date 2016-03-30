@@ -1,5 +1,5 @@
 module.exports = {
-	'd8MBnz2bcb': {
+	'565a3d0d5b838bc0005f81a706afdec2': {
 		name: 'Cheap Caribbean',
 		username: 'iterable-reporting@boomtrain.com',
 		password: 'dlDMShgjTvLS',
@@ -9,8 +9,9 @@ module.exports = {
 		userProperties: [],
 		userLists: []
 	},
-	'fkqWrTlqir': {
+	'79a46ca04aeb5dc696444013ff0ac99d': {
 		name: 'Joy of Kosher',
+		logo: '/images/logos/joy-of-kosher.png',
 		username: 'iterable-reporting@boomtrain.com',
 		password: 'dlDMShgjTvLS',
 		stationAppId: '',
