@@ -1,0 +1,175 @@
+html {
+    box-sizing: border-box;
+    height: 100%
+}
+*,
+:before,
+:after {
+    box-sizing: inherit
+}
+body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, .5) 0, #e8f0f2 100%);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased
+}
+#top-bar {
+    width: 100%;
+    height: 48px;
+    max-height: 48px;
+    background: #302b42;
+    padding: 6px 20px
+}
+#top-bar .logo {
+    max-height: 24px;
+    max-width: 144px
+}
+#top-bar .logo img {
+    width: 100%;
+    height: inherit
+}
+#title-bar {
+    width: 100%;
+    height: 48px;
+    padding: 0 20px;
+    line-height: 48px;
+    border-bottom: 1px solid rgba(83, 98, 102, .2);
+    background: #fff
+}
+#content {
+    width: 100%;
+    max-width: 960px;
+    margin-top: 48px;
+    margin-right: auto;
+    margin-left: auto
+}
+#content .form {
+    margin-left: 20px;
+    text-align: center
+}
+#content .form fieldset {
+    width: 50%;
+    min-height: 292px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border: 0;
+    text-align: left
+}
+#content .form fieldset span,
+#content .form fieldset label,
+#content .form fieldset input {
+    display: block
+}
+#content .form fieldset .title {
+    font-size: 1.5em;
+    color: #4A4A4A;
+    line-height: 24px;
+    font-weight: 700
+}
+#content .form fieldset:first-of-type {
+    padding-right: 10%;
+    border-right: 1px solid rgba(83, 97, 102, .2);
+    box-shadow: 1px 0 0 0 #FFF
+}
+#content .form fieldset:first-of-type input {
+    height: 30px;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(83, 98, 102, .2);
+    background: 0;
+    font-size: 1.125em;
+    font-weight: 400;
+    color: #536266
+}
+#content .form fieldset:first-of-type input:focus {
+    outline: 0;
+    color: #009EC5;
+    border-bottom: 1px solid #009EC5
+}
+#content .form fieldset:first-of-type label {
+    margin-top: 36px;
+    font-size: .750em;
+    color: rgba(33, 39, 54, .5);
+    line-height: 18px;
+    font-weight: 300
+}
+#content .form fieldset:last-of-type {
+    padding-left: 10%
+}
+#content .form fieldset:last-of-type .title {
+    margin-bottom: 16px
+}
+#content .form fieldset:last-of-type input {
+    display: inline-block
+}
+#content .form fieldset:last-of-type label {
+    margin-top: 24px;
+    font-size: 1.125em;
+    color: rgba(33, 39, 54, .5);
+    line-height: 18px;
+    font-weight: 400;
+    color: #536266
+}
+#content .form fieldset:last-of-type input[type=checkbox].css-checkbox {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+#content .form fieldset:last-of-type input[type=checkbox].css-checkbox+label.css-label,
+#content .form fieldset:last-of-type input[type=checkbox].css-checkbox+label.css-label.clr {
+    padding-left: 34px;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+    cursor: pointer
+}
+#content .form fieldset:last-of-type input[type=checkbox].css-checkbox:checked+label.css-label,
+#content .form fieldset:last-of-type input[type=checkbox].css-checkbox+label.css-label.chk {
+    background-position: 0 -24px
+}
+#content .form fieldset:last-of-type label.css-label {
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f263091100c0acc5f5223adc2667d02c.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+#content .form .btn {
+    clear: both;
+    float: none;
+    margin-top: 96px;
+    width: 300px;
+    height: 42px;
+    background: #009EC5;
+    border: 1px solid rgba(27, 134, 153, .4);
+    box-shadow: 0 2px 3px 0 rgba(83, 97, 102, .2), inset 0 1px 0 0 rgba(255, 255, 255, .3);
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.125em;
+    color: #fff;
+    line-height: 24px;
+    text-shadow: 0 1px 2px rgba(34, 39, 55, .4)
+}
+#content .form .btn:hover {
+    background: #00abd6;
+    cursor: pointer;
+    text-shadow: 0 -1px 1px rgba(34, 39, 55, .4);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .3)
+}

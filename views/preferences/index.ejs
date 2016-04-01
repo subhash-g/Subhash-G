@@ -1,33 +1,36 @@
-<div class="header">
-	<img class="logo" src="<%= logo %>" />
+<div id="top-bar">
+	<div class="logo">
+		<img src="<%= logo %>" />
+	</div>
 </div>
-<div class="content">
-	<h3><%= name %> Email Preferences</h3>
-	<div class="preference-section">
-		<h2>Your Profile</h2>
-		<div id="profileFields">
-			<% profile.forEach(function(prop) { %>
-				<div class="profile-field">
-					<label><%= prop.name %></label><br>
-					<input class="profile-input" type="text" placeholder="<%= prop.name %>" data-property="<%= prop.property %>" value="<%= prop.value %>" /><br>
-				</div>
-			<% }); %>
-		</div>
-	</div>
 
-	<div class="preference-section">
-		<h2>Your Email Lists</h2>
-		<div id="listSelection">
-			<% lists.forEach(function(list) { %>
-				<div class="list-option">
-					<input class="list-input" type="checkbox" data-property="<%= list.property %>" value="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> /><label><%= list.name %></label><br>
-				</div>
+<div id="title-bar"><%= name %> - Email Preferences</div>
+
+<div id="content">
+	<div class="form">
+		<fieldset>
+			<span class="title">Your Profile</span>
+			<% profile.forEach(function(prop) { %>
+				<label><%= prop.name %></label>
+				<input type="text" class="profile-input" name="fname" data-property="<%= prop.property %>" value="<%= prop.value %>">
 			<% }); %>
-		</div>
-	</div>
-	
-	<div>
-		<a id="btnSavePreferences" class='btn' href="#">Save Preferences</a>
+		</fieldset>
+		
+		<fieldset>
+			<span class="title">Your Email List</span>
+			<% counter = 1 %>
+			<% lists.forEach(function(list) { %>
+				
+				<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
+				
+				<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+				<% counter++ %>
+			<% }); %>
+			
+		</fieldset>
+		
+		<input id="btnSavePreferences" class="btn" type="submit" value="Save Preferences">
+		
 	</div>
 </div>
 
@@ -66,3 +69,5 @@ $("#btnSavePreferences").click(function() {
 	return false;
 });
 </script>
+
+<script type="text/javascript" src="/js/jspatch.js"></script>

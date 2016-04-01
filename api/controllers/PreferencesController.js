@@ -52,7 +52,6 @@ module.exports = {
 	var customer = customers[customerId];
 
 	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-	console.log(preferences);
 	
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
