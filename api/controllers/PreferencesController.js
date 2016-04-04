@@ -104,7 +104,10 @@ module.exports = {
 	var key = path[depth-1];
 	var value = data[key];
 	
-	if(path.length == depth) {
+	if(!value) {
+		return '';
+	}
+	else if(path.length == depth) {
 		return value || '';
 	}
 	else {
