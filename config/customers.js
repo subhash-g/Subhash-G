@@ -9,7 +9,7 @@ module.exports = {
 		userProperties: [],
 		userLists: []
 	},
-	'79a46ca04aeb5dc696444013ff0ac99d': {
+	'1496': {
 		name: 'Joy of Kosher',
 		logo: '/images/logos/joy-of-kosher.png',
 		username: 'iterable-reporting@boomtrain.com',
