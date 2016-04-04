@@ -49,5 +49,54 @@ module.exports = {
 				property: 'properties.weekly_shabbat'
 			}
 		],
-	}
+	},
+	'2740': {
+		name: 'PatriotUpdate',
+		logo: '/images/logos/PU_Logo.png',
+		bmeApiKey: 'f89f8f04ac3fc5900779a66f792adb6e',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Street',
+				property: 'properties.address.street'
+			},
+			{
+				name: 'City',
+				property: 'properties.address.city'
+			},
+			{
+				name: 'State',
+				property: 'properties.address.state'
+			},
+			{
+				name: 'Zip Code',
+				property: 'properties.address.zip'
+			},			
+			{
+				name: 'Cell',
+				property: 'properties.address.phone_cell'
+			},
+		],
+		userLists: [
+			{
+				name: 'Subscription List 1',
+				property: 'properties.list_1'
+			},
+			{
+				name: 'Subscription List 2',
+				property: 'properties.list_2'
+			},
+			{
+				name: 'Subscription List n',
+				property: 'properties.list_n'
+			},
+		],
+	},
 };
