@@ -52,7 +52,7 @@ module.exports = {
 	},
 	'2740': {
 		name: 'PatriotUpdate',
-		logo: '/images/logos/PU_Logo.png',
+		logo: '/images/logos/patriot-update.png',
 		bmeApiKey: 'f89f8f04ac3fc5900779a66f792adb6e',
 		userProperties: [
 			{
