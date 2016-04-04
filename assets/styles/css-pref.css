@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    height: 100%
+	padding-bottom: 100px;
 }
 *,
 :before,
@@ -9,12 +9,11 @@ html {
 }
 body {
     margin: 0;
-    height: 100%;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, .5) 0, #e8f0f2 100%);
+	background: #e8f0f2;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased
+    font-smoothing: antialiased;
 }
 #top-bar {
     width: 100%;
@@ -37,14 +36,15 @@ body {
     padding: 0 20px;
     line-height: 48px;
     border-bottom: 1px solid rgba(83, 98, 102, .2);
-    background: #fff
+    background: #fff;
+	padding-bottom: 50px;
 }
 #content {
     width: 100%;
     max-width: 960px;
     margin-top: 48px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 #content .form {
     margin-left: 20px;
