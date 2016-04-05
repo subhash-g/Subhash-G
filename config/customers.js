@@ -86,17 +86,13 @@ module.exports = {
 		],
 		userLists: [
 			{
-				name: 'Subscription List 1',
-				property: 'properties.list_1'
+				name: 'Weekly Newsletter',
+				property: 'properties.newletter'
 			},
 			{
-				name: 'Subscription List 2',
-				property: 'properties.list_2'
-			},
-			{
-				name: 'Subscription List n',
-				property: 'properties.list_n'
-			},
+				name: 'Alerts',
+				property: 'properties.alerts'
+			}
 		],
 	},
 };
