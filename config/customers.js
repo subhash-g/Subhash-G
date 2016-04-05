@@ -87,7 +87,7 @@ module.exports = {
 		userLists: [
 			{
 				name: 'Weekly Newsletter',
-				property: 'properties.newletter'
+				property: 'properties.newsletter'
 			},
 			{
 				name: 'Alerts',
