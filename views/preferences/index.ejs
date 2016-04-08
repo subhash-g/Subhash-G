@@ -66,8 +66,14 @@ $("#btnSavePreferences").click(function() {
 		}
 	});
 	
+	mixpanel.track("preferences-updated", {'customerId': <%= customerId %> });
+	
 	return false;
 });
+</script>
+
+<script>
+mixpanel.track("page-load", {'customerId': <%= customerId %> });
 </script>
 
 <script type="text/javascript" src="/js/jspatch.js"></script>
