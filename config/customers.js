@@ -12,10 +12,6 @@ module.exports = {
 	'1496': {
 		name: 'Joy of Kosher',
 		logo: '/images/logos/joy-of-kosher.png',
-		username: 'iterable-reporting@boomtrain.com',
-		password: 'dlDMShgjTvLS',
-		stationAppId: '',
-		stationApiKey: '',
 		bmeApiKey: 'd47e4826eef094523ca6743722494540',
 		userProperties: [
 			{
@@ -95,4 +91,29 @@ module.exports = {
 			}
 		],
 	},
+	'2531': {
+	        name: 'Capitalizarme',
+	        logo: '/images/logos/capitalizarme.png',
+	        bmeApiKey: '5cf3702dcca81f587c4967967265075e',
+	        userProperties: [
+	            {
+	                name: 'Nombre',
+	                property: 'first_name'
+	            },
+	            {
+	                name: 'Apellido',
+	                property: 'last_name'
+	            },           
+	            {
+	                name: 'Teléfono',
+	                property: 'phone'
+	            }
+	        ],
+	        userLists: [
+	            {
+	                name: 'Chile newsletter',
+	                property: 'properties.list_newsletter_chile'
+	            }
+	        ],
+	    }
 };
