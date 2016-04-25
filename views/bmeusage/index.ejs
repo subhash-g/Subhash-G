@@ -1,0 +1,133 @@
+<style>
+canvas{
+        width: 400px !important;
+        max-width: 400px;
+        height: 400px !important;
+		max-height: 400px;
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
+
+<div id="top-bar">
+	<div class="logo">
+		<img src="/images/boomtrain.png" />
+	</div>
+</div>
+
+<div id="title-bar">BME Usage Report  <select id="selectCustomers" style="margin-left: 50px"></select></div>
+
+<div id="content">
+	<div>
+		<h3>Emails</h3>
+		<canvas id="emailsChart" width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+	</div>
+	<div>
+		<h3>Subscribers</h3>
+		<canvas id="subscribersChart" width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+	</div>
+	<div>
+		<h3>Active Subscribers</h3>
+		<canvas id="activeSubscribersChart" width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+	</div>
+</div>
+
+
+
+
+<script>
+var billingData;
+
+$("#selectCustomers").change(function() {
+	var customerBillingData = billingData[this.value];
+	displayCustomerBillingData(customerBillingData);
+});
+
+function displayCustomerBillingData(customerBillingData) {
+	var labels = [];
+	var emailCounts = [];
+	var subscriberCounts = [];
+	var activeSubscriberCounts = [];
+	
+	var cycleCount = Object.keys(customerBillingData.cycles).length;
+	for(var i = 1; i <= cycleCount; i++) {
+		var cycle = customerBillingData.cycles[i];
+		if(cycle) {
+			labels.push(cycle.billing_date);
+			emailCounts.push(cycle.emails);
+			subscriberCounts.push(cycle.subscribers);
+			activeSubscriberCounts.push(cycle.active_subscribers);
+		}
+	}
+	
+	showChart("#emailsChart", labels, emailCounts);
+	showChart("#subscribersChart", labels, subscriberCounts);
+	showChart("#activeSubscribersChart", labels, activeSubscriberCounts);
+}
+
+function showChart(sel, labels, datapoints) {
+	var data = {
+		labels: labels,
+		datasets: [
+			{
+				fillColor: "rgba(220,220,220,0.2)",
+				strokeColor: "rgba(220,220,220,1)",
+				pointColor: "rgba(220,220,220,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(220,220,220,1)",
+				data: datapoints,
+			}
+		]
+	};
+	
+	var ctx = $(sel).get(0).getContext("2d");
+	var myNewChart = new Chart(ctx , {
+		type: "line",
+		data: data,
+		options: {
+			scaleBeginAtZero: true,
+		} 
+	});
+}
+
+function loadBillingData() {
+	var customers = [];
+	$.each(billingData, function(key) {
+		customers.push({
+			account_key: key,
+			url: billingData[key]["url"]
+		});
+	});
+	
+	customers.sort(function(a, b) {
+		if (a.url > b.url) return 1;
+		else if (a.url < b.url) return -1;
+		else return 0
+	});
+
+	var options = $("#selectCustomers");
+	$.each(customers, function(i) {
+		var customer = customers[i];
+		options.append($("<option />").val(customer.account_key).text(customer.url));
+	});
+}
+
+var url = "/usage/bme/billing?cycles=6&" + window.location.href.split("?")[1];
+$.ajax({
+		url: url,
+		method: 'GET',
+		beforeSend: function(xhr, settings) {
+			xhr.setRequestHeader("Content-Type", "application/json");
+			xhr.setRequestHeader("Accept", "application/json");
+		},
+		success: function(data, status, xhr) {
+            billingData = data;
+			loadBillingData();
+		},
+		error: function(xhr, status, error) {
+			alert("An error occurred retrieving chart data: " + error.message + ".");
+		}
+	});
+
+</script>
