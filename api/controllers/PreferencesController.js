@@ -1,12 +1,17 @@
 var url = require('url') ;
 var customers = require('../../config/customers');
 var bme = require('../../lib/bme');
+var validator = require('validator');
 
 module.exports = {
 
   index: function (req, res) {
 	var queryObject = url.parse(req.url,true).query
-	var userId = req.params.userId || queryObject.userId;
+	var userId = req.params.userId || queryObject.userId || queryObject.email;
+	
+	if(userId && validator.isBase64(userId)) {
+		userId = new Buffer(userId, 'base64').toString("ascii");
+	}
 	
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
