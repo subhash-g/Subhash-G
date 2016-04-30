@@ -1,0 +1,113 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
+
+<div id="top-bar">
+	<div class="logo">
+		<img src="/images/boomtrain.png" />
+	</div>
+	<div class="menu">
+		<a href="/usage/bme">Usage</a>
+		<a href="/usage/bme/top_senders">Top Senders</a>
+		<a href="/usage/bme/top_subscribers">Top Subscribers</a>
+	</div>
+</div>
+
+<div id="title-bar"><span style="margin-right: 50px">Top Senders</span>  <select id="selectCycle" style="display: none"></select></div>
+
+<div id="busy">
+	<div style="width: 650px; margin-left: auto; margin-right: auto; margin-top: 140px">
+		<h2>Alfred Boomtrain crunches numbers with his bare hands.</h2>
+	</div>
+	<div style="width: 196px; margin-left: auto; margin-right: auto; margin-top: 25px">
+		<img src="/images/infinity.gif"/>
+	</div>
+</div>
+
+<div id="content" style="display: none">
+    <div style="border-bottom: 1px solid rgba(83, 98, 102, .2)">
+		<h2 id="lblCycle"></h2>
+	</div>
+	<div id="result">
+        
+    </div>
+</div>
+
+
+
+<script>
+var CYCLES = 5;
+var billingData;
+
+for(var cycle = 0; cycle <= CYCLES; cycle++) {
+    var monthsAgo = CYCLES-cycle;
+    var cycleDate = new Date();
+    cycleDate.setDate(1);
+    cycleDate.setMonth(cycleDate.getMonth()-monthsAgo);
+    
+    var strMonth = (cycleDate.getMonth()+1).toString();
+    var strYear = cycleDate.getFullYear().toString();
+    var cycleKey = strYear+"-"+strMonth;
+    
+    $("#selectCycle").append($("<option />").val(cycleKey).text(cycleKey));
+}
+
+function displayCycle(cycleKey) {
+    var customers = [];
+    
+    console.log(billingData);
+    console.log(cycleKey);
+    $.each(billingData, function(key) {
+		customers.push({
+			account_key: key,
+			url: billingData[key]["url"],
+            value: billingData[key]["cycles"][cycleKey]["emails"],
+		});
+	});
+    
+    customers.sort(function(a, b) {
+		if (a.value < b.value) return 1;
+		else if (a.value > b.value) return -1;
+		else return 0
+	});
+    
+    //console.log(customers);
+    $("#result").html("");
+    $.each(customers, function(i, customer) {
+        if(customer.value > 0) {
+            $("#result").append("<div class='table-item'><div class='table-item-title'>"+customer.url + "</div><div class='table-item-value'>" + customer.value+"</div></div>");
+        }
+    });
+    $("#lblCycle").html(cycleKey);
+    $("#busy").hide();
+    $("#content").show();
+    $("#selectCycle").show();
+}
+
+function displaySelectedCycle() {
+	var cycleKey = $("#selectCycle").val();
+	displayCycle(cycleKey);
+}
+
+$("#selectCycle").change(function() {
+	displaySelectedCycle();
+});
+
+var url = "/usage/bme/billing?cycles=" + CYCLES;
+$.ajax({
+		url: url,
+		method: 'GET',
+		beforeSend: function(xhr, settings) {
+			xhr.setRequestHeader("Content-Type", "application/json");
+			xhr.setRequestHeader("Accept", "application/json");
+		},
+		success: function(data, status, xhr) {
+            billingData = data;
+			displaySelectedCycle();
+		},
+		error: function(xhr, status, error) {
+			alert("An error occurred retrieving chart data: " + error.message + ".");
+		}
+	});
+
+</script>

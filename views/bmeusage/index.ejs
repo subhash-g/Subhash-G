@@ -14,6 +14,11 @@ canvas{
 	<div class="logo">
 		<img src="/images/boomtrain.png" />
 	</div>
+	<div class="menu">
+		<a href="/usage/bme">Usage</a>
+		<a href="/usage/bme/top_senders">Top Senders</a>
+		<a href="/usage/bme/top_subscribers">Top Subscribers</a>
+	</div>
 </div>
 
 <div id="title-bar"><span style="margin-right: 50px">BME Usage Report</span>  <select id="selectCustomers" style="display: none"></select></div>
@@ -48,7 +53,7 @@ canvas{
 
 
 <script>
-var CYCLES = 6;
+var CYCLES = 5;
 var billingData;
 
 Chart.defaults.global.legend.display = false;
@@ -114,6 +119,7 @@ function displayCustomerBillingData(customerBillingData) {
 	for(var cycle = 0; cycle <= CYCLES; cycle++) {
 		var monthsAgo = CYCLES-cycle;
 		var cycleDate = new Date();
+		cycleDate.setDate(1);
 		cycleDate.setMonth(cycleDate.getMonth()-monthsAgo);
 		
 		var strMonth = (cycleDate.getMonth()+1).toString();
@@ -182,7 +188,7 @@ function loadBillingData() {
 	$("#content").show();
 }
 
-var url = "/usage/bme/billing?cycles=" + CYCLES + "&" + window.location.href.split("?")[1];
+var url = "/usage/bme/billing?cycles=" + CYCLES;
 $.ajax({
 		url: url,
 		method: 'GET',
@@ -195,7 +201,7 @@ $.ajax({
 			loadBillingData();
 		},
 		error: function(xhr, status, error) {
-			alert("An error occurred retrieving chart data: " + error.message + ".");
+			alert("An error occurred retrieving customer data: " + error.message + ".");
 		}
 	});
 
