@@ -1,12 +1,13 @@
 <style>
 canvas{
-        width: 400px !important;
-        max-width: 400px;
+        width: 800px !important;
+        max-width: 800px;
         height: 400px !important;
 		max-height: 400px;
     }
 </style>
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
 
 <div id="top-bar">
@@ -15,32 +16,89 @@ canvas{
 	</div>
 </div>
 
-<div id="title-bar">BME Usage Report  <select id="selectCustomers" style="margin-left: 50px"></select></div>
+<div id="title-bar"><span style="margin-right: 50px">BME Usage Report</span>  <select id="selectCustomers" style="display: none"></select></div>
 
-<div id="content">
+<div id="busy">
+	<div style="width: 650px; margin-left: auto; margin-right: auto; margin-top: 140px">
+		<h2>Alfred Boomtrain crunches numbers with his bare hands.</h2>
+	</div>
+	<div style="width: 196px; margin-left: auto; margin-right: auto; margin-top: 25px">
+		<img src="/images/infinity.gif"/>
+	</div>
+</div>
+
+<div id="content" style="display: none">
+	<div style="border-bottom: 1px solid rgba(83, 98, 102, .2)">
+		<h2 id="lblCustomer"></h2>
+	</div>
 	<div>
 		<h3>Emails</h3>
-		<canvas id="emailsChart" width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+		<canvas id="emailsChart" width="800" height="400" style="width: 800px; height: 400px;"></canvas>
 	</div>
 	<div>
 		<h3>Subscribers</h3>
-		<canvas id="subscribersChart" width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+		<canvas id="subscribersChart" width="800" height="400" style="width: 800px; height: 400px;"></canvas>
 	</div>
 	<div>
 		<h3>Active Subscribers</h3>
-		<canvas id="activeSubscribersChart" width="400" height="400" style="width: 400px; height: 400px;"></canvas>
+		<canvas id="activeSubscribersChart" width="800" height="400" style="width: 800px; height: 400px;"></canvas>
 	</div>
 </div>
 
 
 
-
 <script>
+var CYCLES = 6;
 var billingData;
 
-$("#selectCustomers").change(function() {
-	var customerBillingData = billingData[this.value];
+Chart.defaults.global.legend.display = false;
+var emailsChartCtx = $("#emailsChart").get(0).getContext("2d");
+var subscribersChartCtx = $("#subscribersChart").get(0).getContext("2d");
+var activeSubscribersChartCtx = $("#activeSubscribersChart").get(0).getContext("2d");
+var emailData = {
+	labels: []
+};
+
+var subscriberData = {
+	labels: []
+};
+
+var activeSubscriberData = {
+	labels: []
+};
+
+var emailsChart = new Chart(emailsChartCtx , {
+	type: "line",
+	data: emailData,
+	options: {
+		scaleBeginAtZero: true,
+	} 
+});
+
+var subscribersChart = new Chart(subscribersChartCtx , {
+	type: "line",
+	data: subscriberData,
+	options: {
+		scaleBeginAtZero: true,
+	} 
+});
+
+var activeSubscribersChart = new Chart(activeSubscribersChartCtx , {
+	type: "line",
+	data: activeSubscriberData,
+	options: {
+		scaleBeginAtZero: true,
+	} 
+});
+
+function displaySelectedCustomer() {
+	var accountKey = $("#selectCustomers").val();
+	var customerBillingData = billingData[accountKey];
 	displayCustomerBillingData(customerBillingData);
+}
+
+$("#selectCustomers").change(function() {
+	displaySelectedCustomer();
 });
 
 function displayCustomerBillingData(customerBillingData) {
@@ -49,26 +107,39 @@ function displayCustomerBillingData(customerBillingData) {
 	var subscriberCounts = [];
 	var activeSubscriberCounts = [];
 	
-	var cycleCount = Object.keys(customerBillingData.cycles).length;
-	for(var i = 1; i <= cycleCount; i++) {
-		var cycle = customerBillingData.cycles[i];
-		if(cycle) {
-			labels.push(cycle.billing_date);
-			emailCounts.push(cycle.emails);
-			subscriberCounts.push(cycle.subscribers);
-			activeSubscriberCounts.push(cycle.active_subscribers);
-		}
+	console.log(JSON.stringify(customerBillingData));
+	
+	$("#lblCustomer").html(customerBillingData["url"]);
+	
+	for(var cycle = 0; cycle <= CYCLES; cycle++) {
+		var monthsAgo = CYCLES-cycle;
+		var cycleDate = new Date();
+		cycleDate.setMonth(cycleDate.getMonth()-monthsAgo);
+		
+		var strMonth = (cycleDate.getMonth()+1).toString();
+		var strYear = cycleDate.getFullYear().toString();
+		var cycleKey = strYear+"-"+strMonth;
+		
+		var cycleData = customerBillingData.cycles[cycleKey];
+		
+		console.log(cycleKey);
+		console.log(JSON.stringify(cycleData));
+		
+		var label = (cycleDate.getMonth()+1).toString() + "-" + cycleDate.getFullYear().toString();
+		labels.push(label);
+		emailCounts.push(cycleData.emails);
+		subscriberCounts.push(cycleData.subscribers);
+		activeSubscriberCounts.push(cycleData.active_subscribers);
 	}
 	
-	showChart("#emailsChart", labels, emailCounts);
-	showChart("#subscribersChart", labels, subscriberCounts);
-	showChart("#activeSubscribersChart", labels, activeSubscriberCounts);
+	showChart(emailsChart, emailData, labels, emailCounts);
+	showChart(subscribersChart, subscriberData, labels, subscriberCounts);
+	showChart(activeSubscribersChart, activeSubscriberData, labels, activeSubscriberCounts);
 }
 
-function showChart(sel, labels, datapoints) {
-	var data = {
-		labels: labels,
-		datasets: [
+function showChart(chart, data, labels, datapoints) {
+	data.labels = labels;
+	data.datasets =[
 			{
 				fillColor: "rgba(220,220,220,0.2)",
 				strokeColor: "rgba(220,220,220,1)",
@@ -78,17 +149,9 @@ function showChart(sel, labels, datapoints) {
 				pointHighlightStroke: "rgba(220,220,220,1)",
 				data: datapoints,
 			}
-		]
-	};
+		];
 	
-	var ctx = $(sel).get(0).getContext("2d");
-	var myNewChart = new Chart(ctx , {
-		type: "line",
-		data: data,
-		options: {
-			scaleBeginAtZero: true,
-		} 
-	});
+	chart.update();
 }
 
 function loadBillingData() {
@@ -111,9 +174,15 @@ function loadBillingData() {
 		var customer = customers[i];
 		options.append($("<option />").val(customer.account_key).text(customer.url));
 	});
+	
+	displaySelectedCustomer();
+	$('#selectCustomers').select2();
+	$("#selectCustomers").show();
+	$("#busy").hide();
+	$("#content").show();
 }
 
-var url = "/usage/bme/billing?cycles=6&" + window.location.href.split("?")[1];
+var url = "/usage/bme/billing?cycles=" + CYCLES + "&" + window.location.href.split("?")[1];
 $.ajax({
 		url: url,
 		method: 'GET',
