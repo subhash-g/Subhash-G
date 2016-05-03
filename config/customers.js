@@ -204,7 +204,7 @@ module.exports = {
 	        ],
 	        userLists: [
 	            {
-	                name: 'Chile newsletter',
+	                name: 'Newsletter Chile',
 	                property: 'properties.list_newsletter_chile'
 	            }
 	        ],
