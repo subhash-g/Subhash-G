@@ -8,4 +8,9 @@ module.exports.routes = {
 	'GET /usage/bme': 'BmeUsageController.index',
 	'GET /usage/bme/top_senders': 'BmeUsageController.topSenders',
 	'GET /usage/bme/top_subscribers': 'BmeUsageController.topSubscribers',
+	'GET /forbes/login': 'ForbesReportsController.login',
+	'POST /forbes/login': 'ForbesReportsController.authenticate',
+	'GET /forbes/reports/email_content': 'ForbesReportsController.emailContentReport',
+	'GET /forbes/reports/subscribers': 'ForbesReportsController.subscribersReport',
+	'GET /forbes/reports/onsite': 'ForbesReportsController.onsiteReport',
 };
