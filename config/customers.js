@@ -185,28 +185,118 @@ module.exports = {
 		],
 	},
 	'2531': {
-	        name: 'Capitalizarme',
-	        logo: '/images/logos/capitalizarme.png',
-	        bmeApiKey: '5cf3702dcca81f587c4967967265075e',
-	        userProperties: [
-	            {
-	                name: 'Nombre',
-	                property: 'first_name'
-	            },
-	            {
-	                name: 'Apellido',
-	                property: 'last_name'
-	            },           
-	            {
-	                name: 'Teléfono',
-	                property: 'phone'
-	            }
-	        ],
-	        userLists: [
-	            {
-	                name: 'Newsletter Chile',
-	                property: 'properties.list_newsletter_chile'
-	            }
-	        ],
-	    }
+        name: 'Capitalizarme',
+        logo: '/images/logos/capitalizarme.png',
+        bmeApiKey: '5cf3702dcca81f587c4967967265075e',
+        userProperties: [
+            {
+                name: 'Nombre',
+                property: 'first_name'
+            },
+            {
+                name: 'Apellido',
+                property: 'last_name'
+            },           
+            {
+                name: 'Teléfono',
+                property: 'phone'
+            }
+        ],
+        userLists: [
+            {
+                name: 'Newsletter Chile',
+                property: 'properties.list_newsletter_chile'
+            }
+        ],
+    },
+    '2289': {
+		name: 'Emmy & Walter',
+		logo: '/images/logos/enwlogo.png',
+		bmeApiKey: '1558dba0f5b8507e8ada29cd41bc731e',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Country',
+				property: 'properties.country'
+			},
+			{
+				name: 'City',
+				property: 'properties.city'
+			},
+			{
+				name: 'State',
+				property: 'properties.state'
+			},
+			{
+				name: 'Zip Code',
+				property: 'properties.zip'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily Newsletter',
+				property: 'properties.daily_newsletter'
+			},
+			{
+				name: 'Weekly Newsletter',
+				property: 'properties.weekly_newsletter'
+			},
+			{
+				name: 'Promo Newsletter',
+				property: 'properties.promo_newsletter'
+			},
+			{
+				name: 'New Product Newsletter',
+				property: 'properties.new_product_newsletter'
+			},
+		],
+	},
+	'1523': {
+		name: 'Marketing Reads',
+		logo: '/images/logos/mrlogo.png',
+		bmeApiKey: '5238c0f1bf59a888d9c1f8f1a5dfff9d',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Country',
+				property: 'properties.country'
+			},
+			{
+				name: 'City',
+				property: 'properties.city'
+			},
+			{
+				name: 'State',
+				property: 'properties.state'
+			},
+			{
+				name: 'Zip Code',
+				property: 'properties.zip'
+			},
+		],
+		userLists: [
+			{
+				name: 'Analytics Newsletter',
+				property: 'properties.analytics_newsletter'
+			},
+			{
+				name: 'Personalization Newsletter',
+				property: 'properties.personalization_newsletter'
+			},
+		],
+	},
 };
