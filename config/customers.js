@@ -299,4 +299,33 @@ module.exports = {
 			},
 		],
 	},
+	'2889': {
+		name: 'GetHealthyU',
+		logo: '/images/logos/gethealthyu.png',
+		bmeApiKey: '856b1083dcd5ad905c1edee6a850d33c',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			}
+		],
+		userLists: [
+			{
+				name: 'Tuesday Newsletter',
+				property: 'properties.tuesday_newsletter'
+			},
+			{
+				name: 'Wednesday Newsletter',
+				property: 'properties.wednesday_newsletter'
+			},,
+			{
+				name: 'Sunday Newsletter',
+				property: 'properties.Sunday_newsletter'
+			},
+		],
+	},
 };
