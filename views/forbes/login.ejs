@@ -1,0 +1,26 @@
+<div id="top-bar">
+	<div class="logo">
+		<img src="/images/boomtrain.png" />
+	</div>
+</div>
+
+<div id="title-bar"><span style="margin-right: 50px">Forbes Reporting Login</span>  <select id="selectCustomers" style="display: none"></select></div>
+
+<div id="content">
+    <form action="login" method="POST">
+        <div class="form">
+            <fieldset style="border: none; box-shadow: none; padding: 0px; float: none; width: 500px; margin-left: auto; margin-right: auto">
+                <div style="margin-top: 50px">
+                    <span class="title">Email</span>
+                    <input class="profile-input" name="user[email]" type="text" value="">
+                </div>
+                <div style="margin-top: 50px">
+                    <span class="title">Password</span>
+                    <input class="profile-input" name="user[password]" type="password" value="">
+                </div>
+            </fieldset>
+            
+            <input id="btnLogin" class="btn" style="margin-top: 15px" type="submit" value="Login">
+        </div>
+    </form>
+</div>
