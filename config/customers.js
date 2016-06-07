@@ -324,7 +324,7 @@ module.exports = {
 			},,
 			{
 				name: 'Sunday Newsletter',
-				property: 'properties.Sunday_newsletter'
+				property: 'properties.sunday_newsletter'
 			},
 		],
 	},
