@@ -299,6 +299,39 @@ module.exports = {
 			},
 		],
 	},
+	'1450': {
+		name: 'SheFinds',
+		logo: '/images/logos/shefinds.png',
+		bmeApiKey: '3a3796d0aaa4a770ced4f1098f115801',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name:'Email',
+				property:'contacts.contact_value'
+			}
+		],
+		userLists: [
+			{
+				name: 'Contests and freebies only, please',
+				property: 'properties.contests_and_freebies_only_please'
+			},
+			{
+				name: 'Hit me up once a week',
+				property: 'properties.hit_me_up_once_a_week'
+			},
+			{
+				name: 'I want it all!',
+				property: 'properties.i_want_it_all!'
+			},
+		],
+	},
 	'2889': {
 		name: 'GetHealthyU',
 		logo: '/images/logos/gethealthyu.png',
@@ -321,7 +354,7 @@ module.exports = {
 			{
 				name: 'Wednesday Newsletter',
 				property: 'properties.wednesday_newsletter'
-			},,
+			},
 			{
 				name: 'Sunday Newsletter',
 				property: 'properties.sunday_newsletter'
