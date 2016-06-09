@@ -314,17 +314,17 @@ module.exports = {
 			},
 			{
 				name:'Email',
-				property:'contacts.contact_value'
+				property:'email'
 			}
 		],
 		userLists: [
 			{
-				name: 'Contests and freebies only, please',
-				property: 'properties.contests_and_freebies_only_please'
+				name: 'Once per week',
+				property: 'properties.once_per_week'
 			},
 			{
-				name: 'Hit me up once a week',
-				property: 'properties.hit_me_up_once_a_week'
+				name: 'Twice per week',
+				property: 'properties.twice_per_week'
 			},
 			{
 				name: 'I want it all!',
