@@ -67,12 +67,12 @@ module.exports = {
 	var customer = customers[customerId];
 
 	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-	var userSubscriberId = '';
+
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
 			res.json({});
 			if(preferences.email != undefined){
-				userSubscriberId = data.contacts[0].id;
+				var userSubscriberId = data.contacts[0].id;
 				var subscriberProps = {
 					'subscriber_contact':{
 						'contact_type':'email',
@@ -95,7 +95,6 @@ module.exports = {
   buildPreferences: function(data, userProperties, userLists) {
 	var result = {};
 	userProperties.forEach(function(item) {
-		// if(item.property === 'subscriber_contact.contact_value') return;
 		var value = data[item.property];
 		module.exports.setUserPropertyValue(result, item.property, value);
 	});
