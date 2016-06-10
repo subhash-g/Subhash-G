@@ -15,6 +15,7 @@ module.exports = {
 	
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
+
 	if (customer) {
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
@@ -31,7 +32,6 @@ module.exports = {
 					else {
 						prop.value = module.exports.getUserPropertyValue(data, prop.property);
 					}
-
 					userProperties.push(prop);
 				});
 
@@ -80,7 +80,14 @@ module.exports = {
 					}
 				}
 				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
-					
+					if(error == null) {
+
+					}
+					else {
+						res.json({
+							error: error.message
+						});
+					}
 				});
 			}
 		}
@@ -90,7 +97,6 @@ module.exports = {
 			});
 		}
 	});
-
   },
   buildPreferences: function(data, userProperties, userLists) {
 	var result = {};
