@@ -2,9 +2,9 @@ var url = require('url') ;
 var customers = require('../../config/customers');
 var bme = require('../../lib/bme');
 var validator = require('validator');
-var userSubscriberId = '';
 
 module.exports = {
+
   index: function (req, res) {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
@@ -15,7 +15,7 @@ module.exports = {
 	
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
-
+ 
 	if (customer) {
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
@@ -25,7 +25,6 @@ module.exports = {
 						for(var i = 0; i < data.contacts.length; i++) {
 							if(data.contacts[i].contact_type == "email") {
 								prop.value = data.contacts[0].contact_value;
-								userSubscriberId = data.contacts[0].id;
 								break;
 							}
 						}
@@ -73,6 +72,7 @@ module.exports = {
 		if(error == null) {
 			res.json({});
 			if(preferences.contact_email != undefined){
+				var userSubscriberId = data.contacts[0].id;
 				var subscriberProps = {
 					'subscriber_contact':{
 						'contact_type':'email',
