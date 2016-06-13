@@ -2,9 +2,9 @@ var url = require('url') ;
 var customers = require('../../config/customers');
 var bme = require('../../lib/bme');
 var validator = require('validator');
+var userSubscriberId = '';
 
 module.exports = {
-
   index: function (req, res) {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
@@ -21,10 +21,11 @@ module.exports = {
 			if(error == null) {
 				var userProperties = [];
 				customer.userProperties.forEach(function(prop) {
-					if(prop.property == "email") {
+					if(prop.property == "contact_email") {
 						for(var i = 0; i < data.contacts.length; i++) {
 							if(data.contacts[i].contact_type == "email") {
 								prop.value = data.contacts[0].contact_value;
+								userSubscriberId = data.contacts[0].id;
 								break;
 							}
 						}
@@ -71,24 +72,23 @@ module.exports = {
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
 			res.json({});
-			if(preferences.email != undefined){
-				var userSubscriberId = data.contacts[0].id;
+			if(preferences.contact_email != undefined){
 				var subscriberProps = {
 					'subscriber_contact':{
 						'contact_type':'email',
-						'contact_value':preferences.email
+						'contact_value':preferences.contact_email
 					}
 				}
-				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
-					if(error == null) {
-
-					}
-					else {
-						res.json({
-							error: error.message
-						});
-					}
-				});
+			bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
+				if(error == null) {
+				}
+				else {
+					res.json({
+						error: error.message
+					});
+				}
+			});
+				
 			}
 		}
 		else {
