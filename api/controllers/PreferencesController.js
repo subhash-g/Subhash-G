@@ -15,13 +15,23 @@ module.exports = {
 	
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
-	
+ 
 	if (customer) {
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
 				var userProperties = [];
 				customer.userProperties.forEach(function(prop) {
-					prop.value = module.exports.getUserPropertyValue(data, prop.property);
+					if(prop.property == "contact_email") {
+						for(var i = 0; i < data.contacts.length; i++) {
+							if(data.contacts[i].contact_type == "email") {
+								prop.value = data.contacts[i].contact_value;
+								break;
+							}
+						}
+					}
+					else {
+						prop.value = module.exports.getUserPropertyValue(data, prop.property);
+					}
 					userProperties.push(prop);
 				});
 
@@ -57,13 +67,40 @@ module.exports = {
 	var customer = customers[customerId];
 
 	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-	
+
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
-			res.json({});
+			if(preferences.contact_email != undefined){
+				for(var x = 0; x < data.contacts.length; x++){
+					if(data.contacts[x].contact_type === 'email'){
+						var userSubscriberId = data.contacts[x].id;
+						break;
+					}
+				}
+				var subscriberProps = {
+					'subscriber_contact':{
+						'contact_type':'email',
+						'contact_value':preferences.contact_email
+					}
+				}
+				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
+					if(error == null) {
+						res.json({});
+					}
+					else {
+						res.json(400, {
+							error: error.message
+						});
+					}
+				});
+					
+			}
+			else {
+				res.json({});
+			}
 		}
 		else {
-			res.json({
+			res.json(400, {
 				error: error.message
 			});
 		}
