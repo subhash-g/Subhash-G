@@ -24,7 +24,7 @@ module.exports = {
 					if(prop.property == "contact_email") {
 						for(var i = 0; i < data.contacts.length; i++) {
 							if(data.contacts[i].contact_type == "email") {
-								prop.value = data.contacts[0].contact_value;
+								prop.value = data.contacts[i].contact_value;
 								break;
 							}
 						}
@@ -70,26 +70,29 @@ module.exports = {
 
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
-			res.json({});
 			if(preferences.contact_email != undefined){
-				var userSubscriberId = data.contacts[0].id;
+				for(var x = 0; x < data.contacts.length; x++){
+					if(data.contacts[x].contact_type === 'email'){
+						var userSubscriberId = data.contacts[x].id;
+						break;
+					}
+				}
 				var subscriberProps = {
 					'subscriber_contact':{
 						'contact_type':'email',
 						'contact_value':preferences.contact_email
 					}
 				}
-			bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
-				if(error == null) {
-				}
-				else {
-					res.json({
-						error: error.message
-					});
-				}
-			});
-				
+				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
+					if(error == null) {}
+					else {
+						res.json({
+							error: error.message
+						});
+					}
+				});	
 			}
+			res.json({});
 		}
 		else {
 			res.json({
