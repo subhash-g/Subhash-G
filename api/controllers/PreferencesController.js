@@ -84,15 +84,20 @@ module.exports = {
 					}
 				}
 				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
-					if(error == null) {}
+					if(error == null) {
+						res.json({});
+					}
 					else {
 						res.json({
 							error: error.message
 						});
 					}
-				});	
+				});
+					
 			}
-			res.json({});
+			else {
+				res.json({});
+			}
 		}
 		else {
 			res.json({

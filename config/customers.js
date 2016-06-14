@@ -361,4 +361,29 @@ module.exports = {
 			},
 		],
 	},
+	'3931': {
+		name: 'Fusion',
+		logo: '/images/logos/fusion.png',
+		bmeApiKey: '93bec4a1f036004f3e849fe4bb54e58e',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+		],
+		userLists: [
+			{
+				name: 'Fusion Daily',
+				property: 'properties.fusion_daily'
+			},
+			{
+				name: 'Real Future',
+				property: 'properties.real_future'
+			},
+			{
+				name: 'Marketing',
+				property: 'properties.marketing'
+			},
+		],
+	},
 };
