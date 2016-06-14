@@ -88,7 +88,7 @@ module.exports = {
 						res.json({});
 					}
 					else {
-						res.json({
+						res.json(400, {
 							error: error.message
 						});
 					}
@@ -100,7 +100,7 @@ module.exports = {
 			}
 		}
 		else {
-			res.json({
+			res.json(400, {
 				error: error.message
 			});
 		}
