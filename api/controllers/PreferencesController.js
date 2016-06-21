@@ -65,10 +65,31 @@ module.exports = {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
 	var customerId = req.params.customerId;
-
+	var customer = customers[customerId];
+	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+		if(error == null) {
+			for(var x = 0; x < data.contacts.length; x++){
+				if(data.contacts[x].contact_type === 'email'){
+					var userSubscriber = data.contacts[x];
+					break;
+				}
+			}
+			var subscriberProps = {
+				'subscriber_contact':{
+					'contact_type':'email',
+					'contact_value': userSubscriber.contact_value,
+					'subscription_status': 'inactive'
+				}
+			}
+			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+				return res.redirect(`/preferences/${customerId}/users/${userId}`);
+			});
+		}
+		else {
+			return res.redirect(`/preferences/${customerId}/users/${userId}`);
+		}
+	});
 	
-
-	return res.redirect(`/preferences/${customerId}/users/${userId}`);
   },
   update: function (req, res) {
 	var queryObject = url.parse(req.url,true).query
