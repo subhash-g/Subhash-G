@@ -1,41 +1,109 @@
 <div id="top-bar">
 	<div class="logo">
+		<img src="/images/boomtrain.png" />
+	</div>
+</div>
+
+<div id="title-bar">
+	<div class="logo">
 		<img src="<%= logo %>" />
 	</div>
 </div>
 
-<div id="title-bar"><%= name %> - Email Preferences</div>
+<div id="body">
+	<div id="left-menu">
+		<div class="menu-items">
+			<div class="menu-item">
+				<a id="btn-my-profile" href="#">My Profile</a>
+			</div>
+			<div class="menu-item">
+				<a id="btn-my-list" href="#">My Lists</a>
+			</div>
+		</div>
+	</div>
 
-<div id="content">
-	<div class="form">
-		<fieldset>
-			<span class="title">Your Profile</span>
-			<% profile.forEach(function(prop) { %>
-				<label><%= prop.name %></label>
-				<input type="text" class="profile-input" name="fname" data-property="<%= prop.property %>" value="<%= prop.value %>">
-			<% }); %>
-		</fieldset>
-		
-		<fieldset>
-			<span class="title">Your Email List</span>
-			<% counter = 1 %>
-			<% lists.forEach(function(list) { %>
-				
-				<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
-				
-				<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
-				<% counter++ %>
-			<% }); %>
-			
-		</fieldset>
-		
-		<input id="btnSavePreferences" class="btn" type="submit" value="Save Preferences">
-		
+	<div id="content">
+		<div id="profile-form" class="form">
+			<div class="fieldset-container">
+				<fieldset>
+					<% profile.forEach(function(prop, index) { %>
+						<% if(index % 2 == 0) { %>
+							<label><%= prop.name %></label>
+							<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+						<% } %>
+					<% }); %>
+				</fieldset>
+				<fieldset>
+					<% profile.forEach(function(prop, index) { %>
+						<% if(index % 2 == 1) { %>
+							<label><%= prop.name %></label>
+							<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+						<% } %>
+					<% }); %>
+				</fieldset>
+			</div>
+			<div>
+				<input class="btn btn-save" type="submit" value="Save Profile">
+			</div>
+		</div>
+		<div id="list-form" class="form">
+			<div class="fieldset-container">
+				<% counter = 1 %>
+				<fieldset>
+					<% lists.forEach(function(list, index) { %>
+						<% if(index % 3 == 0) { %>
+							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
+							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+							<% counter++ %>
+						<% } %>
+					<% }); %>
+				</fieldset>
+				<fieldset>
+					<% lists.forEach(function(list, index) { %>
+						<% if(index % 3 == 1) { %>
+							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
+							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+							<% counter++ %>
+						<% } %>
+					<% }); %>
+				</fieldset>
+				<fieldset>
+					<% lists.forEach(function(list, index) { %>
+						<% if(index % 3 == 2) { %>
+							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
+							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+							<% counter++ %>
+						<% } %>
+					<% }); %>
+				</fieldset>
+			</div>
+			<div>
+				<input class="btn btn-save" type="submit" value="Save Profile">
+			</div>
+		</div>
 	</div>
 </div>
 
 <script>
-$("#btnSavePreferences").click(function() {
+var selectMyProfile = function() {
+	$("#list-form").hide();
+	$("#btn-my-list").removeClass("selected");
+	$("#profile-form").show();
+	$("#btn-my-profile").addClass("selected");
+}
+
+var selectMyList = function() {
+	$("#profile-form").hide();
+	$("#btn-my-profile").removeClass("selected");
+	$("#list-form").show();
+	$("#btn-my-list").addClass("selected");
+}
+
+$("#btn-my-profile").click(selectMyProfile);
+$("#btn-my-list").click(selectMyList);
+selectMyProfile();
+
+$(".btn-save").click(function() {
   var preferences = {};
 
 	$(".profile-input").toArray().forEach(function(item) { 
