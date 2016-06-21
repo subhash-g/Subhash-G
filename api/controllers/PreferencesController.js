@@ -63,7 +63,7 @@ module.exports = {
   },
   unsubscribeAll: function(req, res) {
 	var queryObject = url.parse(req.url,true).query
-	var userId = req.params.userId || queryObject.userId || queryObject.email;
+	var userId = req.params.userId || queryObject.uid || queryObject.email;
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
@@ -82,7 +82,29 @@ module.exports = {
 				}
 			}
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
-				return res.redirect(`/preferences/${customerId}/users/${userId}`);
+				if(error == null) {
+					var preferences = {'properties':{}}
+					customer.userLists.forEach(function(item){
+						var prop = item.property.split(".");
+						preferences[prop[0]][prop[1]] = 'false';
+					});
+					userEmail = userId;
+					userId = data.subscriber.id;
+					bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
+						if(error == null){
+							return res.redirect(`/preferences/${customerId}/users/${userEmail}`);
+						}
+						else {
+							console.log(error);
+							return res.redirect(`/preferences/${customerId}/users/${userEmail}`);
+						}
+					});
+				}
+				else {
+					return res.redirect(`/preferences/${customerId}/users/${userId}`);
+				}
+
+				
 			});
 		}
 		else {
@@ -99,7 +121,7 @@ module.exports = {
 	var customer = customers[customerId];
 
 	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-
+	
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
 			for(var x = 0; x < data.contacts.length; x++){
