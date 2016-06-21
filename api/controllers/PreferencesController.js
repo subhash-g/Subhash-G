@@ -102,34 +102,30 @@ module.exports = {
 
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
-			if(preferences.contact_email != undefined){
-				for(var x = 0; x < data.contacts.length; x++){
-					if(data.contacts[x].contact_type === 'email'){
-						var userSubscriberId = data.contacts[x].id;
-						break;
-					}
+			for(var x = 0; x < data.contacts.length; x++){
+				if(data.contacts[x].contact_type === 'email'){
+					var userSubscriber = data.contacts[x];
+					break;
 				}
-				var subscriberProps = {
-					'subscriber_contact':{
-						'contact_type':'email',
-						'contact_value':preferences.contact_email
-					}
+			}
+			var subscriberProps = {
+				'subscriber_contact':{
+					'contact_type':'email',
+					'contact_value':preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
+					'subscription_status': 'active'
 				}
-				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
-					if(error == null) {
-						res.json({});
-					}
-					else {
-						res.json(400, {
-							error: error.message
-						});
-					}
-				});
-					
 			}
-			else {
-				res.json({});
-			}
+			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+				if(error == null) {
+					res.json({});
+				}
+				else {
+					res.json(400, {
+						error: error.message
+					});
+				}
+			});
+			
 		}
 		else {
 			res.json(400, {
