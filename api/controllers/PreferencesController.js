@@ -63,10 +63,12 @@ module.exports = {
   },
   unsubscribeAll: function(req, res) {
 	var queryObject = url.parse(req.url,true).query
-	var userId = req.params.userId || queryObject.uid || queryObject.email;
+	var userEmail = req.params.userId || queryObject.uid || queryObject.email;
+
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
-	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+
+	bme.getUser(userEmail, customer.bmeApiKey, function(data, error) {
 		if(error == null) {
 			for(var x = 0; x < data.contacts.length; x++){
 				if(data.contacts[x].contact_type === 'email'){
@@ -83,32 +85,32 @@ module.exports = {
 			}
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
 				if(error == null) {
+
 					var preferences = {'properties':{}}
 					customer.userLists.forEach(function(item){
 						var prop = item.property.split(".");
 						preferences[prop[0]][prop[1]] = 'false';
 					});
-					userEmail = userId;
+
 					userId = data.subscriber.id;
 					bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 						if(error == null){
 							return res.redirect(`/preferences/${customerId}/users/${userEmail}`);
 						}
 						else {
-							console.log(error);
 							return res.redirect(`/preferences/${customerId}/users/${userEmail}`);
 						}
 					});
 				}
 				else {
-					return res.redirect(`/preferences/${customerId}/users/${userId}`);
+					return res.redirect(`/preferences/${customerId}/users/${userEmail}`);
 				}
 
 				
 			});
 		}
 		else {
-			return res.redirect(`/preferences/${customerId}/users/${userId}`);
+			return res.redirect(`/preferences/${customerId}/users/${userEmail}`);
 		}
 	});
 	
