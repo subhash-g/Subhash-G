@@ -8,6 +8,7 @@ module.exports = {
   index: function (req, res) {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
+	var originalUserId = userId;
 	
 	if(userId && validator.isBase64(userId)) {
 		userId = new Buffer(userId, 'base64').toString("ascii");
@@ -45,6 +46,7 @@ module.exports = {
 					name: customer.name,
 					customerId: customerId,
 					userId: data.id,
+					originalUserId: originalUserId,
 					logo: customer.logo,
 					profile: userProperties,
 					lists: userLists
@@ -59,45 +61,93 @@ module.exports = {
 		res.view('404');
 	}
   },
-  update: function (req, res) {
+  unsubscribeAll: function(req, res) {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId;
+	var originalUserId = userId;
+	if(userId && validator.isBase64(userId)) {
+		userId = new Buffer(userId, 'base64').toString("ascii");
+	}
 
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
-	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
+	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+		if(error == null) {
+			for(var x = 0; x < data.contacts.length; x++){
+				if(data.contacts[x].contact_type === 'email'){
+					var userSubscriber = data.contacts[x];
+					break;
+				}
+			}
+			var subscriberProps = {
+				'subscriber_contact':{
+					'contact_type':'email',
+					'contact_value': userSubscriber.contact_value,
+					'subscription_status': 'inactive'
+				}
+			}
+			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+				if(error == null) {
 
+					var preferences = {'properties':{}}
+					customer.userLists.forEach(function(item){
+						var prop = item.property.split(".");
+						preferences[prop[0]][prop[1]] = 'false';
+					});
+
+					bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
+						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+					});
+				}
+				else {
+					return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+				}
+
+				
+			});
+		}
+		else {
+			return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+		}
+	});
+	
+  },
+  update: function (req, res) {
+	var queryObject = url.parse(req.url,true).query
+	var userId = req.params.userId || queryObject.userId;
+	
+	var customerId = req.params.customerId;
+	var customer = customers[customerId];
+
+	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
+	
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
-			if(preferences.contact_email != undefined){
-				for(var x = 0; x < data.contacts.length; x++){
-					if(data.contacts[x].contact_type === 'email'){
-						var userSubscriberId = data.contacts[x].id;
-						break;
-					}
+			for(var x = 0; x < data.contacts.length; x++){
+				if(data.contacts[x].contact_type === 'email'){
+					var userSubscriber = data.contacts[x];
+					break;
 				}
-				var subscriberProps = {
-					'subscriber_contact':{
-						'contact_type':'email',
-						'contact_value':preferences.contact_email
-					}
+			}
+			var subscriberProps = {
+				'subscriber_contact':{
+					'contact_type':'email',
+					'contact_value':preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
+					'subscription_status': 'active'
 				}
-				bme.updateSubscriber(userSubscriberId, customer.bmeApiKey, subscriberProps, function(data, error){
-					if(error == null) {
-						res.json({});
-					}
-					else {
-						res.json(400, {
-							error: error.message
-						});
-					}
-				});
-					
 			}
-			else {
-				res.json({});
-			}
+			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+				if(error == null) {
+					res.json({});
+				}
+				else {
+					res.json(400, {
+						error: error.message
+					});
+				}
+			});
+			
 		}
 		else {
 			res.json(400, {
