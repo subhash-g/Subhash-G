@@ -8,6 +8,7 @@ module.exports = {
   index: function (req, res) {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
+	var originalUserId = userId;
 	
 	if(userId && validator.isBase64(userId)) {
 		userId = new Buffer(userId, 'base64').toString("ascii");
@@ -45,6 +46,7 @@ module.exports = {
 					name: customer.name,
 					customerId: customerId,
 					userId: data.id,
+					originalUserId: originalUserId,
 					logo: customer.logo,
 					profile: userProperties,
 					lists: userLists
@@ -58,6 +60,15 @@ module.exports = {
 	else {
 		res.view('404');
 	}
+  },
+  unsubscribeAll: function(req, res) {
+	var queryObject = url.parse(req.url,true).query
+	var userId = req.params.userId || queryObject.userId || queryObject.email;
+	var customerId = req.params.customerId;
+
+	
+
+	return res.redirect(`/preferences/${customerId}/users/${userId}`);
   },
   update: function (req, res) {
 	var queryObject = url.parse(req.url,true).query

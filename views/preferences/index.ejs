@@ -43,7 +43,7 @@
 				</fieldset>
 			</div>
 			<div>
-				<input class="btn btn-save" type="submit" value="Save Profile">
+				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Save Profile">
 			</div>
 		</div>
 		<div id="list-form" class="form">
@@ -69,7 +69,10 @@
 				</fieldset>
 			</div>
 			<div>
-				<input class="btn btn-save" type="submit" value="Save My List">
+				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My List">
+			</div>
+			<div class="unsub">
+				<a id="btn-unsub-all" href="/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribe">Unsubscribe from All</a>
 			</div>
 		</div>
 	</div>
@@ -90,23 +93,19 @@ var selectMyList = function() {
 	$("#btn-my-list").addClass("selected");
 }
 
-$("#btn-my-profile").click(selectMyProfile);
-$("#btn-my-list").click(selectMyList);
-selectMyProfile();
-
-$(".btn-save").click(function() {
-  var preferences = {};
+var updatePreferences = function() {
+	var preferences = {};
 
 	$(".profile-input").toArray().forEach(function(item) { 
 		var key = $(item).attr("data-property");
 		preferences[key] = $(item).val();
 	});
-	
+
 	$(".list-input").toArray().forEach(function(item) { 
 		var key = $(item).attr("data-property");
 		preferences[key] = item.checked ? "true": "false";
 	});
-	
+
 	var url = "/preferences/<%= customerId %>/users/<%= userId %>";
 	
 	$.ajax({
@@ -126,9 +125,16 @@ $(".btn-save").click(function() {
 	});
 	
 	mixpanel.track("preferences-updated", {'customerId': <%= customerId %> });
-	
+
 	return false;
-});
+};
+
+$("#btn-my-profile").click(selectMyProfile);
+$("#btn-my-list").click(selectMyList);
+$("#btn-save-profile").click(updatePreferences);
+$("#btn-save-list").click(updatePreferences);
+selectMyProfile();
+
 </script>
 
 <script>

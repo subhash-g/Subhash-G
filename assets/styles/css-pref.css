@@ -245,10 +245,16 @@ body {
     user-select: none
 }
 
-#content #list-form  .sub-section {
-    border-top: 1px solid rgba(83, 98, 102, .2);
-    border-bottom: 1px solid rgba(83, 98, 102, .2);
-    height: 100px;
+#content #list-form .unsub {
+    margin-top: 20px;
+}
+
+#content #list-form .unsub a {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #039CC4;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #content #result {
