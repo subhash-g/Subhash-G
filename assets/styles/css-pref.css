@@ -280,3 +280,16 @@ body {
     float: right;
     width: 100px;
 }
+
+#btn-my-profile {
+    vertical-align: text-top;
+    padding-left:12px;
+}
+#btn-my-list {
+    vertical-align: text-top;
+    padding-left:12px;
+}
+.menu-item img {
+    width:19px;
+    height:19px;
+}
