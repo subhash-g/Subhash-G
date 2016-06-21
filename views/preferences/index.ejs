@@ -51,7 +51,7 @@
 				<% counter = 1 %>
 				<fieldset>
 					<% lists.forEach(function(list, index) { %>
-						<% if(index % 3 == 0) { %>
+						<% if(index % 2 == 0) { %>
 							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
 							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 							<% counter++ %>
@@ -60,16 +60,7 @@
 				</fieldset>
 				<fieldset>
 					<% lists.forEach(function(list, index) { %>
-						<% if(index % 3 == 1) { %>
-							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
-							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
-							<% counter++ %>
-						<% } %>
-					<% }); %>
-				</fieldset>
-				<fieldset>
-					<% lists.forEach(function(list, index) { %>
-						<% if(index % 3 == 2) { %>
+						<% if(index % 2 == 1) { %>
 							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value == 'true' ? 'checked' : '' %> />
 							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 							<% counter++ %>
@@ -78,7 +69,7 @@
 				</fieldset>
 			</div>
 			<div>
-				<input class="btn btn-save" type="submit" value="Save Profile">
+				<input class="btn btn-save" type="submit" value="Save My List">
 			</div>
 		</div>
 	</div>

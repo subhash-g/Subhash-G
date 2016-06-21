@@ -190,6 +190,67 @@ body {
     display: none;
 }
 
+
+#content #list-form fieldset:first-of-type {
+    padding-right: 30px;
+}
+#content #list-form fieldset .title {
+    margin-bottom: 16px
+}
+#content #list-form fieldset input {
+    display: inline-block
+}
+#content #list-form fieldset label {
+    margin-top: 24px;
+    font-size: 1.125em;
+    color: rgba(33, 39, 54, .5);
+    line-height: 18px;
+    font-weight: 400;
+    color: #536266
+}
+#content #list-form fieldset input[type=checkbox].css-checkbox {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+#content #list-form fieldset input[type=checkbox].css-checkbox+label.css-label,
+#content #list-form fieldset input[type=checkbox].css-checkbox+label.css-label.clr {
+    padding-left: 34px;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+    cursor: pointer
+}
+#content #list-form fieldset input[type=checkbox].css-checkbox:checked+label.css-label,
+#content #list-form fieldset input[type=checkbox].css-checkbox+label.css-label.chk {
+    background-position: 0 -24px
+}
+#content #list-form fieldset label.css-label {
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f263091100c0acc5f5223adc2667d02c.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#content #list-form  .sub-section {
+    border-top: 1px solid rgba(83, 98, 102, .2);
+    border-bottom: 1px solid rgba(83, 98, 102, .2);
+    height: 100px;
+}
+
 #content #result {
     width: 600px; 
     margin-left: auto; 
