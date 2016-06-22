@@ -14,10 +14,10 @@
 	<div id="left-menu">
 		<div class="menu-items">
 			<div class="menu-item">
-				<img src="/images/list-on.svg" id="profile-icon"/><a id="btn-my-profile" href="#">My Profile</a>
+				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="#">My Profile</a>
 			</div>
 			<div class="menu-item">
-				<img src="/images/profile-off.svg" id="list-icon"/><a id="btn-my-list" href="#">My Lists</a>
+				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="#">My Lists</a>
 			</div>
 		</div>
 	</div>
@@ -82,8 +82,8 @@
 var selectMyProfile = function() {
 	$("#list-form").hide();
 	$("#btn-my-list").removeClass("selected");
-	$("#profile-icon").attr("src","/images/profile-on.svg");
-	$("#list-icon").attr("src","/images/list-off.svg");
+	$("#profile-icon").attr("src","/images/profile-on.png");
+	$("#list-icon").attr("src","/images/list-off.png");
 	$("#profile-form").show();
 	$("#btn-my-profile").addClass("selected");
 }
@@ -91,8 +91,8 @@ var selectMyProfile = function() {
 var selectMyList = function() {
 	$("#profile-form").hide();
 	$("#btn-my-profile").removeClass("selected");
-	$("#profile-icon").attr("src","/images/profile-off.svg");
-	$("#list-icon").attr("src","/images/list-on.svg");
+	$("#profile-icon").attr("src","/images/profile-off.png");
+	$("#list-icon").attr("src","/images/list-on.png");
 	$("#list-form").show();
 	$("#btn-my-list").addClass("selected");
 }
