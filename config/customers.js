@@ -386,4 +386,41 @@ module.exports = {
 			},
 		],
 	},
+	'2552': {
+		name: 'Fusion',
+		logo: '/images/logos/refrigiwear.png',
+		bmeApiKey: 'bffecca6c49fa51c7c7957c8e5cb67d8',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Gender',
+				property: 'gender'
+			},
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+		],
+		userLists: [
+			{
+				name: 'Weekly',
+				property: 'properties.weekly'
+			},
+			{
+				name: 'Monthly',
+				property: 'properties.monthly'
+			},
+			{
+				name: 'Quarterly',
+				property: 'properties.quarterly'
+			},
+		],
+	},
 };
