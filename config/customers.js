@@ -344,6 +344,10 @@ module.exports = {
 			{
 				name: 'Last Name',
 				property: 'last_name'
+			},
+			{
+				name: 'Email',
+				property: 'contact_email'
 			}
 		],
 		userLists: [
