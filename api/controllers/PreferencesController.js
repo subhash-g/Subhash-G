@@ -13,7 +13,9 @@ module.exports = {
 	if(userId && validator.isBase64(userId)) {
 		userId = new Buffer(userId, 'base64').toString("ascii");
 	}
-	
+	if(userId.includes('uid_')){
+		userId = userId.replace('uid_','');
+	}
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
  
@@ -69,6 +71,9 @@ module.exports = {
 		userId = new Buffer(userId, 'base64').toString("ascii");
 	}
 
+	if(userId.includes('uid_')){
+		userId = userId.replace('uid_','');
+	}
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
