@@ -133,11 +133,37 @@ var updatePreferences = function() {
 	return false;
 };
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 $("#btn-my-profile").click(selectMyProfile);
 $("#btn-my-list").click(selectMyList);
 $("#btn-save-profile").click(updatePreferences);
 $("#btn-save-list").click(updatePreferences);
-selectMyProfile();
+
+var page = getParameterByName('page');
+if(page && page != '') {
+	if(page == "1") {
+		selectMyProfile();
+	}
+	else if(page == "2") {
+		selectMyList();
+	}
+	else {
+		selectMyProfile();
+	}
+}
+else {
+	selectMyProfile();
+}
+
 
 </script>
 
