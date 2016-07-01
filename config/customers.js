@@ -427,4 +427,34 @@ module.exports = {
 			},
 		],
 	},
+	'3858': {
+		name: 'Coleman Furniture',
+		logo: '/images/logos/coleman_furniture.jpg',
+		bmeApiKey: '0b74eaaa1cb9a1b15b42357d9b8d34c0',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+		],
+		userLists: [
+			{
+				name: 'Abandoned Cart Email',
+				property: 'properties.abandonedcart'
+			},
+			{
+				name: 'Newsletter',
+				property: 'properties.newsletter'
+			},
+
+		],
+	},
 };

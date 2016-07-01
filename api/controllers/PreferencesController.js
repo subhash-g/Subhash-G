@@ -41,6 +41,8 @@ module.exports = {
 				var userLists = [];
 				customer.userLists.forEach(function(list) {
 					list.value = module.exports.getUserPropertyValue(data, list.property);
+					if(typeof list.value == 'boolean') 
+						list.value = list.value.toString();
 					userLists.push(list);
 				});
 
