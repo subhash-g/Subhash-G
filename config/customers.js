@@ -447,7 +447,7 @@ module.exports = {
 		],
 		userLists: [
 			{
-				name: 'Abandoned Cart Email',
+				name: 'Shopping Cart Reminders',
 				property: 'properties.abandonedcart'
 			},
 			{
