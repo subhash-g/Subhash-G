@@ -2,10 +2,9 @@ module.exports.routes = {
 	'GET /preferences/:customerId/users': 'PreferencesController.index',
 	'GET /preferences/:customerId/users/:userId': 'PreferencesController.index',
 	'POST /preferences/:customerId/users/:userId': 'PreferencesController.update',
-	//'GET /preferences/:customerId/users/:userId/unsubscribe': 'PreferencesController.unsubscribeAll',
-
-	'GET /preferences/:customerId/users/:userId/unsubscribe?list=listName': 'PreferencesController.unsubscribeAll',
-	
+	'GET /preferences/:customerId/users/:userId/unsubscribeAll': 'PreferencesController.unsubscribeAll',
+	'GET /preferences/:customerId/users/:userId/unsubscribe': 'PreferencesController.singleUnsubscribe',
+	'GET /preferences/:customerId/users/:userId/userListValues': 'PreferencesController.printUserListsValues',
 	'GET /usage/bme/login': 'BmeUsageController.login',
 	'POST /usage/bme/login': 'BmeUsageController.authenticate',
 	'GET /usage/bme/billing': 'BmeUsageController.billingData',
