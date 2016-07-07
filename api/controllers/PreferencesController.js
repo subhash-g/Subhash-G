@@ -79,6 +79,8 @@ module.exports = {
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
+	//console.log(req.params);
+
 	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 		if(error == null) {
 			for(var x = 0; x < data.contacts.length; x++){
@@ -87,6 +89,10 @@ module.exports = {
 					break;
 				}
 			}
+
+			//console.log(userSubscriber.contact_value);
+			//console.log();
+
 			var subscriberProps = {
 				'subscriber_contact':{
 					'contact_type':'email',
@@ -94,10 +100,19 @@ module.exports = {
 					'subscription_status': 'inactive'
 				}
 			}
+
+			console.log("userSubscriber.id: \n" + userSubscriber.id + "\n");
+			console.log("customer.bmeApiKey: \n" + customer.bmeApiKey + "\n");
+			console.log("subscriberProps: ");
+			console.log(subscriberProps);
+			console.log();
+
+			// THIS NEEDS TO BE UNDERSTOOD
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
 				if(error == null) {
 
 					var preferences = {'properties':{}}
+
 					customer.userLists.forEach(function(item){
 						var prop = item.property.split(".");
 						preferences[prop[0]][prop[1]] = 'false';
@@ -131,6 +146,7 @@ module.exports = {
 	
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
+
 			for(var x = 0; x < data.contacts.length; x++){
 				if(data.contacts[x].contact_type === 'email'){
 					var userSubscriber = data.contacts[x];
@@ -142,9 +158,22 @@ module.exports = {
 					'contact_type':'email',
 					'contact_value':preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
 					'subscription_status': 'active'
+					// Derek's code to set subscription status to inactive when all boxes are unchecked.
+					//'subscription_status':'inactive'
 				}
 			}
+
+			// Derek's code to set subscription status to inactive when all boxes are unchecked.
+			/*for (var i = 0; i < customer.userLists.length; i++) {
+				console.log(customer.userLists[i].value);
+				if (customer.userLists[i].value === 'true') {
+					subscriberProps.subscriber_contact.subscription_status = 'active';
+					break;
+				}
+			}*/
+
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+
 				if(error == null) {
 					res.json({});
 				}
@@ -154,14 +183,82 @@ module.exports = {
 					});
 				}
 			});
-			
 		}
 		else {
 			res.json(400, {
 				error: error.message
 			});
 		}
+
+			// Derek's code to set subscription status to inactive when all boxes are unchecked.
+			/*console.log();
+			console.log("SUBSCRIBERPROPS");
+			console.log(subscriberProps);
+
+			console.log();
+			console.log("DATA.CONTACTS");
+			console.log(data.contacts);*/
 	});
+  },
+  singleUnsubscribe: function(req, res) {
+
+  	console.log("You did it!");
+
+	var queryObject = url.parse(req.url,true).query
+	var userId = req.params.userId || queryObject.userId;
+	var originalUserId = userId;
+	if(userId && validator.isBase64(userId)) {
+		userId = new Buffer(userId, 'base64').toString("ascii");
+	}
+
+	if(userId.includes('uid_')){
+		userId = userId.replace('uid_','');
+	}
+	var customerId = req.params.customerId;
+	var customer = customers[customerId];
+
+	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+		if(error == null) {
+			for(var x = 0; x < data.contacts.length; x++){
+				if(data.contacts[x].contact_type === 'email'){
+					var userSubscriber = data.contacts[x];
+					break;
+				}
+			}
+
+			var subscriberProps = {
+				'subscriber_contact':{
+					'contact_type':'email',
+					'contact_value': userSubscriber.contact_value,
+					'subscription_status': 'inactive'
+				}
+			}
+			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+				if(error == null) {
+
+					var preferences = {'properties':{}}
+
+					customer.userLists.forEach(function(item){
+						var prop = item.property.split(".");
+						preferences[prop[0]][prop[1]] = 'false';
+					});
+
+					bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
+						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+					});
+				}
+				else {
+					return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+				}
+
+				
+			});
+		}
+		else {
+			return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+		}
+	});
+	
   },
   buildPreferences: function(data, userProperties, userLists) {
 	var result = {};
