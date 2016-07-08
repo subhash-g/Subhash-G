@@ -9,7 +9,6 @@ module.exports = {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
 	var originalUserId = userId;
-	//var listName = customer.userLists[0];
 	
 	if(userId && validator.isBase64(userId)) {
 		userId = new Buffer(userId, 'base64').toString("ascii");
@@ -19,8 +18,7 @@ module.exports = {
 	}
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
-	var listName = customer.userLists[1].property.substring(11, customer.userLists[1].property.length);
- 
+
 	if (customer) {
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
@@ -53,7 +51,6 @@ module.exports = {
 					customerId: customerId,
 					userId: data.id,
 					originalUserId: originalUserId,
-					listName: listName,
 					logo: customer.logo,
 					profile: userProperties,
 					lists: userLists
@@ -82,8 +79,6 @@ module.exports = {
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
-	//console.log(req.params);
-
 	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 		if(error == null) {
 			for(var x = 0; x < data.contacts.length; x++){
@@ -93,9 +88,6 @@ module.exports = {
 				}
 			}
 
-			//console.log(userSubscriber.contact_value);
-			//console.log();
-
 			var subscriberProps = {
 				'subscriber_contact':{
 					'contact_type':'email',
@@ -104,14 +96,6 @@ module.exports = {
 				}
 			}
 
-			//Prints to the console the properties of 
-			/*console.log("userSubscriber.id: \n" + userSubscriber.id + "\n");
-			console.log("customer.bmeApiKey: \n" + customer.bmeApiKey + "\n");
-			console.log("subscriberProps: ");
-			console.log(subscriberProps);
-			console.log();*/
-
-			// THIS NEEDS TO BE UNDERSTOOD
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
 				if(error == null) {
 
@@ -146,10 +130,7 @@ module.exports = {
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
-	console.log(req.body);
-
 	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-	
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
 
@@ -164,19 +145,8 @@ module.exports = {
 					'contact_type':'email',
 					'contact_value':preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
 					'subscription_status': 'active'
-					// Derek's code to set subscription status to inactive when all boxes are unchecked.
-					//'subscription_status':'inactive'
 				}
 			}
-
-			// Derek's code to set subscription status to inactive when all boxes are unchecked.
-			/*for (var i = 0; i < customer.userLists.length; i++) {
-				console.log(customer.userLists[i].value);
-				if (customer.userLists[i].value === 'true') {
-					subscriberProps.subscriber_contact.subscription_status = 'active';
-					break;
-				}
-			}*/
 
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
 
@@ -195,95 +165,66 @@ module.exports = {
 				error: error.message
 			});
 		}
-
-			// Derek's code to set subscription status to inactive when all boxes are unchecked.
-			/*console.log();
-			console.log("SUBSCRIBERPROPS");
-			console.log(subscriberProps);
-
-			console.log();
-			console.log("DATA.CONTACTS");
-			console.log(data.contacts);*/
 	});
   },
   singleUnsubscribe: function (req, res) {
 
-  	console.log("Single List Unsub");
-
 	var queryObject = url.parse(req.url,true).query;
 
 	var userId = req.params.userId || queryObject.userId;
+	var originalUserId = userId;
 	
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
-	// Must allow for the query field value to dictate which list will be unsubscribed from.
-	var listName = customer.userLists[1].property.substring(11, customer.userLists[1].property.length);
-
-	//console.log(queryObject);
-	//console.log(queryObject.list);
-	//console.log(listName);
-
-	//for (var i = 0; i < customer.userLists.length; i++) {
-	//	console.log(customer.userLists[i].value);
-	//	if (customer.userLists[i].value === 'true') {
-	customer.userLists[1].value = 'false';
-	//		subscriberProps.subscriber_contact.subscription_status = 'active';
-	//		break;
-	//	}
-	//}
-
 	for (var i = 0; i < customer.userLists.length; i++) {
-		//console.log(customer.userLists[i].value);
+		var listName = customer.userLists[i].property.split(".");
+		var listProp = listName[1];
+		if (queryObject.list === listProp) {
+			var correctURL = true;
+			var userListNumber = i;
+			break;
+		}
 	}
 
-	//console.log(req);
+	if (!correctURL) {
+		return res.view('404');
+	}
 
-	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-	
-	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
+	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 		if(error == null) {
-
 			for(var x = 0; x < data.contacts.length; x++){
 				if(data.contacts[x].contact_type === 'email'){
 					var userSubscriber = data.contacts[x];
 					break;
 				}
 			}
+
 			var subscriberProps = {
 				'subscriber_contact':{
 					'contact_type':'email',
-					'contact_value':preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
+					'contact_value': userSubscriber.contact_value,
 					'subscription_status': 'active'
 				}
 			}
 
-			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+				var preferences = {'properties':{}}
 
-				if(error == null) {
-					res.json({});
-				}
-				else {
-					res.json(400, {
-						error: error.message
-					});
-				}
+				var prop = customer.userLists[userListNumber].property.split(".");
+				preferences[prop[0]][prop[1]] = 'false';
+
+				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
+
+				return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 			});
 		}
 		else {
-			res.json(400, {
-				error: error.message
-			});
+			return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 		}
 	});
   },
   buildPreferences: function(data, userProperties, userLists) {
 	var result = {};
-
-	// REMOVE ME
-	//console.log();
-	//console.log("data: ");
-	//console.log(data);
 
 	userProperties.forEach(function(item) {
 		var value = data[item.property];
@@ -333,13 +274,4 @@ module.exports = {
 		return this.getUserPropertyValueHelper(value, path, depth+1);
 	}
   },
-  printUserListsValues: function(req) {
-  	var customerId = req.params.customerId;
-  	var customer = customers[customerId];
-
-  	console.log("userLists Values: ")
-
- 	for (var i = 0; i < customer.userLists.length; i++)
-		console.log(customer.userLists[i].value);
-  }
 };
