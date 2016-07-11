@@ -193,28 +193,14 @@ module.exports = {
 
 	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 		if(error == null) {
-			for(var x = 0; x < data.contacts.length; x++){
-				if(data.contacts[x].contact_type === 'email'){
-					var userSubscriber = data.contacts[x];
-					break;
-				}
+			var preferences = {
+				'properties':{}
 			}
 
-			var subscriberProps = {
-				'subscriber_contact':{
-					'contact_type':'email',
-					'contact_value': userSubscriber.contact_value,
-					'subscription_status': 'active'
-				}
-			}
+			var prop = customer.userLists[userListNumber].property.split(".");
+			preferences[prop[0]][prop[1]] = 'false';
 
-				var preferences = {'properties':{}}
-
-				var prop = customer.userLists[userListNumber].property.split(".");
-				preferences[prop[0]][prop[1]] = 'false';
-
-				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
-
+			bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
 				return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 			});
 		}
