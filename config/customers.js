@@ -457,4 +457,86 @@ module.exports = {
 
 		],
 	},
+	'4133': {
+		name: 'Exame',
+		logo: '/images/logos/exame.jpg',
+		bmeApiKey: '00cd6b26db69ff2d08a4d6e400c6d0c3',
+		userProperties: [
+			{
+				name: 'Primeiro Nome',
+				property: 'first_name'
+			},
+			{
+				name: 'Ùltimo nome',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'EXAME ESTILO DE VIDA',
+				property: 'properties.16852'
+			},
+			{
+				name: 'EXAME MUNDO',
+				property: 'properties.16841'
+			},
+			{
+				name: 'EXAME MARKETING',
+				property: 'properties.16845'
+			},
+			{
+				name: 'EXAME BRASIL',
+				property: 'properties.16840'
+			},
+			{
+				name: 'EXAME MEIO AMBIENTE & ENERGIA',
+				property: 'properties.16851'
+			},
+			{
+				name: 'EXAME MERCADOS',
+				property: 'properties.16832'
+			},
+			{
+				name: 'EXAME SEMANAL',
+				property: 'properties.16833'
+			},
+			{
+				name: 'EXAME NEGÓCIOS',
+				property: 'properties.16838'
+			},
+			{
+				name: 'EXAME SEU NEGÓCIO',
+				property: 'properties.16847'
+			},
+			{
+				name: 'EXAME CARREIRA',
+				property: 'properties.16846'
+			},
+			{
+				name: 'EXAME EXONOMIA',
+				property: 'properties.16839'
+			},
+			{
+				name: 'EXAME SEU DINHEIRO',
+				property: 'properties.16842'
+			},
+			{
+				name: 'AS + LIDAS DO SITE EXAME',
+				property: 'properties.16834'
+			},
+			{
+				name: 'EXAME CIÊNCIA',
+				property: 'properties.16844'
+			},
+			{
+				name: 'EXAME TECNOLOGIA',
+				property: 'properties.16843'
+			},
+			{
+				name: 'EXAME NEWS',
+				property: 'properties.16831'
+			},
+
+		],
+	},
 };
