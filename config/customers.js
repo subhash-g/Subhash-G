@@ -342,27 +342,11 @@ module.exports = {
 				property: 'first_name'
 			},
 			{
-				name: 'Last Name',
-				property: 'last_name'
-			},
-			{
-				name: 'Email',
+				name: 'Update Your Email',
 				property: 'contact_email'
 			}
 		],
 		userLists: [
-			{
-				name: 'Tuesday Newsletter',
-				property: 'properties.tuesday_newsletter'
-			},
-			{
-				name: 'Wednesday Newsletter',
-				property: 'properties.wednesday_newsletter'
-			},
-			{
-				name: 'Sunday Newsletter',
-				property: 'properties.sunday_newsletter'
-			},
 		],
 	},
 	'3931': {
