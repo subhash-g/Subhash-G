@@ -18,7 +18,22 @@ module.exports = {
 	}
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
- 
+
+	var barStatus = undefined;
+
+    var singleUnsubListName = queryObject.unsubscribe;
+
+    for (var i = 0; i < customer.userLists.length; i++) {
+        var listName = customer.userLists[i].property.split(".");
+        var listProp = listName[1];
+        if (singleUnsubListName === listProp) {
+            barStatus = true;
+            break;
+            }
+        }
+    if (barStatus === undefined)
+        barStatus = false;
+
 	if (customer) {
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
@@ -53,7 +68,9 @@ module.exports = {
 					originalUserId: originalUserId,
 					logo: customer.logo,
 					profile: userProperties,
-					lists: userLists
+					lists: userLists,
+					unsubListName: singleUnsubListName, 
+                    unsubStatus: barStatus
 				});
 			}
 			else {
@@ -87,6 +104,7 @@ module.exports = {
 					break;
 				}
 			}
+
 			var subscriberProps = {
 				'subscriber_contact':{
 					'contact_type':'email',
@@ -94,10 +112,12 @@ module.exports = {
 					'subscription_status': 'inactive'
 				}
 			}
+
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
 				if(error == null) {
 
 					var preferences = {'properties':{}}
+
 					customer.userLists.forEach(function(item){
 						var prop = item.property.split(".");
 						preferences[prop[0]][prop[1]] = 'false';
@@ -118,9 +138,9 @@ module.exports = {
 			return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 		}
 	});
-	
   },
   update: function (req, res) {
+
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId;
 	
@@ -128,9 +148,9 @@ module.exports = {
 	var customer = customers[customerId];
 
 	var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-	
 	bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
 		if(error == null) {
+
 			for(var x = 0; x < data.contacts.length; x++){
 				if(data.contacts[x].contact_type === 'email'){
 					var userSubscriber = data.contacts[x];
@@ -144,7 +164,9 @@ module.exports = {
 					'subscription_status': 'active'
 				}
 			}
+
 			bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error){
+
 				if(error == null) {
 					res.json({});
 				}
@@ -154,7 +176,6 @@ module.exports = {
 					});
 				}
 			});
-			
 		}
 		else {
 			res.json(400, {
@@ -163,8 +184,51 @@ module.exports = {
 		}
 	});
   },
+  singleUnsubscribe: function (req, res) {
+
+    var queryObject = url.parse(req.url,true).query;
+
+    var userId = req.params.userId || queryObject.userId;
+    var originalUserId = userId;
+    
+    var customerId = req.params.customerId;
+    var customer = customers[customerId];
+
+    for (var i = 0; i < customer.userLists.length; i++) {
+        var listName = customer.userLists[i].property.split(".");
+        var listProp = listName[1];
+        if (queryObject.list === listProp) {
+            var correctURL = true;
+            var userListNumber = i;
+            break;
+        }
+    }
+
+    if (!correctURL) {
+        return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
+    }
+
+    bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+        if(error == null) {
+            var preferences = {
+                'properties':{}
+            }
+
+            var prop = customer.userLists[userListNumber].property.split(".");
+            preferences[prop[0]][prop[1]] = 'false';
+
+            bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
+                return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}`);
+            });
+        }
+        else {
+            return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
+        }
+    });
+ },
   buildPreferences: function(data, userProperties, userLists) {
 	var result = {};
+
 	userProperties.forEach(function(item) {
 		var value = data[item.property];
 		module.exports.setUserPropertyValue(result, item.property, value);
@@ -213,5 +277,4 @@ module.exports = {
 		return this.getUserPropertyValueHelper(value, path, depth+1);
 	}
   },
-
 };

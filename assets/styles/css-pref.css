@@ -350,3 +350,10 @@ body {
     width:19px;
     height:19px;
 }
+#banner{
+    position:absolute;
+    top:48px;
+    width:100%;
+    text-align: center;
+    color:white;
+}

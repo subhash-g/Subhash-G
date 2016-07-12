@@ -3,6 +3,9 @@
 		<img src="/images/boomtrain.png" />
 	</div>
 </div>
+<div id="banner">
+	<p id="banner_message"></p>
+</div>
 
 <div id="title-bar">
 	<div class="logo">
@@ -72,7 +75,7 @@
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My List">
 			</div>
 			<div class="unsub">
-				<a id="btn-unsub-all" href="/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribe">Unsubscribe from All</a>
+				<a id="btn-unsub-all" href="/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll">Unsubscribe from All</a>
 			</div>
 		</div>
 	</div>
@@ -163,8 +166,33 @@ if(page && page != '') {
 else {
 	selectMyProfile();
 }
-
-
+status = ('<%= unsubStatus %>');
+list = ('<%= unsubListName %>');
+var listsObj = []
+<% lists.forEach(function(list, index){ %>
+	listsObj[<%= index %>] = {}
+	listsObj[<%= index %>].name = ('<%= list.name %>');
+	listsObj[<%= index %>].property = ('<%= list.property %>');
+<% }); %>
+var bannerSlide = function(unsubList, status){
+	var name = ''
+	for(var a = 0; a < listsObj.length; a++){
+		if(listsObj[a].property === "properties."+unsubList){
+			name = listsObj[a].name
+		}
+	}
+	if(status === 'true'){
+		$("#banner").css('background-color','#3DC054')
+		$("#banner_message").text('You have been successfully unsubscribed from ' + name )
+	} else {
+		$("#banner").css('background-color','#FE314A')
+		$("#banner_message").text('Unable to unsubscribe.')
+	}
+	$("#banner").slideDown().delay(1500).slideUp();
+}
+$("#banner").hide();
+if(list != 'undefined')
+	bannerSlide(list,status)
 </script>
 
 <script>
