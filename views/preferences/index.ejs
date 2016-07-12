@@ -168,7 +168,7 @@ else {
 }
 status = ('<%= unsubStatus %>');
 list = ('<%= unsubListName %>');
-console.log(list, status);
+console.log(list);
 var listsObj = []
 <% lists.forEach(function(list, index){ %>
 	listsObj[<%= index %>] = {}
@@ -187,7 +187,7 @@ var bannerSlide = function(unsubList, status){
 		$("#banner_message").text('You have been successfully unsubscribed from ' + name )
 	} else {
 		$("#banner").css('background-color','#FE314A')
-		$("#banner_message").text('You have been unsuccessfully unsubscribed from ' + name )
+		$("#banner_message").text('Unable to unsubscribe.')
 	}
 	$("#banner").slideDown().delay(1500).slideUp();
 }
