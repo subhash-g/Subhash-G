@@ -19,6 +19,21 @@ module.exports = {
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
+	var barStatus = undefined;
+
+    var singleUnsubListName = queryObject.unsubscribe;
+
+    for (var i = 0; i < customer.userLists.length; i++) {
+        var listName = customer.userLists[i].property.split(".");
+        var listProp = listName[1];
+        if (singleUnsubListName === listProp) {
+            barStatus = true;
+            break;
+            }
+        }
+    if (barStatus === undefined)
+        barStatus = false;
+
 	if (customer) {
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
@@ -53,7 +68,9 @@ module.exports = {
 					originalUserId: originalUserId,
 					logo: customer.logo,
 					profile: userProperties,
-					lists: userLists
+					lists: userLists,
+					unsubListName: singleUnsubListName, 
+                    unsubStatus: barStatus
 				});
 			}
 			else {
@@ -169,46 +186,46 @@ module.exports = {
   },
   singleUnsubscribe: function (req, res) {
 
-	var queryObject = url.parse(req.url,true).query;
+    var queryObject = url.parse(req.url,true).query;
 
-	var userId = req.params.userId || queryObject.userId;
-	var originalUserId = userId;
-	
-	var customerId = req.params.customerId;
-	var customer = customers[customerId];
+    var userId = req.params.userId || queryObject.userId;
+    var originalUserId = userId;
+    
+    var customerId = req.params.customerId;
+    var customer = customers[customerId];
 
-	for (var i = 0; i < customer.userLists.length; i++) {
-		var listName = customer.userLists[i].property.split(".");
-		var listProp = listName[1];
-		if (queryObject.list === listProp) {
-			var correctURL = true;
-			var userListNumber = i;
-			break;
-		}
-	}
+    for (var i = 0; i < customer.userLists.length; i++) {
+        var listName = customer.userLists[i].property.split(".");
+        var listProp = listName[1];
+        if (queryObject.list === listProp) {
+            var correctURL = true;
+            var userListNumber = i;
+            break;
+        }
+    }
 
-	if (!correctURL) {
-		return res.view('404');
-	}
+    if (!correctURL) {
+        return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
+    }
 
-	bme.getUser(userId, customer.bmeApiKey, function(data, error) {
-		if(error == null) {
-			var preferences = {
-				'properties':{}
-			}
+    bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+        if(error == null) {
+            var preferences = {
+                'properties':{}
+            }
 
-			var prop = customer.userLists[userListNumber].property.split(".");
-			preferences[prop[0]][prop[1]] = 'false';
+            var prop = customer.userLists[userListNumber].property.split(".");
+            preferences[prop[0]][prop[1]] = 'false';
 
-			bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
-				return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
-			});
-		}
-		else {
-			return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
-		}
-	});
-  },
+            bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
+                return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}`);
+            });
+        }
+        else {
+            return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
+        }
+    });
+ },
   buildPreferences: function(data, userProperties, userLists) {
 	var result = {};
 
