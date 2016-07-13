@@ -441,6 +441,46 @@ module.exports = {
 
 		],
 	},
+	'2327': {
+		name: 'Mic',
+		logo: '/images/logos/mic.png',
+		bmeApiKey: 'e558ae2b1173e425bd9ea08b5e2f581d',
+		userProperties: [
+		],
+		userLists: [
+			{
+				name: 'Mic Check Daily',
+				property: 'properties.miccheckdaily'
+			},
+			{
+				name: 'Dedicated',
+				property: 'properties.dedicated'
+			},
+
+			{
+				name: 'Delivered',
+				property: 'properties.delivered'
+			},
+
+			{
+				name: 'The Slay',
+				property: 'properties.theslay'
+			},
+			{
+				name: 'News Alerts',
+				property: 'properties.newsalerts'
+			},
+			{
+				name: 'The Movement',
+				property: 'properties.themovement'
+			},
+			{
+				name: 'The Payoff',
+				property: 'properties.thepayoff'
+			},
+
+		],
+	},
 	'4133': {
 		name: 'Exame',
 		logo: '/images/logos/exame.jpg',
