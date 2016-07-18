@@ -27,10 +27,10 @@ module.exports = {
         var listName = customer.userLists[i].property.split(".");
         var listProp = listName[1];
         if (singleUnsubListName === listProp) {
-            barStatus = true;
-            break;
-            }
+        	barStatus = true;
+        	break;
         }
+    }
     if (barStatus === undefined)
         barStatus = false;
 
