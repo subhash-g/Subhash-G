@@ -35,7 +35,7 @@ module.exports = {
         barStatus = false;
 
 	if (customer) {
-		var user = bme.getUser(userId, customer.bmeApiKey, function(data, error) {
+		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
 				var userProperties = [];
 				customer.userProperties.forEach(function(prop) {
@@ -80,7 +80,7 @@ module.exports = {
 		});
 	}
 	else {
-		return res.view('404-UserDoesNotExist', {
+		return res.view('404', {
 		});
 	}
   },
@@ -270,7 +270,7 @@ module.exports = {
 	var key = path[depth-1];
 	var value = data[key];
 	
-	if(!value || value == null) {
+	if(!value) {
 		return '';
 	}
 	else if(path.length == depth) {
