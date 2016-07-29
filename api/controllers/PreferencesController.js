@@ -9,7 +9,7 @@ module.exports = {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId || queryObject.email;
 	var originalUserId = userId;
-	
+
 	if(userId && validator.isBase64(userId)) {
 		userId = new Buffer(userId, 'base64').toString("ascii");
 	}
@@ -60,7 +60,6 @@ module.exports = {
 						list.value = list.value.toString();
 					userLists.push(list);
 				});
-
 				return res.view('preferences/index', {
 					name: customer.name,
 					customerId: customerId,
@@ -74,18 +73,22 @@ module.exports = {
 				});
 			}
 			else {
-				return res.view('404');
+				return res.view('404-UserDoesNotExist', {
+					incorrectUser: userId
+				});
 			}
 		});
 	}
 	else {
-		res.view('404');
+		return res.view('404', {
+		});
 	}
   },
   unsubscribeAll: function(req, res) {
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId;
 	var originalUserId = userId;
+
 	if(userId && validator.isBase64(userId)) {
 		userId = new Buffer(userId, 'base64').toString("ascii");
 	}
@@ -143,7 +146,7 @@ module.exports = {
 
 	var queryObject = url.parse(req.url,true).query
 	var userId = req.params.userId || queryObject.userId;
-	
+
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
 
