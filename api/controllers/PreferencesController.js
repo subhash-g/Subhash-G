@@ -56,7 +56,7 @@ module.exports = {
 				var userLists = [];
 				customer.userLists.forEach(function(list) {
 					list.value = module.exports.getUserPropertyValue(data, list.property);
-					if(typeof list.value == 'boolean') 
+					if(typeof list.value == 'boolean')
 						list.value = list.value.toString();
 					userLists.push(list);
 				});
@@ -68,13 +68,14 @@ module.exports = {
 					logo: customer.logo,
 					profile: userProperties,
 					lists: userLists,
-					unsubListName: singleUnsubListName, 
+					unsubListName: singleUnsubListName,
                     unsubStatus: barStatus
 				});
 			}
 			else {
 				return res.view('404-UserDoesNotExist', {
-					incorrectUser: userId
+					incorrectUser: userId,
+          logo: customer.logo
 				});
 			}
 		});
@@ -134,7 +135,7 @@ module.exports = {
 					return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 				}
 
-				
+
 			});
 		}
 		else {
@@ -193,7 +194,7 @@ module.exports = {
 
     var userId = req.params.userId || queryObject.userId;
     var originalUserId = userId;
-    
+
     var customerId = req.params.customerId;
     var customer = customers[customerId];
 
@@ -236,12 +237,12 @@ module.exports = {
 		var value = data[item.property];
 		module.exports.setUserPropertyValue(result, item.property, value);
 	});
-	
+
 	userLists.forEach(function(item) {
 		var value = data[item.property];
 		module.exports.setUserPropertyValue(result, item.property, value);
 	});
-	
+
 	return result;
   },
   setUserPropertyValue: function(data, property, value) {
@@ -250,7 +251,7 @@ module.exports = {
   },
   setUserPropertyValueHelper: function(data, path, value, depth) {
 	var key = path[depth-1];
-	
+
 	if(path.length == depth) {
 		data[key] = value;
 	}
@@ -258,7 +259,7 @@ module.exports = {
 		if(data[key] == null) {
 			data[key] = {};
 		}
-		
+
 		this.setUserPropertyValueHelper(data[key], path, value, depth+1);
 	}
   },
@@ -269,7 +270,7 @@ module.exports = {
   getUserPropertyValueHelper: function(data, path, depth) {
 	var key = path[depth-1];
 	var value = data[key];
-	
+
 	if(!value) {
 		return '';
 	}

@@ -6,25 +6,19 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
 
-    <div class="fourohfour">
-				<div style="width: 300px; margin-left: auto; margin-right: auto; margin-top: 50px">
-					<img src="/images/pug.png" style="width: 300px">
+    <div class="fourohfour" style="display:flex">
+				<div style=" margin-left: auto; margin-right: auto; margin-top: 50px">
+					<img style="max-width:400px" src="<%=logo%>">
 				</div>
       </div>
 
-      <div style="font-family: Lato; width: 350px; margin-left: auto; margin-right: auto; text-align: center">
-        <h1>
-          What the pug?
-        </h1>
+      <div style="font-family: Lato; margin-left: auto; margin-right: auto; text-align: center">
         <h2>
           <% if (typeof data!== 'undefined') { %>
             <%= data %>
           <% } else { %>
-            The user <%= incorrectUser %> does not exist. 
+            The user <%= incorrectUser %> is not subscribed.
           <% } %>
         </h2>
-        <p class="help">
-          <a href="http://en.wikipedia.org/wiki/HTTP_404">Why</a> might this be happening?
-        </p>
       </div>
     </div>
