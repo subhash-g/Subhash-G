@@ -17,10 +17,10 @@
 	<div id="left-menu">
 		<div class="menu-items">
 			<div class="menu-item">
-				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="#">My Profile</a>
+				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="#">My Lists</a>
 			</div>
 			<div class="menu-item">
-				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="#">My Lists</a>
+				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="#">My Profile</a>
 			</div>
 		</div>
 	</div>
@@ -103,18 +103,18 @@ var selectMyList = function() {
 var updatePreferences = function() {
 	var preferences = {};
 
-	$(".profile-input").toArray().forEach(function(item) { 
+	$(".profile-input").toArray().forEach(function(item) {
 		var key = $(item).attr("data-property");
 		preferences[key] = $(item).val();
 	});
 
-	$(".list-input").toArray().forEach(function(item) { 
+	$(".list-input").toArray().forEach(function(item) {
 		var key = $(item).attr("data-property");
 		preferences[key] = item.checked ? "true": "false";
 	});
 
 	var url = "/preferences/<%= customerId %>/users/<%= userId %>";
-	
+
 	$.ajax({
 		url: url,
 		method: 'POST',
@@ -130,7 +130,7 @@ var updatePreferences = function() {
 			alert("An error occurred updating your preferences(" + error.message + ").  Please try again.");
 		}
 	});
-	
+
 	mixpanel.track("preferences-updated", {'customerId': <%= customerId %> });
 
 	return false;
@@ -154,17 +154,17 @@ $("#btn-save-list").click(updatePreferences);
 var page = getParameterByName('page');
 if(page && page != '') {
 	if(page == "1") {
-		selectMyProfile();
-	}
-	else if(page == "2") {
 		selectMyList();
 	}
-	else {
+	else if(page == "2") {
 		selectMyProfile();
+	}
+	else {
+		selectMyList();
 	}
 }
 else {
-	selectMyProfile();
+	selectMyList();
 }
 status = ('<%= unsubStatus %>');
 list = ('<%= unsubListName %>');
