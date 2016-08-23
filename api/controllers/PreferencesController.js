@@ -18,7 +18,9 @@ module.exports = {
 	}
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
-
+  if(customer == null){
+    return res.view('404', {})
+  }
 	var barStatus = undefined;
 
     var singleUnsubListName = queryObject.unsubscribe;
