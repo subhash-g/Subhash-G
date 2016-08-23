@@ -167,7 +167,7 @@ module.exports = {
 			{
 				name: 'Zip Code',
 				property: 'properties.address.zip'
-			},			
+			},
 			{
 				name: 'Cell',
 				property: 'properties.address.phone_cell'
@@ -196,7 +196,7 @@ module.exports = {
             {
                 name: 'Apellido',
                 property: 'last_name'
-            },           
+            },
             {
                 name: 'Teléfono',
                 property: 'phone'
@@ -559,6 +559,28 @@ module.exports = {
 			{
 				name: 'EXAME NEWS',
 				property: 'properties.16831'
+			},
+
+		],
+	},
+	'4648': {
+		name: 'ReadWrite',
+		logo: '/images/logos/readwrite.png',
+		bmeApiKey: 'f99f56e6566b4843fa6a4d282a8f0b87',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+		],
+		userLists: [
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_wrapup'
+			},
+			{
+				name: 'Daily',
+				property: 'properties.daily_recap'
 			},
 
 		],
