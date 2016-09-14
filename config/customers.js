@@ -1,4 +1,41 @@
 module.exports = {
+	'3412': {
+		name: 'Honeycombers',
+		logo: '/images/logos/honeycombers.png',
+		bmeApiKey: 'b782e14a032ea8b6d2b51b47403c1513',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Singapore',
+				property: 'properties.newsletter_singapore'
+			},
+			{
+				name: 'Bali',
+				property: 'properties.newsletter_bali'
+			},
+			{
+				name: 'Jakarta',
+				property: 'properties.newsletter_jakarta'
+			},
+			{
+				name: 'HoneykidsAsia',
+				property: 'properties.newsletter_honeykidsasia'
+			},
+			{
+				name: 'HoneyBrides',
+				property: 'properties.newsletter_honeybrides'
+			}
+		],
+	},
 	'565a3d0d5b838bc0005f81a706afdec2': {
 		name: 'Cheap Caribbean',
 		username: 'iterable-reporting@boomtrain.com',
