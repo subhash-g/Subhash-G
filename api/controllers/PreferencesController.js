@@ -37,6 +37,7 @@ module.exports = {
         barStatus = false;
 
 	if (customer) {
+
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
 				var userProperties = [];
@@ -62,7 +63,8 @@ module.exports = {
 						list.value = list.value.toString();
 					userLists.push(list);
 				});
-				return res.view('preferences/index', {
+
+				return res.view('preferences/index', { 
 					name: customer.name,
 					customerId: customerId,
 					userId: data.id,
@@ -253,7 +255,6 @@ module.exports = {
   },
   setUserPropertyValueHelper: function(data, path, value, depth) {
 	var key = path[depth-1];
-
 	if(path.length == depth) {
 		data[key] = value;
 	}

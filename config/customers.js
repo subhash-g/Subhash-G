@@ -25,80 +25,16 @@ module.exports = {
 		],
 		userLists: [
 			{
-				name: 'All you can eat (everything)',
-				property: 'properties.subscribe_all'
+				name: 'Daily Content',
+				property: 'properties.newsletter_frequency'
 			},
 			{
-				name: 'Analytics planning and data analysis',
-				property: 'properties.subscribe_all'
+				name: 'Weekly Content',
+				property: 'properties.newsletter_frequency'
 			},
 			{
-				name: 'Cloud ERP financials and supply chain',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Cloud platforms - infrastructure and architecture',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Collaboration sharing and digital productivity',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'CRM and customer experience',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'DevOps NoSQL and the open source stack',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Digital and content marketing',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Digital enterprise in the real world',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Digital government and public services',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Digital transformation - frictionless enterprise',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Financial services and fintech',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Governing identity privacy and security',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'HCM and the digital future of work',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Healthcare transformation',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'IoT robotics and AI',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'Retail e-commerce and the omni-channel',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'The new professional and IT as a service',
-				property: 'properties.subscribe_all'
-			},
-			{
-				name: 'UX and application design',
-				property: 'properties.subscribe_all'
+				name: 'Monthly Content',
+				property: 'properties.newsletter_frequency'
 			},
 		],
 	},

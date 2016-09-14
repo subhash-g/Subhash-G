@@ -51,25 +51,39 @@
 		</div>
 		<div id="list-form" class="form">
 			<div class="fieldset-container">
-				<% counter = 1 %>
-				<fieldset>
-					<% lists.forEach(function(list, index) { %>
-						<% if(index % 2 == 0) { %>
-							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
-							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
-							<% counter++ %>
-						<% } %>
-					<% }); %>
-				</fieldset>
-				<fieldset>
-					<% lists.forEach(function(list, index) { %>
-						<% if(index % 2 == 1) { %>
-							<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
-							<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
-							<% counter++ %>
-						<% } %>
-					<% }); %>
-				</fieldset>
+				<% if ( name != 'Diginomica') { %>	
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 0) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 1) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+				<% } else { %>
+					<fieldset class="dropdown">
+						<select id="Diginomica">
+							<% lists.forEach(function(list, index) { %>
+								<% if(list.value ==  list.name) { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
+								<% } else { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
+								<% } %>
+							<% }); %>
+						</select>
+					</fieldset>
+				<% } %>
 			</div>
 			<div>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My List">
@@ -108,9 +122,21 @@ var updatePreferences = function() {
 		preferences[key] = $(item).val();
 	});
 
+
+	var selected = false; 
 	$(".list-input").toArray().forEach(function(item) {
 		var key = $(item).attr("data-property");
-		preferences[key] = item.checked ? "true": "false";
+		var type = $(item).attr("type");
+
+		if (type != "dropdown") {
+			preferences[key] = item.checked ? "true": "false";
+		} else {
+			//console.log(key + " item selected " + item.selected);
+			if (!selected && item.selected) {
+				preferences[key] = $(item).val();
+				selected = true; 
+			}
+		}
 	});
 
 	var url = "/preferences/<%= customerId %>/users/<%= userId %>";
@@ -193,6 +219,27 @@ var bannerSlide = function(unsubList, status){
 $("#banner").hide();
 if(list != 'undefined')
 	bannerSlide(list,status)
+
+name = ('<%= name %>');
+
+
+$("fieldset.dropdown").css({
+	"padding-top": "30px !important",
+    "text-align": "center !important"
+});
+
+$("select").css({
+    "color": "#536266",
+    "margin": "50px",
+    "border": "1px solid rgba(33, 39, 54, .2)",
+    "background": "transparent",
+    "width": "200px",
+    "padding": "20px",
+    "font-size": "16px",
+    "height": "50px",
+    "font-family": "'Lato', sans-serif"
+});
+
 </script>
 
 <script>
