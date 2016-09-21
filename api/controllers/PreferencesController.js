@@ -2,6 +2,8 @@ var url = require('url') ;
 var customers = require('../../config/customers');
 var bme = require('../../lib/bme');
 var validator = require('validator');
+var request = require('request');
+var querystring = require('querystring');
 
 module.exports = {
 
@@ -18,9 +20,9 @@ module.exports = {
 	}
 	var customerId = req.params.customerId;
 	var customer = customers[customerId];
-  if(customer == null){
-    return res.view('404', {})
-  }
+  	if (customer == null){
+    	return res.view('404', {})
+  	}
 	var barStatus = undefined;
 
     var singleUnsubListName = queryObject.unsubscribe;
@@ -37,6 +39,36 @@ module.exports = {
         barStatus = false;
 
 	if (customer) {
+
+		// unsubscribe event count, only enabled for Mic.com 
+		if (queryObject.message_uid && customer.name =='Mic') {
+
+			var options = {
+				method: 'POST',
+				url: 'https://track.nudgespot.com/sendgrid/message_events',
+				headers: {
+					accept: 'application/json',
+					'content-type': 'application/json'
+				},
+				body: {
+					_json: [{
+						'event': 'unsubscribed',
+						'mail_id': queryObject.message_uid,
+						'unsubscribe_contact': false,
+						'timestamp': Date.now() / 1000
+					}]
+				},
+				json: true 
+			};
+
+			request(options, function (error, response, body) {
+				if (error) {
+					throw new Error(error);
+				}
+				//console.log(response);
+			});
+		}
+
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if(error == null) {
@@ -215,6 +247,9 @@ module.exports = {
     if (!correctURL) {
         return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
     }
+
+    // unsubscribe count
+
 
     bme.getUser(userId, customer.bmeApiKey, function(data, error) {
         if(error == null) {
