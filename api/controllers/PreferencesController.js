@@ -155,8 +155,8 @@ module.exports = {
 						//console.log(module.exports.changeInPreferences(userPreferences, newPreferences));
 						if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
 							module.exports.unsubscribeCount(message_uid, customer.name);
-							userPreferences = newPreferences;
 						}
+						userPreferences = newPreferences;
 					
 					} else {
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
@@ -206,10 +206,13 @@ module.exports = {
 				});
 
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
+				//console.log(userPreferences);
+				//console.log(newPreferences);
+				//console.log(module.exports.changeInPreferences(userPreferences, newPreferences));
 				if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
 					module.exports.unsubscribeCount(message_uid, customer.name);
-					userPreferences = newPreferences;
 				}
+				userPreferences = newPreferences;
 			
 			} else {
 				res.json(400, {
