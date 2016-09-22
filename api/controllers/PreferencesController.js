@@ -4,7 +4,6 @@ var bme = require('../../lib/bme');
 var validator = require('validator');
 var request = require('request');
 
-var message_uid = "";
 var userPreferences = []; 
 
 module.exports = {
@@ -42,7 +41,7 @@ module.exports = {
 
 		// get message_uid
 		if (queryObject.message_uid) {
-			message_uid = queryObject.message_uid;
+			var message_uid = queryObject.message_uid;
 
 			// check if unsubscribe param exists	
 			if (singleUnsubListName) {
@@ -117,6 +116,7 @@ module.exports = {
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
+
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
 				for (var x = 0; x < data.contacts.length; x++) {
@@ -147,14 +147,18 @@ module.exports = {
 						});
 
 						bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
-							return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+							if (queryObject.message_uid != undefined) {
+								return res.redirect(`/preferences/${customerId}/users/${originalUserId}?message_uid=${queryObject.message_uid}`);
+							} else {
+								return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
+							}
 						});
 
 						var newPreferences = module.exports.buildPreferenceValues(preferences);
 						//console.log(message_uid);
 						//console.log(module.exports.changeInPreferences(userPreferences, newPreferences));
 						if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
-							module.exports.unsubscribeCount(message_uid, customer.name);
+							module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
 						}
 						userPreferences = newPreferences;
 					
@@ -210,7 +214,7 @@ module.exports = {
 				//console.log(newPreferences);
 				//console.log(module.exports.changeInPreferences(userPreferences, newPreferences));
 				if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
-					module.exports.unsubscribeCount(message_uid, customer.name);
+					module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
 				}
 				userPreferences = newPreferences;
 			
@@ -328,7 +332,7 @@ module.exports = {
 		return false;
 
 	},
-	unsubscribeCount: function(message_uid, name) {
+	unsubscribeCount: function(message_uid, name, unsubscribe) {
 		// unsubscribe event count, only enabled for Mic.com currently
 		if (message_uid != '' && name == 'Mic') {
 			var options = {
@@ -342,7 +346,7 @@ module.exports = {
 					_json: [{
 						'event': 'unsubscribed',
 						'mail_id': message_uid,
-						'unsubscribe_contact': false,
+						'unsubscribe_contact': unsubscribe,
 						'timestamp': Date.now() / 1000
 					}]
 				},
@@ -353,7 +357,8 @@ module.exports = {
 				if (error) {
 					throw new Error(error);
 				}
-				console.log(body);
+				//console.log(response);
+				console.log('Success');
 			});
 		}
 	},
