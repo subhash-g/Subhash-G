@@ -116,6 +116,7 @@ module.exports = {
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
+		console.log(queryObject);
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
@@ -147,20 +148,17 @@ module.exports = {
 						});
 
 						bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
-							if (queryObject.message_uid != undefined) {
+							var newPreferences = module.exports.buildPreferenceValues(preferences);
+							if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
+								module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
+							}
+							userPreferences = newPreferences;
+							if (queryObject.message_uid) {
 								return res.redirect(`/preferences/${customerId}/users/${originalUserId}?message_uid=${queryObject.message_uid}`);
 							} else {
 								return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 							}
 						});
-
-						var newPreferences = module.exports.buildPreferenceValues(preferences);
-						//console.log(message_uid);
-						//console.log(module.exports.changeInPreferences(userPreferences, newPreferences));
-						if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
-							module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
-						}
-						userPreferences = newPreferences;
 					
 					} else {
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
@@ -176,6 +174,7 @@ module.exports = {
 
 		var queryObject = url.parse(req.url, true).query
 		var userId = req.params.userId || queryObject.userId;
+		console.log(queryObject);
 
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
@@ -334,7 +333,8 @@ module.exports = {
 	},
 	unsubscribeCount: function(message_uid, name, unsubscribe) {
 		// unsubscribe event count, only enabled for Mic.com currently
-		if (message_uid != '' && name == 'Mic') {
+		console.log("messsage_uid: " + message_uid);
+		if (message_uid && name == 'Mic') {
 			var options = {
 				method: 'POST',
 				url: 'https://track.nudgespot.com/sendgrid/message_events',

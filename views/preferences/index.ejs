@@ -88,9 +88,10 @@
 			<div>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My List">
 			</div>
-			<div class="unsub">
-				<a id="btn-unsub-all" href="/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll">Unsubscribe from All</a>
+			<div class="unsub"> 
+				<a id="btn-unsub-all">Unsubscribe from All</a>
 			</div>
+			<div class="message_uid"></div>
 		</div>
 	</div>
 </div>
@@ -138,8 +139,12 @@ var updatePreferences = function() {
 			}
 		}
 	});
-
-	var url = "/preferences/<%= customerId %>/users/<%= userId %>";
+	
+	if (getParameterByName("message_uid")) {
+		var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid");
+	} else {
+		var url = "/preferences/<%= customerId %>/users/<%= userId %>";
+	}
 
 	$.ajax({
 		url: url,
@@ -172,10 +177,45 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+var unsubscribeAll = function() {
+	var url = "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll";
+
+	$.ajax({
+		url: url,
+		method: 'POST',
+		data: "",
+		beforeSend: function(xhr, settings) {
+			xhr.setRequestHeader("Content-Type", "application/json");
+			xhr.setRequestHeader("Accept", "application/json");
+		},
+		success: function(data, status, xhr) {
+			alert("Unsubscribe all successfully updated.");
+		},
+		error: function(xhr, status, error) {
+			alert("An error occurred updating your preferences(" + error.message + ").  Please try again.");
+		}
+	});
+
+	mixpanel.track("preferences-updated", {'customerId': <%= customerId %> });
+
+}
+
 $("#btn-my-profile").click(selectMyProfile);
 $("#btn-my-list").click(selectMyList);
 $("#btn-save-profile").click(updatePreferences);
 $("#btn-save-list").click(updatePreferences);
+
+//$("#btn-unsub-all").click(unsubscribeAll);
+
+// saves message_uid
+if (getParameterByName("message_uid")) {
+	$(".message_uid").attr("id", getParameterByName("message_uid"));
+	$("#btn-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll?message_uid=" + getParameterByName("message_uid"));
+} else {
+	$("#btn-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll");
+}
+
+
 
 var page = getParameterByName('page');
 if(page && page != '') {
@@ -239,6 +279,8 @@ $("select").css({
     "height": "50px",
     "font-family": "'Lato', sans-serif"
 });
+
+console.log("Testing Unsubscribe Count");
 
 </script>
 
