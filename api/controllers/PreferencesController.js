@@ -39,16 +39,6 @@ module.exports = {
 		if (barStatus === undefined)
 			barStatus = false;
 
-		// get message_uid
-		if (queryObject.message_uid) {
-			var message_uid = queryObject.message_uid;
-
-			// check if unsubscribe param exists	
-			if (singleUnsubListName) {
-				module.exports.unsubscribeCount(message_uid, customer.name);
-			}
-		}
-
 		if (customer) {
 
 			bme.getUser(userId, customer.bmeApiKey, function(data, error) {
@@ -148,12 +138,9 @@ module.exports = {
 						});
 
 						bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
-							var newPreferences = module.exports.buildPreferenceValues(preferences);
-							if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
-								module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
-							}
-							userPreferences = newPreferences;
 							if (queryObject.message_uid) {
+								module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
+								userPreferences = module.exports.buildPreferenceValues(preferences);
 								return res.redirect(`/preferences/${customerId}/users/${originalUserId}?message_uid=${queryObject.message_uid}`);
 							} else {
 								return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
@@ -227,6 +214,8 @@ module.exports = {
 	singleUnsubscribe: function(req, res) {
 
 		var queryObject = url.parse(req.url, true).query;
+		console.log("singleUnsubscribe");
+		console.log(queryObject);
 
 		var userId = req.params.userId || queryObject.userId;
 		var originalUserId = userId;
@@ -257,11 +246,17 @@ module.exports = {
 				var prop = customer.userLists[userListNumber].property.split(".");
 				preferences[prop[0]][prop[1]] = 'false';
 
-				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
-					return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}`);
+				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {	
+					if(queryObject.message_uid) {
+						module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
+						return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}&message_uid=${queryObject.message_uid}`);
+					} else {
+						return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}`);
+					}
 				});
 
 				//module.exports.unsubscribeCount(message_uid, customer.name);
+
 			} else {
 				return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
 			}
@@ -347,7 +342,7 @@ module.exports = {
 						'event': 'unsubscribed',
 						'mail_id': message_uid,
 						'unsubscribe_contact': unsubscribe,
-						'timestamp': Date.now() / 1000
+						'timestamp': parseInt((Date.now() / 1000), 10)
 					}]
 				},
 				json: true
