@@ -148,7 +148,7 @@ module.exports = {
 						});
 					
 					} else {
-						req.flash("message", "Error: problem with undating preferences.");
+						req.flash("message", "Error: problem with updating preferences.");
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 					}
 				});
