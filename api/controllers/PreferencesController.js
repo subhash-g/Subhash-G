@@ -136,7 +136,7 @@ module.exports = {
 							var prop = item.property.split(".");
 							preferences[prop[0]][prop[1]] = 'false';
 						});
-
+						req.flash("message", "Preferences successfully updated.");
 						bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
 							if (queryObject.message_uid) {
 								module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
@@ -148,6 +148,7 @@ module.exports = {
 						});
 					
 					} else {
+						req.flash("message", "Error: problem with undating preferences.");
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 					}
 				});

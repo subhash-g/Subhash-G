@@ -215,6 +215,10 @@ if (getParameterByName("message_uid")) {
 	$("#btn-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll");
 }
 
+var message = '<%- req.flash('message') %>';
+if (message != '') {
+	alert(message);
+}
 
 
 var page = getParameterByName('page');
