@@ -451,6 +451,10 @@ module.exports = {
 				name: 'The Payoff',
 				property: 'properties.thepayoff'
 			},
+			{
+				name: 'Dedicated Slay',
+				property: 'properties.dedicatedslay'
+			},
 
 		],
 	},
