@@ -564,7 +564,7 @@ module.exports = {
 	},
 	'1571': {
 		name: 'Al-Monitor',
-		logo: '/images/logos/al_monitor_logo.png',
+		logo: '/images/logos/almonitor.png',
 		bmeApiKey: '1567c933fd90adbfc4ca216f28933ca0',
 		userProperties: [
 		],
