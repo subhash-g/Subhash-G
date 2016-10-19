@@ -562,4 +562,38 @@ module.exports = {
 
 		],
 	},
+	'1571': {
+		name: 'Al-Monitor',
+		logo: '/images/logos/al-monitor.png',
+		bmeApiKey: '1567c933fd90adbfc4ca216f28933ca0',
+		userProperties: [
+		],
+		userLists: [
+			{
+				name: 'English Newsletter',
+				property: 'properties.english'
+			},
+			{
+				name: 'Hebrew Newsletter',
+				property: 'properties.hebrew'
+			},
+			{
+				name: 'Arabic Newsletter',
+				property: 'properties.arabic'
+			},
+			{
+				name: 'Turkish Newsletter',
+				property: 'properties.turkish'
+			},
+			{
+				name: 'Persian Newsletter',
+				property: 'properties.persian'
+			},
+			{
+				name: 'Middle East Minute',
+				property: 'properties.middleeastminute'
+			},
+
+		],
+	},
 };
