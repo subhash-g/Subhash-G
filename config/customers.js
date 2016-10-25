@@ -596,4 +596,86 @@ module.exports = {
 
 		],
 	},
+	'5095': {
+		name: 'CIO-UK',
+		logo: '/images/logos/ciouk.png',
+		bmeApiKey: '9d1580430cada74c216078ac13869662',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'CIO Daily Newsletter',
+				property: 'properties.in_newsletter_daily'
+			},
+			{
+				name: 'Conferences',
+				property: 'properties.in_events_conferences'
+			},
+			{
+				name: 'Networking Events',
+				property: 'properties.in_events_networking'
+			},
+			{
+				name: 'Online Events',
+				property: 'properties.in_events_online'
+			},
+			{
+				name: 'Surveys',
+				property: 'properties.in_mktg_surveys'
+			},
+			{
+				name: 'Partner Emails',
+				property: 'properties.in_mktg_partner_emails'
+			},
+		],
+	},
+	'5096': {
+		name: 'Computerworld UK',
+		logo: '/images/logos/computer_world_uk.png',
+		bmeApiKey: 'd4d85d322cce416cd872d12cfe125a9f',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Computerworld UK Daily Newsletter',
+				property: 'properties.in_newsletter_daily'
+			},
+			{
+				name: 'Conferences',
+				property: 'properties.in_events_conferences'
+			},
+			{
+				name: 'Networking Events',
+				property: 'properties.in_events_networking'
+			},
+			{
+				name: 'Online Events',
+				property: 'properties.in_events_online'
+			},
+			{
+				name: 'Surveys',
+				property: 'properties.in_mktg_surveys'
+			},
+			{
+				name: 'Partner Emails',
+				property: 'properties.in_mktg_partner_emails'
+			},
+		],
+	},
 };
