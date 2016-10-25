@@ -793,6 +793,47 @@ module.exports = {
 			},
 		],
 	},
+	'5097': {
+        name: 'techworld',
+        logo: '/images/logos/techworld.png',
+        bmeApiKey: '17463da5a1f2ce9d2db639e016efc42e',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'Techworld Daily Newsletter',
+                property: 'properties.in_newsletter_daily'
+            },
+            {
+                name: 'Conferences',
+                property: 'properties.in_events_conferences'
+            },
+            {
+                name: 'Networking Events',
+                property: 'properties.in_events_networking'
+            },
+            {
+                name: 'Online Events',
+                property: 'properties.in_events_online'
+            },
+            {
+                name: 'Surveys',
+                property: 'properties.in_mktg_surveys'
+            },
+            {
+                name: 'Partner Emails',
+                property: 'properties.in_mktg_partner_emails'
+            },
+        ],
+	},
 	'5098': {
         name: 'PC Advisor',
         logo: '/images/logos/pc_advisor_uk.png',
