@@ -711,4 +711,218 @@ module.exports = {
 			},
 		],
 	},
-};
+	'5095': {
+		name: 'CIO-UK',
+		logo: '/images/logos/ciouk.png',
+		bmeApiKey: '9d1580430cada74c216078ac13869662',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'CIO Daily Newsletter',
+				property: 'properties.in_newsletter_daily'
+			},
+			{
+				name: 'Conferences',
+				property: 'properties.in_events_conferences'
+			},
+			{
+				name: 'Networking Events',
+				property: 'properties.in_events_networking'
+			},
+			{
+				name: 'Online Events',
+				property: 'properties.in_events_online'
+			},
+			{
+				name: 'Surveys',
+				property: 'properties.in_mktg_surveys'
+			},
+			{
+				name: 'Partner Emails',
+				property: 'properties.in_mktg_partner_emails'
+			},
+		],
+	},
+	'5096': {
+		name: 'Computerworld UK',
+		logo: '/images/logos/computer_world_uk.png',
+		bmeApiKey: 'd4d85d322cce416cd872d12cfe125a9f',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Computerworld UK Daily Newsletter',
+				property: 'properties.in_newsletter_daily'
+			},
+			{
+				name: 'Conferences',
+				property: 'properties.in_events_conferences'
+			},
+			{
+				name: 'Networking Events',
+				property: 'properties.in_events_networking'
+			},
+			{
+				name: 'Online Events',
+				property: 'properties.in_events_online'
+			},
+			{
+				name: 'Surveys',
+				property: 'properties.in_mktg_surveys'
+			},
+			{
+				name: 'Partner Emails',
+				property: 'properties.in_mktg_partner_emails'
+			},
+		],
+	},
+	'5098': {
+        name: 'PC Advisor',
+        logo: '/images/logos/pc_advisor_uk.png',
+        bmeApiKey: 'b94faf95b7f75db5d7980af30cb73c32',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'PC Advisor Daily Newsletter',
+                property: 'properties.in_newsletter_daily'
+            },
+            {
+                name: 'PC Advisor Weekly Newsletter',
+                property: 'properties.in_newsletter_weekly'
+            },
+            {
+                name: 'Surveys',
+                property: 'properties.in_mktg_surveys'
+            },
+            {
+                name: 'Partner Emails',
+                property: 'properties.in_mktg_partner_emails'
+            },
+        ],
+    },
+    '5099': {
+        name: 'Macworld UK',
+        logo: '/images/logos/macworld_uk.png',
+        bmeApiKey: '07d55781a5b88c62c44191e862f1c3fb',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'Macworld Daily Newsletter',
+                property: 'properties.in_newsletter_daily'
+            },
+            {
+                name: 'Macworld Weekly Newsletter',
+                property: 'properties.in_newsletter_weekly'
+            },
+            {
+                name: 'Surveys',
+                property: 'properties.in_mktg_surveys'
+            },
+            {
+                name: 'Partner Emails',
+                property: 'properties.in_mktg_partner_emails'
+            },
+        ],
+    },
+    '5100': {
+        name: 'Digital Arts',
+        logo: '/images/logos/digital-arts.png',
+        bmeApiKey: '1da0c4a9d8147f3ecdd27dae7c07fd3c',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'Digital Arts Daily Newsletter',
+                property: 'properties.in_newsletter_daily'
+            },
+            {
+                name: 'Digital Arts Weekly Newsletter',
+                property: 'properties.in_newsletter_weekly'
+            },
+            {
+                name: 'Surveys',
+                property: 'properties.in_mktg_surveys'
+            },
+            {
+                name: 'Partner Emails',
+                property: 'properties.in_mktg_partner_emails'
+            },
+        ],
+     },
+    '5101': {
+        name: 'Tech Advisor',
+        logo: '/images/logos/tech_advisor.png',
+        bmeApiKey: '625926a00d109a98b892ac665e230418',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'Tech Advisor Daily Newsletter',
+                property: 'properties.in_newsletter_daily'
+            },
+            {
+                name: 'Tech Advisor Weekly Newsletter',
+                property: 'properties.in_newsletter_weekly'
+            },
+            {
+                name: 'Surveys',
+                property: 'properties.in_mktg_surveys'
+            },
+            {
+                name: 'Partner Emails',
+                property: 'properties.in_mktg_partner_emails'
+            },
+        ],
+     },
+ };       
