@@ -593,7 +593,122 @@ module.exports = {
 				name: 'Middle East Minute',
 				property: 'properties.middleeastminute'
 			},
-
+		],
+	},
+	'5116': {
+		name: 'Wide Open Spaces',
+		logo: '/images/logos/wideopenspaces.png',
+		bmeApiKey: '580ff27dada0aab41aea953940c107d8',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
+		],
+	},
+	'5117': {
+		name: 'Wide Open Country',
+		logo: '/images/logos/wideopencountry.png',
+		bmeApiKey: 'cfb565d40bf1aadbb68014819220888f',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
+		],
+	},
+	'5118': {
+		name: 'Wide Open Pets',
+		logo: '/images/logos/wideopenpets.png',
+		bmeApiKey: '4bf7f090e09f8b031c5c87b6a394e9c7',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
+		],
+	},
+	'5119': {
+		name: 'Wide Open Eats',
+		logo: '/images/logos/wideopeneats.png',
+		bmeApiKey: '948bbc4f90c3b8618495eee68c5572a2',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
 		],
 	},
 };
