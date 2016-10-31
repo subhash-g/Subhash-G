@@ -684,7 +684,7 @@ module.exports = {
 	},
 	'5119': {
 		name: 'Wide Open Eats',
-		logo: '/images/logos/woe512.png',
+		logo: '/images/logos/woe_large.png',
 		bmeApiKey: '948bbc4f90c3b8618495eee68c5572a2',
 		userProperties: [
 			{
