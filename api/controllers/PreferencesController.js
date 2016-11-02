@@ -106,7 +106,17 @@ module.exports = {
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
-		console.log(queryObject);
+		// get ip address
+		var ip = req.headers['x-forwarded-for'] || 
+     			req.connection.remoteAddress || 
+     			req.socket.remoteAddress ||
+     			req.connection.socket.remoteAddress;
+
+     	// track time		
+     	var date = new Date();
+		var utcDate = date.toUTCString();
+
+     	console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip + ' with customerId: ' + customerId);
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
@@ -237,6 +247,11 @@ module.exports = {
 		if (!correctURL) {
 			return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
 		}
+
+		var date = new Date();
+		var utcDate = date.toUTCString();
+
+     	console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip + ' with customerId: ' + customerId);
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
