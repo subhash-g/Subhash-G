@@ -116,7 +116,7 @@ module.exports = {
      	var date = new Date();
 		var utcDate = date.toUTCString();
 
-     	console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip);
+     	console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip + ' with customerId: ' + customerId);
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
@@ -247,6 +247,11 @@ module.exports = {
 		if (!correctURL) {
 			return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
 		}
+
+		var date = new Date();
+		var utcDate = date.toUTCString();
+
+     	console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip + ' with customerId: ' + customerId);
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
