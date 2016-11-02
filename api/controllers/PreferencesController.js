@@ -343,9 +343,9 @@ module.exports = {
 
 	},
 	unsubscribeCount: function(message_uid, name, unsubscribe) {
-		// unsubscribe event count, only enabled for Mic.com currently
+		// unsubscribe event count
 		console.log("messsage_uid: " + message_uid);
-		if (message_uid && name == 'Mic') {
+		if (message_uid) {
 			var options = {
 				method: 'POST',
 				url: 'https://track.nudgespot.com/sendgrid/message_events',
