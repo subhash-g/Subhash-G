@@ -455,10 +455,6 @@ module.exports = {
 				name: 'Dedicated Slay',
 				property: 'properties.dedicatedslay'
 			},
-			{
-				name: "Navigating Trump's America",
-				property: 'properties.navigatingtrumpsamerica'
-			},
 
 		],
 	},
