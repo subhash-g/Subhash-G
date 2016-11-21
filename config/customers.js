@@ -593,7 +593,122 @@ module.exports = {
 				name: 'Middle East Minute',
 				property: 'properties.middleeastminute'
 			},
-
+		],
+	},
+	'5116': {
+		name: 'Wide Open Spaces',
+		logo: '/images/logos/wideopenspaces.png',
+		bmeApiKey: '580ff27dada0aab41aea953940c107d8',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
+		],
+	},
+	'5117': {
+		name: 'Wide Open Country',
+		logo: '/images/logos/wideopencountry.png',
+		bmeApiKey: 'cfb565d40bf1aadbb68014819220888f',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
+		],
+	},
+	'5118': {
+		name: 'Wide Open Pets',
+		logo: '/images/logos/wideopenpets.png',
+		bmeApiKey: '4bf7f090e09f8b031c5c87b6a394e9c7',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
+		],
+	},
+	'5119': {
+		name: 'Wide Open Eats',
+		logo: '/images/logos/woe_large.png',
+		bmeApiKey: '948bbc4f90c3b8618495eee68c5572a2',
+		userProperties: [
+			{
+				name: 'Email',
+				property: 'contact_email'
+			},
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Daily',
+				property: 'properties.daily_digest'
+			},
+			{
+				name: 'Weekly',
+				property: 'properties.weekly_digest'
+			},
 		],
 	},
 	'5095': {
@@ -678,6 +793,47 @@ module.exports = {
 			},
 		],
 	},
+	'5097': {
+        name: 'techworld',
+        logo: '/images/logos/techworld.png',
+        bmeApiKey: '17463da5a1f2ce9d2db639e016efc42e',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'Techworld Daily Newsletter',
+                property: 'properties.in_newsletter_daily'
+            },
+            {
+                name: 'Conferences',
+                property: 'properties.in_events_conferences'
+            },
+            {
+                name: 'Networking Events',
+                property: 'properties.in_events_networking'
+            },
+            {
+                name: 'Online Events',
+                property: 'properties.in_events_online'
+            },
+            {
+                name: 'Surveys',
+                property: 'properties.in_mktg_surveys'
+            },
+            {
+                name: 'Partner Emails',
+                property: 'properties.in_mktg_partner_emails'
+            },
+        ],
+	},
 	'5098': {
         name: 'PC Advisor',
         logo: '/images/logos/pc_advisor_uk.png',
@@ -709,6 +865,10 @@ module.exports = {
                 name: 'Partner Emails',
                 property: 'properties.in_mktg_partner_emails'
             },
+						{
+                name: 'Technology deals from TechAdvisor',
+                property: 'properties.pca_deals'
+            },						
         ],
     },
     '5099': {
@@ -810,4 +970,4 @@ module.exports = {
             },
         ],
      },
- };       
+ };

@@ -106,7 +106,17 @@ module.exports = {
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
-		console.log(queryObject);
+		// get ip address
+		var ip = req.headers['x-forwarded-for'] || 
+     			req.connection.remoteAddress || 
+     			req.socket.remoteAddress ||
+     			req.connection.socket.remoteAddress;
+
+     	// track time		
+     	var date = new Date();
+		var utcDate = date.toUTCString();
+
+     console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip + ' with customerId: ' + userId);
 
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
@@ -238,6 +248,16 @@ module.exports = {
 			return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
 		}
 
+    var ip = req.headers['x-forwarded-for'] ||
+             req.connection.remoteAddress ||
+             req.socket.remoteAddress ||
+             req.connection.socket.remoteAddress;
+
+		var date = new Date();
+		var utcDate = date.toUTCString();
+
+    console.log(utcDate + ': Unsubscribe All for ' + customer.name + ' accessed at IP ADDRESS ' + ip + ' with customerId: ' + originalUserId);
+
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
 				var preferences = {
@@ -328,9 +348,9 @@ module.exports = {
 
 	},
 	unsubscribeCount: function(message_uid, name, unsubscribe) {
-		// unsubscribe event count, only enabled for Mic.com currently
+		// unsubscribe event count
 		console.log("messsage_uid: " + message_uid);
-		if (message_uid && name == 'Mic') {
+		if (message_uid) {
 			var options = {
 				method: 'POST',
 				url: 'https://track.nudgespot.com/sendgrid/message_events',
