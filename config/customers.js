@@ -714,7 +714,7 @@ module.exports = {
                 property: 'properties.in_mktg_partner_emails'
             },
             {
-                name: 'Technology deals deom TechAdvisor',
+                name: 'Technology deals from TechAdvisor',
                 property: 'properties.pca_deals'
             },
         ],
