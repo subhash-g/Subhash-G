@@ -821,7 +821,7 @@ module.exports = {
      '273': {
         name: 'nykaa.com',
         logo: '/images/logos/nykaa.png',
-        bmeApiKey: '2bddc0333c6c445746fc5b4733a129b6',
+        bmeApiKey: '3c08fc42ed72194dc41f114d897a0f4e',
         userProperties: [
             {
                 name: 'First Name',
