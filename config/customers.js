@@ -859,4 +859,41 @@ module.exports = {
 			},
 		],
 	},
+    '273': {
+        name: 'nykaa.com',
+        logo: '/images/logos/nykaa.png',
+        bmeApiKey: '3c08fc42ed72194dc41f114d897a0f4e',
+        userProperties: [
+            {
+                name: 'First Name',
+                property: 'first_name'
+            },
+            {
+                name: 'Last Name',
+                property: 'last_name'
+            },
+        ],
+        userLists: [
+            {
+                name: 'Offers',
+                property: 'properties.offers'
+            },
+            {
+                name: 'New launches',
+                property: 'properties.new_launches'
+            },
+            {
+                name: 'Product descriptions',
+                property: 'properties.product_descriptions'
+            },
+            {
+                name: 'Luxe',
+                property: 'properties.luxe'
+            },
+            {
+                name: 'Get the look',
+                property: 'properties.get_the_look'
+            },
+        ],
+     }
  };       
