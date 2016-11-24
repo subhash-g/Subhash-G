@@ -818,7 +818,48 @@ module.exports = {
             },
         ],
      },
-     '273': {
+     '5097': {
+		name: 'Techworld.com UK',
+		logo: '/images/logos/techworld.png',
+		bmeApiKey: '17463da5a1f2ce9d2db639e016efc42e',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Techworld Daily Newsletter',
+				property: 'properties.in_newsletter_daily'
+			},
+			{
+				name: 'Conferences',
+				property: 'properties.in_events_conferences'
+			},
+			{
+				name: 'Networking Events',
+				property: 'properties.in_events_networking'
+			},
+			{
+				name: 'Online Events',
+				property: 'properties.in_events_online'
+			},
+			{
+				name: 'Surveys',
+				property: 'properties.in_mktg_surveys'
+			},
+			{
+				name: 'Partner Emails',
+				property: 'properties.in_mktg_partner_emails'
+			},
+		],
+	},
+    '273': {
         name: 'nykaa.com',
         logo: '/images/logos/nykaa.png',
         bmeApiKey: '3c08fc42ed72194dc41f114d897a0f4e',
@@ -854,5 +895,5 @@ module.exports = {
                 property: 'properties.get_the_look'
             },
         ],
-     },
+     }
  };       
