@@ -572,8 +572,8 @@ module.exports = {
 		bmeApiKey: '1567c933fd90adbfc4ca216f28933ca0',
 		userProperties: [
 		{
-			name: 'Surname',
-			property: 'properties.surname'
+			name: 'First Name',
+			property: 'properties.first_name'
 		},
 		{
 			name: 'Last Name',
