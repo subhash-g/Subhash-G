@@ -580,12 +580,12 @@ module.exports = {
 			property: 'properties.last_name'
 		},
 		{
-			name: 'Title',
-			property: 'properties.title'
-		},
-		{
 			name: 'Organization',
 			property: 'properties.organization'
+		},
+		{
+			name: 'Title',
+			property: 'properties.title'
 		},
 		],
 		userLists: [
