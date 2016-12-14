@@ -9,9 +9,16 @@ var userPreferences = [];
 module.exports = {
 
 	index: function(req, res) {
-		var queryObject = url.parse(req.url, true).query
+		var queryObject = url.parse(req.url, true).query;
+		
+		if (queryObject.email) {
+			queryObject.email = queryObject.email.replace(' ', '+');
+		}
+		
 		var userId = req.params.userId || queryObject.userId || queryObject.email;
 		var originalUserId = userId;
+
+		//console.log(queryObject)
 
 		if (userId && validator.isBase64(userId)) {
 			userId = new Buffer(userId, 'base64').toString("ascii");
