@@ -82,6 +82,7 @@ module.exports = {
 						userId: data.id,
 						originalUserId: originalUserId,
 						logo: customer.logo,
+						header: customer.header,
 						profile: userProperties,
 						lists: userLists,
 						unsubListName: singleUnsubListName,

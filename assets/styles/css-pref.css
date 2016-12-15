@@ -221,6 +221,18 @@ body {
     font-weight: 300
 }
 
+#content .form .header {
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+#content .form fieldset .description {
+    padding-top: 5px;
+    font-size: 15px;
+    color: grey;
+    width: 100%;
+}
+
 #content .form .btn {
     clear: both;
     float: none;

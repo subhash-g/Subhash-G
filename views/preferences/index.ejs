@@ -51,6 +51,9 @@
 		</div>
 		<div id="list-form" class="form">
 			<div class="fieldset-container">
+				<% if(header) { %>
+					<div class="header"><%= header %></div>
+				<% } %>
 				<% if ( name != 'Diginomica') { %>	
 					<% counter = 1 %>
 					<fieldset>
@@ -58,6 +61,10 @@
 							<% if(index % 2 == 0) { %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
 								<% counter++ %>
 							<% } %>
 						<% }); %>
@@ -67,6 +74,9 @@
 							<% if(index % 2 == 1) { %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
 								<% counter++ %>
 							<% } %>
 						<% }); %>
