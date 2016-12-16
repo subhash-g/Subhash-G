@@ -911,5 +911,48 @@ module.exports = {
                 property: 'properties.get_the_look'
             },
         ],
-     }
+     },
+	'3497': {
+		name: 'Uber Vision',
+		logo: '/images/boomtrain.png',
+		bmeApiKey: 'a4d4497206ee6474677a44dcc0bc86eb',
+		header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ipsum quis dictum molestie. Nunc eleifend, massa dictum venenatis elementum, tellus sapien elementum mi, et finibus nibh purus rhoncus nibh. Donec congue cursus risus, fermentum tincidunt ipsum. Aliquam sed purus at mi convallis blandit.',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'Newsletter 1',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ipsum quis dictum molestie. Nunc eleifend, massa dictum venenatis elementum, tellus sapien elementum mi, et finibus nibh purus rhoncus nibh. Donec congue cursus risus, fermentum tincidunt ipsum. Aliquam sed purus at mi convallis blandit.',
+				property: 'properties.in_newsletter_1'
+			},
+			{
+				name: 'Newsletter 2',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ipsum quis dictum molestie. Nunc eleifend, massa dictum venenatis elementum, tellus sapien elementum mi, et finibus nibh purus rhoncus nibh. Donec congue cursus risus, fermentum tincidunt ipsum. Aliquam sed purus at mi convallis blandit.',
+				property: 'properties.in_newsletter_2'
+			},
+			{
+				name: 'Newsletter 3',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ipsum quis dictum molestie. Nunc eleifend, massa dictum venenatis elementum, tellus sapien elementum mi, et finibus nibh purus rhoncus nibh. Donec congue cursus risus, fermentum tincidunt ipsum. Aliquam sed purus at mi convallis blandit.',
+				property: 'properties.in_newsletter_3'
+			},
+			{
+				name: 'Newsletter 4',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ipsum quis dictum molestie. Nunc eleifend, massa dictum venenatis elementum, tellus sapien elementum mi, et finibus nibh purus rhoncus nibh. Donec congue cursus risus, fermentum tincidunt ipsum. Aliquam sed purus at mi convallis blandit.',
+				property: 'properties.in_newsletter_4'
+			},
+			{
+				name: 'Newsletter 5',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ipsum quis dictum molestie. Nunc eleifend, massa dictum venenatis elementum, tellus sapien elementum mi, et finibus nibh purus rhoncus nibh. Donec congue cursus risus, fermentum tincidunt ipsum. Aliquam sed purus at mi convallis blandit.',
+				property: 'properties.in_newsletter_5'
+			},
+		],
+	},
  };       
