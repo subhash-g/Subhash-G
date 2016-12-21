@@ -36,6 +36,31 @@ module.exports = {
 			}
 		],
 	},
+	'1686': {
+		name: 'Honeycombers',
+		logo: '/images/logos/fatherly-logo.png',
+		bmeApiKey: '8d73609fdef397266170c9a8ed4db954',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+		],
+		userLists: [
+			{
+				name: 'General Newsletter',
+				property: 'properties.newsletter'
+			},
+			{
+				name: 'Expecting Parents Newsletter',
+				property: 'properties.expecting-series'
+			}
+		],
+	},
 	'565a3d0d5b838bc0005f81a706afdec2': {
 		name: 'Cheap Caribbean',
 		username: 'iterable-reporting@boomtrain.com',
@@ -955,4 +980,4 @@ module.exports = {
 			},
 		],
 	},
- };       
+ };
