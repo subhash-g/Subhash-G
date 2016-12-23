@@ -37,7 +37,7 @@ module.exports = {
 		],
 	},
 	'1686': {
-		name: 'Honeycombers',
+		name: 'Fatherly',
 		logo: '/images/logos/fatherly-logo.png',
 		bmeApiKey: '8d73609fdef397266170c9a8ed4db954',
 		userProperties: [
