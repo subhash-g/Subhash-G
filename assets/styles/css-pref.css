@@ -5,7 +5,7 @@
         height: 50px !important;
         background: #fff!important;
         border-right: 1px solid rgba(83, 98, 102, .2)!important;
-    }   
+    }
 
     #left-menu .menu-items {
         margin-left: 20px !important;
@@ -176,7 +176,6 @@ body {
 
 #content .form fieldset {
     width: 50%;
-    min-height: 292px;
     margin: 0;
     padding: 0;
     float: left;
@@ -194,7 +193,7 @@ body {
     line-height: 24px;
     font-weight: 700
 }
-#content .form fieldset:first-of-type {
+#content .form fieldset {
     padding-right: 30px;
 }
 #content .form fieldset input {
@@ -326,8 +325,8 @@ body {
 }
 
 #content #result {
-    width: 600px; 
-    margin-left: auto; 
+    width: 600px;
+    margin-left: auto;
     margin-right: auto
 }
 

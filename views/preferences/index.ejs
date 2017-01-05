@@ -17,10 +17,10 @@
 	<div id="left-menu">
 		<div class="menu-items">
 			<div class="menu-item">
-				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="#">My Lists</a>
+				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="javascript:void(0);">My Lists</a>
 			</div>
 			<div class="menu-item">
-				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="#">My Profile</a>
+				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="javascript:void(0);">My Profile</a>
 			</div>
 		</div>
 	</div>
@@ -28,22 +28,12 @@
 	<div id="content">
 		<div id="profile-form" class="form">
 			<div class="fieldset-container">
-				<fieldset>
 					<% profile.forEach(function(prop, index) { %>
-						<% if(index % 2 == 0) { %>
-							<label><%= prop.name %></label>
-							<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
-						<% } %>
+							<fieldset>
+								<label><%= prop.name %></label>
+								<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+							</fieldset>
 					<% }); %>
-				</fieldset>
-				<fieldset>
-					<% profile.forEach(function(prop, index) { %>
-						<% if(index % 2 == 1) { %>
-							<label><%= prop.name %></label>
-							<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
-						<% } %>
-					<% }); %>
-				</fieldset>
 			</div>
 			<div>
 				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Save Profile">
@@ -54,7 +44,7 @@
 				<% if(header) { %>
 					<div class="header"><%= header %></div>
 				<% } %>
-				<% if ( name != 'Diginomica') { %>	
+				<% if ( name != 'Diginomica') { %>
 					<% counter = 1 %>
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
@@ -98,7 +88,7 @@
 			<div>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My List">
 			</div>
-			<div class="unsub"> 
+			<div class="unsub">
 				<a id="btn-unsub-all">Unsubscribe from All</a>
 			</div>
 			<div class="message_uid"></div>
@@ -134,7 +124,7 @@ var updatePreferences = function() {
 	});
 
 
-	var selected = false; 
+	var selected = false;
 	$(".list-input").toArray().forEach(function(item) {
 		var key = $(item).attr("data-property");
 		var type = $(item).attr("type");
@@ -145,11 +135,11 @@ var updatePreferences = function() {
 			//console.log(key + " item selected " + item.selected);
 			if (!selected && item.selected) {
 				preferences[key] = $(item).val();
-				selected = true; 
+				selected = true;
 			}
 		}
 	});
-	
+
 	if (getParameterByName("message_uid")) {
 		var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid");
 	} else {
@@ -178,13 +168,13 @@ var updatePreferences = function() {
 };
 
 function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 var unsubscribeAll = function() {
@@ -279,19 +269,19 @@ name = ('<%= name %>');
 
 $("fieldset.dropdown").css({
 	"padding-top": "30px !important",
-    "text-align": "center !important"
+		"text-align": "center !important"
 });
 
 $("select").css({
-    "color": "#536266",
-    "margin": "50px",
-    "border": "1px solid rgba(33, 39, 54, .2)",
-    "background": "transparent",
-    "width": "200px",
-    "padding": "20px",
-    "font-size": "16px",
-    "height": "50px",
-    "font-family": "'Lato', sans-serif"
+		"color": "#536266",
+		"margin": "50px",
+		"border": "1px solid rgba(33, 39, 54, .2)",
+		"background": "transparent",
+		"width": "200px",
+		"padding": "20px",
+		"font-size": "16px",
+		"height": "50px",
+		"font-family": "'Lato', sans-serif"
 });
 
 console.log("Testing Unsubscribe Count");
