@@ -1004,14 +1004,14 @@ module.exports = {
 		],
 		userLists: [
 			{
-				name: 'AV/VR Weekly',
+				name: 'AR/VR Weekly',
 				description: "GamesBeat's best from the AR/VR industries",
-				property: 'properties.arvr_weekly'
+				property: 'properties.ar_vr_weekly'
 			},
 			{
-				name: 'Botbea',
+				name: 'Botbeat',
 				description: 'Connecting the dots: AI, messaging and bots',
-				property: 'properties.botbea'
+				property: 'properties.botbeat_newsletter'
 			},
 			{
 				name: 'DeanBeat',
@@ -1021,15 +1021,15 @@ module.exports = {
 			{
 				name: 'Marketing Weekly',
 				description: 'The latest news, insider tips, and exclusive stories in martech',
-				property: 'properties.marketing_weekly'
+				property: 'properties.vb_topten'
 			},
 			{
 				name: 'VB Daily Roundup',
-				property: 'properties.vb_daily_roundup'
+				property: 'properties.vb_dailyroundup'
 			},
 			{
 				name: 'GamesBeat Daily Roundup',
-				property: 'properties.ganesbeat_daily_roundup'
+				property: 'properties.gb_dailyroundup'
 			},
 			{
 				name: 'Funding Daily',
@@ -1037,11 +1037,11 @@ module.exports = {
 			},
 			{
 				name: 'VentureBeat Event Updates',
-				property: 'properties.venturebeat_event_updates'
+				property: 'properties.events_communication'
 			},
 			{
 				name: 'Special Communications from VB & Partners',
-				property: 'properties.special_communications'
+				property: 'properties.sponsored_communication'
 			},
 		],
 	},
