@@ -980,4 +980,70 @@ module.exports = {
 			},
 		],
 	},
+	'5144': {
+		name: 'VentureBeat',
+		logo: '/images/logo/venturebeat.png',
+		bmeApiKey: 'abb2d3afe93766789b8d439f7af003df',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Company',
+				property: 'company'
+			},
+			{
+				name: 'Title',
+				property: 'title'
+			},
+		],
+		userLists: [
+			{
+				name: 'AR/VR Weekly',
+				description: "GamesBeat's best from the AR/VR industries",
+				property: 'properties.ar_vr_weekly'
+			},
+			{
+				name: 'Botbeat',
+				description: 'Connecting the dots: AI, messaging and bots',
+				property: 'properties.botbeat_newsletter'
+			},
+			{
+				name: 'DeanBeat',
+				description: 'Gaming news and insight from Lead GamesBeat Writer Dean Takahashi',
+				property: 'properties.deanbeat'
+			},
+			{
+				name: 'Marketing Weekly',
+				description: 'The latest news, insider tips, and exclusive stories in martech',
+				property: 'properties.vb_topten'
+			},
+			{
+				name: 'VB Daily Roundup',
+				property: 'properties.vb_dailyroundup'
+			},
+			{
+				name: 'GamesBeat Daily Roundup',
+				property: 'properties.gb_dailyroundup'
+			},
+			{
+				name: 'Funding Daily',
+				property: 'properties.funding_daily'
+			},
+			{
+				name: 'VentureBeat Event Updates',
+				property: 'properties.events_communication'
+			},
+			{
+				name: 'Special Communications from VB & Partners',
+				property: 'properties.sponsored_communication'
+			},
+		],
+	},
+ 
  };
