@@ -1045,5 +1045,33 @@ module.exports = {
 			},
 		],
 	},
- 
- };
+	'5109': {
+		name: 'HeatSt',
+		logo: '/images/logo/heatst.png',
+		bmeApiKey: 'ef09e238ecd5f61b62cda95860abc231',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			},
+			{
+				name: 'Company',
+				property: 'company'
+			},
+			{
+				name: 'Title',
+				property: 'title'
+			},
+		],
+		userLists: [
+			{
+				name: 'Newsletters',
+				property: 'properties.newsletter'
+			},
+		],	
+	},	
+};
