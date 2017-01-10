@@ -1070,7 +1070,7 @@ module.exports = {
 		userLists: [
 			{
 				name: 'Newsletters',
-				property: 'properties.newsletters'
+				property: 'properties.newsletter'
 			},
 		],	
 	},	
