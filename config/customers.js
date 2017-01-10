@@ -982,7 +982,7 @@ module.exports = {
 	},
 	'5144': {
 		name: 'VentureBeat',
-		logo: '/images/logo/venturebeat.png',
+		logo: '/images/logos/venturebeat.png',
 		bmeApiKey: 'abb2d3afe93766789b8d439f7af003df',
 		userProperties: [
 			{
@@ -1047,7 +1047,7 @@ module.exports = {
 	},
 	'5109': {
 		name: 'HeatSt',
-		logo: '/images/logo/heatst.png',
+		logo: '/images/logos/heatst.png',
 		bmeApiKey: 'ef09e238ecd5f61b62cda95860abc231',
 		userProperties: [
 			{
