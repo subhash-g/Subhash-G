@@ -1073,5 +1073,42 @@ module.exports = {
 				property: 'properties.newsletter'
 			},
 		],	
-	},	
+	},
+	'502': {
+		name: 'caratlane.com',
+		logo: '/images/logos/caratlane.png',
+		bmeApiKey: '4a98ad98c499938320e99bce6c6c5b7b',
+		userProperties: [
+			{
+				name: 'First Name',
+				property: 'first_name'
+			},
+			{
+				name: 'Last Name',
+				property: 'last_name'
+			}
+		],
+		userLists: [
+			{
+				name: 'Solitaire and Diamond Jewellery',
+				property: 'properties.solitaire_and_diamond_jewellery'
+			},
+			{
+                name: 'Gold Jewellery',
+                property: 'properties.gold_jewellery'
+            },
+            {
+                name: 'Gemstone Jewellery',
+                property: 'properties.gemstone_jewellery'
+            },
+            {
+                name: 'New Collections',
+                property: 'properties.new_collections'
+            },
+            {
+                name: 'Promotional Offers',
+                property: 'properties.promotional_offers'
+            },
+		],	
+	} 
 };
