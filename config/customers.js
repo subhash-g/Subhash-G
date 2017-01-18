@@ -1089,7 +1089,7 @@ module.exports = {
 			},
 			{
 				name: 'Phone Number',
-				property: 'phone_number'
+				property: 'phone'
 			},
 			{
 				name: 'Birthday',
