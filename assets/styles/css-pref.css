@@ -1,3 +1,4 @@
+/* this is a new branch */
 @media only screen and (max-width: 970px) {
 
     #left-menu {
@@ -74,6 +75,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
+
 #top-bar {
     width: 100%;
     height: 48px;
@@ -101,6 +103,25 @@ body {
     margin-right: 20px;
 }
 
+#powered_by {
+    margin-top: 40px;
+}
+
+#powered_by span {
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#powered_by .logo {
+    height: 20px;
+    margin: auto;
+    margin-top: 5px;
+}
+#powered_by .logo img {
+    height: 20px;
+}
+
 #title-bar {
     width: 100%;
     height: 48px;
@@ -111,14 +132,15 @@ body {
     padding-bottom: 50px;
 }
 #title-bar .logo {
-    height: 24px;
-    width: 144px;
+    height: 38px;   /* was 24px */
+    /* width: 144px; */
     float: left;
     margin: 0px;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 #title-bar .logo img {
-    height: 24px;
+    max-height: 38px;   /* was height: 24px */
+    max-width: 164px;
 }
 
 #body {
