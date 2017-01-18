@@ -1089,15 +1089,15 @@ module.exports = {
 			},
 			{
 				name: 'Phone Number',
-				property: 'phone'
+				property: 'properties.phone'
 			},
 			{
 				name: 'Birthday',
-				property: 'birthday'
+				property: 'properties.birthday'
 			},
 			{
 				name: 'Wedding Day',
-				property: 'wedding_day'
+				property: 'properties.wedding_day'
 			}
 		],
 		userLists: [
