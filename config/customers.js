@@ -1086,6 +1086,18 @@ module.exports = {
 			{
 				name: 'Last Name',
 				property: 'last_name'
+			},
+			{
+				name: 'Phone Number',
+				property: 'phone_number'
+			},
+			{
+				name: 'Birthday',
+				property: 'birthday'
+			},
+			{
+				name: 'Wedding Day',
+				property: 'wedding_day'
 			}
 		],
 		userLists: [
