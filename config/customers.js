@@ -1086,28 +1086,32 @@ module.exports = {
 			{
 				name: 'Last Name',
 				property: 'last_name'
+			},
+			{
+				name: 'Phone Number',
+				property: 'properties.phone'
+			},
+			{
+				name: 'Birthday',
+				property: 'properties.birthday'
+			},
+			{
+				name: 'Wedding Day',
+				property: 'properties.wedding_day'
 			}
 		],
 		userLists: [
 			{
-				name: 'Solitaire and Diamond Jewellery',
-				property: 'properties.solitaire_and_diamond_jewellery'
+				name: 'Notify me during offers',
+				property: 'properties.notify_me_during_offers'
 			},
-			{
-                name: 'Gold Jewellery',
-                property: 'properties.gold_jewellery'
+            {
+                name: 'Notify me during new collection and product launches',
+                property: 'properties.notify_me_during_new_collection_and_product_launches'
             },
             {
-                name: 'Gemstone Jewellery',
-                property: 'properties.gemstone_jewellery'
-            },
-            {
-                name: 'New Collections',
-                property: 'properties.new_collections'
-            },
-            {
-                name: 'Promotional Offers',
-                property: 'properties.promotional_offers'
+                name: 'Send me product updates twice a week',
+                property: 'properties.send_me_product_updates_twice_a_week'
             },
 		],	
 	} 
