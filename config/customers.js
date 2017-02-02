@@ -1212,6 +1212,38 @@ module.exports = {
             }
         ]
     },
+        "5177": {
+        "name": "HonestReporting",
+        "logo": "/images/logos/honestreporting.png",
+        "bmeApiKey": "bfe860ba8fc1121e04cb8d7b0c1b3381",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+        "userProperties": [
+            {
+                "name": "email address",
+                "property": "contact_email"
+            },
+            {
+                "name": "first name",
+                "property": "first_name"
+            },
+            {
+                "name": "last name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Daily IDNS emails",
+                "description": "Check here to receive Daily IDNS emails",
+                "property": "properties.daily_idns"
+            },
+            {
+                "name": "Weekly Bias Alert emails",
+                "description": "Check here to receive Weekly Bias Alert emails",
+                "property": "properties.weekly_bias_alert"
+            }
+        ]
+    },
     "565a3d0d5b838bc0005f81a706afdec2": {
         "name": "Cheap Caribbean",
         "username": "iterable-reporting@boomtrain.com",
