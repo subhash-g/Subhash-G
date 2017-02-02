@@ -42,8 +42,24 @@
 		<div id="list-form" class="form">
 			<div class="fieldset-container">
 				<% if(header) { %>
-					<div class="header"><%= header %></div>
+					<div class="header" style="text-align:left; !important"><%= header %></div>
 				<% } %>
+		<!-- START: Honest Reporting Only -->
+
+			<% if ( name == 'HonestReporting') { %>
+		<!-- START:add a div to contain NON EDITABLE user prefs -->
+				<% counter = 0 %>
+				<% profile.forEach(function(prop, index) { %>
+							<% if(counter == 0) { %>
+							<div class="header" style="text-align:left; !important">
+							<p>You are subscribed as <%= prop.name %>:&nbsp;<b><%= prop.value %> </b></p>
+							</div>
+							<% } %>
+							<% counter++ %>
+			<% }); %>
+		<!-- END:add a div to contain user prefs -->
+		<% } %>
+		<!-- END: Honest Reporting Only -->
 				<% if ( name != 'Diginomica') { %>
 					<% counter = 1 %>
 					<fieldset>
