@@ -746,6 +746,7 @@ module.exports = {
     "5095": {
         "name": "CIO-UK",
         "logo": "/images/logos/ciouk.png",
+        "header": "Manage your email Preferences or Unsubscribe from all CIO emails",
         "bmeApiKey": "9d1580430cada74c216078ac13869662",
         "userProperties": [
             {
@@ -760,26 +761,32 @@ module.exports = {
         "userLists": [
             {
                 "name": "CIO Daily Newsletter",
+                "description": "Our daily briefing including news, analysis, insight, profiles, interviews, opinions and more.",
                 "property": "properties.in_newsletter_daily"
             },
             {
                 "name": "Conferences",
+                "description": "Invitations to register for CIO hosted conferences that tackle the business, technology and leadership issues facing senior IT leaders.",
                 "property": "properties.in_events_conferences"
             },
             {
                 "name": "Networking Events",
+                "description": "Invitations to register for CIO networking events, roundtable dinners, executive breakfasts, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
             },
             {
                 "name": "Online Events",
+                "description": "Invitations to register for online events.",
                 "property": "properties.in_events_online"
             },
             {
                 "name": "Surveys",
+                "description": "The opportunity to participate in CIO and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
                 "name": "Partner Emails",
+                "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
             }
         ]
@@ -787,6 +794,7 @@ module.exports = {
     "5096": {
         "name": "Computerworld UK",
         "logo": "/images/logos/computer_world_uk.png",
+        "header": "Manage your email Preferences or Unsubscribe from all Computerworld emails",
         "bmeApiKey": "d4d85d322cce416cd872d12cfe125a9f",
         "userProperties": [
             {
@@ -801,26 +809,32 @@ module.exports = {
         "userLists": [
             {
                 "name": "Computerworld UK Daily Newsletter",
+                "description": "Our daily briefing including news, analysis, insight, galleries, tutorials and more.",
                 "property": "properties.in_newsletter_daily"
             },
             {
                 "name": "Conferences",
+                "description": "Invitations to register for IDG UK hosted conferences that tackle the business, technology and leadership issues facing senior IT leaders.",
                 "property": "properties.in_events_conferences"
             },
             {
                 "name": "Networking Events",
+                "description": "Invitations to register for IDG UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
             },
             {
                 "name": "Online Events",
+                "description": "Invitations to register for online events.",
                 "property": "properties.in_events_online"
             },
             {
                 "name": "Surveys",
+                "description": "The opportunity to participate in Computerworld UK carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
                 "name": "Partner Emails",
+                "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
             }
         ]
@@ -828,6 +842,7 @@ module.exports = {
     "5097": {
         "name": "Techworld.com UK",
         "logo": "/images/logos/techworld.png",
+        "header": "Manage your email Preferences or Unsubscribe from all Techworld emails",
         "bmeApiKey": "17463da5a1f2ce9d2db639e016efc42e",
         "userProperties": [
             {
@@ -842,26 +857,32 @@ module.exports = {
         "userLists": [
             {
                 "name": "Techworld Daily Newsletter",
+                "description": "Our daily newsletter including news, analysis, insight, galleries, tutorials and more.",
                 "property": "properties.in_newsletter_daily"
             },
             {
                 "name": "Conferences",
+                "description": "Invitations to register for IDG UK hosted conferences that tackle the business, technology and leadership issues facing IT professionals.",
                 "property": "properties.in_events_conferences"
             },
             {
                 "name": "Networking Events",
+                "description": "Invitations to register for IDG UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
             },
             {
                 "name": "Online Events",
+                "description": "Invitations to register for online events.",
                 "property": "properties.in_events_online"
             },
             {
                 "name": "Surveys",
+                "description": "The opportunity to participate in Techworld and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
                 "name": "Partner Emails",
+                "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
             }
         ]
@@ -869,6 +890,7 @@ module.exports = {
     "5098": {
         "name": "PC Advisor",
         "logo": "/images/logos/pc_advisor_uk.png",
+        "header": "Manage your email Preferences or Unsubscribe from all PC Advisor and TechAdvisor emails",
         "bmeApiKey": "b94faf95b7f75db5d7980af30cb73c32",
         "userProperties": [
             {
@@ -883,29 +905,45 @@ module.exports = {
         "userLists": [
             {
                 "name": "PC Advisor Daily Newsletter",
+                "description": "Our daily newsletter including the latest news, reviews, how to's, user forums and free downloads.",
                 "property": "properties.in_newsletter_daily"
             },
             {
                 "name": "PC Advisor Weekly Newsletter",
+                "description": "Our weekly newsletter including a roundup of the week’s news, reviews, how to's, forums and downloads.",
                 "property": "properties.in_newsletter_weekly"
             },
             {
                 "name": "Surveys",
+                "description": "The opportunity to participate in PC Advisor and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
                 "name": "Partner Emails",
+                "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
             },
             {
                 "name": "Technology deals from TechAdvisor",
+                "description": "The best deals on technology purchases when the biggest discounts are announced (e.g. Black Friday, Boxing Day)",
                 "property": "properties.pca_deals"
+            },
+            {
+                "name": "Samsung Galaxy Rumours",
+                "description": "The latest news, rumours & deals for the Samsung Galaxy flagship phone, as soon as they're announced",
+                "property": "properties.pca_galaxy_deals"
+            },
+            {
+                "name": "Apple iPhone Rumours",
+                "description": "The latest news, rumours & deals for the next iPhone, as soon as they're announced",
+                "property": "properties.pca_iphone_deals"
             }
         ]
     },
     "5099": {
         "name": "Macworld UK",
         "logo": "/images/logos/macworld_uk.png",
+        "header": "Manage your email Preferences or Unsubscribe from all Macworld emails",
         "bmeApiKey": "07d55781a5b88c62c44191e862f1c3fb",
         "userProperties": [
             {
@@ -920,25 +958,40 @@ module.exports = {
         "userLists": [
             {
                 "name": "Macworld Daily Newsletter",
+                "description": "Our daily newsletter including the latest news, reviews, how to's and free downloads.",
                 "property": "properties.in_newsletter_daily"
             },
             {
                 "name": "Macworld Weekly Newsletter",
+                "description": "Our weekly newsletter including a roundup of the week’s news, reviews, how to's and downloads.",
                 "property": "properties.in_newsletter_weekly"
             },
             {
                 "name": "Surveys",
+                "description": "The opportunity to participate in Macworld and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
                 "name": "Partner Emails",
+                "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
+            },
+            {
+                "name": "Technology Deals from Macworld",
+                "description": "The best deals on Apple and related products when the biggest discounts are announced (e.g. Black Friday, Boxing Day)",
+                "property": "properties.mw_deals"
+            },
+            {
+                "name": "Apple iPhone Rumours",
+                "description": "The latest news, rumours & deals for the next iPhone, as soon as they're announced",
+                "property": "properties.mw_iphone_deals"
             }
         ]
     },
     "5100": {
         "name": "Digital Arts",
         "logo": "/images/logos/digital-arts.png",
+        "header": "Manage your email Preferences or Unsubscribe from all Digital Arts emails",
         "bmeApiKey": "1da0c4a9d8147f3ecdd27dae7c07fd3c",
         "userProperties": [
             {
@@ -953,18 +1006,22 @@ module.exports = {
         "userLists": [
             {
                 "name": "Digital Arts Daily Newsletter",
+                "description": "Our daily newsletter including the latest news, features, reviews, tutorials and guides.",
                 "property": "properties.in_newsletter_daily"
             },
             {
                 "name": "Digital Arts Weekly Newsletter",
+                "description": "Our weekly newsletter including the latest news, features, reviews, tutorials and guides.",
                 "property": "properties.in_newsletter_weekly"
             },
             {
                 "name": "Surveys",
+                "description": "The opportunity to participate in Digital Arts and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
                 "name": "Partner Emails",
+                "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
             }
         ]
@@ -1212,9 +1269,9 @@ module.exports = {
             }
         ]
     },
-        "5177": {
+    "5177": {
         "name": "HonestReporting",
-        "logo": "/images/logos/honestreporting.png",
+        "logo": "/images/logos/honestreporting.jpg",
         "bmeApiKey": "bfe860ba8fc1121e04cb8d7b0c1b3381",
         "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
         "userProperties": [
@@ -1241,6 +1298,35 @@ module.exports = {
                 "name": "Weekly Bias Alert emails",
                 "description": "Check here to receive Weekly Bias Alert emails",
                 "property": "properties.weekly_bias_alert"
+            }
+        ]
+    },
+    "5178": {
+        "name": "Roll Call",
+        "logo": "/images/logos/rollcall.png",
+        "bmeApiKey": "bcca09d26dea7907e4fe1b599abdd247",
+        "userProperties": [
+            {
+                "name": "first name",
+                "property": "first_name"
+            },
+            {
+                "name": "last name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Latest Headlines",
+                "property": "properties.in_latest_headlines"
+            },
+            {
+                "name": "Weekend Reads",
+                "property": "properties.in_weekend_reads"
+            },
+            {
+                "name": "News Alert",
+                "property": "properties.in_news_alert"
             }
         ]
     },
