@@ -193,7 +193,7 @@ body {
 
 #content .form .fieldset-container {
     float: left;
-    width: 700px;
+    width: 715px;  /* changed from 700px to 715px to accommodate Computerworld UK */
 }
 
 #content .form fieldset {

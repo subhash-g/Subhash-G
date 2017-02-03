@@ -28,12 +28,12 @@
 	<div id="content">
 		<div id="profile-form" class="form">
 			<div class="fieldset-container">
-					<% profile.forEach(function(prop, index) { %>
-							<fieldset>
-								<label><%= prop.name %></label>
-								<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
-							</fieldset>
-					<% }); %>
+				<% profile.forEach(function(prop, index) { %>
+					<fieldset>
+						<label><%= prop.name %></label>
+						<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+					</fieldset>
+				<% }); %>
 			</div>
 			<div>
 				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Save Profile">
@@ -41,25 +41,35 @@
 		</div>
 		<div id="list-form" class="form">
 			<div class="fieldset-container">
-				<% if(header) { %>
-					<div class="header" style="text-align:left; !important"><%= header %></div>
-				<% } %>
-		<!-- START: Honest Reporting Only -->
+                <% if ( name != 'HonestReporting') { %>  <!-- DO FOR EVERYONE EXCEPT... -->
 
-			<% if ( name == 'HonestReporting') { %>
-		<!-- START:add a div to contain NON EDITABLE user prefs -->
-				<% counter = 0 %>
-				<% profile.forEach(function(prop, index) { %>
-							<% if(counter == 0) { %>
-							<div class="header" style="text-align:left; !important">
-							<p>You are subscribed as <%= prop.name %>:&nbsp;<b><%= prop.value %> </b></p>
-							</div>
-							<% } %>
-							<% counter++ %>
-			<% }); %>
-		<!-- END:add a div to contain user prefs -->
-		<% } %>
-		<!-- END: Honest Reporting Only -->
+    				<% if(header) { %>
+    					<div class="header"><%= header %></div>
+    				<% } %>
+
+                <% } else { %>  <!-- DO FOR OTHERS -->
+
+            		<!-- START: Honest Reporting Only -->
+        			<% if ( name == 'HonestReporting') { %>
+                        <% if(header) { %>
+                            <div class="header" style="text-align:left !important"><%= header %></div>
+                        <% } %>
+                        <!-- START: add a div to contain NON EDITABLE user prefs -->
+        				<% counter = 0 %>
+        				<% profile.forEach(function(prop, index) { %>
+    						<% if(counter == 0) { %>
+        						<div class="header" style="text-align:left !important">
+        						<p>You are subscribed as <%= prop.name %>:&nbsp;<b><%= prop.value %> </b></p>
+        						</div>
+    						<% } %>
+    					<% counter++ %>
+                        <% }); %>
+    	           	<!-- END: add a div to contain user prefs -->
+            		<% } %>
+    		        <!-- END: Honest Reporting Only -->
+
+                <% } %>     <!-- END IF -->
+
 				<% if ( name != 'Diginomica') { %>
 					<% counter = 1 %>
 					<fieldset>
