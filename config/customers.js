@@ -1339,5 +1339,26 @@ module.exports = {
         "bmeApiKey": "",
         "userProperties": [],
         "userLists": []
-    }
-};
+    },
+    "5153": {
+        "name": "Snopes",
+        "logo": "images/logos/snopes.png",
+        "bmeApiKey": "dd138fdf19abde29d9afedde58d4535c",
+        "userProperties": [
+        {
+            "name": "First Name",
+            "property": "first_name"
+        },
+        {
+            "name": "Last Name",
+            "property": "last_name"
+        }
+        ],
+        "userLists": [
+        {
+            "name": "Daily Update",
+            "property": "properties.daily_update"
+        }
+    ]
+},
+  };
