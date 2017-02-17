@@ -70,7 +70,19 @@ module.exports = {
 						list.value = module.exports.getUserPropertyValue(data, list.property);
 						if (typeof list.value == 'boolean')
 							list.value = list.value.toString();
-						userLists.push(list);
+						else if (Array.isArray(list.value))
+							list.value.forEach(function(item) {
+								listList = {
+									name: item,
+									property: list.property,
+									value: item,
+									type: 'array'
+								}
+								userLists.push(listList)
+							});
+						else if (list.value !== '')
+							// TODO: Jenky. Assumes that empty string means skip.
+							userLists.push(list);
 
 						// sets current userPreferences (global variable)
 						userPreferences.push(list.value.toString());
