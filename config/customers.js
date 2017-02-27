@@ -254,10 +254,17 @@ module.exports = {
         "userLists": [
             {
                 "name": "General Newsletter",
+                "description": "Subscribe to this list to receive all regular newsletters throughout the week."
                 "property": "properties.newsletter"
             },
             {
+                "name": "Weekly Newsletter",
+                "description": "Subscribe to this list to receive one weekly digest newsletter, sent every Sunday."
+                "property": "properties.weekly_digest"
+            },
+            {
                 "name": "Expecting Parents Newsletter",
+                "description": "Get insight into what your partner is feeling, what your unborn kid is doing, and how you should be preparing for your biggest life change ever."
                 "property": "properties.expecting-series"
             }
         ]
