@@ -1368,4 +1368,29 @@ module.exports = {
         }
     ]
 },
+    "5134": {
+        "name": "Balboa's Bazaar",
+        "logo": "images/logos/fred-test-site.png",
+        "bmeApiKey": "b5ad6def444626aa0256b563885897a6",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Interests (set)",
+                "property": "properties.interests"
+            },
+            {
+                "name": "Test Pref Center (string)",
+                "property": "properties.test_pref_center"
+            }
+        ]
+    }
   };
