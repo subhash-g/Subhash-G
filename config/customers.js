@@ -1392,5 +1392,48 @@ module.exports = {
                 "property": "properties.test_pref_center"
             }
         ]
+    },
+     "5184": {
+        "name": "WNYT",
+        "logo": "/images/logos/wnyt.png",
+        "bmeApiKey": "f6ab717a1d2ac10ae63fc00d1cc8dfb6",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Morning News",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "Afternoon News",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "Evening News",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "All Three",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "Check here if you would like NewsChannel 13 to let you know about other opportunities?",
+                "property": "properties.opt_in"
+            },
+            {
+                "name": "Would you like a banana?",
+                "property": "properties.banana"
+            }
+        ]
     }
   };
