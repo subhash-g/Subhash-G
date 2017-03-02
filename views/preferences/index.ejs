@@ -70,7 +70,52 @@
 
                 <% } %>     <!-- END IF -->
 
-				<% if ( name != 'Diginomica') { %>
+
+				<% if ( name == 'WNYT'){ %> <!-- SET LAYOUT FOR ONLY WNYT -->
+					<% counter = 1 %>
+
+					<fieldset class="dropdown">  <!-- WNYT SECTION 1: DROPDOWN FOR FIRST 4 USER PROPS -->
+						<select id="WNYT">
+							<% lists.forEach(function(list, index) { %>
+							<% if(counter<= 4) { %>							
+								<% if(list.value ==  list.name) { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
+								<% } else { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
+								<% } %>
+								<% counter++ %>	
+
+							<% } else if(counter==5){%>	 <!-- WNYT SECTION 2: CHECKBOXES FOR OTHER USER PROPS -->
+
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'false' ? '' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% if(list.description) { %>
+									<div class="description" style="text-align:left !important;"><%= list.description %></div>
+
+								<% } %>
+								<div>&nbsp;</div>
+
+							<% } %>																					
+							<% }); %>
+						</select>
+					</fieldset>
+
+
+				<% } else if ( name == 'Diginomica')  { %> <!-- SET LAYOUT FOR ONLY DIGINOMICA -->
+
+					<fieldset class="dropdown"> <!-- ALL DIGINOMICA USER PROPS PRESENTED AS DROPDOWN -->
+						<select id="Diginomica">
+							<% lists.forEach(function(list, index) { %>
+								<% if(list.value ==  list.name) { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
+								<% } else { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
+								<% } %>
+							<% }); %>
+						</select>
+					</fieldset>
+
+				<% } else { %>
 					<% counter = 1 %>
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
@@ -97,19 +142,12 @@
 							<% } %>
 						<% }); %>
 					</fieldset>
-				<% } else { %>
-					<fieldset class="dropdown">
-						<select id="Diginomica">
-							<% lists.forEach(function(list, index) { %>
-								<% if(list.value ==  list.name) { %>
-									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
-								<% } else { %>
-									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
-								<% } %>
-							<% }); %>
-						</select>
-					</fieldset>
 				<% } %>
+
+
+
+
+
 			</div>
 			<div>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My List">
