@@ -1349,7 +1349,7 @@ module.exports = {
     },
     "5153": {
         "name": "Snopes",
-        "logo": "images/logos/snopes.png",
+        "logo": "/images/logos/snopes.png",
         "bmeApiKey": "dd138fdf19abde29d9afedde58d4535c",
         "userProperties": [
         {
@@ -1370,7 +1370,7 @@ module.exports = {
 },
     "5134": {
         "name": "Balboa's Bazaar",
-        "logo": "images/logos/fred-test-site.png",
+        "logo": "/images/logos/fred-test-site.png",
         "bmeApiKey": "b5ad6def444626aa0256b563885897a6",
         "userProperties": [
             {
