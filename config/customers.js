@@ -1429,10 +1429,45 @@ module.exports = {
             {
                 "name": "Check here if you would like NewsChannel 13 to let you know about other opportunities?",
                 "property": "properties.opt_in"
+            }
+        ]
+    },
+     "5185": {
+        "name": "KOB",
+        "logo": "/images/logos/kob.png",
+        "bmeApiKey": "e9654a1e7fbc2c340c60c4b4225c457e",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
             },
             {
-                "name": "Would you like a banana?",
-                "property": "properties.banana"
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Morning News",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "Afternoon News",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "Evening News",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "All Three",
+                "property": "properties.newsletter_time"
+            },
+            {
+                "name": "Send Me Breaking News Alerts",
+                "property": "properties.opt_in"
             }
         ]
     }
