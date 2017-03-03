@@ -68,9 +68,10 @@ module.exports = {
 					var userLists = [];
 					customer.userLists.forEach(function(list) {
 						list.value = module.exports.getUserPropertyValue(data, list.property);
-						if (typeof list.value == 'boolean')
+						if (typeof list.value == 'boolean') {
 							list.value = list.value.toString();
-						else if (Array.isArray(list.value))
+							userLists.push(list);
+						} else if (Array.isArray(list.value))
 							list.value.forEach(function(item) {
 								listList = {
 									name: item,
@@ -322,7 +323,9 @@ module.exports = {
 		var key = path[depth - 1];
 		var value = data[key];
 
-		if (!value) {
+		if (typeof value == 'boolean') {
+			return value;
+		} else if (!value) {
 			return '';
 		} else if (path.length == depth) {
 			return value || '';
