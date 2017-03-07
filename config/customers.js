@@ -387,6 +387,79 @@ module.exports = {
             }
         ]
     },
+    "2537": {
+        "name": "The Gazette",
+        "logo": "/images/logos/gazette.png",
+        "bmeApiKey": "2a63e0521124bf3db0755c08c001f9a8",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Gazette Daily Sports",
+                "property": "properties.list-sports"
+            },
+            {
+                "name": "The Gazette Daily News",
+                "property": "properties.list-news"
+            },
+            {
+                "name": "The Gazette Daily News and Sports",
+                "property": "properties.list-news-and-sports"
+            },
+            {
+                "name": "The Gazette Daily Obituaries",
+                "property": "properties.list-obits"
+            },
+            {
+                "name": "The Gazette Weekly Hoopla Email",
+                "property": "properties.list-hoopla"
+            },
+            {
+                "name": "The Gazette Special Offers and Deals",
+                "property": "properties.special_offers"
+            },
+            {
+                "name": "Iowa Ideas General Updates",
+                "property": "properties.ii-general"
+            },
+            {
+                "name": "Iowa Ideas Agriculture Updates",
+                "property": "properties.ii-ag"
+            },
+            {
+                "name": "Iowa Ideas Energy and Environment Updates",
+                "property": "properties.ii-ee"
+            },
+            {
+                "name": "Iowa Ideas Health Care Updates",
+                "property": "properties.ii-health"
+            },
+            {
+                "name": "Iowa Ideas Higher Education Updates",
+                "property": "properties.ii-higher"
+            },
+            {
+                "name": "Iowa Ideas K-12 Education Updates",
+                "property": "properties.ii-k12"
+            },
+            {
+                "name": "Iowa Ideas Regionalism and Workforce Updates",
+                "property": "properties.ii-reg"
+            },
+            {
+                "name": "Iowa Ideas Transportation Updates",
+                "property": "properties.ii-trans"
+            }
+        ]
+    },
     "2552": {
         "name": "Fusion",
         "logo": "/images/logos/refrigiwear.png",

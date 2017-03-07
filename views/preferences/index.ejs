@@ -77,13 +77,13 @@
 					<fieldset class="dropdown">  <!-- WNYT SECTION 1: DROPDOWN FOR FIRST 4 USER PROPS -->
 						<select id="WNYT">
 							<% lists.forEach(function(list, index) { %>
-							<% if(counter<= 4) { %>							
+							<% if(counter<= 4) { %>
 								<% if(list.value ==  list.name) { %>
 									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
 								<% } else { %>
 									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
 								<% } %>
-								<% counter++ %>	
+								<% counter++ %>
 
 							<% } else if(counter==5){%>	 <!-- WNYT SECTION 2: CHECKBOXES FOR OTHER USER PROPS -->
 
@@ -95,7 +95,7 @@
 								<% } %>
 								<div>&nbsp;</div>
 
-							<% } %>																					
+							<% } %>
 							<% }); %>
 						</select>
 					</fieldset>
@@ -106,13 +106,13 @@
 					<fieldset class="dropdown">  <!-- KOB SECTION 1: DROPDOWN FOR FIRST 4 USER PROPS -->
 						<select id="KOB">
 							<% lists.forEach(function(list, index) { %>
-							<% if(counter<= 4) { %>							
+							<% if(counter<= 4) { %>
 								<% if(list.value ==  list.name) { %>
 									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
 								<% } else { %>
 									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
 								<% } %>
-								<% counter++ %>	
+								<% counter++ %>
 
 							<% } else if(counter==5){%>	 <!-- KOB SECTION 2: CHECKBOXES FOR OTHER USER PROPS -->
 
@@ -124,7 +124,7 @@
 								<% } %>
 								<div>&nbsp;</div>
 
-							<% } %>																					
+							<% } %>
 							<% }); %>
 						</select>
 					</fieldset>
@@ -143,6 +143,35 @@
 							<% }); %>
 						</select>
 					</fieldset>
+
+				<% } else if ( name == 'The Gazette')  { %> <!-- SET LAYOUT FOR ONLY THE GAZETTE -->
+				<% counter = 1 %>
+				<fieldset>
+				  <% lists.forEach(function(list, index) { %>
+				    <% if(index <= 5) { %>
+				      <input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'false' ? '' : 'checked' %> />
+				      <label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+				      <% if(list.description) { %>
+				        <div class="description"><%= list.description %></div>
+				      <% } %>
+				      <% counter++ %>
+				    <% } %>
+				  <% }); %>
+				</fieldset>
+				<fieldset>
+				  <% lists.forEach(function(list, index) { %>
+				    <% if(index > 5) { %>
+				      <input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'false' ? '' : 'checked' %> />
+				      <label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+				      <% if(list.description) { %>
+				        <div class="description"><%= list.description %></div>
+				      <% } %>
+				      <% counter++ %>
+				    <% } %>
+				  <% }); %>
+				</fieldset>
+
 
 				<% } else { %>
 					<% counter = 1 %>
