@@ -1466,6 +1466,245 @@ module.exports = {
             }
         ]
     },
+     "5181": {
+        "name": "Swift Communications",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Summit Daily Daily Newsletter",
+                "property": "properties.summitdaily_daily_newsletter"
+            },
+            {
+                "name": "Summit Daily Breaking News",
+                "property": "properties.summitdaily_breaking_news"
+            },
+            {
+                "name": "Summit Daily Contests Promotions",
+                "property": "properties.summitdaily_contests_promotions"
+            },
+            {
+                "name": "Summit Daily Deals",
+                "property": "properties.summitdaily_deals"
+            },
+            {
+                "name": "Summit Daily Seasonal Travel Guide",
+                "property": "properties.summitdaily_seasonal_travel_guide"
+            },
+            {
+                "name": "Summit Daily Weekend Entertainment Guide",
+                "property": "properties.summitdaily_weekend_entertainment_guide"
+            },
+            {
+                "name": "Vail Daily This Week's Headlines & Entertainment",
+                "property": "properties.vaildaily_headlines_entertainment"
+            },
+            {
+                "name": "Nevada Appeal Daily News Brief",
+                "property": "properties.nevadaappeal_the_daily_news_brief"
+            },
+            {
+                "name": "Nevada Appeal Mid-Week Review",
+                "property": "properties.nevadaappeal_the_week_in_review"
+            },
+            {
+                "name": "Nevada Appeal Promotions & Contest Alerts",
+                "property": "properties.nevadaappeal_promotions_contest_alerts"
+            },
+            {
+                "name": "Nevada Appeal Entertainment Alerts",
+                "property": "properties.nevadaappeal_entertainment_alerts"
+            },
+            {
+                "name": "Post Independent Top Stories",
+                "property": "properties.postindependent_week_in_review"
+            },
+            {
+                "name": "Post Independent All the Fun",
+                "property": "properties.postindependent_things_to_do"
+            },
+            {
+                "name": "Post Independent Contest & Quizzes",
+                "property": "properties.postindependent_contest_quizzes"
+            },
+            {
+                "name": "Post Independent Deals",
+                "property": "properties.postindependent_deals"
+            },
+            {
+                "name": "Record Courier Week in Review",
+                "property": "properties.recordcourier_the_week_in_review"
+            },
+            {
+                "name": "Record Courier Promotions & Contests Alerts",
+                "property": "properties.recordcourier_promotions_contest_alerts"
+            },
+            {
+                "name": "Sky-Hi News Weekly Update",
+                "property": "properties.skyhidailynews_the_grand_update"
+            },
+            {
+                "name": "Sky-Hi News Seasonal Travel Guide",
+                "property": "properties.skyhidailynews_seasonal_travel_guide"
+            },
+            {
+                "name": "Sky-Hi News Deals",
+                "property": "properties.skyhidailynews_deals"
+            },
+            {
+                "name": "Sky-Hi News Contests & Promotions",
+                "property": "properties.skyhidailynews_contests_promotions"
+            },
+            {
+                "name": "Sky-Hi News Weekend Entertainment Guide",
+                "property": "properties.skyhidailynews_weekend_entertainment_guide"
+            },
+            {
+                "name": "Sky-Hi Breaking News",
+                "property": "properties.skyhidailynews_breaking_news"
+            },
+            {
+                "name": "The Fence Post Weekly Round-Up",
+                "property": "properties.thefencepost_the_weekly_news_round_up"
+            },
+            {
+                "name": "The Fence Post Weekly Market Report",
+                "property": "properties.thefencepost_the_weekly_market_update"
+            },
+            {
+                "name": "The Fence Post Promotions & Contest Alerts",
+                "property": "properties.thefencepost_promotions_contest_alerts"
+            },
+            {
+                "name": "The Union Daily News Brief",
+                "property": "properties.theunion_the_daily_news_brief"
+            },
+            {
+                "name": "The Union Week in Review",
+                "property": "properties.theunion_the_week_in_review"
+            },
+            {
+                "name": "The Union Promotions & Contest Alerts",
+                "property": "properties.theunion_promotions_contest_alerts"
+            },
+            {
+                "name": "The Wildwood Independent",
+                "property": "properties.theunion_the_wildwood_independent"
+            },
+            {
+                "name": "Grass Valley Cannabis News",
+                "property": "properties.theunion_cannabis_news"
+            },
+            {
+                "name": "Aspen Times Daily News Brief",
+                "property": "properties.aspentimes_the_daily_news_brief"
+            },
+            {
+                "name": "Aspen Times Promotions & Contest Alerts",
+                "property": "properties.aspentimes_promotions_contest_alerts"
+            },
+            {
+                "name": "Aspen Times Breaking News",
+                "property": "properties.aspentimes_breaking_news"
+            },
+            {
+                "name": "Aspen Times Seasonal Travel Guide",
+                "property": "properties.aspentimes_seasonal_travel_guide"
+            },
+            {
+                "name": "Weekend in Aspen - Aspen Times Weekend Entertainment Guide",
+                "property": "properties.aspentimes_weekend_entertainment_guide"
+            },
+            {
+                "name": "Northern Nevada Business Daily",
+                "property": "properties.nnbw_daily_update"
+            },
+            {
+                "name": "NNBW Contests & Promotions",
+                "property": "properties.nnbw_contests_promotions"
+            },
+            {
+                "name": "Northern Nevada Business Monthly",
+                "property": "properties.nnbw_business_monthly"
+            },
+            {
+                "name": "Northern Nevada Business Bright Idea",
+                "property": "properties.nnbw_business_bright_idea"
+            },
+            {
+                "name": "Sierra Sun Locals Newsletter",
+                "property": "properties.sierrasun_locals_newsletter"
+            },
+            {
+                "name": "Sierra Sun Visitors Newsletter",
+                "property": "properties.sierrasun_visitors_newsletter"
+            },
+            {
+                "name": "Sierra Sun Weekend Entertainment Guide",
+                "property": "properties.sierrasun_weekend_entertainment_guide"
+            },
+            {
+                "name": "Sierra Sun Contests & Promotions",
+                "property": "properties.sierrasun_contests_promotions"
+            },
+            {
+                "name": "Sierra Sun Breaking News",
+                "property": "properties.sierrasun_breaking_news"
+            },
+            {
+                "name": "Tahoe Daily Tribune Locals Newsletter",
+                "property": "properties.tahoetribune_locals_newsletter"
+            },
+            {
+                "name": "Tahoe Daily Tribune Visitors Newsletter",
+                "property": "properties.tahoetribune_visitors_newsletter"
+            },
+            {
+                "name": "Tahoe Daily Tribune Weekend Entertainment Guide",
+                "property": "properties.tahoetribune_weekend_entertainment_guide"
+            },
+            {
+                "name": "Tahoe Daily Tribune Contests & Promotions",
+                "property": "properties.tahoetribune_contests_promotions"
+            },
+            {
+                "name": "Tahoe Daily Tribune Breaking News",
+                "property": "properties.tahoetribune_breaking_news"
+            },
+            {
+                "name": "Healthy Tahoe",
+                "property": "properties.tahoetribune_healthy_tahoe"
+            },
+            {
+                "name": "Tri-State Livestock News Weekly Round Up",
+                "property": "properties.tsin_the_weekly_news_round_up"
+            },
+            {
+                "name": "Tri-State Livestock News Weekly Market Update",
+                "property": "properties.tsin_the_weekly_market_update"
+            },
+            {
+                "name": "Tri-State Livestock News Promotions & Contest Alerts",
+                "property": "properties.tsin_promotions_contest_alerts"
+            },
+            {
+                "name": "Cavvy Savvy The Big Circle",
+                "property": "properties.tsin_cavvy_savvy_the_big_circle"
+            }
+        ]
+    },
      "5184": {
         "name": "WNYT",
         "logo": "/images/logos/wnyt.png",
