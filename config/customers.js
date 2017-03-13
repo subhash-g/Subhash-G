@@ -1702,6 +1702,26 @@ module.exports = {
             {
                 "name": "Cavvy Savvy The Big Circle",
                 "property": "properties.tsin_cavvy_savvy_the_big_circle"
+            },
+            {
+                "name": "The Greeley Tribune Daily News Brief",
+                "property": "properties.greeleytribune_the_daily_news_brief"
+            },
+            {
+                "name": "The Greeley Tribune Week in Review",
+                "property": "properties.greeleytribune_the_week_in_review"
+            },
+            {
+                "name": "Greeley Tribune Promotions & Contest Alerts",
+                "property": "properties.greeleytribune_promotions_contest_alerts"
+            },
+            {
+                "name": "Energy Pipeline, Your Source for Oil & Gas Industry",
+                "property": "properties.greeleytribune_energy_pipeline"
+            },
+            {
+                "name": "Greeley Sports Newsletter",
+                "property": "properties.greeleytribune_sports_newsletter"
             }
         ]
     },
