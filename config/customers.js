@@ -1387,6 +1387,10 @@ module.exports = {
         "bmeApiKey": "bcca09d26dea7907e4fe1b599abdd247",
         "userProperties": [
             {
+                "name": "email address",
+                "property": "contact_email"
+            },
+            {
                 "name": "first name",
                 "property": "first_name"
             },
@@ -1425,22 +1429,22 @@ module.exports = {
         "logo": "/images/logos/snopes.png",
         "bmeApiKey": "dd138fdf19abde29d9afedde58d4535c",
         "userProperties": [
-        {
-            "name": "First Name",
-            "property": "first_name"
-        },
-        {
-            "name": "Last Name",
-            "property": "last_name"
-        }
-        ],
-        "userLists": [
-        {
-            "name": "Daily Update",
-            "property": "properties.daily_update"
-        }
-    ]
-},
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+            ],
+            "userLists": [
+            {
+                "name": "Daily Update",
+                "property": "properties.daily_update"
+            }
+        ]
+    },
     "5134": {
         "name": "Balboa's Bazaar",
         "logo": "/images/logos/fred-test-site.png",
