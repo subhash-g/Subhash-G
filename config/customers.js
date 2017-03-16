@@ -1726,6 +1726,38 @@ module.exports = {
             {
                 "name": "Greeley Sports Newsletter",
                 "property": "properties.greeleytribune_sports_newsletter"
+            },
+            {
+                "name": "The Union Circulation",
+                "property": "properties.union_circulation"
+            },
+            {
+                "name": "Tri-State Livestock News Circulation",
+                "property": "properties.tristate_circulation"
+            },
+            {
+                "name": "The Fence Post Circulation",
+                "property": "properties.fencepost_circulation"
+            },
+            {
+                "name": "Record Courier Circulation",
+                "property": "properties.recordcourier_circulation"
+            },
+            {
+                "name": "Northern Nevada Business Weekly Circulation",
+                "property": "properties.nnbw_circulation"
+            },
+            {
+                "name": "Nevada Appeal Circulation",
+                "property": "properties.nevadaappeal_circulation"
+            },
+            {
+                "name": "Lahontan Valley News Circulation",
+                "property": "properties.lahontanvalley_circulation"
+            },
+            {
+                "name": "Greeley Tribune Circulation",
+                "property": "properties.greeleytribune_circulation"
             }
         ]
     },
