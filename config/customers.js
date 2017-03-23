@@ -919,7 +919,7 @@ module.exports = {
             },
             {
                 "name": "ComputerworldUK Jobs",
-                "description": "The latest careers content and employer profiles.",
+                "description": "Bespoke careers-oriented content to help you further your career.",
                 "property": "properties.in_computerworldUK_jobs"
             }
         ]
@@ -972,7 +972,7 @@ module.exports = {
             },
             {
                 "name": "Techworld Jobs",
-                "description": "The latest careers content and employer profiles.",
+                "description": "Bespoke careers-oriented content to help you further your career.",
                 "property": "properties.in_techworld_jobs"
             }
         ]
@@ -1116,7 +1116,7 @@ module.exports = {
             },
             {
                 "name": "Digital Arts Jobs",
-                "description": "The latest careers content and employer profiles.",
+                "description": "Bespoke careers-oriented content to help you further your career.",
                 "property": "properties.in_DigitalArts_jobs"
             }
         ]
