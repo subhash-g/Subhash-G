@@ -1455,8 +1455,32 @@ module.exports = {
             ],
             "userLists": [
             {
-                "name": "Daily Update",
-                "property": "properties.daily_update"
+                "name": "Sunday",
+                "property": "properties.update_sunday"
+            },
+            {
+                "name": "Monday",
+                "property": "properties.update_monday"
+            },
+            {
+                "name": "Tuesday",
+                "property": "properties.update_tuesday"
+            },
+            {
+                "name": "Wednesday",
+                "property": "properties.update_wednesday"
+            },
+            {
+                "name": "Thursday",
+                "property": "properties.update_thursday"
+            },
+            {
+                "name": "Friday",
+                "property": "properties.update_friday"
+            },
+            {
+                "name": "Saturday",
+                "property": "properties.update_saturday"
             }
         ]
     },
