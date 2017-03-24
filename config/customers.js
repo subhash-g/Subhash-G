@@ -916,6 +916,11 @@ module.exports = {
                 "name": "Partner Emails",
                 "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
+            },
+            {
+                "name": "ComputerworldUK Jobs",
+                "description": "Bespoke careers-oriented content to help you further your career.",
+                "property": "properties.in_computerworld_uk_jobs"
             }
         ]
     },
@@ -964,6 +969,11 @@ module.exports = {
                 "name": "Partner Emails",
                 "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
+            },
+            {
+                "name": "Techworld Jobs",
+                "description": "Bespoke careers-oriented content to help you further your career.",
+                "property": "properties.in_techworld_jobs"
             }
         ]
     },
@@ -1103,6 +1113,11 @@ module.exports = {
                 "name": "Partner Emails",
                 "description": "Communications from carefully selected third parties.",
                 "property": "properties.in_mktg_partner_emails"
+            },
+            {
+                "name": "Digital Arts Jobs",
+                "description": "Bespoke careers-oriented content to help you further your career.",
+                "property": "properties.in_digital_arts_jobs"
             }
         ]
     },
