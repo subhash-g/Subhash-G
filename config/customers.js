@@ -1443,6 +1443,7 @@ module.exports = {
         "name": "Snopes",
         "logo": "/images/logos/snopes.png",
         "bmeApiKey": "dd138fdf19abde29d9afedde58d4535c",
+        "header": 'You Can Subscribe to the following lists. Remember to hit "Save My List", otherwise you will not be subscribed.'
         "userProperties": [
             {
                 "name": "First Name",
@@ -1455,31 +1456,31 @@ module.exports = {
             ],
             "userLists": [
             {
-                "name": "Sunday",
+                "name": "Sunday Update",
                 "property": "properties.update_sunday"
             },
             {
-                "name": "Monday",
+                "name": "Monday Update",
                 "property": "properties.update_monday"
             },
             {
-                "name": "Tuesday",
+                "name": "Tuesday Update",
                 "property": "properties.update_tuesday"
             },
             {
-                "name": "Wednesday",
+                "name": "Wednesday Update",
                 "property": "properties.update_wednesday"
             },
             {
-                "name": "Thursday",
+                "name": "Thursday Update",
                 "property": "properties.update_thursday"
             },
             {
-                "name": "Friday",
+                "name": "Friday Update",
                 "property": "properties.update_friday"
             },
             {
-                "name": "Saturday",
+                "name": "Saturday Update",
                 "property": "properties.update_saturday"
             }
         ]
