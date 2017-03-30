@@ -457,6 +457,14 @@ module.exports = {
             {
                 "name": "Iowa Ideas Transportation Updates",
                 "property": "properties.ii-trans"
+            },
+            {
+                "name": "Receive Gazette Subscription Status Notices",
+                "property": "properties.receive-subscription-status-email"
+            },
+            {
+                "name": "Receive Gazette Rewards Newsletters",
+                "property": "properties.receive-rewards-email"
             }
         ]
     },
@@ -1443,7 +1451,7 @@ module.exports = {
         "name": "Snopes",
         "logo": "/images/logos/snopes.png",
         "bmeApiKey": "dd138fdf19abde29d9afedde58d4535c",
-        "header": 'You Can Subscribe to the following lists. Remember to hit "Save My List", otherwise you will not be subscribed.'
+        "header": "You Can Subscribe to the following lists. Remember to hit 'Save My List', otherwise you will not be subscribed.",
         "userProperties": [
             {
                 "name": "First Name",
