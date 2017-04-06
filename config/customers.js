@@ -466,6 +466,7 @@ module.exports = {
                 "name": "Receive Gazette Rewards Newsletters",
                 "property": "properties.receive-rewards-email"
             }
+            
         ]
     },
     "2552": {
@@ -1200,7 +1201,7 @@ module.exports = {
                 "name": "Email",
                 "property": "contact_email"
             },
-            {
+            { 
                 "name": "First Name",
                 "property": "first_name"
             },
@@ -1884,6 +1885,44 @@ module.exports = {
             {
                 "name": "Send Me Breaking News Alerts",
                 "property": "properties.opt_in"
+            }
+        ]
+    },
+    "5206": {
+        "name": "RiseArt",
+        "logo": "/images/logos/riseart.png",
+        "bmeApiKey": "1f96cb9d045b89d4a9b7233a440a1097",
+       
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Newsletter",
+                "property": "subscribed_to_newsletter"
+            },
+            {
+                "name": "Activity updates",
+                "property": "properties.subscribed_to_activity_updates"
+            },
+            {
+                "name": "Weekly Digest",
+                "property": "properties.subscribed_to_weekly_digest"
+            },
+            {
+                "name": "General Emails",
+                "property": "properties.subscribed_to_general_emails"
+            },
+            {
+                "name": "Product updates",
+                "property": "properties.subscribed_to_product_updates"
             }
         ]
     }
