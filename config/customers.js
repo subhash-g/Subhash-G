@@ -1888,11 +1888,20 @@ module.exports = {
             }
         ]
     },
+<<<<<<< HEAD
     "5206": {
         "name": "RiseArt",
         "logo": "/images/logos/riseart.png",
         "bmeApiKey": "1f96cb9d045b89d4a9b7233a440a1097",
        
+=======
+    "5078": {
+        "name": "Finder",
+        "logo": "/images/logos/finder-logo.png",
+        "bmeApiKey": "a16098e0d5a38780b7384aabf883d3a0",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+
+>>>>>>> finder
         "userProperties": [
             {
                 "name": "First Name",
@@ -1905,6 +1914,7 @@ module.exports = {
         ],
         "userLists": [
             {
+<<<<<<< HEAD
                 "name": "Newsletter",
                 "property": "subscribed_to_newsletter"
             },
@@ -1923,6 +1933,42 @@ module.exports = {
             {
                 "name": "Product updates",
                 "property": "properties.subscribed_to_product_updates"
+=======
+                "name": "Newsletter: Technology",
+                "property": "properties.newsletter:technology"
+            },
+            {
+                "name": "Newsletter: Travel",
+                "property": "properties.newsletter:travel"
+            },
+            {
+                "name": "Travel Deals",
+                "property": "properties.newsletter:travel_deals"
+            },
+            {
+                "name": "Newsletter: Deals",
+                "property": "properties.newsletter:deals"
+            },
+            {
+                "name": "Newsletter: Business",
+                "property": "properties.newsletter:business"
+            },
+            {
+                "name": "Newsletter: Education",
+                "property": "properties.newsletter:education"
+            },
+            {
+                "name": "RBA Updates",
+                "property": "properties.newsletter:rba_updates"
+            },
+            {
+                "name": "Newsletter: Health",
+                "property": "properties.newsletter:health"
+            },
+            {
+                "name": "Newsletter: Money",
+                "property": "properties.newsletter:money"
+>>>>>>> finder
             }
         ]
     }
