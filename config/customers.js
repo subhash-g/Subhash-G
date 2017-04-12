@@ -466,7 +466,7 @@ module.exports = {
                 "name": "Receive Gazette Rewards Newsletters",
                 "property": "properties.receive-rewards-email"
             }
-            
+
         ]
     },
     "2552": {
@@ -1201,7 +1201,7 @@ module.exports = {
                 "name": "Email",
                 "property": "contact_email"
             },
-            { 
+            {
                 "name": "First Name",
                 "property": "first_name"
             },
@@ -1849,7 +1849,7 @@ module.exports = {
             }
         ]
     },
-     "5185": {
+    "5185": {
         "name": "KOB",
         "logo": "/images/logos/kob.png",
         "bmeApiKey": "e9654a1e7fbc2c340c60c4b4225c457e",
@@ -1888,20 +1888,10 @@ module.exports = {
             }
         ]
     },
-<<<<<<< HEAD
     "5206": {
         "name": "RiseArt",
         "logo": "/images/logos/riseart.png",
         "bmeApiKey": "1f96cb9d045b89d4a9b7233a440a1097",
-       
-=======
-    "5078": {
-        "name": "Finder",
-        "logo": "/images/logos/finder-logo.png",
-        "bmeApiKey": "a16098e0d5a38780b7384aabf883d3a0",
-        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
-
->>>>>>> finder
         "userProperties": [
             {
                 "name": "First Name",
@@ -1914,7 +1904,6 @@ module.exports = {
         ],
         "userLists": [
             {
-<<<<<<< HEAD
                 "name": "Newsletter",
                 "property": "subscribed_to_newsletter"
             },
@@ -1933,7 +1922,26 @@ module.exports = {
             {
                 "name": "Product updates",
                 "property": "properties.subscribed_to_product_updates"
-=======
+            }
+        ]
+    },
+    "5078": {
+        "name": "Finder",
+        "logo": "/images/logos/finder-logo.png",
+        "bmeApiKey": "a16098e0d5a38780b7384aabf883d3a0",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
                 "name": "Newsletter: Technology",
                 "property": "properties.newsletter:technology"
             },
@@ -1968,7 +1976,6 @@ module.exports = {
             {
                 "name": "Newsletter: Money",
                 "property": "properties.newsletter:money"
->>>>>>> finder
             }
         ]
     }
