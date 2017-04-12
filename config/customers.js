@@ -1878,5 +1878,60 @@ module.exports = {
                 "property": "properties.opt_in"
             }
         ]
+    },
+    "5078": {
+        "name": "Finder",
+        "logo": "/images/logos/finder-logo.png",
+        "bmeApiKey": "a16098e0d5a38780b7384aabf883d3a0",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Newsletter: Technology",
+                "property": "properties.newsletter:technology"
+            },
+            {
+                "name": "Newsletter: Travel",
+                "property": "properties.newsletter:travel"
+            },
+            {
+                "name": "Travel Deals",
+                "property": "properties.newsletter:travel_deals"
+            },
+            {
+                "name": "Newsletter: Deals",
+                "property": "properties.newsletter:deals"
+            },
+            {
+                "name": "Newsletter: Business",
+                "property": "properties.newsletter:business"
+            },
+            {
+                "name": "Newsletter: Education",
+                "property": "properties.newsletter:education"
+            },
+            {
+                "name": "RBA Updates",
+                "property": "properties.newsletter:rba_updates"
+            },
+            {
+                "name": "Newsletter: Health",
+                "property": "properties.newsletter:health"
+            },
+            {
+                "name": "Newsletter: Money",
+                "property": "properties.newsletter:money"
+            }
+        ]
     }
   };
