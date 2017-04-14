@@ -1943,39 +1943,39 @@ module.exports = {
         "userLists": [
             {
                 "name": "Newsletter: Technology",
-                "property": "'properties': {'newsletter:technology'}"
+                "property": "properties['newsletter:technology']"
             },
             {
                 "name": "Newsletter: Travel",
-                "property": "'properties': {'newsletter:travel'}"
+                "property": "properties['newsletter:travel']"
             },
             {
                 "name": "Travel Deals",
-                "property": "'properties': {'newsletter:travel_deals'}"
+                "property": "properties['newsletter:travel_deals']"
             },
             {
                 "name": "Newsletter: Deals",
-                "property": "'properties': {'newsletter:deals'}"
+                "property": "properties['newsletter:deals']"
             },
             {
                 "name": "Newsletter: Business",
-                "property": "'properties': {'newsletter:business'}"
+                "property": "properties['newsletter:business']"
             },
             {
                 "name": "Newsletter: Education",
-                "property": "'properties': {'newsletter:education'}"
+                "property": "properties['newsletter:education']"
             },
             {
                 "name": "RBA Updates",
-                "property": "'properties': {'newsletter:rba_updates'}"
+                "property": "properties['newsletter:rba_updates']"
             },
             {
                 "name": "Newsletter: Health",
-                "property": "'properties': {'newsletter:health'}"
+                "property": "properties['newsletter:health']"
             },
             {
                 "name": "Newsletter: Money",
-                "property": "'properties': {'newsletter:money'}"
+                "property": "properties['newsletter:money']"
             }
         ]
     }
