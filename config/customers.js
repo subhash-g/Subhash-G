@@ -1942,41 +1942,41 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Newsletter: Technology",
-                "property": "properties['newsletter:technology']"
-            },
-            {
-                "name": "Newsletter: Travel",
-                "property": "properties['newsletter:travel']"
-            },
-            {
-                "name": "Travel Deals",
-                "property": "properties['newsletter:travel_deals']"
-            },
-            {
-                "name": "Newsletter: Deals",
-                "property": "properties['newsletter:deals']"
-            },
-            {
-                "name": "Newsletter: Business",
-                "property": "properties['newsletter:business']"
-            },
-            {
-                "name": "Newsletter: Education",
-                "property": "properties['newsletter:education']"
-            },
-            {
-                "name": "RBA Updates",
-                "property": "properties['newsletter:rba_updates']"
-            },
-            {
-                "name": "Newsletter: Health",
-                "property": "properties['newsletter:health']"
-            },
-            {
                 "name": "Newsletter: Money",
-                "property": "properties['newsletter:money']"
+                "property": "properties.money"
             }
+            // {
+            //     "name": "Newsletter: Travel",
+            //     "property": "properties['newsletter:travel']"
+            // },
+            // {
+            //     "name": "Travel Deals",
+            //     "property": "properties['newsletter:travel_deals']"
+            // },
+            // {
+            //     "name": "Newsletter: Deals",
+            //     "property": "properties['newsletter:deals']"
+            // },
+            // {
+            //     "name": "Newsletter: Business",
+            //     "property": "properties['newsletter:business']"
+            // },
+            // {
+            //     "name": "Newsletter: Education",
+            //     "property": "properties['newsletter:education']"
+            // },
+            // {
+            //     "name": "RBA Updates",
+            //     "property": "properties['newsletter:rba_updates']"
+            // },
+            // {
+            //     "name": "Newsletter: Health",
+            //     "property": "properties['newsletter:health']"
+            // },
+            // {
+            //     "name": "Newsletter: Money",
+            //     "property": "properties['newsletter:money']"
+            // }
         ]
     }
 };
