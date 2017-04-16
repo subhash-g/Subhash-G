@@ -1928,7 +1928,7 @@ module.exports = {
     "5078": {
         "name": "Finder",
         "logo": "/images/logos/finder-logo.png",
-        "bmeApiKey": "a16098e0d5a38780b7384aabf883d3a0",
+        "bmeApiKey": "ecac9e3eb9998884bb8dceef9f0df534",
         "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
         "userProperties": [
             {
@@ -1942,41 +1942,41 @@ module.exports = {
         ],
         "userLists": [
             {
+                "name": "Newsletter: Technology",
+                "property": "properties.newsletter:technology"
+            },
+            {
+                "name": "Newsletter: Travel",
+                "property": "properties.newsletter:travel"
+            },
+            {
+                "name": "Travel Deals",
+                "property": "properties.newsletter:travel_deals"
+            },
+            {
+                "name": "Newsletter: Deals",
+                "property": "properties.newsletter:deals"
+            },
+            {
+                "name": "Newsletter: Business",
+                "property": "properties.newsletter:business"
+            },
+            {
+                "name": "Newsletter: Education",
+                "property": "properties.newsletter:education"
+            },
+            {
+                "name": "RBA Updates",
+                "property": "properties.newsletter:rba_updates"
+            },
+            {
+                "name": "Newsletter: Health",
+                "property": "properties.newsletter:health"
+            },
+            {
                 "name": "Newsletter: Money",
-                "property": "properties.money"
+                "property": "properties.newsletter:money"
             }
-            // {
-            //     "name": "Newsletter: Travel",
-            //     "property": "properties['newsletter:travel']"
-            // },
-            // {
-            //     "name": "Travel Deals",
-            //     "property": "properties['newsletter:travel_deals']"
-            // },
-            // {
-            //     "name": "Newsletter: Deals",
-            //     "property": "properties['newsletter:deals']"
-            // },
-            // {
-            //     "name": "Newsletter: Business",
-            //     "property": "properties['newsletter:business']"
-            // },
-            // {
-            //     "name": "Newsletter: Education",
-            //     "property": "properties['newsletter:education']"
-            // },
-            // {
-            //     "name": "RBA Updates",
-            //     "property": "properties['newsletter:rba_updates']"
-            // },
-            // {
-            //     "name": "Newsletter: Health",
-            //     "property": "properties['newsletter:health']"
-            // },
-            // {
-            //     "name": "Newsletter: Money",
-            //     "property": "properties['newsletter:money']"
-            // }
         ]
     }
 };
