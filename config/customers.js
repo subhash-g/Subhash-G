@@ -1452,7 +1452,7 @@ module.exports = {
         "name": "Snopes",
         "logo": "/images/logos/snopes.png",
         "bmeApiKey": "dd138fdf19abde29d9afedde58d4535c",
-        "header": "You Can Subscribe to the following lists. Remember to hit 'Save My List', otherwise you will not be subscribed.",
+        "header": "You can subscribe to the following lists. Remember to hit 'Save My List', otherwise you will not be subscribed.",
         "userProperties": [
             {
                 "name": "First Name",
