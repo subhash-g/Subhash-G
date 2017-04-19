@@ -1913,7 +1913,7 @@ module.exports = {
             {
                 "name": "Newsletter",
                 "description":"Receive the Riseart weekly newsletter and keep up to date with the latest news and events",
-                "property": "subscribed_to_newsletter"
+                "property": "properties.subscribed_to_newsletter"
             },
             {
                 "name": "Activity updates",
