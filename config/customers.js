@@ -1995,7 +1995,7 @@ module.exports = {
         "name": "Brenthaven",
         "logo": "/images/logos/brenthaven.png",
         "bmeApiKey": "407bdd590f2093829a475df30f078c33",
-        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+        "header": "Please use the form below to update your subscription settings.",
         "userProperties": [
             {
                 "name": "First Name",
@@ -2009,12 +2009,12 @@ module.exports = {
         "userLists": [
             {
                 "name": "Newsletter",
-                "description": "Coupons, Sale Events, and Brenthaven Special Offers",
+                "description": "Coupons, promotions, special events, and new product launches",
                 "property": "mail_list"
             },
             {
-                "name": "Abandoned Cart",
-                "description": "Cart Reminders and Special Offers On Items In Your Cart",
+                "name": "Cart Reminders",
+                "description": "Reminders,inventory notifications, and special offers on items in your cart",
                 "property": "in-abandoned_cart"
             }
         ]
