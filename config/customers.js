@@ -594,13 +594,13 @@ module.exports = {
                 "name": "Monthly Content",
                 "property": "properties.newsletter_frequency"
             },
- 
+
           {
                 "name": "Digital Government Content",
                 "property": "properties.newsletter_frequency"
             }
 
-            
+
         ]
     },
     "3412": {
@@ -1991,7 +1991,7 @@ module.exports = {
             }
         ]
     },
-        "4004": {
+    "4004": {
         "name": "Brenthaven",
         "logo": "/images/logos/brenthaven.png",
         "bmeApiKey": "407bdd590f2093829a475df30f078c33",
@@ -2016,6 +2016,32 @@ module.exports = {
                 "name": "Cart Reminders",
                 "description": "Reminders,inventory notifications, and special offers on items in your cart",
                 "property": "in-abandoned_cart"
+            }
+        ]
+    },
+    "5208": {
+        "name": "Angry Patriot Movement",
+        "logo": "/images/logos/ap-logo.png",
+        "bmeApiKey": "b7aa9e4bfac0527b3b5843cab139db8b",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Daily Newsletter",
+                "property": "properties.daily_newsletter"
+            },
+            {
+                "name": "Afternoon Newsletter",
+                "property": "properties.afternoon_newsletter"
             }
         ]
     }
