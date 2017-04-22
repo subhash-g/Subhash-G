@@ -1991,6 +1991,34 @@ module.exports = {
             }
         ]
     },
+    "4004": {
+        "name": "Brenthaven",
+        "logo": "/images/logos/brenthaven.png",
+        "bmeApiKey": "407bdd590f2093829a475df30f078c33",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Newsletter",
+                "description": "Coupons, promotions, special events, and new product launches",
+                "property": "mail_list"
+            },
+            {
+                "name": "Cart Reminders",
+                "description": "Reminders,inventory notifications, and special offers on items in your cart",
+                "property": "in-abandoned_cart"
+            }
+        ]
+    },
     "5208": {
         "name": "Angry Patriot Movement",
         "logo": "/images/logos/ap-logo.png",
