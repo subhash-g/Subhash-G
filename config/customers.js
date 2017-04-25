@@ -2010,12 +2010,12 @@ module.exports = {
             {
                 "name": "Newsletter",
                 "description": "Coupons, promotions, special events, and new product launches",
-                "property": "mail_list"
+                "property": "properties.mail_list"
             },
             {
                 "name": "Cart Reminders",
-                "description": "Reminders,inventory notifications, and special offers on items in your cart",
-                "property": "in-abandoned_cart"
+                "description": "Reminders inventory notifications, and special offers on items in your cart",
+                "property": "properties.in-abandoned_cart"
             }
         ]
     },
