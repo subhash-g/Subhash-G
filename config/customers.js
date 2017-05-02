@@ -1912,27 +1912,27 @@ module.exports = {
         "userLists": [
             {
                 "name": "Newsletter",
-                "description":"Receive the Riseart weekly newsletter and keep up to date with the latest news and events",
+                "description":"Receive the Rise Art weekly newsletter and keep up to date with new releases, top tips, events and curator's picks",
                 "property": "properties.subscribed_to_newsletter"
             },
             {
-                "name": "Activity updates",
-                "description":"Receive notifications of new activity in your profile (i.e. new followers,new users favouriting your art work",
+                "name": "Activity Updates",
+                "description":"Receive notifications of new activity on your profile (i.e. new followers, users favouriting your artwork etc)",
                 "property": "properties.subscribed_to_activity_updates"
             },
             {
                 "name": "Weekly Digest",
-                "description":"Receive a weekly email digest summarizing the latest activity on your profile",
+                "description":"Receive a weekly email summarising the latest activity on your profile",
                 "property": "properties.subscribed_to_weekly_digest"
             },
             {
                 "name": "General Emails",
-                "description":"Receive general notifications (i.e. recommendations,reminders etc)",
+                "description":"Receive general notifications (i.e. recommendations, reminders etc)",
                 "property": "properties.subscribed_to_general_emails"
             },
             {
-                "name": "Product updates",
-                "description":"Receive notifications on product updates",
+                "name": "Product Updates",
+                "description":"Be the first to know when your favourite artists release new works for sale",
                 "property": "properties.subscribed_to_product_updates"
             }
         ]
