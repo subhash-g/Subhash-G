@@ -387,6 +387,39 @@ module.exports = {
             }
         ]
     },
+"2439": {
+        "name": "YellowHammer",
+        "logo": "/images/logos/YelloHammer.png",
+        "bmeApiKey": "90668177ddcad7e8754e568489a70dee",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            },
+            {
+                "name": "Email",
+                "property": "contact_email"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Daily Newsletter",
+                "property": "properties.mon_to_fri"
+            },
+            {
+                "name": "Weekly Digest",
+                "property": "properties.only_sunday"
+            },
+            {
+                "name": "Both",
+                "property": "properties.mon_to_fri_and_sun"
+            }
+        ]
+    },
     "2537": {
         "name": "The Gazette",
         "logo": "/images/logos/gazette.png",
