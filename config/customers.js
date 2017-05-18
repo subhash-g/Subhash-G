@@ -1377,7 +1377,7 @@ module.exports = {
                 "property": "properties.ar_vr_weekly"
             },
             {
-                "name": "Botbeat",
+                "name": "AI Weekly",
                 "description": "Connecting the dots: AI, messaging and bots",
                 "property": "properties.botbeat_newsletter"
             },
@@ -1410,6 +1410,10 @@ module.exports = {
             {
                 "name": "Special Communications from VB & Partners",
                 "property": "properties.sponsored_communication"
+            },
+            {
+                "name": "PC Gaming Weekly",
+                "property": "properties.pcgaming_weekly"
             }
         ]
     },
