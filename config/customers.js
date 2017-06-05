@@ -2081,5 +2081,47 @@ module.exports = {
                 "property": "properties.afternoon_newsletter"
             }
         ]
+    },
+    "5243": {
+        "name": "Las Vegas Review-Journal",
+        "logo": "/images/logos/lvrj_logo.png",
+        "bmeApiKey": "716e0194817e6a6e196875db6e6ea573",
+        "header": "Please use the form below to update your subscription settings. You can select which emails you receive, or unsubscribe from all email communications entirely.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Morning Headlines",
+                "property": "properties.morning_headlines"
+            },
+            {
+                "name": "Afternoon Update",
+                "property": "properties.afternoon_update"
+            },
+            {
+                "name": "Business Wire",
+                "property": "properties.business_wire"
+            },
+            {
+                "name": "Entertainment Wire",
+                "property": "properties.entertainment_wire"
+            },
+            {
+                "name": "Political Wire",
+                "property": "properties.political_wire"
+            },
+            {
+                "name": "Sports Wire",
+                "property": "properties.sports_wire"
+            }
+        ]
     }
 };
