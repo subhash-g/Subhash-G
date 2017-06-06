@@ -110,43 +110,43 @@ module.exports = {
             }
         ]
     },
-    "1496": {
-        "name": "Joy of Kosher",
-        "logo": "/images/logos/joy-of-kosher.png",
-        "bmeApiKey": "d47e4826eef094523ca6743722494540",
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "first_name"
-            },
-            {
-                "name": "Last Name",
-                "property": "last_name"
-            },
-            {
-                "name": "Zip Code",
-                "property": "properties.zip"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Jamie Geller",
-                "property": "properties.jamie_geller"
-            },
-            {
-                "name": "Joy Is Real",
-                "property": "properties.joy_isreal"
-            },
-            {
-                "name": "Passover Count",
-                "property": "properties.passover_count"
-            },
-            {
-                "name": "Weekly Shabbat",
-                "property": "properties.weekly_shabbat"
-            }
-        ]
-    },
+    // "1496": {
+    //     "name": "Joy of Kosher",
+    //     "logo": "/images/logos/joy-of-kosher.png",
+    //     "bmeApiKey": "d47e4826eef094523ca6743722494540",
+    //     "userProperties": [
+    //         {
+    //             "name": "First Name",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "Last Name",
+    //             "property": "last_name"
+    //         },
+    //         {
+    //             "name": "Zip Code",
+    //             "property": "properties.zip"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Jamie Geller",
+    //             "property": "properties.jamie_geller"
+    //         },
+    //         {
+    //             "name": "Joy Is Real",
+    //             "property": "properties.joy_isreal"
+    //         },
+    //         {
+    //             "name": "Passover Count",
+    //             "property": "properties.passover_count"
+    //         },
+    //         {
+    //             "name": "Weekly Shabbat",
+    //             "property": "properties.weekly_shabbat"
+    //         }
+    //     ]
+    // },
     "1523": {
         "name": "Marketing Reads",
         "logo": "/images/logos/mrlogo.png",
@@ -188,55 +188,55 @@ module.exports = {
             }
         ]
     },
-    "1571": {
-        "name": "Al-Monitor",
-        "logo": "/images/logos/almonitor.png",
-        "bmeApiKey": "1567c933fd90adbfc4ca216f28933ca0",
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "properties.first_name"
-            },
-            {
-                "name": "Last Name",
-                "property": "properties.last_name"
-            },
-            {
-                "name": "Organization",
-                "property": "properties.organization"
-            },
-            {
-                "name": "Title",
-                "property": "properties.title"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "English Newsletter",
-                "property": "properties.english"
-            },
-            {
-                "name": "Hebrew Newsletter",
-                "property": "properties.hebrew"
-            },
-            {
-                "name": "Arabic Newsletter",
-                "property": "properties.arabic"
-            },
-            {
-                "name": "Turkish Newsletter",
-                "property": "properties.turkish"
-            },
-            {
-                "name": "Persian Newsletter",
-                "property": "properties.persian"
-            },
-            {
-                "name": "Middle East Minute",
-                "property": "properties.middleeastminute"
-            }
-        ]
-    },
+    // "1571": {
+    //     "name": "Al-Monitor",
+    //     "logo": "/images/logos/almonitor.png",
+    //     "bmeApiKey": "1567c933fd90adbfc4ca216f28933ca0",
+    //     "userProperties": [
+    //         {
+    //             "name": "First Name",
+    //             "property": "properties.first_name"
+    //         },
+    //         {
+    //             "name": "Last Name",
+    //             "property": "properties.last_name"
+    //         },
+    //         {
+    //             "name": "Organization",
+    //             "property": "properties.organization"
+    //         },
+    //         {
+    //             "name": "Title",
+    //             "property": "properties.title"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "English Newsletter",
+    //             "property": "properties.english"
+    //         },
+    //         {
+    //             "name": "Hebrew Newsletter",
+    //             "property": "properties.hebrew"
+    //         },
+    //         {
+    //             "name": "Arabic Newsletter",
+    //             "property": "properties.arabic"
+    //         },
+    //         {
+    //             "name": "Turkish Newsletter",
+    //             "property": "properties.turkish"
+    //         },
+    //         {
+    //             "name": "Persian Newsletter",
+    //             "property": "properties.persian"
+    //         },
+    //         {
+    //             "name": "Middle East Minute",
+    //             "property": "properties.middleeastminute"
+    //         }
+    //     ]
+    // },
     "1686": {
         "name": "Fatherly",
         "logo": "/images/logos/fatherly-logo.png",
@@ -318,76 +318,76 @@ module.exports = {
             }
         ]
     },
-    "2327": {
-        "name": "Mic",
-        "logo": "/images/logos/mic.png",
-        "bmeApiKey": "e558ae2b1173e425bd9ea08b5e2f581d",
-        "userProperties": [],
-        "userLists": [
-            {
-                "name": "Mic Check Daily",
-                "property": "properties.miccheckdaily"
-            },
-            {
-                "name": "Dedicated",
-                "property": "properties.dedicated"
-            },
-            {
-                "name": "Delivered",
-                "property": "properties.delivered"
-            },
-            {
-                "name": "The Slay",
-                "property": "properties.theslay"
-            },
-            {
-                "name": "News Alerts",
-                "property": "properties.newsalerts"
-            },
-            {
-                "name": "The Movement",
-                "property": "properties.themovement"
-            },
-            {
-                "name": "The Payoff",
-                "property": "properties.thepayoff"
-            },
-            {
-                "name": "Dedicated Slay",
-                "property": "properties.dedicatedslay"
-            },
-            {
-                "name": "Navigating Trump's America",
-                "property": "properties.navigatingtrumpsamerica"
-            }
-        ]
-    },
-    "2531": {
-        "name": "Capitalizarme",
-        "logo": "/images/logos/capitalizarme.png",
-        "bmeApiKey": "5cf3702dcca81f587c4967967265075e",
-        "userProperties": [
-            {
-                "name": "Nombre",
-                "property": "first_name"
-            },
-            {
-                "name": "Apellido",
-                "property": "last_name"
-            },
-            {
-                "name": "Teléfono",
-                "property": "phone"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Newsletter Chile",
-                "property": "properties.list_newsletter_chile"
-            }
-        ]
-    },
-"2439": {
+    // "2327": {
+    //     "name": "Mic",
+    //     "logo": "/images/logos/mic.png",
+    //     "bmeApiKey": "e558ae2b1173e425bd9ea08b5e2f581d",
+    //     "userProperties": [],
+    //     "userLists": [
+    //         {
+    //             "name": "Mic Check Daily",
+    //             "property": "properties.miccheckdaily"
+    //         },
+    //         {
+    //             "name": "Dedicated",
+    //             "property": "properties.dedicated"
+    //         },
+    //         {
+    //             "name": "Delivered",
+    //             "property": "properties.delivered"
+    //         },
+    //         {
+    //             "name": "The Slay",
+    //             "property": "properties.theslay"
+    //         },
+    //         {
+    //             "name": "News Alerts",
+    //             "property": "properties.newsalerts"
+    //         },
+    //         {
+    //             "name": "The Movement",
+    //             "property": "properties.themovement"
+    //         },
+    //         {
+    //             "name": "The Payoff",
+    //             "property": "properties.thepayoff"
+    //         },
+    //         {
+    //             "name": "Dedicated Slay",
+    //             "property": "properties.dedicatedslay"
+    //         },
+    //         {
+    //             "name": "Navigating Trump's America",
+    //             "property": "properties.navigatingtrumpsamerica"
+    //         }
+    //     ]
+    // },
+    // "2531": {
+    //     "name": "Capitalizarme",
+    //     "logo": "/images/logos/capitalizarme.png",
+    //     "bmeApiKey": "5cf3702dcca81f587c4967967265075e",
+    //     "userProperties": [
+    //         {
+    //             "name": "Nombre",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "Apellido",
+    //             "property": "last_name"
+    //         },
+    //         {
+    //             "name": "Teléfono",
+    //             "property": "phone"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Newsletter Chile",
+    //             "property": "properties.list_newsletter_chile"
+    //         }
+    //     ]
+    // },
+    "2439": {
         "name": "YellowHammer",
         "logo": "/images/logos/YelloHammer.png",
         "bmeApiKey": "90668177ddcad7e8754e568489a70dee",
@@ -502,104 +502,104 @@ module.exports = {
 
         ]
     },
-    "2552": {
-        "name": "Fusion",
-        "logo": "/images/logos/refrigiwear.png",
-        "bmeApiKey": "bffecca6c49fa51c7c7957c8e5cb67d8",
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "first_name"
-            },
-            {
-                "name": "Last Name",
-                "property": "last_name"
-            },
-            {
-                "name": "Gender",
-                "property": "gender"
-            },
-            {
-                "name": "Email",
-                "property": "contact_email"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Weekly",
-                "property": "properties.weekly"
-            },
-            {
-                "name": "Monthly",
-                "property": "properties.monthly"
-            },
-            {
-                "name": "Quarterly",
-                "property": "properties.quarterly"
-            }
-        ]
-    },
-    "2740": {
-        "name": "PatriotUpdate",
-        "logo": "/images/logos/patriot-update.png",
-        "bmeApiKey": "f400913fe2386e2347ecb77e45eb0900",
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "first_name"
-            },
-            {
-                "name": "Last Name",
-                "property": "last_name"
-            },
-            {
-                "name": "Street",
-                "property": "properties.address.street"
-            },
-            {
-                "name": "City",
-                "property": "properties.address.city"
-            },
-            {
-                "name": "State",
-                "property": "properties.address.state"
-            },
-            {
-                "name": "Zip Code",
-                "property": "properties.address.zip"
-            },
-            {
-                "name": "Cell",
-                "property": "properties.address.phone_cell"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Weekly Newsletter",
-                "property": "properties.newsletter"
-            },
-            {
-                "name": "Alerts",
-                "property": "properties.alerts"
-            }
-        ]
-    },
-    "2889": {
-        "name": "GetHealthyU",
-        "logo": "/images/logos/gethealthyu.png",
-        "bmeApiKey": "856b1083dcd5ad905c1edee6a850d33c",
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "first_name"
-            },
-            {
-                "name": "Update Your Email",
-                "property": "contact_email"
-            }
-        ],
-        "userLists": []
-    },
+    // "2552": {
+    //     "name": "Fusion",
+    //     "logo": "/images/logos/refrigiwear.png",
+    //     "bmeApiKey": "bffecca6c49fa51c7c7957c8e5cb67d8",
+    //     "userProperties": [
+    //         {
+    //             "name": "First Name",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "Last Name",
+    //             "property": "last_name"
+    //         },
+    //         {
+    //             "name": "Gender",
+    //             "property": "gender"
+    //         },
+    //         {
+    //             "name": "Email",
+    //             "property": "contact_email"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Weekly",
+    //             "property": "properties.weekly"
+    //         },
+    //         {
+    //             "name": "Monthly",
+    //             "property": "properties.monthly"
+    //         },
+    //         {
+    //             "name": "Quarterly",
+    //             "property": "properties.quarterly"
+    //         }
+    //     ]
+    // },
+    // "2740": {
+    //     "name": "PatriotUpdate",
+    //     "logo": "/images/logos/patriot-update.png",
+    //     "bmeApiKey": "f400913fe2386e2347ecb77e45eb0900",
+    //     "userProperties": [
+    //         {
+    //             "name": "First Name",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "Last Name",
+    //             "property": "last_name"
+    //         },
+    //         {
+    //             "name": "Street",
+    //             "property": "properties.address.street"
+    //         },
+    //         {
+    //             "name": "City",
+    //             "property": "properties.address.city"
+    //         },
+    //         {
+    //             "name": "State",
+    //             "property": "properties.address.state"
+    //         },
+    //         {
+    //             "name": "Zip Code",
+    //             "property": "properties.address.zip"
+    //         },
+    //         {
+    //             "name": "Cell",
+    //             "property": "properties.address.phone_cell"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Weekly Newsletter",
+    //             "property": "properties.newsletter"
+    //         },
+    //         {
+    //             "name": "Alerts",
+    //             "property": "properties.alerts"
+    //         }
+    //     ]
+    // },
+    // "2889": {
+    //     "name": "GetHealthyU",
+    //     "logo": "/images/logos/gethealthyu.png",
+    //     "bmeApiKey": "856b1083dcd5ad905c1edee6a850d33c",
+    //     "userProperties": [
+    //         {
+    //             "name": "First Name",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "Update Your Email",
+    //             "property": "contact_email"
+    //         }
+    //     ],
+    //     "userLists": []
+    // },
     "2987": {
         "name": "Diginomica",
         "logo": "/images/logos/dgn.jpg",
@@ -636,43 +636,43 @@ module.exports = {
 
         ]
     },
-    "3412": {
-        "name": "Honeycombers",
-        "logo": "/images/logos/honeycombers.png",
-        "bmeApiKey": "b782e14a032ea8b6d2b51b47403c1513",
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "first_name"
-            },
-            {
-                "name": "Last Name",
-                "property": "last_name"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Singapore",
-                "property": "properties.newsletter_singapore"
-            },
-            {
-                "name": "Bali",
-                "property": "properties.newsletter_bali"
-            },
-            {
-                "name": "Jakarta",
-                "property": "properties.newsletter_jakarta"
-            },
-            {
-                "name": "HoneykidsAsia",
-                "property": "properties.newsletter_honeykidsasia"
-            },
-            {
-                "name": "HoneyBrides",
-                "property": "properties.newsletter_honeybrides"
-            }
-        ]
-    },
+    // "3412": {
+    //     "name": "Honeycombers",
+    //     "logo": "/images/logos/honeycombers.png",
+    //     "bmeApiKey": "b782e14a032ea8b6d2b51b47403c1513",
+    //     "userProperties": [
+    //         {
+    //             "name": "First Name",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "Last Name",
+    //             "property": "last_name"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Singapore",
+    //             "property": "properties.newsletter_singapore"
+    //         },
+    //         {
+    //             "name": "Bali",
+    //             "property": "properties.newsletter_bali"
+    //         },
+    //         {
+    //             "name": "Jakarta",
+    //             "property": "properties.newsletter_jakarta"
+    //         },
+    //         {
+    //             "name": "HoneykidsAsia",
+    //             "property": "properties.newsletter_honeykidsasia"
+    //         },
+    //         {
+    //             "name": "HoneyBrides",
+    //             "property": "properties.newsletter_honeybrides"
+    //         }
+    //     ]
+    // },
     "3497": {
         "name": "Uber Vision",
         "logo": "/images/boomtrain.png",
@@ -745,31 +745,31 @@ module.exports = {
             }
         ]
     },
-    "3931": {
-        "name": "Fusion",
-        "logo": "/images/logos/fusion.png",
-        "bmeApiKey": "93bec4a1f036004f3e849fe4bb54e58e",
-        "userProperties": [
-            {
-                "name": "Email",
-                "property": "contact_email"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Fusion Daily",
-                "property": "properties.fusion_daily"
-            },
-            {
-                "name": "Real Future",
-                "property": "properties.real_future"
-            },
-            {
-                "name": "Marketing",
-                "property": "properties.marketing"
-            }
-        ]
-    },
+    // "3931": {
+    //     "name": "Fusion",
+    //     "logo": "/images/logos/fusion.png",
+    //     "bmeApiKey": "93bec4a1f036004f3e849fe4bb54e58e",
+    //     "userProperties": [
+    //         {
+    //             "name": "Email",
+    //             "property": "contact_email"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Fusion Daily",
+    //             "property": "properties.fusion_daily"
+    //         },
+    //         {
+    //             "name": "Real Future",
+    //             "property": "properties.real_future"
+    //         },
+    //         {
+    //             "name": "Marketing",
+    //             "property": "properties.marketing"
+    //         }
+    //     ]
+    // },
     "4133": {
         "name": "Exame",
         "logo": "/images/logos/exame.jpg",
@@ -851,27 +851,27 @@ module.exports = {
             }
         ]
     },
-    "4648": {
-        "name": "ReadWrite",
-        "logo": "/images/logos/readwrite.png",
-        "bmeApiKey": "f99f56e6566b4843fa6a4d282a8f0b87",
-        "userProperties": [
-            {
-                "name": "Email",
-                "property": "contact_email"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Weekly",
-                "property": "properties.weekly_wrapup"
-            },
-            {
-                "name": "Daily",
-                "property": "properties.daily_recap"
-            }
-        ]
-    },
+    // "4648": {
+    //     "name": "ReadWrite",
+    //     "logo": "/images/logos/readwrite.png",
+    //     "bmeApiKey": "f99f56e6566b4843fa6a4d282a8f0b87",
+    //     "userProperties": [
+    //         {
+    //             "name": "Email",
+    //             "property": "contact_email"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Weekly",
+    //             "property": "properties.weekly_wrapup"
+    //         },
+    //         {
+    //             "name": "Daily",
+    //             "property": "properties.daily_recap"
+    //         }
+    //     ]
+    // },
     "5095": {
         "name": "CIO-UK",
         "logo": "/images/logos/ciouk.png",
@@ -1417,38 +1417,38 @@ module.exports = {
             }
         ]
     },
-    "5177": {
-        "name": "HonestReporting",
-        "logo": "/images/logos/honestreporting.jpg",
-        "bmeApiKey": "bfe860ba8fc1121e04cb8d7b0c1b3381",
-        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
-        "userProperties": [
-            {
-                "name": "email address",
-                "property": "contact_email"
-            },
-            {
-                "name": "first name",
-                "property": "first_name"
-            },
-            {
-                "name": "last name",
-                "property": "last_name"
-            }
-        ],
-        "userLists": [
-            {
-                "name": "Daily IDNS emails",
-                "description": "Check here to receive Daily IDNS emails",
-                "property": "properties.daily_idns"
-            },
-            {
-                "name": "Weekly Bias Alert emails",
-                "description": "Check here to receive Weekly Bias Alert emails",
-                "property": "properties.weekly_bias_alert"
-            }
-        ]
-    },
+    // "5177": {
+    //     "name": "HonestReporting",
+    //     "logo": "/images/logos/honestreporting.jpg",
+    //     "bmeApiKey": "bfe860ba8fc1121e04cb8d7b0c1b3381",
+    //     "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive or unsubscribe from all email communications.",
+    //     "userProperties": [
+    //         {
+    //             "name": "email address",
+    //             "property": "contact_email"
+    //         },
+    //         {
+    //             "name": "first name",
+    //             "property": "first_name"
+    //         },
+    //         {
+    //             "name": "last name",
+    //             "property": "last_name"
+    //         }
+    //     ],
+    //     "userLists": [
+    //         {
+    //             "name": "Daily IDNS emails",
+    //             "description": "Check here to receive Daily IDNS emails",
+    //             "property": "properties.daily_idns"
+    //         },
+    //         {
+    //             "name": "Weekly Bias Alert emails",
+    //             "description": "Check here to receive Weekly Bias Alert emails",
+    //             "property": "properties.weekly_bias_alert"
+    //         }
+    //     ]
+    // },
     "5178": {
         "name": "Roll Call",
         "logo": "/images/logos/rollcall.png",
