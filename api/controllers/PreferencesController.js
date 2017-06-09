@@ -77,6 +77,8 @@ module.exports = {
 					});
 
 					return res.view('preferences/index', {
+						// added langPref customer prop - to support text localisation
+						langPref: customer.langPref,
 						name: customer.name,
 						customerId: customerId,
 						userId: data.id,

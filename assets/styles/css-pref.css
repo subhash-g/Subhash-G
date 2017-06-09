@@ -322,10 +322,13 @@ body {
 }
 #content #list-form fieldset input[type=checkbox].css-checkbox:checked+label.css-label,
 #content #list-form fieldset input[type=checkbox].css-checkbox+label.css-label.chk {
-    background-position: 0 -24px
+   /* changed the vertical position of the background image to allow for multi line titles - image height changed to 96px - below */
+    background-position: 0 -72px
 }
 #content #list-form fieldset label.css-label {
-    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f263091100c0acc5f5223adc2667d02c.png);
+    /* background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f263091100c0acc5f5223adc2667d02c.png);*/
+    /* new background image has height 96px - was 48px - allows for multi line titles*/
+    background-image: url(/images/checkbox.png);    
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -389,4 +392,11 @@ body {
     width:100%;
     text-align: center;
     color:white;
+}
+/* Set style for dropdown selections */
+.drop-down {
+    margin-top:5px !important;
+    margin-bottom:5px !important;
+    margin-left: 0px !important;
+    width:250px !important;
 }
