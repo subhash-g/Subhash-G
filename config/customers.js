@@ -2123,5 +2123,273 @@ module.exports = {
                 "property": "properties.sports_wire"
             }
         ]
+    },
+    "5284_LO": {
+        "name": "Impremdia_LaOpinion",
+        "langPref":"ES",
+        "logo": "/images/logos/laopinion-logo.png",
+        "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
+        "header":"Actualice sus preferencias",
+        "userProperties": [
+            {
+                "name": "Correo electrónico",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nombre",
+                "property": "first_name"
+            },
+            {
+                "name": "Apellido",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "NOTICIAS DE LOS ÁNGELES",
+                "description":"Las noticias más importantes que están ocurriendo en Los Ángeles.",
+                "property": "properties.lo_noticiasdelosangeles"
+            },
+            {
+                "name": "NOTICIAS DEL DÍA",
+                "description":"Los titulares más populares del día de hoy en los Estados Unidos",
+                "property": "properties.lo_noticiasdeldia"
+            },
+            {
+                "name": "ENTRETENIMIENTO",
+                "description":"Los titulares del día de hoy sobre tus estrellas favoritas.",
+                "property": "properties.lo_entretenimiento"
+            },
+            {
+                "name": "POLÍTICA",
+                "description":"Noticias diarias de política en los Estados Unidos.",
+                "property": "properties.lo_politica"
+            },
+            {
+                "name": "FÚTBOL",
+                "description":"Los titulares más populares del fútbol del día de hoy.",
+                "property": "properties.lo_futbol"
+            },
+            {
+                "name": "GUÍA DE COMPRAS",
+                "description":"Guía de compras para belleza, tecnología, tu hogar y más.",
+                "property": "properties.lo_guiadecompras"
+            },
+            {
+                "name": "EMPLEOS",
+                "description":"Ofertas de trabajo en Los Ángeles.",
+                "property": "properties.lo_empleos"
+            },
+            {
+                "name": "LOTERÍA",
+                "description":"Resultados de las loterías de California.",
+                "property": "properties.lo_loteria"
+            },
+            {
+                "name": "HORÓSCOPO",
+                "description":"Empieza el día con tu horóscopo por El Niño Prodigio.",
+                "property": "properties.lo_horoscopo"
+            },
+            {
+                "name": "RESUMEN SEMANAL",
+                "description":"Los titulares más populares de la semana.",
+                "property": "properties.lo_resumensemanal"
+            },
+            {
+                "name": "HORÓSCOPO_SIGN",
+                "property": "properties.horoscopo_sign",
+                "listType":"dropDown"
+            },
+            {
+                "name": "NOTICIAS DE ÚLTIMA HORA",
+                "description":"Alertas informativas de noticias muy importantes.",
+                "property": "properties.lo_noticiasdeultimahora"
+            }
+     
+         ]
+    },
+        "5284_ED": {
+        "name": "Impremdia_ElDiarioNY",
+        "langPref":"ES",
+        "logo": "/images/logos/eldiariony-logo.png",
+        "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
+        "header":"Actualice sus preferencias",
+        "userProperties": [
+            {
+                "name": "Correo electrónico",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nombre",
+                "property": "first_name"
+            },
+            {
+                "name": "Apellido",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [            
+            {
+                "name": "NOTICIAS DE NEW YORK",
+                "description":"Las noticias más importantes que están ocurriendo en New York.",
+                "property": "properties.ed_noticiasdenewyork"
+            },
+            {
+                "name": "NOTICIAS DEL DÍA",
+                "description":"Los titulares más populares del día de hoy en los Estados Unidos.",
+                "property": "properties.ed_noticiasdeldia"
+            },
+            {
+                "name": "ENTRETENIMIENTO",
+                "description":"Los titulares del día de hoy sobre tus estrellas favoritas.",
+                "property": "properties.ed_entretenimiento"
+            },
+            {
+                "name": "POLÍTICA",
+                "description":"Noticias diarias de política en los Estados Unidos.",
+                "property": "properties.ed_politica"
+            },
+            {
+                "name": "GUÍA DE COMPRAS",
+                "description":"Guía de compras para belleza, tecnología, tu hogar y más.",
+                "property": "properties.ed_guiadecompras"
+            },
+            {
+                "name": "EMPLEOS",
+                "description":"Ofertas de trabajo en New York.",
+                "property": "properties.ed_empleos"
+            },
+            {
+                "name": "LOTERÍA",
+                "description":"Resultados de las loterías de New York.",
+                "property": "properties.ed_loteria"
+            },
+            {
+                "name": "HORÓSCOPO",
+                "description":"Empieza el día con tu horóscopo por El Niño Prodigio.",
+                "property": "properties.ed_horoscopo"
+            },
+            {
+                "name": "RESUMEN SEMANAL",
+                "description":"Los titulares más populares de la semana.",
+                "property": "properties.ed_resumensemanal"
+            },
+            {
+                "name": "HORÓSCOPO_SIGN",
+                "property": "properties.horoscopo_sign",
+                "listType":"dropDown"
+            },
+            {
+                "name": "NOTICIAS DE ÚLTIMA HORA",
+                "description":"Alertas informativas de noticias muy importantes.",
+                "property": "properties.ed_noticiasdeultimahora"
+            }
+        ]
+    },
+        "5284_LR": {
+        "name": "Impremdia_Laraza",
+        "langPref":"ES",
+        "logo": "/images/logos/laraza-logo.jpg",
+        "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
+        "header":"Actualice sus preferencias",
+        "userProperties": [
+            {
+                "name": "Correo electrónico",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nombre",
+                "property": "first_name"
+            },
+            {
+                "name": "Apellido",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "HIDDEN",
+                "property": "properties.horoscopo_sign"
+            }, 
+            {
+                "name": "NOTICIAS DEL DÍA",
+                "description":"Los titulares más populares del día de hoy en los Estados Unidos.",
+                "property": "properties.lr_noticiasdeldia"
+            },
+            
+            {
+                "name": "HORÓSCOPO",
+                "description":"Empieza el día con tu horóscopo por El Niño Prodigio.",
+                "property": "properties.lr_horoscopo"
+            },
+            {
+                "name": "EMPLEOS",
+                "description":"Ofertas de trabajo en Chicago.",
+                "property": "properties.lr_empleos"
+            },
+            {
+                "name": "HORÓSCOPO_SIGN",
+                "property": "properties.horoscopo_sign",
+                "listType":"dropDown"
+            },
+        ]
+    },
+        "5284_LP": {
+        "name": "Impremdia_LaPrensa",
+        "langPref":"ES",
+        "logo": "/images/logos/laprensa-logo.png",
+        "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
+        "header":"Actualice sus preferencias",
+        "userProperties": [
+             
+            {
+                "name": "Correo electrónico",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nombre",
+                "property": "first_name"
+            },
+            {
+                "name": "Apellido",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "NOTICIAS DEL DÍA",
+                "description":"Los titulares más populares del día de hoy en los Estados Unidos.",
+                "property": "properties.lp_noticiasdeldia"
+            }
+        ]
+    },
+        "5284_PTM": {
+        "name": "Impremdia_ParaTiMujer",
+        "langPref":"ES",
+        "logo": "/images/logos/paratimujer-logo.jpg",
+        "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
+        "header":"Actualice sus preferencias",
+        "userProperties": [
+            {
+                "name": "Correo electrónico",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nombre",
+                "property": "first_name"
+            },
+            {
+                "name": "Apellido",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+
+            {
+                "name": "TITULARES DE HOY",
+                "description":"Consejos para relaciones, belleza y salud.",
+                "property": "properties.ptm_titularesdeho"
+            }
+        ]
     }
 };
