@@ -2306,11 +2306,7 @@ module.exports = {
                 "property": "last_name"
             }
         ],
-        "userLists": [
-            {
-                "name": "HIDDEN",
-                "property": "properties.horoscopo_sign"
-            }, 
+        "userLists": [ 
             {
                 "name": "NOTICIAS DEL DÍA",
                 "description":"Los titulares más populares del día de hoy en los Estados Unidos.",
