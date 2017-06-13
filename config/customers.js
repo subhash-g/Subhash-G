@@ -206,8 +206,8 @@ module.exports = {
     //             "property": "properties.organization"
     //         },
     //         {
-    //             "name": "Title",
-    //             "property": "properties.title"
+    //             "name": "Título",
+    //             "property": "properties.Título"
     //         }
     //     ],
     //     "userLists": [
@@ -1221,8 +1221,8 @@ module.exports = {
                 "property": "company"
             },
             {
-                "name": "Title",
-                "property": "title"
+                "name": "Título",
+                "property": "Título"
             }
         ],
         "userLists": [
@@ -1366,8 +1366,8 @@ module.exports = {
                 "property": "company"
             },
             {
-                "name": "Title",
-                "property": "title"
+                "name": "Título",
+                "property": "Título"
             }
         ],
         "userLists": [
@@ -2386,6 +2386,71 @@ module.exports = {
                 "description":"Consejos para relaciones, belleza y salud.",
                 "property": "properties.ptm_titularesdeho"
             }
+        ]
+    },
+        "5264_Aeropost": {
+        "name": "DEMO-ONLINE-CONTENT",
+        "langPref":"ES",
+        "logo": "/images/logos/aeropost.png",
+        "bmeApiKey": "83634e47366340ef84b2741c07af91c5",
+        "header":"Actualice sus preferencias",
+        "userProperties": [
+            {
+                "name": "Correo electrónico",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nombre",
+                "property": "first_name"
+            },
+            {
+                "name": "Apellido",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+
+            {
+                "name": "Título 1",
+                "description":"Esta es la descripción para el título 1, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 2",
+                "description":"Esta es la descripción para el título 2, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 3",
+                "description":"Esta es la descripción para el título 3, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 4",
+                "description":"Esta es la descripción para el título 4, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 5",
+                "description":"Esta es la descripción para el título 5, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 6",
+                "description":"Esta es la descripción para el título 6, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 7",
+                "description":"Esta es la descripción para el título 7, es una casilla",
+                "property": "properties.newsletter_daily"
+            },
+            {
+                "name": "Título 8",
+                "description":"Esta es la descripción para el título 8, es una casilla",
+                "property": "properties.newsletter_daily"
+            }
+
         ]
     }
 };
