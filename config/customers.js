@@ -2121,6 +2121,10 @@ module.exports = {
             {
                 "name": "Sports Wire",
                 "property": "properties.sports_wire"
+            },
+            {
+                "name": "Business Press Highlights",
+                "property": "properties.business_press"
             }
         ]
     },
