@@ -1414,6 +1414,10 @@ module.exports = {
             {
                 "name": "PC Gaming Weekly",
                 "property": "properties.pcgaming_weekly"
+            },
+            {
+                "name": "Heartland Tech Weekly",
+                "property": "properties.heartland_tech"
             }
         ]
     },
