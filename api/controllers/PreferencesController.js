@@ -205,8 +205,6 @@ module.exports = {
 				});
 
 				if(customer.bmeApiKey) {
-					var today = new Date();
-					current_date = today.toISOString().replace(/\.[0-9]{2,3}/, '');
 					var properties = {}
 					customer.userLists.forEach(function(entry) {
 	    				properties[entry.property] = req.body[entry.property]
@@ -218,7 +216,6 @@ module.exports = {
 					      "uid":userSubscriber.contact_value
 					    },
 					    "event":"updated_preferences",
-					    "timestamp":current_date,
 					    "properties": properties
 	  				}
 					}
