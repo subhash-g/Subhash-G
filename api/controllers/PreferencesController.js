@@ -210,7 +210,7 @@ module.exports = {
 	    				properties[entry.property] = req.body[entry.property]
 					});
 
-					var activityProps = {
+					var updatePreferenceActivity = {
 						"activity":{
 					    "subscriber":{
 					      "uid":userSubscriber.contact_value
@@ -220,7 +220,7 @@ module.exports = {
 	  				}
 					}
 
-					bme.postSubscriberActivity(customer.bmeApiKey, activityProps, function (data, error) { })
+					bme.postSubscriberActivity(customer.bmeApiKey, updatePreferenceActivity, function (data, error) { })
 				}
 
 
