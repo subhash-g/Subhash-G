@@ -2209,7 +2209,7 @@ module.exports = {
                 "description":"Alertas informativas de noticias muy importantes.",
                 "property": "properties.lo_noticiasdeultimahora"
             }
-     
+
          ]
     },
         "5284_ED": {
@@ -2232,7 +2232,7 @@ module.exports = {
                 "property": "last_name"
             }
         ],
-        "userLists": [            
+        "userLists": [
             {
                 "name": "NOTICIAS DE NEW YORK",
                 "description":"Las noticias más importantes que están ocurriendo en New York.",
@@ -2310,13 +2310,13 @@ module.exports = {
                 "property": "last_name"
             }
         ],
-        "userLists": [ 
+        "userLists": [
             {
                 "name": "NOTICIAS DEL DÍA",
                 "description":"Los titulares más populares del día de hoy en los Estados Unidos.",
                 "property": "properties.lr_noticiasdeldia"
             },
-            
+
             {
                 "name": "HORÓSCOPO",
                 "description":"Empieza el día con tu horóscopo por El Niño Prodigio.",
@@ -2341,7 +2341,7 @@ module.exports = {
         "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
         "header":"Actualice sus preferencias",
         "userProperties": [
-             
+
             {
                 "name": "Correo electrónico",
                 "property": "contact_email"
@@ -2389,6 +2389,48 @@ module.exports = {
                 "name": "TITULARES DE HOY",
                 "description":"Consejos para relaciones, belleza y salud.",
                 "property": "properties.ptm_titularesdeho"
+            }
+        ]
+    },
+        "4884": {
+        "name": "Abril - Veja",
+        "langPref":"BP",
+        "logo": "/images/logos/veja-logo.png",
+        "bmeApiKey": "67cd63093f6148c1ef358b74ac07e8ff",
+        "userProperties": [
+            {
+                "name": "Email",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nome",
+                "property": "name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "VEJA",
+                "property": "properties.veja_newsletter"
+            },
+            {
+                "name": "Radar Online",
+                "property": "properties.radar_newsletter"
+            },
+            {
+                "name": "VEJA Colunistas",
+                "property": "properties.vejacolunistas_newsletter"
+            },
+            {
+                "name": "Isabela Boscov",
+                "property": "properties.isabelaboscov_newsletter"
+            },
+            {
+                "name": "TVeja",
+                "property": "properties.tveja_newsletter"
+            },
+            {
+                "name": "Placar",
+                "property": "properties.placar_newsletter"
             }
         ]
     }
