@@ -2472,6 +2472,18 @@ module.exports = {
             {
                 "name": "PC Newsletter",
                 "property": "properties.pc"
+            },
+            {
+                "name": "Entertainment Newsletter",
+                "property": "properties.entertainment"
+            },
+            {
+                "name": "Giveaways & Deals Newsletter",
+                "property": "properties.giveaways_deals"
+            },
+            {
+                "name": "Tech & Hardware Newsletter",
+                "property": "properties.tech_hardware"
             }
         ]
     }
