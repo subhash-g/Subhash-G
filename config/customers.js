@@ -2433,5 +2433,58 @@ module.exports = {
                 "property": "properties.placar_newsletter"
             }
         ]
+    },
+    "2555": {
+        "name": "GameSpot",
+        "logo": "/images/logos/gamespot_logo.png",
+        "bmeApiKey": "189fe4f4f1829765b626f54ac012f4c2",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            },
+            {
+                "name": "Email",
+                "property": "contact_email"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Weekly Newsletter",
+                "property": "properties.opt_in"
+            },
+            {
+                "name": "Nintendo Switch Newsletter",
+                "property": "properties.nintendo_switch"
+            },
+            {
+                "name": "PS4 Newsletter",
+                "property": "properties.ps4"
+            },
+            {
+                "name": "Xbox One Newsletter",
+                "property": "properties.xbox_one"
+            },
+            {
+                "name": "PC Newsletter",
+                "property": "properties.pc"
+            },
+            {
+                "name": "Entertainment Newsletter",
+                "property": "properties.entertainment"
+            },
+            {
+                "name": "Giveaways & Deals Newsletter",
+                "property": "properties.giveaways_deals"
+            },
+            {
+                "name": "Tech & Hardware Newsletter",
+                "property": "properties.tech_hardware"
+            }
+        ]
     }
 };
