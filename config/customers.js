@@ -2436,7 +2436,7 @@ module.exports = {
     },
     "2555": {
         "name": "GameSpot",
-        "logo": "/images/logos/gamespot_logo.png",
+        "logo": "/images/logos/gamespot_logo_new.png",
         "bmeApiKey": "189fe4f4f1829765b626f54ac012f4c2",
         "userProperties": [
             {
@@ -2474,16 +2474,16 @@ module.exports = {
                 "property": "properties.pc"
             },
             {
-                "name": "Entertainment Newsletter",
-                "property": "properties.entertainment"
+                "name": "Universe Newsletter",
+                "property": "properties.universe"
             },
             {
                 "name": "Giveaways & Deals Newsletter",
                 "property": "properties.giveaways_deals"
             },
             {
-                "name": "Tech & Hardware Newsletter",
-                "property": "properties.tech_hardware"
+                "name": "Gametech Newsletter",
+                "property": "properties.gametech"
             }
         ]
     }
