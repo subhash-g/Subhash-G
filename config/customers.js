@@ -2474,7 +2474,7 @@ module.exports = {
                 "property": "properties.pc"
             },
             {
-                "name": "Universe Newsletter",
+                "name": "Universe (Entertainment) Newsletter",
                 "property": "properties.universe"
             },
             {
@@ -2482,7 +2482,7 @@ module.exports = {
                 "property": "properties.giveaways_deals"
             },
             {
-                "name": "Gametech Newsletter",
+                "name": "GameTech (Tech & Hardware) Newsletter",
                 "property": "properties.gametech"
             }
         ]
