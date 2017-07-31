@@ -2458,8 +2458,8 @@ module.exports = {
                 "property": "properties.opt_in"
             },
             {
-                "name": "Nintendo Switch Newsletter",
-                "property": "properties.nintendo_switch"
+                "name": "Nintendo Newsletter",
+                "property": "properties.nintendo"
             },
             {
                 "name": "PS4 Newsletter",
