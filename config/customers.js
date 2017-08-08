@@ -2486,5 +2486,34 @@ module.exports = {
                 "property": "properties.gametech"
             }
         ]
+    },
+    "2847": {
+        "name": "theParisReview",
+        "logo": "/images/logos/theparisreview-logo.png",
+        "bmeApiKey": "bd9e39669b29eab15758d4e3c6468877",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Weekly: The best of <i>The Paris Review Daily</i>, once a week",
+                "property": "properties.weekly"
+            },
+            {
+                "name": "Redux: See which interviews, stories, and poems the editors unlocked this week",
+                "property": "properties.redux"
+            },
+            {
+                "name": "Announcements: Monthly updates, issues releases, events, and more from <i>The Paris Review</i>",
+                "property": "properties.newsletter_subscriber"
+            }
+        ]
     }
 };
