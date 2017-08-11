@@ -2503,15 +2503,18 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Weekly: The best of <i>The Paris Review Daily</i>, once a week",
+                "name": "Weekly",
+                "description": "The best of <The Paris Review Daily>, once a week.",
                 "property": "properties.weekly"
             },
             {
-                "name": "Redux: See which interviews, stories, and poems the editors unlocked this week",
+                "name": "Redux",
+                "description": "See which interviews, stories, and poems the editors unlocked this week.",
                 "property": "properties.redux"
             },
             {
-                "name": "Announcements: Monthly updates, issues releases, events, and more from <i>The Paris Review</i>",
+                "name": "Announcements",
+                "description": "Monthly updates, issues releases, events, and more from <The Paris Review>.",
                 "property": "properties.newsletter_subscriber"
             }
         ]
