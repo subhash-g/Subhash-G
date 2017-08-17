@@ -2518,5 +2518,42 @@ module.exports = {
                 "property": "properties.newsletter_subscriber"
             }
         ]
+    },
+"5308": {
+        "name": "Engerati",
+        "logo": "/images/logos/engerati_logo.png",
+        "bmeApiKey": "ad986e40503c4f975f2503d60f6de416",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Engerati Weekly newsletter",
+                "description": "Our weekly newsletter delivering this week's articles, upcoming webinars and community updates to your inbox.",
+                "property": "properties.engeratinewsletter"
+            },
+            {
+                "name": "Engerati Webinar Updates",
+                "description": "A digest of upcoming and recomended webinars sent every two weeks.",
+                "property": "properties.webinarupdate"
+            },
+            {
+                "name": "Engerati Community Update",
+                "description": "A monthly newsletter of member updates and new features on Engerati.com.",
+                "property": "properties.comunityupdate"
+            },
+            {
+                "name": "Unsubscribe From All",
+                "description": "This option will unsubscribe you from all email communication from Engerati.com and override any choices you have made above or previously.",
+                "property": "properties.unsub_all"
+            }
+        ]
     }
 };
