@@ -2518,5 +2518,27 @@ module.exports = {
                 "property": "properties.newsletter_subscriber"
             }
         ]
+    },
+    "5312": {
+        "name": "Cowgirl Magazine",
+        "logo": "/images/logos/cowgirl_logo.png",
+        "bmeApiKey": "bbe302125b6f0f392b8c849338195f85",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Weekly",
+                "description": "Add a description here to define the newsletter",
+                "property": "properties.cg_main_list"
+            }
+        ]
     }
 };
