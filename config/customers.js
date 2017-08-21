@@ -188,55 +188,55 @@ module.exports = {
             }
         ]
     },
-    // "1571": {
-    //     "name": "Al-Monitor",
-    //     "logo": "/images/logos/almonitor.png",
-    //     "bmeApiKey": "1567c933fd90adbfc4ca216f28933ca0",
-    //     "userProperties": [
-    //         {
-    //             "name": "First Name",
-    //             "property": "properties.first_name"
-    //         },
-    //         {
-    //             "name": "Last Name",
-    //             "property": "properties.last_name"
-    //         },
-    //         {
-    //             "name": "Organization",
-    //             "property": "properties.organization"
-    //         },
-    //         {
-    //             "name": "Title",
-    //             "property": "properties.title"
-    //         }
-    //     ],
-    //     "userLists": [
-    //         {
-    //             "name": "English Newsletter",
-    //             "property": "properties.english"
-    //         },
-    //         {
-    //             "name": "Hebrew Newsletter",
-    //             "property": "properties.hebrew"
-    //         },
-    //         {
-    //             "name": "Arabic Newsletter",
-    //             "property": "properties.arabic"
-    //         },
-    //         {
-    //             "name": "Turkish Newsletter",
-    //             "property": "properties.turkish"
-    //         },
-    //         {
-    //             "name": "Persian Newsletter",
-    //             "property": "properties.persian"
-    //         },
-    //         {
-    //             "name": "Middle East Minute",
-    //             "property": "properties.middleeastminute"
-    //         }
-    //     ]
-    // },
+    "1571": {
+        "name": "Al-Monitor",
+        "logo": "/images/logos/almonitor.png",
+        "bmeApiKey": "1567c933fd90adbfc4ca216f28933ca0",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "properties.first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "properties.last_name"
+            },
+            {
+                "name": "Organization",
+                "property": "properties.organization"
+            },
+            {
+                "name": "Title",
+                "property": "properties.title"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "English Newsletter",
+                "property": "properties.english"
+            },
+            {
+                "name": "Hebrew Newsletter",
+                "property": "properties.hebrew"
+            },
+            {
+                "name": "Arabic Newsletter",
+                "property": "properties.arabic"
+            },
+            {
+                "name": "Turkish Newsletter",
+                "property": "properties.turkish"
+            },
+            {
+                "name": "Persian Newsletter",
+                "property": "properties.persian"
+            },
+            {
+                "name": "Middle East Minute",
+                "property": "properties.middleeastminute"
+            }
+        ]
+    },
     "1686": {
         "name": "Fatherly",
         "logo": "/images/logos/fatherly-logo.png",
