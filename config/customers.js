@@ -2519,7 +2519,7 @@ module.exports = {
             }
         ]
     },
-    "5312": {
+"5312": {
         "name": "Cowgirl Magazine",
         "logo": "/images/logos/cowgirl_logo.png",
         "bmeApiKey": "bbe302125b6f0f392b8c849338195f85",
@@ -2535,9 +2535,47 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Weekly",
+              "name": "Weekly",
                 "description": "Add a description here to define the newsletter",
                 "property": "properties.cg_main_list"
+            }
+          ]
+},
+"5308": {
+        "name": "Engerati",
+        "logo": "/images/logos/engerati_logo.png",
+        "bmeApiKey": "ad986e40503c4f975f2503d60f6de416",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Engerati Weekly newsletter",
+                "description": "Our weekly newsletter delivering this week's articles, upcoming webinars and community updates to your inbox.",
+                "property": "properties.engeratinewsletter"
+            },
+            {
+                "name": "Engerati Webinar Updates",
+                "description": "A digest of upcoming and recomended webinars sent every two weeks.",
+                "property": "properties.webinarupdate"
+            },
+            {
+                "name": "Engerati Community Update",
+                "description": "A monthly newsletter of member updates and new features on Engerati.com.",
+                "property": "properties.comunityupdate"
+            },
+            {
+                "name": "Unsubscribe From All",
+                "description": "This option will unsubscribe you from all email communication from Engerati.com and override any choices you have made above or previously.",
+                "property": "properties.unsub_all"
+
             }
         ]
     }
