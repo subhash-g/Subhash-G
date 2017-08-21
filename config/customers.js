@@ -2519,6 +2519,28 @@ module.exports = {
             }
         ]
     },
+"5312": {
+        "name": "Cowgirl Magazine",
+        "logo": "/images/logos/cowgirl_logo.png",
+        "bmeApiKey": "bbe302125b6f0f392b8c849338195f85",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+              "name": "Weekly",
+                "description": "Add a description here to define the newsletter",
+                "property": "properties.cg_main_list"
+            }
+          ]
+},
 "5308": {
         "name": "Engerati",
         "logo": "/images/logos/engerati_logo.png",
@@ -2553,6 +2575,7 @@ module.exports = {
                 "name": "Unsubscribe From All",
                 "description": "This option will unsubscribe you from all email communication from Engerati.com and override any choices you have made above or previously.",
                 "property": "properties.unsub_all"
+
             }
         ]
     }
