@@ -2570,12 +2570,6 @@ module.exports = {
                 "name": "Engerati Community Update",
                 "description": "Be the first to hear about member updates and new features on Engerati.com.",
                 "property": "properties.comunityupdate"
-            },
-            {
-                "name": "Unsubscribe From All",
-                "description": "This option will unsubscribe you from all email communication from Engerati.com and override any choices you have made above or previously.",
-                "property": "properties.unsub_all"
-
             }
         ]
     }
