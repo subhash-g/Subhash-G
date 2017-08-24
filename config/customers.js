@@ -889,9 +889,14 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "CIO Daily Newsletter",
-                "description": "Our daily briefing including news, analysis, insight, profiles, interviews, opinions and more.",
+                "name": "CIO Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days.",
                 "property": "properties.in_newsletter_daily"
+            },
+           {
+                "name": "CIO Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by the CIO UK Editorial Team.",
+                "property": "properties.in_cio_insight"
             },
             {
                 "name": "Conferences",
@@ -937,9 +942,14 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Computerworld UK Daily Newsletter",
-                "description": "Our daily briefing including news, analysis, insight, galleries, tutorials and more.",
+                "name": "ComputerworldUK Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days. ",
                 "property": "properties.in_newsletter_daily"
+            },
+            {
+                "name": "ComputerworldUK Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts. ",
+                "property": "properties.in_computerworlduk_insight"
             },
             {
                 "name": "Conferences",
@@ -990,9 +1000,14 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Techworld Daily Newsletter",
-                "description": "Our daily newsletter including news, analysis, insight, galleries, tutorials and more.",
+                "name": "Techworld Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days.",
                 "property": "properties.in_newsletter_daily"
+            },
+            {
+                "name": "Techworld Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts.",
+                "property": "properties.in_techworld_insight"
             },
             {
                 "name": "Conferences",
