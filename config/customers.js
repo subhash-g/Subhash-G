@@ -2563,7 +2563,7 @@ module.exports = {
             },
             {
                 "name": "Engerati Webinar Updates",
-                "description": "A digest of upcoming and recomended webinars.",
+                "description": "A digest of upcoming and recommended webinars.",
                 "property": "properties.webinarupdate"
             },
             {
