@@ -899,11 +899,6 @@ module.exports = {
                 "property": "properties.in_cio_insight"
             },
             {
-                "name": "Conferences",
-                "description": "Invitations to register for CIO hosted conferences that tackle the business, technology and leadership issues facing senior IT leaders.",
-                "property": "properties.in_events_conferences"
-            },
-            {
                 "name": "Networking Events",
                 "description": "Invitations to register for CIO networking events, roundtable dinners, executive breakfasts, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
@@ -950,11 +945,6 @@ module.exports = {
                 "name": "ComputerworldUK Insight",
                 "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts. ",
                 "property": "properties.in_computerworlduk_insight"
-            },
-            {
-                "name": "Conferences",
-                "description": "Invitations to register for IDG UK hosted conferences that tackle the business, technology and leadership issues facing senior IT leaders.",
-                "property": "properties.in_events_conferences"
             },
             {
                 "name": "Networking Events",
@@ -1008,11 +998,6 @@ module.exports = {
                 "name": "Techworld Insight",
                 "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts.",
                 "property": "properties.in_techworld_insight"
-            },
-            {
-                "name": "Conferences",
-                "description": "Invitations to register for IDG UK hosted conferences that tackle the business, technology and leadership issues facing IT professionals.",
-                "property": "properties.in_events_conferences"
             },
             {
                 "name": "Networking Events",
