@@ -904,11 +904,6 @@ module.exports = {
                 "property": "properties.in_events_networking"
             },
             {
-                "name": "Online Events",
-                "description": "Invitations to register for online events.",
-                "property": "properties.in_events_online"
-            },
-            {
                 "name": "Surveys",
                 "description": "The opportunity to participate in CIO and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
