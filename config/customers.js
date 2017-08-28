@@ -2557,5 +2557,58 @@ module.exports = {
                 "property": "properties.comunityupdate"
             }
         ]
-    }
-};
+    },
+"5146": {
+        "name": "italki",
+        "logo": "/images/logos/italki.png",
+        "bmeApiKey": "d659d75d63f8d841764cf01b17035019",
+        "header": "Manage your Spotify Updates or Your Music preferences.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Product News",
+                "description": "Getting started, new features and the latest product updates on spotify.",
+                "property": "properties.subscribe_product_news"
+            },
+            {
+                "name": "Spotify News and Offers",
+                "description": "News, promos and events for you.",
+                "property": "properties.subscribe_news_and_offers"
+            },
+            {
+                "name": "Recommended Music",
+                "description": "Music we find that we think you'll like.",
+                "property": "properties.subscribe_recommended_music"
+            },
+            {
+                "name": "New Music",
+                "description": "Fresh tracks from artists you follow or might like.",
+                "property": "properties.subscribe_new_music"
+            },
+            {
+                "name": "Playlist Updates",
+                "description": "A Playlist you follow is updated.",
+                "property": "properties.subscribe_playlist_updates"
+            },
+            {
+                "name": "Concert Notifications",
+                "description": "Updates about live shows by artists you like, in places near you.",
+                "property": "properties.subscribe_concert_notifications"
+            },
+            {
+                "name": "Artist Updates",
+                "description": "Hear about artists you listen to and artists we think you'll like.",
+                "property": "properties.subscribe_artist_updates"
+            }
+        ]
+ }
+  };
