@@ -904,11 +904,6 @@ module.exports = {
                 "property": "properties.in_events_networking"
             },
             {
-                "name": "Online Events",
-                "description": "Invitations to register for online events.",
-                "property": "properties.in_events_online"
-            },
-            {
                 "name": "Surveys",
                 "description": "The opportunity to participate in CIO and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
@@ -950,11 +945,6 @@ module.exports = {
                 "name": "Networking Events",
                 "description": "Invitations to register for ComputerWorld UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
-            },
-            {
-                "name": "Online Events",
-                "description": "Invitations to register for online events.",
-                "property": "properties.in_events_online"
             },
             {
                 "name": "Surveys",
@@ -1001,7 +991,7 @@ module.exports = {
             },
             {
                 "name": "Networking Events",
-                "description": "Invitations to register for techworld networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
+                "description": "Invitations to register for Techworld networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
             },
             {

@@ -308,6 +308,17 @@
 					</fieldset>
 <!-- END LAYOUT FOR ONLY DIGINOMICA -->
 
+<!-- SET LAYOUT FOR ONLY SHEFINDS -->
+				<% } else if ( name == 'SheFinds')  { %>
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+								<input type="radio" id="radioG<%= counter %>" class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency" value="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> > <%= list.name %>
+							<% counter++ %>
+						<% }); %>
+					</fieldset>
+<!-- END LAYOUT FOR ONLY SHEFINDS -->
+
 <!-- SET LAYOUT FOR ONLY PARIS REVIEW -->
 				<% } else if ( name == 'theParisReview')  { %>
 					<% counter = 1 %>

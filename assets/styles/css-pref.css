@@ -328,7 +328,7 @@ body {
 #content #list-form fieldset label.css-label {
     /* background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f263091100c0acc5f5223adc2667d02c.png);*/
     /* new background image has height 96px - was 48px - allows for multi line titles*/
-    background-image: url(/images/checkbox.png);    
+    background-image: url(/images/checkbox.png);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -395,6 +395,15 @@ body {
 }
 /* Set style for dropdown selections */
 .drop-down {
+    margin-top:5px !important;
+    margin-bottom:5px !important;
+    margin-left: 0px !important;
+    width:250px !important;
+    height: 65px !important;
+}
+
+/* Set style for radio selections */
+.radio {
     margin-top:5px !important;
     margin-bottom:5px !important;
     margin-left: 0px !important;
