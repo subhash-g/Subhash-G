@@ -932,19 +932,14 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "ComputerworldUK Weekly Digest",
-                "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days. ",
-                "property": "properties.in_newsletter_daily"
-            },
-            {
                 "name": "ComputerworldUK Insight",
                 "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts. ",
                 "property": "properties.in_computerworlduk_insight"
             },
             {
-                "name": "Networking Events",
-                "description": "Invitations to register for ComputerWorld UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
-                "property": "properties.in_events_networking"
+                "name": "ComputerworldUK Jobs",
+                "description": "Bespoke careers-oriented content to help you further your career.",
+                "property": "properties.in_computerworld_uk_jobs"
             },
             {
                 "name": "Surveys",
@@ -957,9 +952,14 @@ module.exports = {
                 "property": "properties.in_mktg_partner_emails"
             },
             {
-                "name": "ComputerworldUK Jobs",
-                "description": "Bespoke careers-oriented content to help you further your career.",
-                "property": "properties.in_computerworld_uk_jobs"
+                "name": "ComputerworldUK Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during \n the previous seven days.",
+                "property": "properties.in_newsletter_daily"
+            },
+            {
+                "name": "Networking Events",
+                "description": "Invitations to register for Computerworld UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
+                "property": "properties.in_events_networking"
             }
         ]
     },
@@ -985,14 +985,14 @@ module.exports = {
                 "property": "properties.in_newsletter_daily"
             },
             {
-                "name": "Techworld Insight",
-                "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts.",
-                "property": "properties.in_techworld_insight"
-            },
-            {
                 "name": "Networking Events",
                 "description": "Invitations to register for Techworld networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
+            },
+            {
+                "name": "Techworld Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts.",
+                "property": "properties.in_techworld_insight"
             },
             {
                 "name": "Surveys",
