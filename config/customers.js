@@ -97,16 +97,16 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Once per week",
-                "property": "properties.once_per_week"
+                "name": "Once a week",
+                "property": "properties.once_a_week"
             },
             {
-                "name": "Twice per week",
-                "property": "properties.twice_per_week"
+                "name": "Twice a week",
+                "property": "properties.twice_a_week"
             },
             {
                 "name": "I want it all!",
-                "property": "properties.i_want_it_all!"
+                "property": "properties.send_all_emails"
             }
         ]
     },
