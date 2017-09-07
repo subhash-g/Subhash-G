@@ -330,7 +330,8 @@
 					<% counter = 1 %>
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
-							<% if(index % 2 == 0) { %>
+
+							<% if((index % 2 == 0) && (list.property !== 'properties.opt_in')) { %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 
@@ -338,12 +339,21 @@
 									<div class="description"><%= list.description %></div>
 								<% } %>
 								<% counter++ %>
+							<% } else if((index % 2 == 0) && (list.property == 'properties.opt_in')) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
 							<% } %>
+
 						<% }); %>
 					</fieldset>
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
-							<% if(index % 2 == 1) { %>
+							<% if((index % 2 == 1) && (list.property !== 'properties.opt_in')) { %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 								<% if(list.description) { %>
