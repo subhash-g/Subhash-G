@@ -2108,9 +2108,21 @@ module.exports = {
                 "property": "properties.sports_wire"
             },
             {
+                "name": "Golden Knights",
+                "property": "properties.golden_knights"
+            },
+            {
+                "name": "Las Vegas Raiders",
+                "property": "properties.lv_raiders"
+            },
+            {
                 "name": "Business Press Highlights",
                 "property": "properties.business_press"
             }
+            {
+                "name": "El Tiempo",
+                "property": "properties.el_tiempo"
+            },
         ]
     },
     "5284_LO": {
