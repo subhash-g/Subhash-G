@@ -2096,6 +2096,10 @@ module.exports = {
                 "property": "properties.business_wire"
             },
             {
+                "name": "Business Press Highlights",
+                "property": "properties.business_press"
+            },
+            {
                 "name": "Entertainment Wire",
                 "property": "properties.entertainment_wire"
             },
@@ -2114,10 +2118,6 @@ module.exports = {
             {
                 "name": "Las Vegas Raiders",
                 "property": "properties.lv_raiders"
-            },
-            {
-                "name": "Business Press Highlights",
-                "property": "properties.business_press"
             },
             {
                 "name": "El Tiempo",
