@@ -204,7 +204,8 @@ module.exports = {
 					}
 				});
 
-				if(customer.bmeApiKey) {
+
+				if(customer.bmeApiKey && customerId == 5206) {
 					var properties = {}
 					customer.userLists.forEach(function(entry) {
 	    				properties[entry.property] = req.body[entry.property]
@@ -215,7 +216,7 @@ module.exports = {
 					    "subscriber":{
 					      "uid":userSubscriber.contact_value
 					    },
-					    "event":"updated_preferences",
+					    "event":"system::updated_preferences",
 					    "properties": properties
 	  				}
 					}
