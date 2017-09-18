@@ -2536,7 +2536,7 @@ module.exports = {
                 "description": "Add a description here to define the newsletter",
                 "property": "properties.cg_main_list"
             }
-          ]
+        ]
 },
 "5308": {
         "name": "Engerati",
@@ -2570,7 +2570,7 @@ module.exports = {
             }
         ]
     },
-"5146": {
+    "5146": {
         "name": "italki",
         "logo": "/images/logos/italki.png",
         "bmeApiKey": "d659d75d63f8d841764cf01b17035019",
@@ -2622,5 +2622,58 @@ module.exports = {
                 "property": "properties.subscribe_artist_updates"
             }
         ]
- }
+    },
+    "5313": {
+        "name": "Advisor Perspectives",
+        "logo": "/images/logos/advisor_logo.png",
+        "bmeApiKey": "d499fdc926486088e41c0209edd1b926",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Advisor Perspectives",
+                "description": "Tuesdays 6am ET",
+                "property": "properties.list_advisorperspectives"
+            },
+            {
+                "name": "dshort Daily Digest",
+                "description": "Charting economic and market trends",
+                "property": "properties.list_dshortdaily"
+            },
+            {
+                "name": "Monthly Digest",
+                "description": "End of month",
+                "property": "properties.list_monthlyarticledigest"
+            },
+            // {
+            //     "name": "Third Party Content",
+            //     "description": "Occasional White Papers and Messages from Third Parties",
+            //     "property": "properties.subscribe_new_music"
+            // },
+            {
+                "name": "Research Perspectives",
+                "description": "Daily 4pm ET",
+                "property": "properties.list_researchperspectivesdaily"
+            },
+            {
+                "name": "Weekly Commentary Digest",
+                "description": "Fridays 4pm ET",
+                "property": "properties.list_weeklycommentarydigest"
+            },
+            {
+                "name": "White Paper Digest",
+                "description": "Monthly",
+                "property": "properties.list_whitepaperdigest"
+            }
+        ]
+    }
   };

@@ -437,6 +437,35 @@
 				</fieldset>
 <!-- END LAYOUT FOR ONLY THE GAZETTE -->
 
+<!-- SET LAYOUT FOR IDG -->
+				<% } else if ( name == 'CIO-UK' || name == 'Computerworld UK' || name == 'Techworld.com UK')  { %>
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 0) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 1) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+<!-- END LAYOUT FOR IDG -->
 
 <!-- SET LAYOUT FOR EVERYONE ELSE -->
 				<% } else { %>
