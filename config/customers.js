@@ -2675,5 +2675,28 @@ module.exports = {
                 "property": "properties.list_whitepaperdigest"
             }
         ]
+    },
+    "5363": {
+        "name": "Light Workers",
+        "logo": "/images/logos/lightworkers.png",
+        "bmeApiKey": "23e1585ec1d3f6eab5f23542fc722881",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Newsletter",
+                "description": "Our daily newsletter, direct to your inbox.",
+                "property": "properties.newsletter"
+            }
+        ]
     }
   };
