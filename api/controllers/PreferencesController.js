@@ -4,17 +4,17 @@ var bme = require('../../lib/bme');
 var validator = require('validator');
 var request = require('request');
 
-var userPreferences = []; 
+var userPreferences = [];
 
 module.exports = {
 
 	index: function(req, res) {
 		var queryObject = url.parse(req.url, true).query;
-		
+
 		if (queryObject.email) {
 			queryObject.email = queryObject.email.replace(' ', '+');
 		}
-		
+
 		var userId = req.params.userId || queryObject.userId || queryObject.email;
 		var originalUserId = userId;
 
@@ -156,24 +156,22 @@ module.exports = {
 								return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 							}
 						});
-					
+
 					} else {
 						req.flash("message", "Error: problem with updating preferences.");
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 					}
 				});
-				
+
 			} else {
 				return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 			}
 		});
 	},
 	update: function(req, res) {
-
 		var queryObject = url.parse(req.url, true).query
 		var userId = req.params.userId || queryObject.userId;
 		console.log(queryObject);
-
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
@@ -206,6 +204,8 @@ module.exports = {
 					}
 				});
 
+				module.exports.trackPreferenceUpdate(customer, customerId, userSubscriber.contact_value, req);
+
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
 				//console.log(userPreferences);
 				//console.log(newPreferences);
@@ -214,7 +214,6 @@ module.exports = {
 					module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
 				}
 				userPreferences = newPreferences;
-			
 			} else {
 				res.json(400, {
 					error: error.message
@@ -257,7 +256,7 @@ module.exports = {
 				var prop = customer.userLists[userListNumber].property.split(".");
 				preferences[prop[0]][prop[1]] = 'false';
 
-				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {	
+				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
 					if(queryObject.message_uid) {
 						module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}&message_uid=${queryObject.message_uid}`);
@@ -327,13 +326,13 @@ module.exports = {
 		for (var key in preferences.properties) {
 			list.push(preferences.properties[key]);
 		}
-		return list; 
+		return list;
 	},
 	changeInPreferences: function(oldList, newList) {
 		// check if there is change in user list
 		for (var i = 0; i < oldList.length; i++) {
 			if (oldList[i] != newList[i] && newList[i] == 'false') {
-				return true; 
+				return true;
 			}
 		}
 		return false;
@@ -370,4 +369,25 @@ module.exports = {
 			});
 		}
 	},
+	trackPreferenceUpdate: function(customer, customerId, uid, req) {
+		if(customer.bmeApiKey && customerId == 5206) {
+			var properties = {}
+			customer.userLists.forEach(function(entry) {
+					properties[entry.property.replace('properties.', '')] = req.body[entry.property]
+			});
+
+			var updatePreferenceActivity = {
+				"activity":{
+					"subscriber":{
+						"uid":uid
+					},
+					"event":"updated_preferences",
+					"properties": properties
+				}
+			}
+
+			bme.postSubscriberActivity(customer.bmeApiKey, updatePreferenceActivity, function (data, error) { })
+		}
+	}
+
 };
