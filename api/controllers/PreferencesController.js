@@ -204,7 +204,7 @@ module.exports = {
 					}
 				});
 
-				module.exports.updatePreference(customer, customerId, userSubscriber.contact_value, req);
+				module.exports.trackPreferenceUpdate(customer, customerId, userSubscriber.contact_value, req);
 
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
 				//console.log(userPreferences);
@@ -369,7 +369,7 @@ module.exports = {
 			});
 		}
 	},
-	updatePreference: function(customer, customerId, uid, req) {
+	trackPreferenceUpdate: function(customer, customerId, uid, req) {
 		if(customer.bmeApiKey && customerId == 5206) {
 			var properties = {}
 			customer.userLists.forEach(function(entry) {
