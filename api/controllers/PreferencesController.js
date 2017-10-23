@@ -370,7 +370,7 @@ module.exports = {
 		}
 	},
 	updatePreference: function(customer, customerId, uid, req) {
-		if(customer.bmeApiKey && customerId == 1523) {
+		if(customer.bmeApiKey && customerId == 5206) {
 			var properties = {}
 			customer.userLists.forEach(function(entry) {
 					properties[entry.property.replace('properties.', '')] = req.body[entry.property]
