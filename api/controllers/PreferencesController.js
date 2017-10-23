@@ -204,27 +204,7 @@ module.exports = {
 					}
 				});
 
-
-				if(customer.bmeApiKey && customerId == 5206) {
-					var properties = {}
-					customer.userLists.forEach(function(entry) {
-	    				properties[entry.property.replace('properties.', '')] = req.body[entry.property]
-					});
-
-					var updatePreferenceActivity = {
-						"activity":{
-					    "subscriber":{
-					      "uid":userSubscriber.contact_value
-					    },
-					    "event":"updated_preferences",
-					    "properties": properties
-	  				}
-					}
-
-					bme.postSubscriberActivity(customer.bmeApiKey, updatePreferenceActivity, function (data, error) { })
-				}
-
-
+				module.exports.updatePreference(customer, customerId, userSubscriber.contact_value, req);
 
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
 				//console.log(userPreferences);
@@ -389,4 +369,25 @@ module.exports = {
 			});
 		}
 	},
+	updatePreference: function(customer, customerId, uid, req) {
+		if(customer.bmeApiKey && customerId == 1523) {
+			var properties = {}
+			customer.userLists.forEach(function(entry) {
+					properties[entry.property.replace('properties.', '')] = req.body[entry.property]
+			});
+
+			var updatePreferenceActivity = {
+				"activity":{
+					"subscriber":{
+						"uid":uid
+					},
+					"event":"updated_preferences",
+					"properties": properties
+				}
+			}
+
+			bme.postSubscriberActivity(customer.bmeApiKey, updatePreferenceActivity, function (data, error) { })
+		}
+	}
+
 };
