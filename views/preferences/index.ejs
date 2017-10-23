@@ -20,6 +20,8 @@
 				<!-- Localise Left Nav links (list page/prefs page) - based on account property -->
 				<% if (langPref == 'ES'){ %>
 				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="javascript:void(0);">Mis Boletines</a>
+				<% } else if (langPref == 'BP'){ %>
+				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="javascript:void(0);">Minhas Newsletters - VEJA</a>
 				<% } else { %>
 				<img src="/images/profile-off.png" id="list-icon"/><a id="btn-my-list" href="javascript:void(0);">My Lists</a>
 				<% } %>
@@ -27,6 +29,8 @@
 			<div class="menu-item">
 				<% if (langPref == 'ES'){ %>
 				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="javascript:void(0);">Mi Perfil</a>
+				<% } else if (langPref == 'BP'){ %>
+				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="javascript:void(0);">Meu Perfil</a>
 				<% } else { %>
 				<img src="/images/list-on.png" id="profile-icon"/><a id="btn-my-profile" href="javascript:void(0);">My Profile</a>
 				<% } %>
@@ -48,6 +52,8 @@
 				<!-- Localise Save Profile - based on account property -->
 				<% if (langPref == 'ES'){ %>
 				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Guardar mis Preferencias">
+				<% } else if (langPref == 'BP'){ %>
+				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Salvar">
 				<% } else { %>
 				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Save Profile">
 				<% } %>			</div>
@@ -60,7 +66,7 @@
     					<div class="header"><%= header %></div>
     				<% } %>
 
-                <% } else { %>  
+                <% } else { %>
 
 
         			<% if (name.indexOf('Impremdia') != -1) { %> <!-- DO FOR IMPREMEDIA ONLY - add div for user prefs -->
@@ -87,12 +93,12 @@
 <!-- END CUSTOM HEADER FOR ONLY IMPREMEDIA ONLY -->
 
 <!-- SET LAYOUT FOR ONLY IMPREMEDIA -->
-				<% if (name.indexOf('Impremdia') != -1){ %> 
+				<% if (name.indexOf('Impremdia') != -1){ %>
 					<% counter = 1 %>
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
 							<% if(index % 2 == 0) { %>
-							<% if (list.listType !='dropDown'){ %> 
+							<% if (list.listType !='dropDown'){ %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 								<% } %>
@@ -104,52 +110,52 @@
 									<% } else { %>
 									<option type="dropdown" class="list-input" value="" data-property="<%= list.value %>">Seleccionar signo</option>
 									<% } %>
-									<!--<option type="dropdown" class="list-input" 
+									<!--<option type="dropdown" class="list-input"
 									value="<%= list.value %>" data-property="<%= list.value %>"> <%= list.value %>
 									-->
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Aries" data-property="<%= list.property %>">Aries
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Tauro" data-property="<%= list.property %>">Tauro
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Geminis" data-property="<%= list.property %>">Géminis
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Cancer" data-property="<%= list.property %>">Cáncer
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Leo" data-property="<%= list.property %>">Leo
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Virgo" data-property="<%= list.property %>">Virgo
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Libra" data-property="<%= list.property %>">Libra
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Escorpio" data-property="<%= list.property %>">Escorpio
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Sagitario" data-property="<%= list.property %>">Sagitario
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Capricornio" data-property="<%= list.property %>">Capricornio
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Acuario" data-property="<%= list.property %>">Acuario
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Piscis" data-property="<%= list.property %>">Piscis
-									</option> 
-								</select>           						
+									</option>
+								</select>
 								<% } %>
 								<% if(list.description) { %>
 									<div class="description"><%= list.description %></div>
 									<% counter++ %>
-								
+
 								<% } %>
 							<% } %>
 						<% }); %>
@@ -157,7 +163,7 @@
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
 							<% if(index % 2 == 1) { %>
-							<% if (list.listType !='dropDown'){ %>  
+							<% if (list.listType !='dropDown'){ %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 								<% } %>
@@ -168,51 +174,51 @@
 									<% } else { %>
 									<option type="dropdown" class="list-input" value="" data-property="<%= list.property %>">Seleccionar signo</option>
 									<% } %>
-									<!--<option type="dropdown" class="list-input" 
+									<!--<option type="dropdown" class="list-input"
 									value="<%= list.value %>" data-property="<%= list.value %>"> <%= list.value %>
 									</option>-->
-									<option type="dropdown" class="list-input" 
+									<option type="dropdown" class="list-input"
 									value="Aries" data-property="<%= list.property %>">Aries
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Tauro" data-property="<%= list.property %>">Tauro
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Geminis" data-property="<%= list.property %>">Géminis
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Cancer" data-property="<%= list.property %>">Cáncer
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Leo" data-property="<%= list.property %>">Leo
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Virgo" data-property="<%= list.property %>">Virgo
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Libra" data-property="<%= list.property %>">Libra
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Escorpio" data-property="<%= list.property %>">Escorpio
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Sagitario" data-property="<%= list.property %>">Sagitario
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Capricornio" data-property="<%= list.property %>">Capricornio
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Acuario" data-property="<%= list.property %>">Acuario
-									</option> 
-									<option type="dropdown" class="list-input" 
+									</option>
+									<option type="dropdown" class="list-input"
 									value="Piscis" data-property="<%= list.property %>">Piscis
-									</option> 
-								</select>          						
+									</option>
+								</select>
 								<% } %>
 
 								<% if(list.description) { %>
 									<div class="description"><%= list.description %></div>
-								
+
 								<% counter++ %>
 								<% } %>
 							<% } %>
@@ -223,7 +229,7 @@
 
 
 <!-- SET LAYOUT FOR ONLY WNYT -->
-				<% } else if ( name == 'WNYT'){ %> 
+				<% } else if ( name == 'WNYT'){ %>
 					<% counter = 1 %>
 
 					<fieldset class="dropdown">  <!-- WNYT SECTION 1: DROPDOWN FOR FIRST 4 USER PROPS -->
@@ -255,7 +261,7 @@
 
 
 <!-- SET LAYOUT FOR ONLY KOB -->
-				<% } else if ( name == 'KOB'){ %> 
+				<% } else if ( name == 'KOB'){ %>
 					<% counter = 1 %>
 
 					<fieldset class="dropdown">  <!-- KOB SECTION 1: DROPDOWN FOR FIRST 4 USER PROPS -->
@@ -287,7 +293,7 @@
 
 
 <!-- SET LAYOUT FOR ONLY DIGINOMICA -->
-				<% } else if ( name == 'Diginomica')  { %> 
+				<% } else if ( name == 'Diginomica')  { %>
 
 					<fieldset class="dropdown"> <!-- ALL DIGINOMICA USER PROPS PRESENTED AS DROPDOWN -->
 						<select id="Diginomica">
@@ -302,9 +308,107 @@
 					</fieldset>
 <!-- END LAYOUT FOR ONLY DIGINOMICA -->
 
+<!-- SET LAYOUT FOR ONLY SHEFINDS -->
+				<% } else if ( name == 'SheFinds')  { %>
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+								<input type="radio" id="radioG<%= counter %>" class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency" value="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> > <%= list.name %>
+							<% counter++ %>
+						<% }); %>
+					</fieldset>
+<!-- END LAYOUT FOR ONLY SHEFINDS -->
+
+<!-- SET LAYOUT FOR ONLY GAMESPOT -->
+				<% } else if ( name == 'GameSpot')  { %>
+					<style>
+					body{background:#ffffff;}
+					#btn-save-list{background:#e02b00 !important;}
+					#btn-unsub-all{color:#858585 !important;}
+					#btn-my-profile,#btn-my-list{color:#e02b00 !important;}
+					</style>
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+
+							<% if((index % 2 == 0) && (list.property !== 'properties.opt_in')) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } else if((index % 2 == 0) && (list.property == 'properties.opt_in')) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+
+						<% }); %>
+					</fieldset>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if((index % 2 == 1) && (list.property !== 'properties.opt_in')) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+<!-- END LAYOUT FOR ONLY SHEFINDS -->
+
+<!-- SET LAYOUT FOR ONLY PARIS REVIEW -->
+				<% } else if ( name == 'theParisReview')  { %>
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 0) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(counter == 1) { %>
+									<% if(list.description) { %>
+										<div class="description">The best of <i>The Paris Review Daily</i>, once a week.</div>
+									<% } %>
+								<% } %>
+								<% if(counter == 2) { %>
+									<% if(list.description) { %>
+										<div class="description">Monthly updates, issues releases, events, and more from <i>The Paris Review</i>.</div>
+									<% } %>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 1) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(counter == 3) { %>
+									<% if(list.description) { %>
+										<div class="description">See which interviews, stories, and poems the editors unlocked this week.</div>
+									<% } %>
+								<% } %>
+
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+<!-- END LAYOUT FOR ONLY PARIS REVIEW -->
+
 
 <!-- SET LAYOUT FOR ONLY THE GAZETTE -->
-				<% } else if ( name == 'The Gazette')  { %> 
+				<% } else if ( name == 'The Gazette')  { %>
 				<% counter = 1 %>
 				<fieldset>
 				  <% lists.forEach(function(list, index) { %>
@@ -333,6 +437,35 @@
 				</fieldset>
 <!-- END LAYOUT FOR ONLY THE GAZETTE -->
 
+<!-- SET LAYOUT FOR IDG -->
+				<% } else if ( name == 'CIO-UK' || name == 'Computerworld UK' || name == 'Techworld.com UK')  { %>
+					<% counter = 1 %>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 0) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+							<% if(index % 2 == 1) { %>
+								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
+								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+								<% if(list.description) { %>
+									<div class="description"><%= list.description %></div>
+								<% } %>
+								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+<!-- END LAYOUT FOR IDG -->
 
 <!-- SET LAYOUT FOR EVERYONE ELSE -->
 				<% } else { %>
@@ -371,6 +504,8 @@
 				<!-- Localise Save Profile  - based on account property -->
 				<% if (langPref == 'ES'){ %>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Guardar mis Preferencias">
+				<% } else if (langPref == 'BP'){ %>
+				<input id="btn-save-list" class="btn btn-save" type="submit" value="Salvar">
 				<% } else { %>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save Profile">
 				<% } %>
@@ -379,10 +514,12 @@
 				<!-- Localise Unsub from all  - based on account property -->
 				<% if (langPref == 'ES'){ %>
 				<a id="btn-unsub-all">Bajar de todos los boletines</a>
+				<% } else if (langPref == 'BP'){ %>
+				<a id="btn-unsub-all">Cancelar Todas</a>
 				<% } else { %>
 				<a id="btn-unsub-all">Unsubscribe from All</a>
 				<% } %>
-				
+
 			</div>
 			<div class="message_uid"></div>
 			<div id="powered_by"><span>Powered by</span><br />

@@ -97,16 +97,16 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Once per week",
-                "property": "properties.once_per_week"
+                "name": "Once a week",
+                "property": "properties.once_a_week"
             },
             {
-                "name": "Twice per week",
-                "property": "properties.twice_per_week"
+                "name": "Twice a week",
+                "property": "properties.twice_a_week"
             },
             {
                 "name": "I want it all!",
-                "property": "properties.i_want_it_all!"
+                "property": "properties.send_all_emails"
             }
         ]
     },
@@ -188,55 +188,55 @@ module.exports = {
             }
         ]
     },
-    // "1571": {
-    //     "name": "Al-Monitor",
-    //     "logo": "/images/logos/almonitor.png",
-    //     "bmeApiKey": "1567c933fd90adbfc4ca216f28933ca0",
-    //     "userProperties": [
-    //         {
-    //             "name": "First Name",
-    //             "property": "properties.first_name"
-    //         },
-    //         {
-    //             "name": "Last Name",
-    //             "property": "properties.last_name"
-    //         },
-    //         {
-    //             "name": "Organization",
-    //             "property": "properties.organization"
-    //         },
-    //         {
-    //             "name": "Title",
-    //             "property": "properties.title"
-    //         }
-    //     ],
-    //     "userLists": [
-    //         {
-    //             "name": "English Newsletter",
-    //             "property": "properties.english"
-    //         },
-    //         {
-    //             "name": "Hebrew Newsletter",
-    //             "property": "properties.hebrew"
-    //         },
-    //         {
-    //             "name": "Arabic Newsletter",
-    //             "property": "properties.arabic"
-    //         },
-    //         {
-    //             "name": "Turkish Newsletter",
-    //             "property": "properties.turkish"
-    //         },
-    //         {
-    //             "name": "Persian Newsletter",
-    //             "property": "properties.persian"
-    //         },
-    //         {
-    //             "name": "Middle East Minute",
-    //             "property": "properties.middleeastminute"
-    //         }
-    //     ]
-    // },
+    "1571": {
+        "name": "Al-Monitor",
+        "logo": "/images/logos/almonitor.png",
+        "bmeApiKey": "1567c933fd90adbfc4ca216f28933ca0",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "properties.first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "properties.last_name"
+            },
+            {
+                "name": "Organization",
+                "property": "properties.organization"
+            },
+            {
+                "name": "Title",
+                "property": "properties.title"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "English Newsletter",
+                "property": "properties.english"
+            },
+            {
+                "name": "Hebrew Newsletter",
+                "property": "properties.hebrew"
+            },
+            {
+                "name": "Arabic Newsletter",
+                "property": "properties.arabic"
+            },
+            {
+                "name": "Turkish Newsletter",
+                "property": "properties.turkish"
+            },
+            {
+                "name": "Persian Newsletter",
+                "property": "properties.persian"
+            },
+            {
+                "name": "Middle East Minute",
+                "property": "properties.middleeastminute"
+            }
+        ]
+    },
     "1686": {
         "name": "Fatherly",
         "logo": "/images/logos/fatherly-logo.png",
@@ -889,24 +889,19 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "CIO Daily Newsletter",
-                "description": "Our daily briefing including news, analysis, insight, profiles, interviews, opinions and more.",
+                "name": "CIO Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days.",
                 "property": "properties.in_newsletter_daily"
             },
-            {
-                "name": "Conferences",
-                "description": "Invitations to register for CIO hosted conferences that tackle the business, technology and leadership issues facing senior IT leaders.",
-                "property": "properties.in_events_conferences"
+           {
+                "name": "CIO Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by the CIO UK Editorial Team.",
+                "property": "properties.in_cio_insight"
             },
             {
                 "name": "Networking Events",
                 "description": "Invitations to register for CIO networking events, roundtable dinners, executive breakfasts, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
-            },
-            {
-                "name": "Online Events",
-                "description": "Invitations to register for online events.",
-                "property": "properties.in_events_online"
             },
             {
                 "name": "Surveys",
@@ -937,24 +932,14 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Computerworld UK Daily Newsletter",
-                "description": "Our daily briefing including news, analysis, insight, galleries, tutorials and more.",
-                "property": "properties.in_newsletter_daily"
+                "name": "ComputerworldUK Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts. ",
+                "property": "properties.in_computerworlduk_insight"
             },
             {
-                "name": "Conferences",
-                "description": "Invitations to register for IDG UK hosted conferences that tackle the business, technology and leadership issues facing senior IT leaders.",
-                "property": "properties.in_events_conferences"
-            },
-            {
-                "name": "Networking Events",
-                "description": "Invitations to register for IDG UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
-                "property": "properties.in_events_networking"
-            },
-            {
-                "name": "Online Events",
-                "description": "Invitations to register for online events.",
-                "property": "properties.in_events_online"
+                "name": "ComputerworldUK Jobs",
+                "description": "Bespoke careers-oriented content to help you further your career.",
+                "property": "properties.in_computerworld_uk_jobs"
             },
             {
                 "name": "Surveys",
@@ -967,9 +952,14 @@ module.exports = {
                 "property": "properties.in_mktg_partner_emails"
             },
             {
-                "name": "ComputerworldUK Jobs",
-                "description": "Bespoke careers-oriented content to help you further your career.",
-                "property": "properties.in_computerworld_uk_jobs"
+                "name": "ComputerworldUK Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during \n the previous seven days.",
+                "property": "properties.in_newsletter_daily"
+            },
+            {
+                "name": "Networking Events",
+                "description": "Invitations to register for Computerworld UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
+                "property": "properties.in_events_networking"
             }
         ]
     },
@@ -990,24 +980,19 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Techworld Daily Newsletter",
-                "description": "Our daily newsletter including news, analysis, insight, galleries, tutorials and more.",
+                "name": "Techworld Weekly Digest",
+                "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days.",
                 "property": "properties.in_newsletter_daily"
             },
             {
-                "name": "Conferences",
-                "description": "Invitations to register for IDG UK hosted conferences that tackle the business, technology and leadership issues facing IT professionals.",
-                "property": "properties.in_events_conferences"
-            },
-            {
                 "name": "Networking Events",
-                "description": "Invitations to register for IDG UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
+                "description": "Invitations to register for Techworld networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
                 "property": "properties.in_events_networking"
             },
             {
-                "name": "Online Events",
-                "description": "Invitations to register for online events.",
-                "property": "properties.in_events_online"
+                "name": "Techworld Insight",
+                "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts.",
+                "property": "properties.in_techworld_insight"
             },
             {
                 "name": "Surveys",
@@ -2111,6 +2096,10 @@ module.exports = {
                 "property": "properties.business_wire"
             },
             {
+                "name": "Business Press Highlights",
+                "property": "properties.business_press"
+            },
+            {
                 "name": "Entertainment Wire",
                 "property": "properties.entertainment_wire"
             },
@@ -2123,8 +2112,16 @@ module.exports = {
                 "property": "properties.sports_wire"
             },
             {
-                "name": "Business Press Highlights",
-                "property": "properties.business_press"
+                "name": "Golden Knights",
+                "property": "properties.golden_knights"
+            },
+            {
+                "name": "Las Vegas Raiders",
+                "property": "properties.lv_raiders"
+            },
+            {
+                "name": "El Tiempo",
+                "property": "properties.el_tiempo"
             }
         ]
     },
@@ -2209,7 +2206,7 @@ module.exports = {
                 "description":"Alertas informativas de noticias muy importantes.",
                 "property": "properties.lo_noticiasdeultimahora"
             }
-     
+
          ]
     },
         "5284_ED": {
@@ -2232,7 +2229,7 @@ module.exports = {
                 "property": "last_name"
             }
         ],
-        "userLists": [            
+        "userLists": [
             {
                 "name": "NOTICIAS DE NEW YORK",
                 "description":"Las noticias más importantes que están ocurriendo en New York.",
@@ -2310,13 +2307,13 @@ module.exports = {
                 "property": "last_name"
             }
         ],
-        "userLists": [ 
+        "userLists": [
             {
                 "name": "NOTICIAS DEL DÍA",
                 "description":"Los titulares más populares del día de hoy en los Estados Unidos.",
                 "property": "properties.lr_noticiasdeldia"
             },
-            
+
             {
                 "name": "HORÓSCOPO",
                 "description":"Empieza el día con tu horóscopo por El Niño Prodigio.",
@@ -2341,7 +2338,7 @@ module.exports = {
         "bmeApiKey": "175986a244c4fc14dcb11c13d4556198",
         "header":"Actualice sus preferencias",
         "userProperties": [
-             
+
             {
                 "name": "Correo electrónico",
                 "property": "contact_email"
@@ -2391,5 +2388,315 @@ module.exports = {
                 "property": "properties.ptm_titularesdeho"
             }
         ]
+    },
+        "4884": {
+        "name": "Abril - Veja",
+        "langPref":"BP",
+        "logo": "/images/logos/veja-logo.png",
+        "bmeApiKey": "67cd63093f6148c1ef358b74ac07e8ff",
+        "userProperties": [
+            {
+                "name": "Email",
+                "property": "contact_email"
+            },
+            {
+                "name": "Nome",
+                "property": "name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "VEJA",
+                "property": "properties.veja_newsletter"
+            },
+            {
+                "name": "Radar Online",
+                "property": "properties.radar_newsletter"
+            },
+            {
+                "name": "VEJA Colunistas",
+                "property": "properties.vejacolunistas_newsletter"
+            },
+            {
+                "name": "Isabela Boscov",
+                "property": "properties.isabelaboscov_newsletter"
+            },
+            {
+                "name": "TVeja",
+                "property": "properties.tveja_newsletter"
+            },
+            {
+                "name": "Placar",
+                "property": "properties.placar_newsletter"
+            }
+        ]
+    },
+    "2555": {
+        "name": "GameSpot",
+        "logo": "/images/logos/gamespot_logo_new.png",
+        "bmeApiKey": "189fe4f4f1829765b626f54ac012f4c2",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            },
+            {
+                "name": "Email",
+                "property": "contact_email"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Weekly Newsletter",
+                "property": "properties.opt_in"
+            },
+            {
+                "name": "Nintendo Newsletter",
+                "property": "properties.nintendo"
+            },
+            {
+                "name": "PS4 Newsletter",
+                "property": "properties.ps4"
+            },
+            {
+                "name": "Xbox One Newsletter",
+                "property": "properties.xbox_one"
+            },
+            {
+                "name": "PC Newsletter",
+                "property": "properties.pc"
+            },
+            {
+                "name": "Universe (Entertainment) Newsletter",
+                "property": "properties.universe"
+            },
+            {
+                "name": "Giveaways & Deals Newsletter",
+                "property": "properties.giveaways_deals"
+            },
+            {
+                "name": "GameTech (Tech & Hardware) Newsletter",
+                "property": "properties.gametech"
+            }
+        ]
+    },
+    "2847": {
+        "name": "theParisReview",
+        "logo": "/images/logos/theparisreview-logo.png",
+        "bmeApiKey": "bd9e39669b29eab15758d4e3c6468877",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Weekly",
+                "description": "The best of <The Paris Review Daily>, once a week.",
+                "property": "properties.weekly"
+            },
+            {
+                "name": "Redux",
+                "description": "See which interviews, stories, and poems the editors unlocked this week.",
+                "property": "properties.redux"
+            },
+            {
+                "name": "Announcements",
+                "description": "Monthly updates, issues releases, events, and more from <The Paris Review>.",
+                "property": "properties.newsletter_subscriber"
+            }
+        ]
+    },
+"5312": {
+        "name": "Cowgirl Magazine",
+        "logo": "/images/logos/cowgirl_logo.png",
+        "bmeApiKey": "bbe302125b6f0f392b8c849338195f85",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+              "name": "Weekly",
+                "description": "Add a description here to define the newsletter",
+                "property": "properties.cg_main_list"
+            }
+        ]
+},
+"5308": {
+        "name": "Engerati",
+        "logo": "/images/logos/engerati_logo.png",
+        "bmeApiKey": "ad986e40503c4f975f2503d60f6de416",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Engerati Weekly Newsletter",
+                "description": "Our weekly newsletter delivering this week's articles, upcoming webinars and community updates to your inbox.",
+                "property": "properties.engeratinewsletter"
+            },
+            {
+                "name": "Engerati Webinar Updates",
+                "description": "A digest of upcoming and recomended webinars.",
+                "property": "properties.webinarupdate"
+            },
+            {
+                "name": "Engerati Community Update",
+                "description": "Be the first to hear about member updates and new features on Engerati.com.",
+                "property": "properties.comunityupdate"
+            }
+        ]
+    },
+    "5146": {
+        "name": "italki",
+        "logo": "/images/logos/italki.png",
+        "bmeApiKey": "d659d75d63f8d841764cf01b17035019",
+        "header": "Manage your Spotify Updates or Your Music preferences.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Product News",
+                "description": "Getting started, new features and the latest product updates on spotify.",
+                "property": "properties.subscribe_product_news"
+            },
+            {
+                "name": "Spotify News and Offers",
+                "description": "News, promos and events for you.",
+                "property": "properties.subscribe_news_and_offers"
+            },
+            {
+                "name": "Recommended Music",
+                "description": "Music we find that we think you'll like.",
+                "property": "properties.subscribe_recommended_music"
+            },
+            {
+                "name": "New Music",
+                "description": "Fresh tracks from artists you follow or might like.",
+                "property": "properties.subscribe_new_music"
+            },
+            {
+                "name": "Playlist Updates",
+                "description": "A Playlist you follow is updated.",
+                "property": "properties.subscribe_playlist_updates"
+            },
+            {
+                "name": "Concert Notifications",
+                "description": "Updates about live shows by artists you like, in places near you.",
+                "property": "properties.subscribe_concert_notifications"
+            },
+            {
+                "name": "Artist Updates",
+                "description": "Hear about artists you listen to and artists we think you'll like.",
+                "property": "properties.subscribe_artist_updates"
+            }
+        ]
+    },
+    "5313": {
+        "name": "Advisor Perspectives",
+        "logo": "/images/logos/advisor_logo.png",
+        "bmeApiKey": "d499fdc926486088e41c0209edd1b926",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Advisor Perspectives",
+                "description": "Tuesdays 6am ET",
+                "property": "properties.list_advisorperspectives"
+            },
+            {
+                "name": "dshort Daily Digest",
+                "description": "Charting economic and market trends",
+                "property": "properties.list_dshortdaily"
+            },
+            {
+                "name": "Monthly Digest",
+                "description": "End of month",
+                "property": "properties.list_monthlyarticledigest"
+            },
+            // {
+            //     "name": "Third Party Content",
+            //     "description": "Occasional White Papers and Messages from Third Parties",
+            //     "property": "properties.subscribe_new_music"
+            // },
+            {
+                "name": "Research Perspectives",
+                "description": "Daily 4pm ET",
+                "property": "properties.list_researchperspectivesdaily"
+            },
+            {
+                "name": "Weekly Commentary Digest",
+                "description": "Fridays 4pm ET",
+                "property": "properties.list_weeklycommentarydigest"
+            },
+            {
+                "name": "White Paper Digest",
+                "description": "Monthly",
+                "property": "properties.list_whitepaperdigest"
+            }
+        ]
+    },
+    "5363": {
+        "name": "Light Workers",
+        "logo": "/images/logos/lightworkers.png",
+        "bmeApiKey": "23e1585ec1d3f6eab5f23542fc722881",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Newsletter",
+                "description": "Our daily newsletter, direct to your inbox.",
+                "property": "properties.newsletter"
+            }
+        ]
     }
-};
+  };
