@@ -216,7 +216,7 @@ module.exports = {
 					    "subscriber":{
 					      "uid":userSubscriber.contact_value
 					    },
-					    "event":"system::updated_preferences",
+					    "event":"updated_preferences",
 					    "properties": properties
 	  				}
 					}
