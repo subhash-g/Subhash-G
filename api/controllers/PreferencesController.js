@@ -208,7 +208,7 @@ module.exports = {
 				if(customer.bmeApiKey && customerId == 5206) {
 					var properties = {}
 					customer.userLists.forEach(function(entry) {
-	    				properties[entry.property] = req.body[entry.property]
+	    				properties[entry.property.replace('properties.', '')] = req.body[entry.property]
 					});
 
 					var updatePreferenceActivity = {
