@@ -2636,43 +2636,87 @@ module.exports = {
             {
                 "name": "Last Name",
                 "property": "last_name"
-            }
+            },
+            {
+                "name": "Email",
+                "property": "email"
+            },
+            {
+                "name": "City",
+                "property": "city"
+            },
+            {
+                "name": "State",
+                "property": "state"
+            },
+            {
+                "name": "Country",
+                "property": "country"
+            },
+            {
+                "name": "Company",
+                "property": "company"
+            },
+            {
+                "name": "Type of Advisor",
+                "property": "type_of_advisor"
+            },
+            {
+                "name": "AUM",
+                "property": "AUM"
+            },
+
         ],
         "userLists": [
             {
                 "name": "Advisor Perspectives",
-                "description": "Tuesdays 6am ET",
+                "description": "Flagship newsletter with original articles\\nTuesday 6a ET",
                 "property": "properties.list_advisorperspectives"
             },
             {
-                "name": "dshort Daily Digest",
-                "description": "Charting economic and market trends",
-                "property": "properties.list_dshortdaily"
+                "name": "Practice Perspectives",
+                "description": "Original content focused on managing your practice\\nThursdays 6a ET",
+                "property": "properties.list_practiceperspectives"
             },
-            {
-                "name": "Monthly Digest",
-                "description": "End of month",
-                "property": "properties.list_monthlyarticledigest"
-            },
-            // {
-            //     "name": "Third Party Content",
-            //     "description": "Occasional White Papers and Messages from Third Parties",
-            //     "property": "properties.subscribe_new_music"
-            // },
             {
                 "name": "Research Perspectives",
-                "description": "Daily 4pm ET",
+                "description": "An aggregation of today’s top market commentaries by industry thought leaders\\nDaily at 4p ET",
                 "property": "properties.list_researchperspectivesdaily"
             },
             {
-                "name": "Weekly Commentary Digest",
-                "description": "Fridays 4pm ET",
-                "property": "properties.list_weeklycommentarydigest"
+                "name": "Morning Insights",
+                "description": "Thought provoking original content sent early in the mornings for your commute\\nM, W, F at 4a or 6a ET",
+                "property": "properties.list_mostactive"
+            },
+            {
+                "name": "dshort Daily Digest",
+                "description": "Charts of market and economics trends by Jill Mislinski\\nTues-Sat at 9a ET",
+                "property": "properties.list_dshortdaily"
+            },
+            {
+                "name": "Webinar Invitations",
+                "description": "Custom webinars often with CE credits for CFP, IMCA and other CE opportunities\\nOccasional",
+                "property": "properties.webinar_invite"
+            },
+{
+                "name": "Dedicated Emails",
+                "description": "Occasional messages from our partners\\nOccasional",
+                "property": "properties.list_DedicatedEmails"
             },
             {
                 "name": "White Paper Digest",
-                "description": "Monthly",
+                "description": "Spotlight of the top white papers this month\\nOnce per month",
                 "property": "properties.list_whitepaperdigest"
+            },
+            {
+                "name": "Monthly Article Digest",
+                "description": "Our most-read articles in the previous month\\nOnce per month",
+                "property": "properties.list_monthlyarticledigest"
+            },
+            {
+                "name": "Weekly Commentary Digest",
+                "description": "Our most-read commentaries that week\\nDelivered Friday afternoons",
+                "property": "properties.list_weeklycommentarydigest"
             }
         ]
     },
