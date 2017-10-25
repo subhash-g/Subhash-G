@@ -2701,7 +2701,7 @@ module.exports = {
 {
                 "name": "Dedicated Emails",
                 "description": "Occasional messages from our partners\\nOccasional",
-                "property": "properties.list_DedicatedEmails"
+                "property": "properties.list_dedicatedemails"
             },
             {
                 "name": "White Paper Digest",
