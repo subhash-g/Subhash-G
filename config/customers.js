@@ -2643,27 +2643,27 @@ module.exports = {
             },
             {
                 "name": "City",
-                "property": "city"
+                "property": "properties.city"
             },
             {
                 "name": "State",
-                "property": "state"
+                "property": "properties.state"
             },
             {
                 "name": "Country",
-                "property": "country"
+                "property": "properties.country"
             },
             {
                 "name": "Company",
-                "property": "company"
+                "property": "properties.company"
             },
             {
                 "name": "Type of Advisor",
-                "property": "type_of_advisor"
+                "property": "properties.type_of_advisor"
             },
             {
                 "name": "AUM",
-                "property": "AUM"
+                "property": "properties.AUM"
             },
 
         ],
