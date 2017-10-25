@@ -2639,7 +2639,7 @@ module.exports = {
             },
             {
                 "name": "Email",
-                "property": "email"
+                "property": "contact_email"
             },
             {
                 "name": "City",
