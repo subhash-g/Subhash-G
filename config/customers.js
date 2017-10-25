@@ -2670,7 +2670,7 @@ module.exports = {
         "userLists": [
             {
                 "name": "Advisor Perspectives",
-                "description": "Flagship newsletter with original articles\\nTuesday 6a ET",
+                "description": "Flagship newsletter with original articles\nTuesday 6a ET",
                 "property": "properties.list_advisorperspectives"
             },
             {
