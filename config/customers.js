@@ -2663,7 +2663,7 @@ module.exports = {
             },
             {
                 "name": "AUM",
-                "property": "properties.AUM"
+                "property": "properties.aum"
             },
 
         ],
