@@ -2670,52 +2670,52 @@ module.exports = {
         "userLists": [
             {
                 "name": "Advisor Perspectives",
-                "description": "Flagship newsletter with original articles\nTuesday 6a ET",
+                "description": "Flagship newsletter with original articles - Tuesday at 6a ET",
                 "property": "properties.list_advisorperspectives"
             },
             {
                 "name": "Practice Perspectives",
-                "description": "Original content focused on managing your practice\\nThursdays 6a ET",
+                "description": "Original content focused on managing your practice - Thursday at 6a ET",
                 "property": "properties.list_practiceperspectives"
             },
             {
                 "name": "Research Perspectives",
-                "description": "An aggregation of today’s top market commentaries by industry thought leaders\\nDaily at 4p ET",
+                "description": "An aggregation of today’s top market commentaries by industry thought leaders - Daily at 4p ET",
                 "property": "properties.list_researchperspectivesdaily"
             },
             {
                 "name": "Morning Insights",
-                "description": "Thought provoking original content sent early in the mornings for your commute\\nM, W, F at 4a or 6a ET",
+                "description": "Thought provoking original content sent early in the mornings for your commute - M, W, F at 4a or 6a ET",
                 "property": "properties.list_mostactive"
             },
             {
                 "name": "dshort Daily Digest",
-                "description": "Charts of market and economics trends by Jill Mislinski\\nTues-Sat at 9a ET",
+                "description": "Charts of market and economics trends by Jill Mislinski - Tues-Sat at 9a ET",
                 "property": "properties.list_dshortdaily"
             },
             {
                 "name": "Webinar Invitations",
-                "description": "Custom webinars often with CE credits for CFP, IMCA and other CE opportunities\\nOccasional",
+                "description": "Custom webinars often with CE credits for CFP, IMCA and other CE opportunities - Occasional",
                 "property": "properties.webinar_invite"
             },
 {
                 "name": "Dedicated Emails",
-                "description": "Occasional messages from our partners\\nOccasional",
+                "description": "Occasional messages from our partners - Occasional",
                 "property": "properties.list_dedicatedemail"
             },
             {
                 "name": "White Paper Digest",
-                "description": "Spotlight of the top white papers this month\\nOnce per month",
+                "description": "Spotlight of the top white papers this month - Once per month",
                 "property": "properties.list_whitepaperdigest"
             },
             {
                 "name": "Monthly Article Digest",
-                "description": "Our most-read articles in the previous month\\nOnce per month",
+                "description": "Our most-read articles in the previous month - Once per month",
                 "property": "properties.list_monthlyarticledigest"
             },
             {
                 "name": "Weekly Commentary Digest",
-                "description": "Our most-read commentaries that week\\nDelivered Friday afternoons",
+                "description": "Our most-read commentaries that week - Delivered Friday afternoons",
                 "property": "properties.list_weeklycommentarydigest"
             }
         ]

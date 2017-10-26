@@ -377,9 +377,36 @@
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 
-								<% if(list.description) { %>
-									<div class="description"><%= list.description %></div>
+								<% if(counter == 1) { %>
+									<% if(list.description) { %>
+										<div class="description">Flagship newsletter with original articles<br><i>Tuesday at 6a ET</i></div>
+									<% } %>
 								<% } %>
+
+								<% if(counter == 2) { %>
+									<% if(list.description) { %>
+										<div class="description">An aggregation of today’s top market commentaries by industry thought leaders<br><i>Daily at 4p ET</i></div>
+									<% } %>
+								<% } %>
+
+								<% if(counter == 3) { %>
+									<% if(list.description) { %>
+										<div class="description">Charts of market and economics trends by Jill Mislinski<br><i>Tues-Sat at 9a ET</i></div>
+									<% } %>
+								<% } %>
+
+								<% if(counter == 4) { %>
+									<% if(list.description) { %>
+										<div class="description">Occasional messages from our partners<br><i>Occasional</i></div>
+									<% } %>
+								<% } %>
+
+								<% if(counter == 5) { %>
+									<% if(list.description) { %>
+										<div class="description">Our most-read articles in the previous month<br><i>Once per month</i></div>
+									<% } %>
+								<% } %>
+
 								<% counter++ %>
 							<% } %>
 						<% }); %>
@@ -389,9 +416,34 @@
 							<% if(index % 2 == 1) { %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
-								<% if(list.description) { %>
-									<div class="description"><%= list.description %></div>
+
+								<% if(counter == 6) { %>
+									<% if(list.description) { %>
+										<div class="description">Original content focused on managing your practice<br><i>Thursday at 6a ET</i></div>
+									<% } %>
 								<% } %>
+
+								<% if(counter == 7) { %>
+									<% if(list.description) { %>
+										<div class="description">Thought provoking original content sent early in the mornings for your commute<br><i>M, W, F at 4a or 6a ET</i></div>
+									<% } %>
+								<% } %>
+								<% if(counter == 8) { %>
+									<% if(list.description) { %>
+										<div class="description">Custom webinars often with CE credits for CFP, IMCA and other CE opportunities<br><i>Occasional</i></div>
+									<% } %>
+								<% } %>
+								<% if(counter == 9) { %>
+									<% if(list.description) { %>
+										<div class="description">Spotlight of the top white papers this month<br><i>Once per month</i></div>
+									<% } %>
+								<% } %>
+								<% if(counter == 10) { %>
+									<% if(list.description) { %>
+										<div class="description">Our most-read commentaries that week<br><i>Delivered Friday afternoons</i></div>
+									<% } %>
+								<% } %>
+
 								<% counter++ %>
 							<% } %>
 						<% }); %>
