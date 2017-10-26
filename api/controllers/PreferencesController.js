@@ -204,7 +204,7 @@ module.exports = {
 					}
 				});
 
-				module.exports.trackPreferenceUpdate(customer, customerId, userSubscriber.contact_value, req);
+				module.exports.trackPreferenceUpdate(customer, userSubscriber.contact_value, req);
 
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
 				//console.log(userPreferences);
@@ -369,8 +369,8 @@ module.exports = {
 			});
 		}
 	},
-	trackPreferenceUpdate: function(customer, customerId, uid, req) {
-		if(customer.bmeApiKey && customerId == 5206) {
+	trackPreferenceUpdate: function(customer, uid, req) {
+		if(customer.bmeApiKey) {
 			var properties = {}
 			customer.userLists.forEach(function(entry) {
 					properties[entry.property.replace('properties.', '')] = req.body[entry.property]
