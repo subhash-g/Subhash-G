@@ -41,12 +41,95 @@
 	<div id="content">
 		<div id="profile-form" class="form">
 			<div class="fieldset-container">
-				<% profile.forEach(function(prop, index) { %>
-					<fieldset>
-						<label><%= prop.name %></label>
-						<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
-					</fieldset>
-				<% }); %>
+
+
+<% if (name == 'Advisor Perspectives') { %>
+	<% profile.forEach(function(prop, index) { %>
+
+		<% if (prop.name == 'Role in Company') { %>
+
+			<fieldset>
+				<label><%= prop.name %></label>
+				<select class="drop-down">
+
+  				<% if (prop.value) { %>
+
+        	<option type="dropdown" class="profile-input" value="<%= prop.value %>" data-property="<%= prop.property %>"> <%= prop.value %></option>
+
+      		<% } else { %>
+
+        	<option type="dropdown" class="profile-input" value="" data-property="<%= prop.value %>"><%= prop.name %></option>
+
+      		<% } %>
+
+				  <option type="dropdown" class="profile-input" value="Independent Financial Planner/Advisor" data-property="<%= prop.property %>">Independent Financial Planner/Advisor</option>
+				  <option type="dropdown" class="profile-input" value="Registered Investment Advisor (RIA)" data-property="<%= prop.property %>">Registered Investment Advisor (RIA)</option>
+				  <option type="dropdown" class="profile-input" value="Registered Representative - Wirehouse" data-property="<%= prop.property %>">Registered Representative - Wirehouse</option>
+				  <option type="dropdown" class="profile-input" value="Registered Representative - IBD" data-property="<%= prop.property %>">Registered Representative - IBD</option>
+				  <option type="dropdown" class="profile-input" value="Insurance" data-property="<%= prop.property %>">Insurance</option>
+				  <option type="dropdown" class="profile-input" value="Accounting" data-property="<%= prop.property %>">Accounting</option>
+				  <option type="dropdown" class="profile-input" value="Bank Advisor" data-property="<%= prop.property %>">Bank Advisor</option>
+				  <option type="dropdown" class="profile-input" value="Other" data-property="<%= prop.property %>">Other</option>
+				</select>
+			</fieldset>
+
+		<% } else if (prop.name == 'AUM') { %>
+
+			<fieldset>
+				<label><%= prop.name %></label>
+				<select class="drop-down">
+
+  				<% if (prop.value) { %>
+
+        	<option type="dropdown" class="profile-update" value="<%= prop.value %>" data-property="<%= prop.property %>"> <%= prop.value %></option>
+
+      		<% } else { %>
+
+        	<option type="dropdown" class="profile-update" value="" data-property="<%= prop.value %>"><%= prop.name %></option>
+
+      		<% } %>
+
+				  <option type="dropdown" class="profile-update" value="I don't manage assets" data-property="<%= prop.property %>">I don't manage assets</option>
+				  <option type="dropdown" class="profile-update" value="Less than $500,000" data-property="<%= prop.property %>">Less than $500,000</option>
+				  <option type="dropdown" class="profile-update" value="$500,000-$1 million" data-property="<%= prop.property %>">$500,000-$1 million</option>
+				  <option type="dropdown" class="profile-update" value="$1 million-$10 million" data-property="<%= prop.property %>">$1 million-$10 million</option>
+				  <option type="dropdown" class="profile-update" value="$10 million-$50 million" data-property="<%= prop.property %>">$10 million-$50 million</option>
+				  <option type="dropdown" class="profile-update" value="$50 million-$100 million" data-property="<%= prop.property %>">$50 million-$100 million</option>
+				  <option type="dropdown" class="profile-update" value="$100 million-$500 million" data-property="<%= prop.property %>">$100 million-$500 million</option>
+				  <option type="dropdown" class="profile-update" value="$500 million-$1 billion" data-property="<%= prop.property %>">$500 million-$1 billion</option>
+				  <option type="dropdown" class="profile-update" value="Over $1 billion" data-property="<%= prop.property %>">Over $1 billion</option>
+				</select>
+			</fieldset>
+
+		<% } else { %>
+			<% if (prop.name == 'Email') { %>
+				<fieldset id="full-width">
+					<label><%= prop.name %></label>
+					<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+				</fieldset>
+			<% } else { %>
+				<fieldset>
+					<label><%= prop.name %></label>
+					<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+				</fieldset>
+			<% } %>
+
+		<% } %>
+
+	<% }); %>
+
+<% } else { %>
+
+	<% profile.forEach(function(prop, index) { %>
+		<fieldset>
+			<label><%= prop.name %></label>
+			<input type="text" class="profile-input" data-property="<%= prop.property %>" value="<%= prop.value %>">
+		</fieldset>
+	<% }); %>
+
+<% } %>
+
+
 			</div>
 			<div>
 				<!-- Localise Save Profile - based on account property -->
@@ -56,7 +139,8 @@
 				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Salvar">
 				<% } else { %>
 				<input id="btn-save-profile" class="btn btn-save" type="submit" value="Save Profile">
-				<% } %>			</div>
+				<% } %>
+			</div>
 		</div>
 		<div id="list-form" class="form">
 			<div class="fieldset-container">
@@ -370,6 +454,7 @@
 					<style>
 					body{background:#ffffff;}
 					</style>
+
 					<% counter = 1 %>
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
@@ -636,13 +721,38 @@ var selectMyList = function() {
 var updatePreferences = function() {
 	var preferences = {};
 
-	$(".profile-input").toArray().forEach(function(item) {
+	var selected = false;
+	$(".profile-update").toArray().forEach(function(item) {
 		var key = $(item).attr("data-property");
-		preferences[key] = $(item).val();
+		var type = $(item).attr("type");
+
+		if (type == "dropdown") {
+			// console.log(key + " item selected " + item.selected);
+			if (!selected && item.selected) {
+				preferences[key] = $(item).val();
+				selected = true;
+			}
+		} else {
+			preferences[key] = $(item).val();
+		}
 	});
 
-
 	var selected = false;
+	$(".profile-input").toArray().forEach(function(item) {
+		var key = $(item).attr("data-property");
+		var type = $(item).attr("type");
+
+		if (type == "dropdown") {
+			// console.log(key + " item selected " + item.selected);
+			if (!selected && item.selected) {
+				preferences[key] = $(item).val();
+				selected = true;
+			}
+		} else {
+			preferences[key] = $(item).val();
+		}
+	});
+
 	$(".list-input").toArray().forEach(function(item) {
 		var key = $(item).attr("data-property");
 		var dataVal = $(item).attr("data-property-value");
@@ -818,8 +928,6 @@ $("select").css({
 		"height": "50px",
 		"font-family": "'Lato', sans-serif"
 });
-
-console.log("Testing Unsubscribe Count");
 
 </script>
 

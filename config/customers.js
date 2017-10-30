@@ -2658,7 +2658,7 @@ module.exports = {
                 "property": "properties.company"
             },
             {
-                "name": "Type of Advisor",
+                "name": "Role in Company",
                 "property": "properties.type_of_advisor"
             },
             {
@@ -2698,7 +2698,7 @@ module.exports = {
                 "description": "Custom webinars often with CE credits for CFP, IMCA and other CE opportunities - Occasional",
                 "property": "properties.webinar_invite"
             },
-{
+            {
                 "name": "Dedicated Emails",
                 "description": "Occasional messages from our partners - Occasional",
                 "property": "properties.list_dedicatedemail"

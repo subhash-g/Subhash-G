@@ -204,6 +204,16 @@ body {
     border: 0;
     text-align: left
 }
+
+#full-width {
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border: 0;
+    text-align: left
+}
+
 #content .form fieldset span,
 #content .form fieldset label,
 #content .form fieldset input {
