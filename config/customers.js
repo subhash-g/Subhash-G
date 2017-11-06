@@ -2574,7 +2574,7 @@ module.exports = {
         "name": "italki",
         "logo": "/images/logos/italki.png",
         "bmeApiKey": "d659d75d63f8d841764cf01b17035019",
-        "header": "Manage your Spotify Updates or Your Music preferences.",
+        "header": "Manage your email preferences",
         "userProperties": [
             {
                 "name": "First Name",
@@ -2587,39 +2587,24 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Product News",
-                "description": "Getting started, new features and the latest product updates on spotify.",
-                "property": "properties.subscribe_product_news"
+                "name": "Tips for Students",
+                "description": "You will receive emails featuring tips on how to get the most out of your italki experience.",
+                "property": "properties.subscribe_student_tips"
             },
             {
-                "name": "Spotify News and Offers",
-                "description": "News, promos and events for you.",
-                "property": "properties.subscribe_news_and_offers"
+                "name": "Article Newsletter",
+                "description": "You will receive emails featuring our language learning articles.    (1 per week)",
+                "property": "properties.subscribe_article_news"
             },
             {
-                "name": "Recommended Music",
-                "description": "Music we find that we think you'll like.",
-                "property": "properties.subscribe_recommended_music"
+                "name": "Recommended Teacher Newsletter",
+                "description": "You will receive emails featuring our teacher recommendations for you.  (1 per week)    ",
+                "property": "properties.subscribe_recommended_teacher"
             },
             {
-                "name": "New Music",
-                "description": "Fresh tracks from artists you follow or might like.",
-                "property": "properties.subscribe_new_music"
-            },
-            {
-                "name": "Playlist Updates",
-                "description": "A Playlist you follow is updated.",
-                "property": "properties.subscribe_playlist_updates"
-            },
-            {
-                "name": "Concert Notifications",
-                "description": "Updates about live shows by artists you like, in places near you.",
-                "property": "properties.subscribe_concert_notifications"
-            },
-            {
-                "name": "Artist Updates",
-                "description": "Hear about artists you listen to and artists we think you'll like.",
-                "property": "properties.subscribe_artist_updates"
+                "name": "Promotions",
+                "description": "You will receive emails featuring the latest news from italki, including updates, promotions, and feature announcements.",
+                "property": "properties.subscribe_promotions"
             }
         ]
     },
