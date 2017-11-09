@@ -2727,5 +2727,66 @@ module.exports = {
                 "property": "properties.newsletter"
             }
         ]
+    },
+    "5218": {
+        "name": "Parent Co",
+        "logo": "/images/logos/parent_co.png",
+        "bmeApiKey": "b31a7812302e54b5299a5c2d8e761715",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Frequency - Daily",
+                "property": "properties.fre_daily"
+            },
+            {
+                "name": "Frequency - Weekly",
+                "property": "properties.fre_weekly"
+            },
+            {
+                "name": "Baby",
+                "description": "0-1 mos",
+                "property": "properties.sub_baby"
+            },
+            {
+                "name": "Toddler",
+                "description": "2-3 yrs",
+                "property": "properties.sub_toddler"
+            },
+            {
+                "name": "Preschool",
+                "description": "4-5 yrs",
+                "property": "properties.sub_preschool"
+            },
+            {
+                "name": "Gradeschooler",
+                "description": "6-12 yrs",
+                "property": "properties.sub_gradeschooler"
+            },
+            {
+                "name": "Teen",
+                "description": "13-18 yrs",
+                "property": "properties.sub_teen"
+            },
+            {
+                "name": "Young Adult",
+                "description": "19+ yrs",
+                "property": "properties.sub_young_adult"
+            },
+            {
+                "name": "No Kiddos",
+                "description": "Cool Aunt, Rad Uncle, Loving Caregiver, Proud Grandparent, Future Family Planner",
+                "property": "properties.sub_no_kiddos"
+            }
+        ]
     }
   };
