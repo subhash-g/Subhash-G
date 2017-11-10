@@ -2455,6 +2455,11 @@ module.exports = {
                 "property": "properties.opt_in"
             },
             {
+                "name": "Cadence",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            },
+            {
                 "name": "Nintendo Newsletter",
                 "property": "properties.nintendo"
             },
@@ -2471,15 +2476,15 @@ module.exports = {
                 "property": "properties.pc"
             },
             {
-                "name": "Universe (Entertainment) Newsletter",
+                "name": "Universe (Entertainment)",
                 "property": "properties.universe"
             },
             {
-                "name": "Giveaways & Deals Newsletter",
+                "name": "Giveaways & Deals",
                 "property": "properties.giveaways_deals"
             },
             {
-                "name": "GameTech (Tech & Hardware) Newsletter",
+                "name": "GameTech (Tech & Hardware)",
                 "property": "properties.gametech"
             }
         ]

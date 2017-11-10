@@ -412,6 +412,7 @@
 					#btn-my-profile,#btn-my-list{color:#e02b00 !important;}
 					</style>
 					<% counter = 1 %>
+
 					<fieldset>
 						<% lists.forEach(function(list, index) { %>
 
@@ -419,34 +420,54 @@
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 
-								<% if(list.description) { %>
-									<div class="description"><%= list.description %></div>
-								<% } %>
 								<% counter++ %>
+
 							<% } else if((index % 2 == 0) && (list.property == 'properties.opt_in')) { %>
 								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type ? list.type : '' %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : 'checked' %> />
 								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
 
-								<% if(list.description) { %>
-									<div class="description"><%= list.description %></div>
-								<% } %>
 								<% counter++ %>
+							<% } %>
+						<% }); %>
+					</fieldset>
+
+					<fieldset>
+						<% lists.forEach(function(list, index) { %>
+
+							<% if((index % 2 == 1) && (list.property !== 'properties.opt_in')) { %>
+								<% if ( list.listType !== 'dropDown') { %>
+									<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
+									<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
+
+									<% counter++ %>
+								<% } %>
+								<% if ( list.listType == 'dropDown') { %>
+									<select class="drop-down" checked>
+										<% if(list.value) { %>
+											<option type="dropdown" class="list-input" value="<%= list.value %>" data-property="<%= list.property %>"> <%= list.name %>: <%= list.value %></option>
+										<% } else { %>
+											<option type="dropdown" class="list-input" value="" data-property="<%= list.value %>">Please select a cadence</option>
+										<% } %>
+
+										<option type="dropdown" class="list-input"
+										value="1x_weekly" data-property="<%= list.property %>">1x Weekly
+										</option>
+										<option type="dropdown" class="list-input"
+										value="2x_weekly" data-property="<%= list.property %>">2x Weekly
+										</option>
+										<option type="dropdown" class="list-input"
+										value="3x_weekly" data-property="<%= list.property %>">3x Weekly
+										</option>
+										<option type="dropdown" class="list-input"
+										value="4x_weekly" data-property="<%= list.property %>">4x + Weekly
+										</option>
+									</select>
+								<% } %>
 							<% } %>
 
 						<% }); %>
 					</fieldset>
-					<fieldset>
-						<% lists.forEach(function(list, index) { %>
-							<% if((index % 2 == 1) && (list.property !== 'properties.opt_in')) { %>
-								<input type="checkbox" id="checkboxG<%= counter %>" class="css-checkbox list-input" data-property="<%= list.property %>" data-property-value="<%= list.type == 'array' ? list.name : '' %>" data-property-type="<%= list.type %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> />
-								<label for="checkboxG<%= counter%>" class="css-label radGroup1" checked><%= list.name %></label><br />
-								<% if(list.description) { %>
-									<div class="description"><%= list.description %></div>
-								<% } %>
-								<% counter++ %>
-							<% } %>
-						<% }); %>
-					</fieldset>
+
 <!-- END LAYOUT FOR ONLY GAMESPOT -->
 
 <!-- SET LAYOUT FOR ADVISOR PERSPECTIVES -->
