@@ -2451,7 +2451,7 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Weekly Newsletter",
+                "name": "General Newsletter",
                 "property": "properties.opt_in"
             },
             {
