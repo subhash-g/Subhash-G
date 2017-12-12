@@ -810,7 +810,12 @@ var updatePreferences = function() {
 	});
 
 	if (getParameterByName("message_uid")) {
-		var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid");
+		if (getParameterByName("email")) {
+			var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid") + "&email=" + getParameterByName("email");
+		} else {
+			var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid");
+		}
+
 	} else {
 		var url = "/preferences/<%= customerId %>/users/<%= userId %>";
 	}

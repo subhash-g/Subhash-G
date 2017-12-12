@@ -170,8 +170,11 @@ module.exports = {
 	},
 	update: function(req, res) {
 		var queryObject = url.parse(req.url, true).query
+		if (queryObject.email) {
+			var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
+		}
+
 		var userId = req.params.userId || queryObject.userId;
-		console.log(queryObject);
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
@@ -204,7 +207,9 @@ module.exports = {
 					}
 				});
 
-				module.exports.trackPreferenceUpdate(customer, userSubscriber.contact_value, req);
+				if (originalUserId) {
+					module.exports.trackPreferenceUpdate(customer, originalUserId, req);
+				}
 
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
 				//console.log(userPreferences);
