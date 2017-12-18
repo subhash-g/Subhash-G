@@ -2707,6 +2707,11 @@ module.exports = {
                 "name": "Weekly Commentary Digest",
                 "description": "Our most-read commentaries that week - Delivered Friday afternoons",
                 "property": "properties.list_weeklycommentarydigest"
+            },
+            {
+                "name": "Special Editions",
+                "description": "Mon, Wed, Fri articles from keynote speakers and exclusive interviews from thought leaders like Gundlach, Siegel and more.",
+                "property": "properties.list_specialeditions"
             }
         ]
     },
