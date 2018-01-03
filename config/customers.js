@@ -1566,7 +1566,7 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Summit Daily Daily Newsletter",
+                "name": "Summit Daily Locals News Flash",
                 "property": "properties.summitdaily_daily_newsletter"
             },
             {
@@ -1574,7 +1574,7 @@ module.exports = {
                 "property": "properties.summitdaily_breaking_news"
             },
             {
-                "name": "Summit Daily Contests Promotions",
+                "name": "Summit Daily Contests, Promotions & Offers",
                 "property": "properties.summitdaily_contests_promotions"
             },
             {
@@ -1586,12 +1586,28 @@ module.exports = {
                 "property": "properties.summitdaily_seasonal_travel_guide"
             },
             {
-                "name": "Summit Daily Weekend Entertainment Guide",
+                "name": "Summit Daily Explore Summit Weekender",
                 "property": "properties.summitdaily_weekend_entertainment_guide"
             },
             {
-                "name": "Vail Daily This Week's Headlines & Entertainment",
+                "name": "Vail Daily Newsletter",
+                "property": "properties.vaildaily_daily_newsletter_future_offering"
+            },
+            {
+                "name": "Vail Daily Weekly Entertainment & Outdoors",
                 "property": "properties.vaildaily_headlines_entertainment"
+            },
+            {
+                "name": "Vail Daily Contests, Promotions & Offers",
+                "property": "properties.vaildaily_contests_promos"
+            },
+            {
+                "name": "Vail Daily Breaking News",
+                "property": "properties.vaildaily_breaking_news_future_offering"
+            },
+            {
+                "name": "Everything Nevada Newsletter",
+                "property": "properties.everything_nevada_newsletter"
             },
             {
                 "name": "Nevada Appeal Daily News Brief",
@@ -1602,7 +1618,7 @@ module.exports = {
                 "property": "properties.nevadaappeal_the_week_in_review"
             },
             {
-                "name": "Nevada Appeal Promotions & Contest Alerts",
+                "name": "Nevada Appeal Contests, Promotions & Offers",
                 "property": "properties.nevadaappeal_promotions_contest_alerts"
             },
             {
@@ -1626,15 +1642,15 @@ module.exports = {
                 "property": "properties.postindependent_deals"
             },
             {
-                "name": "Record Courier Week in Review",
+                "name": "The Record Courier For the Record",
                 "property": "properties.recordcourier_the_week_in_review"
             },
             {
-                "name": "Record Courier Promotions & Contests Alerts",
+                "name": "The Record Courier Contests, Promotions & Offers",
                 "property": "properties.recordcourier_promotions_contest_alerts"
             },
             {
-                "name": "Sky-Hi News Weekly Update",
+                "name": "Sky-Hi News The Grand Update",
                 "property": "properties.skyhidailynews_the_grand_update"
             },
             {
@@ -1646,7 +1662,7 @@ module.exports = {
                 "property": "properties.skyhidailynews_deals"
             },
             {
-                "name": "Sky-Hi News Contests & Promotions",
+                "name": "Sky-Hi News Contests, Promotions & Offers",
                 "property": "properties.skyhidailynews_contests_promotions"
             },
             {
@@ -1666,11 +1682,11 @@ module.exports = {
                 "property": "properties.thefencepost_the_weekly_market_update"
             },
             {
-                "name": "The Fence Post Promotions & Contest Alerts",
+                "name": "The Fence Post Contests, Promotions & Offers",
                 "property": "properties.thefencepost_promotions_contest_alerts"
             },
             {
-                "name": "The Union Daily News Brief",
+                "name": "The Union Today",
                 "property": "properties.theunion_the_daily_news_brief"
             },
             {
@@ -1678,11 +1694,11 @@ module.exports = {
                 "property": "properties.theunion_the_week_in_review"
             },
             {
-                "name": "The Union Promotions & Contest Alerts",
+                "name": "The Union Contests, Promotions & Offers",
                 "property": "properties.theunion_promotions_contest_alerts"
             },
             {
-                "name": "The Wildwood Independent",
+                "name": "The Union Wildwood Independent",
                 "property": "properties.theunion_the_wildwood_independent"
             },
             {
@@ -1690,23 +1706,23 @@ module.exports = {
                 "property": "properties.theunion_cannabis_news"
             },
             {
-                "name": "Aspen Times Daily News Brief",
+                "name": "The Aspen Times Sunrise Rundown",
                 "property": "properties.aspentimes_the_daily_news_brief"
             },
             {
-                "name": "Aspen Times Promotions & Contest Alerts",
+                "name": "The Aspen Times Contests, Promotions & Offers",
                 "property": "properties.aspentimes_promotions_contest_alerts"
             },
             {
-                "name": "Aspen Times Breaking News",
+                "name": "The Aspen Times Breaking News",
                 "property": "properties.aspentimes_breaking_news"
             },
             {
-                "name": "Aspen Times Seasonal Travel Guide",
+                "name": "The Aspen Times Seasonal Travel Guide",
                 "property": "properties.aspentimes_seasonal_travel_guide"
             },
             {
-                "name": "Weekend in Aspen - Aspen Times Weekend Entertainment Guide",
+                "name": "The Aspen Times Weekend in Aspen",
                 "property": "properties.aspentimes_weekend_entertainment_guide"
             },
             {
@@ -1714,7 +1730,7 @@ module.exports = {
                 "property": "properties.nnbw_daily_update"
             },
             {
-                "name": "NNBW Contests & Promotions",
+                "name": "Northern Nevada Business Weekly Promtions, Contests & Offers",
                 "property": "properties.nnbw_contests_promotions"
             },
             {
@@ -1722,7 +1738,7 @@ module.exports = {
                 "property": "properties.nnbw_business_monthly"
             },
             {
-                "name": "Northern Nevada Business Bright Idea",
+                "name": "Northern Nevada Business Technology & Tentreprenuership News",
                 "property": "properties.nnbw_business_bright_idea"
             },
             {
@@ -1746,7 +1762,7 @@ module.exports = {
                 "property": "properties.sierrasun_breaking_news"
             },
             {
-                "name": "Tahoe Daily Tribune Locals Newsletter",
+                "name": "Tahoe Tribune & Sierra Sun's Monday Morning Report",
                 "property": "properties.tahoetribune_locals_newsletter"
             },
             {
@@ -1754,7 +1770,7 @@ module.exports = {
                 "property": "properties.tahoetribune_visitors_newsletter"
             },
             {
-                "name": "Tahoe Daily Tribune Weekend Entertainment Guide",
+                "name": "Tahoe Daily Tribune Your Tahoe Weekend",
                 "property": "properties.tahoetribune_weekend_entertainment_guide"
             },
             {
@@ -1766,11 +1782,11 @@ module.exports = {
                 "property": "properties.tahoetribune_breaking_news"
             },
             {
-                "name": "Healthy Tahoe",
+                "name": "Tahoe Daily Tribune Healthy Tahoe",
                 "property": "properties.tahoetribune_healthy_tahoe"
             },
             {
-                "name": "Tri-State Livestock News Weekly Round Up",
+                "name": "Tri-State Livestock News RoundUp",
                 "property": "properties.tsin_the_weekly_news_round_up"
             },
             {
@@ -1778,15 +1794,15 @@ module.exports = {
                 "property": "properties.tsin_the_weekly_market_update"
             },
             {
-                "name": "Tri-State Livestock News Promotions & Contest Alerts",
+                "name": "Tri-State Livestock News Contests, Promotions & Offers",
                 "property": "properties.tsin_promotions_contest_alerts"
             },
             {
-                "name": "Cavvy Savvy The Big Circle",
+                "name": "Tri-State Livestock News Cavvy Savvy The Big Circle",
                 "property": "properties.tsin_cavvy_savvy_the_big_circle"
             },
             {
-                "name": "The Greeley Tribune Daily News Brief",
+                "name": "The Greeley Tribune Daily Update",
                 "property": "properties.greeleytribune_the_daily_news_brief"
             },
             {
@@ -1794,16 +1810,20 @@ module.exports = {
                 "property": "properties.greeleytribune_the_week_in_review"
             },
             {
-                "name": "Greeley Tribune Promotions & Contest Alerts",
+                "name": "The Greeley Tribune Contests, Promotions & Offers",
                 "property": "properties.greeleytribune_promotions_contest_alerts"
             },
             {
-                "name": "Energy Pipeline, Your Source for Oil & Gas Industry",
+                "name": "The Greeley Tribune Energy Pipeline",
                 "property": "properties.greeleytribune_energy_pipeline"
             },
             {
-                "name": "Greeley Sports Newsletter",
+                "name": "The Greeley Tribune Sports Newsletter",
                 "property": "properties.greeleytribune_sports_newsletter"
+            },
+            {
+                "name": "The Greeley Tribune Breaking News",
+                "property": "properties.greeleytribune_breaking_news"
             },
             {
                 "name": "The Union Circulation",
@@ -1818,7 +1838,7 @@ module.exports = {
                 "property": "properties.fencepost_circulation"
             },
             {
-                "name": "Record Courier Circulation",
+                "name": "The Record Courier Circulation",
                 "property": "properties.recordcourier_circulation"
             },
             {
@@ -1834,8 +1854,60 @@ module.exports = {
                 "property": "properties.lahontanvalley_circulation"
             },
             {
-                "name": "Greeley Tribune Circulation",
+                "name": "Lahontan Valley News Week in Review",
+                "property": "properties.nevadaappeal_lahontan_valley_news_week_in_review"
+            },
+            {
+                "name": "Lahontan Valley News Week Contests, Promotions & Offers",
+                "property": "properties.lvn_promotions_contest_alerts"
+            },
+            {
+                "name": "The Greeley Tribune Circulation",
                 "property": "properties.greeleytribune_circulation"
+            },
+            {
+                "name": "Steamboat Today Your Morning News",
+                "property": "properties.steamboattoday_your_morning_news"
+            },
+            {
+                "name": "Steamboat Today Yampa Valley Health",
+                "property": "properties.steamboattoday_yampa_valley_health"
+            },
+            {
+                "name": "Steamboat Today Steamboat Scorecard",
+                "property": "properties.steamboattoday_steamboat_scorecard"
+            },
+            {
+                "name": "Steamboat Today Explore Steamboat",
+                "property": "properties.steamboattoday_explore_steamboat"
+            },
+            {
+                "name": "Steamboat Today Contests, Promotions & Offers",
+                "property": "properties.steamboattoday_contests_promotions"
+            },
+            {
+                "name": "Steamboat Today Breaking News",
+                "property": "properties.steamboattoday_breaking_news"
+            },
+            {
+                "name": "Craig Press Breaking News",
+                "property": "properties.craigdailypress_breaking_news"
+            },
+            {
+                "name": "Craig Press Morning Report",
+                "property": "properties.craigdailypress_morning_report"
+            },
+            {
+                "name": "Craig Press Saturday Sports",
+                "property": "properties.craigdailypress_saturday_sports"
+            },
+            {
+                "name": "Craig Press Your Health",
+                "property": "properties.craigdailypress_your_health"
+            },
+            {
+                "name": "Craig Press Contests, Promotions & Offers",
+                "property": "properties.craigdailypress_contests_promotions"
             }
         ]
     },
