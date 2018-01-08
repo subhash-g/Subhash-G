@@ -1911,6 +1911,131 @@ module.exports = {
             }
         ]
     },
+
+    "5181_SD": {
+        "name": "Summit Daily",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Summit Daily Locals News Flash",
+                "property": "properties.summitdaily_daily_newsletter"
+            },
+            {
+                "name": "Summit Daily Breaking News",
+                "property": "properties.summitdaily_breaking_news"
+            },
+            {
+                "name": "Summit Daily Contests, Promotions & Offers",
+                "property": "properties.summitdaily_contests_promotions"
+            },
+            {
+                "name": "Summit Daily Deals",
+                "property": "properties.summitdaily_deals"
+            },
+            {
+                "name": "Summit Daily Seasonal Travel Guide",
+                "property": "properties.summitdaily_seasonal_travel_guide"
+            },
+            {
+                "name": "Summit Daily Explore Summit Weekender",
+                "property": "properties.summitdaily_weekend_entertainment_guide"
+            }
+        ]
+    },
+
+    "5181_VD": {
+        "name": "Vail Daily",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Vail Daily Newsletter",
+                "property": "properties.vaildaily_daily_newsletter_future_offering"
+            },
+            {
+                "name": "Vail Daily Weekly Entertainment & Outdoors",
+                "property": "properties.vaildaily_headlines_entertainment"
+            },
+            {
+                "name": "Vail Daily Contests, Promotions & Offers",
+                "property": "properties.vaildaily_contests_promos"
+            },
+            {
+                "name": "Vail Daily Breaking News",
+                "property": "properties.vaildaily_breaking_news_future_offering"
+            }
+        ]
+    },
+
+    "5181_SH": {
+        "name": "Sky-Hi News",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Sky-Hi News The Grand Update",
+                "property": "properties.skyhidailynews_the_grand_update"
+            },
+            {
+                "name": "Sky-Hi News Seasonal Travel Guide",
+                "property": "properties.skyhidailynews_seasonal_travel_guide"
+            },
+            {
+                "name": "Sky-Hi News Deals",
+                "property": "properties.skyhidailynews_deals"
+            },
+            {
+                "name": "Sky-Hi News Contests, Promotions & Offers",
+                "property": "properties.skyhidailynews_contests_promotions"
+            },
+            {
+                "name": "Sky-Hi News Weekend Entertainment Guide",
+                "property": "properties.skyhidailynews_weekend_entertainment_guide"
+            },
+            {
+                "name": "Sky-Hi Breaking News",
+                "property": "properties.skyhidailynews_breaking_news"
+            }
+        ]
+    },
+
      "5184": {
         "name": "WNYT",
         "logo": "/images/logos/wnyt.png",
