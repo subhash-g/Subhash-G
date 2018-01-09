@@ -1566,347 +1566,347 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Summit Daily Locals News Flash",
+                "name": "Summit Daily: Locals News Flash",
                 "property": "properties.summitdaily_daily_newsletter"
             },
             {
-                "name": "Summit Daily Breaking News",
+                "name": "Summit Daily: Breaking News",
                 "property": "properties.summitdaily_breaking_news"
             },
             {
-                "name": "Summit Daily Contests, Promotions & Offers",
+                "name": "Summit Daily: Contests, Promotions & Offers",
                 "property": "properties.summitdaily_contests_promotions"
             },
             {
-                "name": "Summit Daily Deals",
+                "name": "Summit Daily: Deals",
                 "property": "properties.summitdaily_deals"
             },
             {
-                "name": "Summit Daily Seasonal Travel Guide",
+                "name": "Summit Daily: Seasonal Travel Guide",
                 "property": "properties.summitdaily_seasonal_travel_guide"
             },
             {
-                "name": "Summit Daily Explore Summit Weekender",
+                "name": "Summit Daily: Explore Summit Weekender",
                 "property": "properties.summitdaily_weekend_entertainment_guide"
             },
             {
-                "name": "Vail Daily Newsletter",
+                "name": "Vail Daily: Newsletter",
                 "property": "properties.vaildaily_daily_newsletter_future_offering"
             },
             {
-                "name": "Vail Daily Weekly Entertainment & Outdoors",
+                "name": "Vail Daily: Weekly Entertainment & Outdoors",
                 "property": "properties.vaildaily_headlines_entertainment"
             },
             {
-                "name": "Vail Daily Contests, Promotions & Offers",
+                "name": "Vail Daily: Contests, Promotions & Offers",
                 "property": "properties.vaildaily_contests_promos"
             },
             {
-                "name": "Vail Daily Breaking News",
+                "name": "Vail Daily: Breaking News",
                 "property": "properties.vaildaily_breaking_news_future_offering"
             },
             {
-                "name": "Everything Nevada Newsletter",
+                "name": "Everything Nevada: Newsletter",
                 "property": "properties.everything_nevada_newsletter"
             },
             {
-                "name": "Nevada Appeal Daily News Brief",
+                "name": "Nevada Appeal: Daily News Brief",
                 "property": "properties.nevadaappeal_the_daily_news_brief"
             },
             {
-                "name": "Nevada Appeal Mid-Week Review",
+                "name": "Nevada Appeal: Mid-Week Review",
                 "property": "properties.nevadaappeal_the_week_in_review"
             },
             {
-                "name": "Nevada Appeal Contests, Promotions & Offers",
+                "name": "Nevada Appeal: Contests, Promotions & Offers",
                 "property": "properties.nevadaappeal_promotions_contest_alerts"
             },
             {
-                "name": "Nevada Appeal Entertainment Alerts",
+                "name": "Nevada Appeal: Entertainment Alerts",
                 "property": "properties.nevadaappeal_entertainment_alerts"
             },
             {
-                "name": "Post Independent Top Stories",
-                "property": "properties.postindependent_week_in_review"
-            },
-            {
-                "name": "Post Independent All the Fun",
-                "property": "properties.postindependent_things_to_do"
-            },
-            {
-                "name": "Post Independent Contest & Quizzes",
-                "property": "properties.postindependent_contest_quizzes"
-            },
-            {
-                "name": "Post Independent Deals",
-                "property": "properties.postindependent_deals"
-            },
-            {
-                "name": "The Record Courier For the Record",
-                "property": "properties.recordcourier_the_week_in_review"
-            },
-            {
-                "name": "The Record Courier Contests, Promotions & Offers",
-                "property": "properties.recordcourier_promotions_contest_alerts"
-            },
-            {
-                "name": "Sky-Hi News The Grand Update",
-                "property": "properties.skyhidailynews_the_grand_update"
-            },
-            {
-                "name": "Sky-Hi News Seasonal Travel Guide",
-                "property": "properties.skyhidailynews_seasonal_travel_guide"
-            },
-            {
-                "name": "Sky-Hi News Deals",
-                "property": "properties.skyhidailynews_deals"
-            },
-            {
-                "name": "Sky-Hi News Contests, Promotions & Offers",
-                "property": "properties.skyhidailynews_contests_promotions"
-            },
-            {
-                "name": "Sky-Hi News Weekend Entertainment Guide",
-                "property": "properties.skyhidailynews_weekend_entertainment_guide"
-            },
-            {
-                "name": "Sky-Hi Breaking News",
-                "property": "properties.skyhidailynews_breaking_news"
-            },
-            {
-                "name": "The Fence Post Weekly Round-Up",
-                "property": "properties.thefencepost_the_weekly_news_round_up"
-            },
-            {
-                "name": "The Fence Post Weekly Market Report",
-                "property": "properties.thefencepost_the_weekly_market_update"
-            },
-            {
-                "name": "The Fence Post Contests, Promotions & Offers",
-                "property": "properties.thefencepost_promotions_contest_alerts"
-            },
-            {
-                "name": "The Union Today",
-                "property": "properties.theunion_the_daily_news_brief"
-            },
-            {
-                "name": "The Union Week in Review",
-                "property": "properties.theunion_the_week_in_review"
-            },
-            {
-                "name": "The Union Contests, Promotions & Offers",
-                "property": "properties.theunion_promotions_contest_alerts"
-            },
-            {
-                "name": "The Union Wildwood Independent",
-                "property": "properties.theunion_the_wildwood_independent"
-            },
-            {
-                "name": "Grass Valley Cannabis News",
-                "property": "properties.theunion_cannabis_news"
-            },
-            {
-                "name": "The Aspen Times Sunrise Rundown",
-                "property": "properties.aspentimes_the_daily_news_brief"
-            },
-            {
-                "name": "The Aspen Times Contests, Promotions & Offers",
-                "property": "properties.aspentimes_promotions_contest_alerts"
-            },
-            {
-                "name": "The Aspen Times Breaking News",
-                "property": "properties.aspentimes_breaking_news"
-            },
-            {
-                "name": "The Aspen Times Seasonal Travel Guide",
-                "property": "properties.aspentimes_seasonal_travel_guide"
-            },
-            {
-                "name": "The Aspen Times Weekend in Aspen",
-                "property": "properties.aspentimes_weekend_entertainment_guide"
-            },
-            {
-                "name": "Northern Nevada Business Daily",
-                "property": "properties.nnbw_daily_update"
-            },
-            {
-                "name": "Northern Nevada Business Weekly Promtions, Contests & Offers",
-                "property": "properties.nnbw_contests_promotions"
-            },
-            {
-                "name": "Northern Nevada Business Monthly",
-                "property": "properties.nnbw_business_monthly"
-            },
-            {
-                "name": "Northern Nevada Business Technology & Tentreprenuership News",
-                "property": "properties.nnbw_business_bright_idea"
-            },
-            {
-                "name": "Sierra Sun Locals Newsletter",
-                "property": "properties.sierrasun_locals_newsletter"
-            },
-            {
-                "name": "Sierra Sun Visitors Newsletter",
-                "property": "properties.sierrasun_visitors_newsletter"
-            },
-            {
-                "name": "Sierra Sun Weekend Entertainment Guide",
-                "property": "properties.sierrasun_weekend_entertainment_guide"
-            },
-            {
-                "name": "Sierra Sun Contests & Promotions",
-                "property": "properties.sierrasun_contests_promotions"
-            },
-            {
-                "name": "Sierra Sun Breaking News",
-                "property": "properties.sierrasun_breaking_news"
-            },
-            {
-                "name": "Tahoe Tribune & Sierra Sun's Monday Morning Report",
-                "property": "properties.tahoetribune_locals_newsletter"
-            },
-            {
-                "name": "Tahoe Daily Tribune Visitors Newsletter",
-                "property": "properties.tahoetribune_visitors_newsletter"
-            },
-            {
-                "name": "Tahoe Daily Tribune Your Tahoe Weekend",
-                "property": "properties.tahoetribune_weekend_entertainment_guide"
-            },
-            {
-                "name": "Tahoe Daily Tribune Contests & Promotions",
-                "property": "properties.tahoetribune_contests_promotions"
-            },
-            {
-                "name": "Tahoe Daily Tribune Breaking News",
-                "property": "properties.tahoetribune_breaking_news"
-            },
-            {
-                "name": "Tahoe Daily Tribune Healthy Tahoe",
-                "property": "properties.tahoetribune_healthy_tahoe"
-            },
-            {
-                "name": "Tri-State Livestock News RoundUp",
-                "property": "properties.tsin_the_weekly_news_round_up"
-            },
-            {
-                "name": "Tri-State Livestock News Weekly Market Update",
-                "property": "properties.tsin_the_weekly_market_update"
-            },
-            {
-                "name": "Tri-State Livestock News Contests, Promotions & Offers",
-                "property": "properties.tsin_promotions_contest_alerts"
-            },
-            {
-                "name": "Tri-State Livestock News Cavvy Savvy The Big Circle",
-                "property": "properties.tsin_cavvy_savvy_the_big_circle"
-            },
-            {
-                "name": "The Greeley Tribune Daily Update",
-                "property": "properties.greeleytribune_the_daily_news_brief"
-            },
-            {
-                "name": "The Greeley Tribune Week in Review",
-                "property": "properties.greeleytribune_the_week_in_review"
-            },
-            {
-                "name": "The Greeley Tribune Contests, Promotions & Offers",
-                "property": "properties.greeleytribune_promotions_contest_alerts"
-            },
-            {
-                "name": "The Greeley Tribune Energy Pipeline",
-                "property": "properties.greeleytribune_energy_pipeline"
-            },
-            {
-                "name": "The Greeley Tribune Sports Newsletter",
-                "property": "properties.greeleytribune_sports_newsletter"
-            },
-            {
-                "name": "The Greeley Tribune Breaking News",
-                "property": "properties.greeleytribune_breaking_news"
-            },
-            {
-                "name": "The Union Circulation",
-                "property": "properties.union_circulation"
-            },
-            {
-                "name": "Tri-State Livestock News Circulation",
-                "property": "properties.tristate_circulation"
-            },
-            {
-                "name": "The Fence Post Circulation",
-                "property": "properties.fencepost_circulation"
-            },
-            {
-                "name": "The Record Courier Circulation",
-                "property": "properties.recordcourier_circulation"
-            },
-            {
-                "name": "Northern Nevada Business Weekly Circulation",
-                "property": "properties.nnbw_circulation"
-            },
-            {
-                "name": "Nevada Appeal Circulation",
+                "name": "Nevada Appeal: Circulation",
                 "property": "properties.nevadaappeal_circulation"
             },
             {
-                "name": "Lahontan Valley News Circulation",
-                "property": "properties.lahontanvalley_circulation"
+                "name": "Post Independent: Top Stories",
+                "property": "properties.postindependent_week_in_review"
             },
             {
-                "name": "Lahontan Valley News Week in Review",
-                "property": "properties.nevadaappeal_lahontan_valley_news_week_in_review"
+                "name": "Post Independent: All the Fun",
+                "property": "properties.postindependent_things_to_do"
             },
             {
-                "name": "Lahontan Valley News Week Contests, Promotions & Offers",
-                "property": "properties.lvn_promotions_contest_alerts"
+                "name": "Post Independent: Contest & Quizzes",
+                "property": "properties.postindependent_contest_quizzes"
             },
             {
-                "name": "The Greeley Tribune Circulation",
+                "name": "Post Independent: Deals",
+                "property": "properties.postindependent_deals"
+            },
+            {
+                "name": "The Record Courier: For the Record",
+                "property": "properties.recordcourier_the_week_in_review"
+            },
+            {
+                "name": "The Record Courier: Contests, Promotions & Offers",
+                "property": "properties.recordcourier_promotions_contest_alerts"
+            },
+            {
+                "name": "The Record Courier: Circulation",
+                "property": "properties.recordcourier_circulation"
+            },
+            {
+                "name": "Sky-Hi News: The Grand Update",
+                "property": "properties.skyhidailynews_the_grand_update"
+            },
+            {
+                "name": "Sky-Hi News: Seasonal Travel Guide",
+                "property": "properties.skyhidailynews_seasonal_travel_guide"
+            },
+            {
+                "name": "Sky-Hi News: Deals",
+                "property": "properties.skyhidailynews_deals"
+            },
+            {
+                "name": "Sky-Hi News: Contests, Promotions & Offers",
+                "property": "properties.skyhidailynews_contests_promotions"
+            },
+            {
+                "name": "Sky-Hi News: Weekend Entertainment Guide",
+                "property": "properties.skyhidailynews_weekend_entertainment_guide"
+            },
+            {
+                "name": "Sky-Hi News: Breaking News",
+                "property": "properties.skyhidailynews_breaking_news"
+            },
+            {
+                "name": "The Fence Post: Weekly Round-Up",
+                "property": "properties.thefencepost_the_weekly_news_round_up"
+            },
+            {
+                "name": "The Fence Post: Weekly Market Report",
+                "property": "properties.thefencepost_the_weekly_market_update"
+            },
+            {
+                "name": "The Fence Post: Contests, Promotions & Offers",
+                "property": "properties.thefencepost_promotions_contest_alerts"
+            },
+            {
+                "name": "The Fence Post: Circulation",
+                "property": "properties.fencepost_circulation"
+            },
+            {
+                "name": "The Union: Today",
+                "property": "properties.theunion_the_daily_news_brief"
+            },
+            {
+                "name": "The Union: Week in Review",
+                "property": "properties.theunion_the_week_in_review"
+            },
+            {
+                "name": "The Union: Contests, Promotions & Offers",
+                "property": "properties.theunion_promotions_contest_alerts"
+            },
+            {
+                "name": "The Union: Wildwood Independent",
+                "property": "properties.theunion_the_wildwood_independent"
+            },
+            {
+                "name": "The Union: Circulation",
+                "property": "properties.union_circulation"
+            },
+            {
+                "name": "The Union: Grass Valley Cannabis News",
+                "property": "properties.theunion_cannabis_news"
+            },
+            {
+                "name": "The Aspen Times: Sunrise Rundown",
+                "property": "properties.aspentimes_the_daily_news_brief"
+            },
+            {
+                "name": "The Aspen Times: Contests, Promotions & Offers",
+                "property": "properties.aspentimes_promotions_contest_alerts"
+            },
+            {
+                "name": "The Aspen Times: Breaking News",
+                "property": "properties.aspentimes_breaking_news"
+            },
+            {
+                "name": "The Aspen Times: Seasonal Travel Guide",
+                "property": "properties.aspentimes_seasonal_travel_guide"
+            },
+            {
+                "name": "The Aspen Times: Weekend in Aspen",
+                "property": "properties.aspentimes_weekend_entertainment_guide"
+            },
+            {
+                "name": "Northern Nevada Business: Daily",
+                "property": "properties.nnbw_daily_update"
+            },
+            {
+                "name": "Northern Nevada Business: Weekly Circulation",
+                "property": "properties.nnbw_circulation"
+            },
+            {
+                "name": "Northern Nevada Business: Weekly Promotions, Contests & Offers",
+                "property": "properties.nnbw_contests_promotions"
+            },
+            {
+                "name": "Northern Nevada Business: Monthly",
+                "property": "properties.nnbw_business_monthly"
+            },
+            {
+                "name": "Northern Nevada Business: Technology & Entrepreneurship News",
+                "property": "properties.nnbw_business_bright_idea"
+            },
+            {
+                "name": "Sierra Sun: Locals Newsletter",
+                "property": "properties.sierrasun_locals_newsletter"
+            },
+            {
+                "name": "Sierra Sun: Visitors Newsletter",
+                "property": "properties.sierrasun_visitors_newsletter"
+            },
+            {
+                "name": "Sierra Sun: Weekend Entertainment Guide",
+                "property": "properties.sierrasun_weekend_entertainment_guide"
+            },
+            {
+                "name": "Sierra Sun: Contests & Promotions",
+                "property": "properties.sierrasun_contests_promotions"
+            },
+            {
+                "name": "Sierra Sun: Breaking News",
+                "property": "properties.sierrasun_breaking_news"
+            },
+            {
+                "name": "Tahoe Daily Tribune & Sierra Sun: Monday Morning Report",
+                "property": "properties.tahoetribune_locals_newsletter"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Visitors Newsletter",
+                "property": "properties.tahoetribune_visitors_newsletter"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Your Tahoe Weekend",
+                "property": "properties.tahoetribune_weekend_entertainment_guide"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Contests & Promotions",
+                "property": "properties.tahoetribune_contests_promotions"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Breaking News",
+                "property": "properties.tahoetribune_breaking_news"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Healthy Tahoe",
+                "property": "properties.tahoetribune_healthy_tahoe"
+            },
+            {
+                "name": "Tri-State Livestock News: RoundUp",
+                "property": "properties.tsin_the_weekly_news_round_up"
+            },
+            {
+                "name": "Tri-State Livestock News: Weekly Market Update",
+                "property": "properties.tsin_the_weekly_market_update"
+            },
+            {
+                "name": "Tri-State Livestock News: Contests, Promotions & Offers",
+                "property": "properties.tsin_promotions_contest_alerts"
+            },
+            {
+                "name": "Tri-State Livestock News: Cavvy Savvy The Big Circle",
+                "property": "properties.tsin_cavvy_savvy_the_big_circle"
+            },
+            {
+                "name": "Tri-State Livestock News: Circulation",
+                "property": "properties.tristate_circulation"
+            },
+            {
+                "name": "The Greeley Tribune: Daily Update",
+                "property": "properties.greeleytribune_the_daily_news_brief"
+            },
+            {
+                "name": "The Greeley Tribune: Week in Review",
+                "property": "properties.greeleytribune_the_week_in_review"
+            },
+            {
+                "name": "The Greeley Tribune: Contests, Promotions & Offers",
+                "property": "properties.greeleytribune_promotions_contest_alerts"
+            },
+            {
+                "name": "The Greeley Tribune: Energy Pipeline",
+                "property": "properties.greeleytribune_energy_pipeline"
+            },
+            {
+                "name": "The Greeley Tribune: Sports Newsletter",
+                "property": "properties.greeleytribune_sports_newsletter"
+            },
+            {
+                "name": "The Greeley Tribune: Breaking News",
+                "property": "properties.greeleytribune_breaking_news"
+            },
+            {
+                "name": "The Greeley Tribune: Circulation",
                 "property": "properties.greeleytribune_circulation"
             },
             {
-                "name": "Steamboat Today Your Morning News",
+                "name": "Lahontan Valley News: Circulation",
+                "property": "properties.lahontanvalley_circulation"
+            },
+            {
+                "name": "Lahontan Valley News: Week in Review",
+                "property": "properties.nevadaappeal_lahontan_valley_news_week_in_review"
+            },
+            {
+                "name": "Lahontan Valley News: Contests, Promotions & Offers",
+                "property": "properties.lvn_promotions_contest_alerts"
+            },
+            {
+                "name": "Steamboat Today: Your Morning News",
                 "property": "properties.steamboattoday_your_morning_news"
             },
             {
-                "name": "Steamboat Today Yampa Valley Health",
+                "name": "Steamboat Today: Yampa Valley Health",
                 "property": "properties.steamboattoday_yampa_valley_health"
             },
             {
-                "name": "Steamboat Today Steamboat Scorecard",
+                "name": "Steamboat Today: Steamboat Scorecard",
                 "property": "properties.steamboattoday_steamboat_scorecard"
             },
             {
-                "name": "Steamboat Today Explore Steamboat",
+                "name": "Steamboat Today: Explore Steamboat",
                 "property": "properties.steamboattoday_explore_steamboat"
             },
             {
-                "name": "Steamboat Today Contests, Promotions & Offers",
+                "name": "Steamboat Today: Contests, Promotions & Offers",
                 "property": "properties.steamboattoday_contests_promotions"
             },
             {
-                "name": "Steamboat Today Breaking News",
+                "name": "Steamboat Today: Breaking News",
                 "property": "properties.steamboattoday_breaking_news"
             },
             {
-                "name": "Craig Press Breaking News",
+                "name": "Craig Press: Breaking News",
                 "property": "properties.craigdailypress_breaking_news"
             },
             {
-                "name": "Craig Press Morning Report",
+                "name": "Craig Press: Morning Report",
                 "property": "properties.craigdailypress_morning_report"
             },
             {
-                "name": "Craig Press Saturday Sports",
+                "name": "Craig Press: Saturday Sports",
                 "property": "properties.craigdailypress_saturday_sports"
             },
             {
-                "name": "Craig Press Your Health",
+                "name": "Craig Press: Your Health",
                 "property": "properties.craigdailypress_your_health"
             },
             {
-                "name": "Craig Press Contests, Promotions & Offers",
+                "name": "Craig Press: Contests, Promotions & Offers",
                 "property": "properties.craigdailypress_contests_promotions"
             }
         ]
@@ -1930,27 +1930,27 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Summit Daily Locals News Flash",
+                "name": "Summit Daily: Locals News Flash",
                 "property": "properties.summitdaily_daily_newsletter"
             },
             {
-                "name": "Summit Daily Breaking News",
+                "name": "Summit Daily: Breaking News",
                 "property": "properties.summitdaily_breaking_news"
             },
             {
-                "name": "Summit Daily Contests, Promotions & Offers",
+                "name": "Summit Daily: Contests, Promotions & Offers",
                 "property": "properties.summitdaily_contests_promotions"
             },
             {
-                "name": "Summit Daily Deals",
+                "name": "Summit Daily: Deals",
                 "property": "properties.summitdaily_deals"
             },
             {
-                "name": "Summit Daily Seasonal Travel Guide",
+                "name": "Summit Daily: Seasonal Travel Guide",
                 "property": "properties.summitdaily_seasonal_travel_guide"
             },
             {
-                "name": "Summit Daily Explore Summit Weekender",
+                "name": "Summit Daily: Explore Summit Weekender",
                 "property": "properties.summitdaily_weekend_entertainment_guide"
             }
         ]
@@ -1974,20 +1974,153 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Vail Daily Newsletter",
+                "name": "Vail Daily: Newsletter",
                 "property": "properties.vaildaily_daily_newsletter_future_offering"
             },
             {
-                "name": "Vail Daily Weekly Entertainment & Outdoors",
+                "name": "Vail Daily: Weekly Entertainment & Outdoors",
                 "property": "properties.vaildaily_headlines_entertainment"
             },
             {
-                "name": "Vail Daily Contests, Promotions & Offers",
+                "name": "Vail Daily: Contests, Promotions & Offers",
                 "property": "properties.vaildaily_contests_promos"
             },
             {
-                "name": "Vail Daily Breaking News",
+                "name": "Vail Daily: Breaking News",
                 "property": "properties.vaildaily_breaking_news_future_offering"
+            }
+        ]
+    },
+
+
+    "5181_EN": {
+        "name": "Everything Nevada",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Everything Nevada: Newsletter",
+                "property": "properties.everything_nevada_newsletter"
+            }
+        ]
+    },
+
+    "5181_NA": {
+        "name": "Nevada Appeal",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Nevada Appeal: Daily News Brief",
+                "property": "properties.nevadaappeal_the_daily_news_brief"
+            },
+            {
+                "name": "Nevada Appeal: Mid-Week Review",
+                "property": "properties.nevadaappeal_the_week_in_review"
+            },
+            {
+                "name": "Nevada Appeal: Contests, Promotions & Offers",
+                "property": "properties.nevadaappeal_promotions_contest_alerts"
+            },
+            {
+                "name": "Nevada Appeal: Entertainment Alerts",
+                "property": "properties.nevadaappeal_entertainment_alerts"
+            },
+            {
+                "name": "Nevada Appeal: Circulation",
+                "property": "properties.nevadaappeal_circulation"
+            }
+        ]
+    },
+
+    "5181_PI": {
+        "name": "Post Independent",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Post Independent: Top Stories",
+                "property": "properties.postindependent_week_in_review"
+            },
+            {
+                "name": "Post Independent: All the Fun",
+                "property": "properties.postindependent_things_to_do"
+            },
+            {
+                "name": "Post Independent: Contest & Quizzes",
+                "property": "properties.postindependent_contest_quizzes"
+            },
+            {
+                "name": "Post Independent: Deals",
+                "property": "properties.postindependent_deals"
+            }
+        ]
+    },
+
+    "5181_RC": {
+        "name": "Record Courier",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Record Courier: For the Record",
+                "property": "properties.recordcourier_the_week_in_review"
+            },
+            {
+                "name": "The Record Courier: Contests, Promotions & Offers",
+                "property": "properties.recordcourier_promotions_contest_alerts"
+            },
+            {
+                "name": "The Record Courier: Circulation",
+                "property": "properties.recordcourier_circulation"
             }
         ]
     },
@@ -2010,28 +2143,480 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Sky-Hi News The Grand Update",
+                "name": "Sky-Hi News: The Grand Update",
                 "property": "properties.skyhidailynews_the_grand_update"
             },
             {
-                "name": "Sky-Hi News Seasonal Travel Guide",
+                "name": "Sky-Hi News: Seasonal Travel Guide",
                 "property": "properties.skyhidailynews_seasonal_travel_guide"
             },
             {
-                "name": "Sky-Hi News Deals",
+                "name": "Sky-Hi News: Deals",
                 "property": "properties.skyhidailynews_deals"
             },
             {
-                "name": "Sky-Hi News Contests, Promotions & Offers",
+                "name": "Sky-Hi News: Contests, Promotions & Offers",
                 "property": "properties.skyhidailynews_contests_promotions"
             },
             {
-                "name": "Sky-Hi News Weekend Entertainment Guide",
+                "name": "Sky-Hi News: Weekend Entertainment Guide",
                 "property": "properties.skyhidailynews_weekend_entertainment_guide"
             },
             {
-                "name": "Sky-Hi Breaking News",
+                "name": "Sky-Hi News: Breaking News",
                 "property": "properties.skyhidailynews_breaking_news"
+            }
+        ]
+    },
+
+    "5181_FP": {
+        "name": "Fence Post",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Fence Post: Weekly Round-Up",
+                "property": "properties.thefencepost_the_weekly_news_round_up"
+            },
+            {
+                "name": "The Fence Post: Weekly Market Report",
+                "property": "properties.thefencepost_the_weekly_market_update"
+            },
+            {
+                "name": "The Fence Post: Contests, Promotions & Offers",
+                "property": "properties.thefencepost_promotions_contest_alerts"
+            },
+            {
+                "name": "The Fence Post: Circulation",
+                "property": "properties.fencepost_circulation"
+            }
+        ]
+    },
+
+    "5181_UT": {
+        "name": "Union Today",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Union: Today",
+                "property": "properties.theunion_the_daily_news_brief"
+            },
+            {
+                "name": "The Union: Week in Review",
+                "property": "properties.theunion_the_week_in_review"
+            },
+            {
+                "name": "The Union: Contests, Promotions & Offers",
+                "property": "properties.theunion_promotions_contest_alerts"
+            },
+            {
+                "name": "The Union: Wildwood Independent",
+                "property": "properties.theunion_the_wildwood_independent"
+            },
+            {
+                "name": "The Union: Circulation",
+                "property": "properties.union_circulation"
+            },
+            {
+                "name": "The Union: Grass Valley Cannabis News",
+                "property": "properties.theunion_cannabis_news"
+            }
+        ]
+    },
+
+    "5181_AT": {
+        "name": "Aspen Times",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Aspen Times: Sunrise Rundown",
+                "property": "properties.aspentimes_the_daily_news_brief"
+            },
+            {
+                "name": "The Aspen Times: Contests, Promotions & Offers",
+                "property": "properties.aspentimes_promotions_contest_alerts"
+            },
+            {
+                "name": "The Aspen Times: Breaking News",
+                "property": "properties.aspentimes_breaking_news"
+            },
+            {
+                "name": "The Aspen Times: Seasonal Travel Guide",
+                "property": "properties.aspentimes_seasonal_travel_guide"
+            },
+            {
+                "name": "The Aspen Times: Weekend in Aspen",
+                "property": "properties.aspentimes_weekend_entertainment_guide"
+            }
+        ]
+    },
+
+    "5181_NN": {
+        "name": "Northern Nevada",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Northern Nevada Business: Daily",
+                "property": "properties.nnbw_daily_update"
+            },
+            {
+                "name": "Northern Nevada Business: Weekly Circulation",
+                "property": "properties.nnbw_circulation"
+            },
+            {
+                "name": "Northern Nevada Business: Weekly Promotions, Contests & Offers",
+                "property": "properties.nnbw_contests_promotions"
+            },
+            {
+                "name": "Northern Nevada Business: Monthly",
+                "property": "properties.nnbw_business_monthly"
+            },
+            {
+                "name": "Northern Nevada Business: Technology & Entrepreneurship News",
+                "property": "properties.nnbw_business_bright_idea"
+            }
+        ]
+    },
+
+    "5181_SS": {
+        "name": "Sierra Sun",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Sierra Sun: Locals Newsletter",
+                "property": "properties.sierrasun_locals_newsletter"
+            },
+            {
+                "name": "Sierra Sun: Visitors Newsletter",
+                "property": "properties.sierrasun_visitors_newsletter"
+            },
+            {
+                "name": "Sierra Sun: Weekend Entertainment Guide",
+                "property": "properties.sierrasun_weekend_entertainment_guide"
+            },
+            {
+                "name": "Sierra Sun: Contests & Promotions",
+                "property": "properties.sierrasun_contests_promotions"
+            },
+            {
+                "name": "Sierra Sun: Breaking News",
+                "property": "properties.sierrasun_breaking_news"
+            },
+            {
+                "name": "Tahoe Daily Tribune & Sierra Sun: Monday Morning Report",
+                "property": "properties.tahoetribune_locals_newsletter"
+            }
+        ]
+    },
+
+    "5181_TD": {
+        "name": "Tahoe Daily",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Tahoe Daily Tribune: Visitors Newsletter",
+                "property": "properties.tahoetribune_visitors_newsletter"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Your Tahoe Weekend",
+                "property": "properties.tahoetribune_weekend_entertainment_guide"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Contests & Promotions",
+                "property": "properties.tahoetribune_contests_promotions"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Breaking News",
+                "property": "properties.tahoetribune_breaking_news"
+            },
+            {
+                "name": "Tahoe Daily Tribune: Healthy Tahoe",
+                "property": "properties.tahoetribune_healthy_tahoe"
+            },
+            {
+                "name": "Tahoe Daily Tribune & Sierra Sun: Monday Morning Report",
+                "property": "properties.tahoetribune_locals_newsletter"
+            }
+        ]
+    },
+
+    "5181_TL": {
+        "name": "Tri-State Livestock News",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Tri-State Livestock News: RoundUp",
+                "property": "properties.tsin_the_weekly_news_round_up"
+            },
+            {
+                "name": "Tri-State Livestock News: Weekly Market Update",
+                "property": "properties.tsin_the_weekly_market_update"
+            },
+            {
+                "name": "Tri-State Livestock News: Contests, Promotions & Offers",
+                "property": "properties.tsin_promotions_contest_alerts"
+            },
+            {
+                "name": "Tri-State Livestock News: Cavvy Savvy The Big Circle",
+                "property": "properties.tsin_cavvy_savvy_the_big_circle"
+            },
+            {
+                "name": "Tri-State Livestock News: Circulation",
+                "property": "properties.tristate_circulation"
+            }
+        ]
+    },
+
+    "5181_GT": {
+        "name": "Greeley Tribune",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Greeley Tribune: Daily Update",
+                "property": "properties.greeleytribune_the_daily_news_brief"
+            },
+            {
+                "name": "The Greeley Tribune: Week in Review",
+                "property": "properties.greeleytribune_the_week_in_review"
+            },
+            {
+                "name": "The Greeley Tribune: Contests, Promotions & Offers",
+                "property": "properties.greeleytribune_promotions_contest_alerts"
+            },
+            {
+                "name": "The Greeley Tribune: Energy Pipeline",
+                "property": "properties.greeleytribune_energy_pipeline"
+            },
+            {
+                "name": "The Greeley Tribune: Sports Newsletter",
+                "property": "properties.greeleytribune_sports_newsletter"
+            },
+            {
+                "name": "The Greeley Tribune: Breaking News",
+                "property": "properties.greeleytribune_breaking_news"
+            },
+            {
+                "name": "The Greeley Tribune: Circulation",
+                "property": "properties.greeleytribune_circulation"
+            }
+        ]
+    },
+
+    "5181_LV": {
+        "name": "Lahontan Valley",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Lahontan Valley News: Circulation",
+                "property": "properties.lahontanvalley_circulation"
+            },
+            {
+                "name": "Lahontan Valley News: Week in Review",
+                "property": "properties.nevadaappeal_lahontan_valley_news_week_in_review"
+            },
+            {
+                "name": "Lahontan Valley News: Contests, Promotions & Offers",
+                "property": "properties.lvn_promotions_contest_alerts"
+            }
+        ]
+    },
+
+    "5181_ST": {
+        "name": "Steamboat Today",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Steamboat Today: Your Morning News",
+                "property": "properties.steamboattoday_your_morning_news"
+            },
+            {
+                "name": "Steamboat Today: Yampa Valley Health",
+                "property": "properties.steamboattoday_yampa_valley_health"
+            },
+            {
+                "name": "Steamboat Today: Steamboat Scorecard",
+                "property": "properties.steamboattoday_steamboat_scorecard"
+            },
+            {
+                "name": "Steamboat Today: Explore Steamboat",
+                "property": "properties.steamboattoday_explore_steamboat"
+            },
+            {
+                "name": "Steamboat Today: Contests, Promotions & Offers",
+                "property": "properties.steamboattoday_contests_promotions"
+            },
+            {
+                "name": "Steamboat Today: Breaking News",
+                "property": "properties.steamboattoday_breaking_news"
+            }
+        ]
+    },
+
+    "5181_CP": {
+        "name": "Craig Press",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Craig Press: Breaking News",
+                "property": "properties.craigdailypress_breaking_news"
+            },
+            {
+                "name": "Craig Press: Morning Report",
+                "property": "properties.craigdailypress_morning_report"
+            },
+            {
+                "name": "Craig Press: Saturday Sports",
+                "property": "properties.craigdailypress_saturday_sports"
+            },
+            {
+                "name": "Craig Press: Your Health",
+                "property": "properties.craigdailypress_your_health"
+            },
+            {
+                "name": "Craig Press: Contests, Promotions & Offers",
+                "property": "properties.craigdailypress_contests_promotions"
             }
         ]
     },
