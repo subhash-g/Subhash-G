@@ -1974,7 +1974,7 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Vail Daily: Newsletter",
+                "name": "Vail Daily: Daily Newsletter",
                 "property": "properties.vaildaily_daily_newsletter_future_offering"
             },
             {
