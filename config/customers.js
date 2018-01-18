@@ -1591,11 +1591,11 @@ module.exports = {
             },
             {
                 "name": "Vail Daily: Newsletter",
-                "property": "properties.vaildaily_daily_newsletter_future_offering"
+                "property": "properties.vaildaily_daily_newsletter"
             },
             {
                 "name": "Vail Daily: Weekly Entertainment & Outdoors",
-                "property": "properties.vaildaily_headlines_entertainment"
+                "property": "properties.vaildaily_headlines_entertainment_outdoors"
             },
             {
                 "name": "Vail Daily: Contests, Promotions & Offers",
@@ -1603,7 +1603,7 @@ module.exports = {
             },
             {
                 "name": "Vail Daily: Breaking News",
-                "property": "properties.vaildaily_breaking_news_future_offering"
+                "property": "properties.vaildaily_breaking_news"
             },
             {
                 "name": "Everything Nevada: Newsletter",
@@ -1635,7 +1635,7 @@ module.exports = {
             },
             {
                 "name": "Post Independent: All the Fun",
-                "property": "properties.postindependent_things_to_do"
+                "property": "properties.postindependent_deals"
             },
             {
                 "name": "Post Independent: Contest & Quizzes",
@@ -1659,27 +1659,27 @@ module.exports = {
             },
             {
                 "name": "Sky-Hi News: The Grand Update",
-                "property": "properties.skyhidailynews_the_grand_update"
+                "property": "properties.skyhinews_the_grand_update"
             },
             {
                 "name": "Sky-Hi News: Seasonal Travel Guide",
-                "property": "properties.skyhidailynews_seasonal_travel_guide"
+                "property": "properties.skyhinews_seasonal_travel_guide"
             },
             {
                 "name": "Sky-Hi News: Deals",
-                "property": "properties.skyhidailynews_deals"
+                "property": "properties.skyhinews_deals"
             },
             {
                 "name": "Sky-Hi News: Contests, Promotions & Offers",
-                "property": "properties.skyhidailynews_contests_promotions"
+                "property": "properties.skyhinews_contests_promotions"
             },
             {
                 "name": "Sky-Hi News: Weekend Entertainment Guide",
-                "property": "properties.skyhidailynews_weekend_entertainment_guide"
+                "property": "properties.skyhinews_weekend_entertainment_guide"
             },
             {
                 "name": "Sky-Hi News: Breaking News",
-                "property": "properties.skyhidailynews_breaking_news"
+                "property": "properties.skyhinews_breaking_news"
             },
             {
                 "name": "The Fence Post: Weekly Round-Up",
@@ -1743,7 +1743,7 @@ module.exports = {
             },
             {
                 "name": "Northern Nevada Business: Daily",
-                "property": "properties.nnbw_daily_update"
+                "property": "properties.nnbw_nnbw_daily_update"
             },
             {
                 "name": "Northern Nevada Business: Weekly Circulation",
@@ -1759,7 +1759,7 @@ module.exports = {
             },
             {
                 "name": "Northern Nevada Business: Technology & Entrepreneurship News",
-                "property": "properties.nnbw_business_bright_idea"
+                "property": "properties.nnbw_technology_and_entrepreneurship"
             },
             {
                 "name": "Sierra Sun: Locals Newsletter",
@@ -1975,11 +1975,11 @@ module.exports = {
         "userLists": [
             {
                 "name": "Vail Daily: Daily Newsletter",
-                "property": "properties.vaildaily_daily_newsletter_future_offering"
+                "property": "properties.vaildaily_daily_newsletter"
             },
             {
                 "name": "Vail Daily: Weekly Entertainment & Outdoors",
-                "property": "properties.vaildaily_headlines_entertainment"
+                "property": "properties.vaildaily_headlines_entertainment_outdoors"
             },
             {
                 "name": "Vail Daily: Contests, Promotions & Offers",
@@ -1987,7 +1987,7 @@ module.exports = {
             },
             {
                 "name": "Vail Daily: Breaking News",
-                "property": "properties.vaildaily_breaking_news_future_offering"
+                "property": "properties.vaildaily_breaking_news"
             }
         ]
     },
@@ -2080,7 +2080,7 @@ module.exports = {
             },
             {
                 "name": "Post Independent: All the Fun",
-                "property": "properties.postindependent_things_to_do"
+                "property": "properties.postindependent_deals"
             },
             {
                 "name": "Post Independent: Contest & Quizzes",
@@ -2144,27 +2144,27 @@ module.exports = {
         "userLists": [
             {
                 "name": "Sky-Hi News: The Grand Update",
-                "property": "properties.skyhidailynews_the_grand_update"
+                "property": "properties.skyhinews_the_grand_update"
             },
             {
                 "name": "Sky-Hi News: Seasonal Travel Guide",
-                "property": "properties.skyhidailynews_seasonal_travel_guide"
+                "property": "properties.skyhinews_seasonal_travel_guide"
             },
             {
                 "name": "Sky-Hi News: Deals",
-                "property": "properties.skyhidailynews_deals"
+                "property": "properties.skyhinews_deals"
             },
             {
                 "name": "Sky-Hi News: Contests, Promotions & Offers",
-                "property": "properties.skyhidailynews_contests_promotions"
+                "property": "properties.skyhinews_contests_promotions"
             },
             {
                 "name": "Sky-Hi News: Weekend Entertainment Guide",
-                "property": "properties.skyhidailynews_weekend_entertainment_guide"
+                "property": "properties.skyhinews_weekend_entertainment_guide"
             },
             {
                 "name": "Sky-Hi News: Breaking News",
-                "property": "properties.skyhidailynews_breaking_news"
+                "property": "properties.skyhinews_breaking_news"
             }
         ]
     },
@@ -2308,7 +2308,7 @@ module.exports = {
         "userLists": [
             {
                 "name": "Northern Nevada Business: Daily",
-                "property": "properties.nnbw_daily_update"
+                "property": "properties.nnbw_nnbw_daily_update"
             },
             {
                 "name": "Northern Nevada Business: Weekly Circulation",
@@ -2324,7 +2324,7 @@ module.exports = {
             },
             {
                 "name": "Northern Nevada Business: Technology & Entrepreneurship News",
-                "property": "properties.nnbw_business_bright_idea"
+                "property": "properties.nnbw_technology_and_entrepreneurship"
             }
         ]
     },
