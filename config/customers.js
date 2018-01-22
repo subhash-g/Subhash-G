@@ -476,28 +476,32 @@ module.exports = {
                 "property": "properties.ii-health"
             },
             {
-                "name": "Iowa Ideas Higher Education Updates",
-                "property": "properties.ii-higher"
-            },
-            {
-                "name": "Iowa Ideas K-12 Education Updates",
-                "property": "properties.ii-k12"
-            },
-            {
-                "name": "Iowa Ideas Regionalism and Workforce Updates",
-                "property": "properties.ii-reg"
-            },
-            {
-                "name": "Iowa Ideas Transportation Updates",
-                "property": "properties.ii-trans"
-            },
-            {
                 "name": "Receive Gazette Subscription Status Notices",
                 "property": "properties.receive-subscription-status-email"
             },
             {
                 "name": "Receive Gazette Rewards Newsletters",
                 "property": "properties.receive-rewards-email"
+            },
+            {
+                "name": "Iowa Ideas Education Updates",
+                "property": "properties.ii-education"
+            },
+            {
+                "name": "Iowa Ideas Future of Work",
+                "property": "properties.ii-future"
+            },
+            {
+                "name": "Iowa Ideas Regional Development Updates",
+                "property": "properties.ii-regdev"
+            },
+            {
+                "name": "Iowa Ideas Human & Social Services Updates",
+                "property": "properties.ii-human"
+            },
+            {
+                "name": "Iowa Ideas Policy Updates",
+                "property": "properties.ii-policy"
             }
 
         ]
