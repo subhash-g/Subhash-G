@@ -2505,6 +2505,18 @@ module.exports = {
             {
                 "name": "The Greeley Tribune: Circulation",
                 "property": "properties.greeleytribune_circulation"
+            },
+            {
+                "name": "Windsor Now: Breaking News",
+                "property": "properties.mywindsornow_breaking_news"
+            },
+            {
+                "name": "Windsor Now: Contests, Promotions & Offers",
+                "property": "properties.mywindsornow_promotions_contest_alerts"
+            },
+            {
+                "name": "Windsor Now: Windsor Now Weekly",
+                "property": "properties.mywindsornow_windsor_now_weekly"
             }
         ]
     },
@@ -2621,6 +2633,38 @@ module.exports = {
             {
                 "name": "Craig Press: Contests, Promotions & Offers",
                 "property": "properties.craigdailypress_contests_promotions"
+            }
+        ]
+    },
+
+    "5181_PR": {
+        "name": "Park Record",
+        "logo": "/images/logos/swift-comm.png",
+        "bmeApiKey": "fa75c9aaa4bae5dd3890558801284ab5",
+        "header": "Please use the form below to update your subscription settings. You can select what type of emails you receive, or unsubscribe from all email communications.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Park Record: Breaking News",
+                "property": "properties.parkrecord_breaking_news"
+            },
+            {
+                "name": "Park Record: The Record Roundup",
+                "property": "properties.parkrecord_the_record_roundup"
+            },
+            {
+                "name": "Park Record: Promotions & Offers",
+                "property": "properties.parkrecord_promotions_offers"
             }
         ]
     },
