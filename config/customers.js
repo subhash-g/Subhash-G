@@ -3628,5 +3628,27 @@ module.exports = {
                 "property": "properties.sub_no_kiddos"
             }
         ]
+    },
+    "5385": {
+        "name": "Delfi",
+        "logo": "/images/logos/parent_co.png",
+        "bmeApiKey": "b12a706fcc4cad1b3e0b5b902225a9ac",
+        "header": "<img src='http://g.delfi.ee/d/r/nl/i/delfi-nltr-doglet.jpg/><br/>Kahju, et soovid ära minna.Oled alati tagasi oodatud!",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Frequency - Daily",
+                "property": "properties.fre_daily"
+            }
+        ]
     }
   };
