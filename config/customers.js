@@ -3650,5 +3650,118 @@ module.exports = {
                 "property": "properties.fre_daily"
             }
         ]
+    },
+    "5424_EN_UNSUB": {
+        "name": "Haggar-DEV-EN-UNSUB",
+        "logo": "/images/logos/Haggar.png",
+        "bmeApiKey": "1b44efa71ece15d7c1bebcb9fa155e4b",
+        "header": "You have successfully unsubscribed from the Haggar Canada email list.  Please let us know why you no longer want to receive communications from us.",
+        "subHeader": "If you prefer to continue receiving emails from Haggar Canada but less frequently, please indicate how often you prefer to hear from us:",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "not_comfortable_shopping_online",
+                "description":"I am not comfortable shopping online",
+                "property": "properties.unsub_reason",
+                "type":"unsub_reason"
+            },
+            {
+                "name": "emails_too_frequent",
+                "description":"I receive too many emails",
+                "property": "properties.unsub_reason",
+                "type":"unsub_reason"
+            },
+            {
+                "name": "content_not_relevant",
+                "description":"I don't think the content is relevant",
+                "property": "properties.unsub_reason",
+                "type":"unsub_reason"
+            },
+            {
+                "name": "weekly",
+                "description":"Once per week",
+                "property": "properties.newsletter_frequency_weekly",
+                "type":"preference"
+            },
+            {
+                "name": "bi-weekly",
+                "description":"Once every 2 weeks",
+                "property": "properties.newsletter_frequency_bi-weekly",
+                "type":"preference"
+            },
+            {
+                "name": "monthly",
+                "description":"Once per month",
+                "property": "properties.newsletter_frequency_monthly",
+                "type":"preference"
+            }
+        ]
+    },
+    "5424_FR_UNSUB": {
+        "name": "Haggar-DEV-FR-UNSUB",
+        "logo": "/images/logos/Haggar.png",
+        "langPref":"FR",
+        "bmeApiKey": "1b44efa71ece15d7c1bebcb9fa155e4b",
+        "header": "Votre adresse a été retirée de la liste de diffusion de Haggar Canada.  Veuillez nous dire pourquoi vous ne voulez plus recevoir de messages de notre part.",
+        "subHeader": "Si vous préférez recevoir moins de messages de Haggar Canada, veuillez préciser la fréquence d'envoi qui vous conviendrait : ",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "not_comfortable_shopping_online",
+                "description":"Je ne suis pas à l'aise avec les achats en ligne.",
+                "property": "properties.unsub_reason",
+                "type":"unsub_reason"
+            },
+            {
+                "name": "emails_too_frequent",
+                "description":"Je reçois trop de courriels.",
+                "property": "properties.unsub_reason",
+                "type":"unsub_reason"
+            },
+            {
+                "name": "content_not_relevant",
+                "description":"Les messages ne me semblent pas pertinents.",
+                "property": "properties.unsub_reason",
+                "type":"unsub_reason"
+            },
+            {
+                "name": "weekly",
+                "description":"Une fois par semaine",
+                "property": "properties.newsletter_frequency_weekly",
+                "type":"preference"
+            },
+            {
+                "name": "bi-weekly",
+                "description":"Toutes les deux semaines",
+                "property": "properties.newsletter_frequency_bi-weekly",
+                "type":"preference"
+            },
+            {
+                "name": "monthly",
+                "description":"Une fois par mois",
+                "property": "properties.newsletter_frequency_monthly",
+                "type":"preference"
+            }
+        ]
     }
   };
