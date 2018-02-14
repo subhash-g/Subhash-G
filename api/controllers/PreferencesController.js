@@ -85,6 +85,7 @@ module.exports = {
 						originalUserId: originalUserId,
 						logo: customer.logo,
 						header: customer.header,
+						subHeader:customer.subHeader,
 						profile: userProperties,
 						lists: userLists,
 						unsubListName: singleUnsubListName,
@@ -144,8 +145,9 @@ module.exports = {
 
 						customer.userLists.forEach(function(item) {
 							var prop = item.property.split(".");
-							preferences[prop[0]][prop[1]] = 'false';
-						});
+							//preferences[prop[0]][prop[1]] = 'false';
+							//DH - set all properties to '' on unsub - not all props are true/false
+							preferences[prop[0]][prop[1]] = '';						});
 						req.flash("message", "Preferences successfully updated.");
 						bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
 							if (queryObject.message_uid) {
@@ -219,6 +221,58 @@ module.exports = {
 					module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
 				}
 				userPreferences = newPreferences;
+			} else {
+				res.json(400, {
+					error: error.message
+				});
+			}
+		});
+	},
+		//DH - add function to update user prefs and set status to inactive
+		unsubUpdatePreferences: function(req, res) {
+		var queryObject = url.parse(req.url, true).query
+		if (queryObject.email) {
+			var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
+		}
+
+		var userId = req.params.userId || queryObject.userId;
+		var customerId = req.params.customerId;
+		var customer = customers[customerId];
+
+		var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
+		bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
+			if (error == null) {
+
+				for (var x = 0; x < data.contacts.length; x++) {
+					if (data.contacts[x].contact_type === 'email') {
+						var userSubscriber = data.contacts[x];
+						break;
+					}
+				}
+
+				var subscriberProps = {
+					'subscriber_contact': {
+						'contact_type': 'email',
+						'contact_value': preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
+						'subscription_status': 'inactive'
+					}
+				}
+
+				bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error) {
+
+					if (error == null) {
+						res.json({});
+					} else {
+						res.json(400, {
+							error: error.message
+						});
+					}
+				});
+
+				if (originalUserId) {
+					module.exports.trackUnsubUpdate(customer, originalUserId, req);
+				}
+
 			} else {
 				res.json(400, {
 					error: error.message
@@ -345,7 +399,8 @@ module.exports = {
 	},
 	unsubscribeCount: function(message_uid, name, unsubscribe) {
 		// unsubscribe event count, only enabled for Mic.com currently
-		console.log("messsage_uid: " + message_uid);
+		//DH - update this so all unsubs are attributed to email from where pref center was launched
+		//if (message_uid && name == 'Mic') {
 		if (message_uid && name == 'Mic') {
 			var options = {
 				method: 'POST',
@@ -387,6 +442,27 @@ module.exports = {
 						"uid":uid
 					},
 					"event":"updated_preferences",
+					"properties": properties
+				}
+			}
+
+			bme.postSubscriberActivity(customer.bmeApiKey, updatePreferenceActivity, function (data, error) { })
+		}
+	},
+	//DH - add function to post activity on unsub preference selection
+	trackUnsubUpdate: function(customer, uid, req) {
+		if(customer.bmeApiKey) {
+			var properties = {}
+			customer.userLists.forEach(function(entry) {
+					properties[entry.property.replace('properties.', '')] = req.body[entry.property]
+			});
+
+			var updatePreferenceActivity = {
+				"activity":{
+					"subscriber":{
+						"uid":uid
+					},
+					"event":"track_unsubscribe_reason",
 					"properties": properties
 				}
 			}

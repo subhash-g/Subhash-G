@@ -15,4 +15,10 @@ module.exports.routes = {
 	'GET /forbes/reports/email_content': 'ForbesReportsController.emailContentReport',
 	'GET /forbes/reports/subscribers': 'ForbesReportsController.subscribersReport',
 	'GET /forbes/reports/onsite': 'ForbesReportsController.onsiteReport',
+	//DH - Define routes for unsub pages
+	'GET /unsub/:customerId/users': 'PreferencesController.index',
+	'GET /unsub/:customerId/users/:userId': 'PreferencesController.index',	
+	'POST /unsub/:customerId/users/:userId': 'PreferencesController.unsubUpdatePreferences',
+	'GET /unsub/:customerId/users/:userId/unsubscribeAll': 'PreferencesController.unsubscribeAll',
+	'POST /unsub/:customerId/users/:userId/unsubscribeAll': 'PreferencesController.unsubscribeAll',
 };
