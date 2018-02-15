@@ -3632,6 +3632,7 @@ module.exports = {
     "5385": {
         "name": "Delfi",
         "logo": "/images/logos/delfi-logo.jpg",
+        "langPref":"ET",
         "bmeApiKey": "b12a706fcc4cad1b3e0b5b902225a9ac",
         "header": "Kahju, et soovid ära minna.Oled alati tagasi oodatud!",
         "userProperties": [
