@@ -3631,9 +3631,9 @@ module.exports = {
     },
     "5385": {
         "name": "Delfi",
-        "logo": "/images/logos/parent_co.png",
+        "logo": "/images/logos/delfi-logo.jpg",
         "bmeApiKey": "b12a706fcc4cad1b3e0b5b902225a9ac",
-        "header": "<img src='http://g.delfi.ee/d/r/nl/i/delfi-nltr-doglet.jpg/><br/>Kahju, et soovid ära minna.Oled alati tagasi oodatud!",
+        "header": "Kahju, et soovid ära minna.Oled alati tagasi oodatud!",
         "userProperties": [
             {
                 "name": "First Name",
@@ -3645,10 +3645,6 @@ module.exports = {
             }
         ],
         "userLists": [
-            {
-                "name": "Frequency - Daily",
-                "property": "properties.fre_daily"
-            }
         ]
     },
     "5424_EN_UNSUB": {
