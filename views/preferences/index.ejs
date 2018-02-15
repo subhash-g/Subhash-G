@@ -151,8 +151,33 @@
 		</div>
 		<div id="list-form" class="form">
 			<div class="fieldset-container">
+<!-- SET CUSTOM HEADER IMAGE FOR DELFI -->
+            <% if (name == 'Delfi') { %> <!-- Only for Delfi -->
+                <style>
+                  body{background:#ffffff;}
+                  #btn-save-list{display:none;}
+                  .header{display: block;
+                    max-width: 510px;
+                    margin: 25px auto;
+                    font-size: 24px !important;
+                    line-height: 28px;}
+                    #btn-unsub-all{
+                    padding: 14px 25px 14px;
+                    background: #0372dd;
+                    font-size: 16px;
+                    color: #ffffff !important;
+                    margin-bottom: 25px;
+                    text-transform: uppercase;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    border: 0;
+                    outline: 0;
+                    box-sizing: border-box;}
+                </style>
+                <div class="headerImage"><img alt="Sad" src="/images/delfi-nltr-doglet.jpg"/></div>
+            <% } %>     <!-- END IF -->
 <!-- SET EMAIL IN HEADER FOR ONLY IMPREMEDIA ONLY (this was Honest Reporting section) -->
-                <% if (name.indexOf('Impremdia') == -1) { %> <!-- DO FOR OTHERS -->
+            <% if (name.indexOf('Impremdia') == -1) { %> <!-- DO FOR OTHERS -->
     				<% if(header) { %>
     					<div class="header"><%= header %></div>
     				<% } %>
@@ -884,6 +909,8 @@
 				<a id="btn-unsub-all">Cancelar Todas</a>
 				<% } else if (langPref == 'FR'){ %>
 				<a id="btn-unsub-all">Se désabonner de tous</a>
+        <% } else if (langPref == 'ET'){ %>
+				<a id="btn-unsub-all">Eemalda uudiskirjast</a>
 				<% } else { %>
 				<a id="btn-unsub-all">Unsubscribe from All</a>
 				<% } %>
