@@ -3765,5 +3765,18 @@ module.exports = {
                 "type":"preference"
             }
         ]
+    },
+    "5442": {
+        "name": "Nutricia",
+        "logo": "/images/logos/nutricia-logo.gif",
+        "langPref":"ZH",
+        "bmeApiKey": "744ce7f6ef767f18f89d5e7a41a40a38",
+        "header": "It's not the same without you!",
+        "subHeader": "You will be unsubscribed on clicking this button below."
+        "userProperties": [
+            
+        ],
+        "userLists": [
+        ]
     }
   };
