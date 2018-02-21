@@ -3390,18 +3390,23 @@ module.exports = {
         "userLists": [
             {
                 "name": "Engerati Weekly Newsletter",
-                "description": "Our weekly newsletter delivering this week's articles, upcoming webinars and community updates to your inbox.",
+                "description": "Weekly updates on articles, webinars, PDF Resources, blogs, quarterly digital publications and Engerati Meets",
                 "property": "properties.engeratinewsletter"
             },
             {
                 "name": "Engerati Webinar Updates",
-                "description": "A digest of upcoming and recomended webinars.",
+                "description": "Weekly round up of all new or recent webinars",
                 "property": "properties.webinarupdate"
             },
             {
                 "name": "Engerati Community Update",
-                "description": "Be the first to hear about member updates and new features on Engerati.com.",
+                "description": "Periodic alerts on new feature updates on engerati.com",
                 "property": "properties.comunityupdate"
+            },
+            {
+                "name": "Personalised Webinar Alerts",
+                "description": "Occasional Webinar Alerts recommended for you based on your browsing history",
+                "property": "properties.personalisedupdate"
             }
         ]
     },
