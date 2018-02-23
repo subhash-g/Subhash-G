@@ -3771,7 +3771,6 @@ module.exports = {
         "logo": "/images/logos/nutricia-logo.gif",
         "bmeApiKey": "744ce7f6ef767f18f89d5e7a41a40a38",
         "header": "",
-        "subHeader": ""
         "userProperties": [
             
         ],
