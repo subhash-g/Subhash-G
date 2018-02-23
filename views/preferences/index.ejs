@@ -42,7 +42,7 @@
 				<% } %>
 			</div>
 		</div>
-		
+
 	</div>
 
 	<div id="content">
@@ -381,12 +381,13 @@
 <!-- SET LAYOUT FOR ONLY Haggar-DEV-EN-UNSUB -->
 				<% } else if ( name == 'Haggar-DEV-EN-UNSUB'){ %>
 				<style>
-					body{background:#FFFFFF;text-align:center!important;}
+					body{background:#FFFFFF;font-family: 'Montserrat', sans-serif; text-align:center!important;}
 					#left-menu {width:0px!important;}
 					.menu-items {display:none!important;}
 					#btn-unsub-all{display:none !important;}
-					#btn-my-profile,#btn-my-list{color:#039CC4 !important; height:auto!important;}
-					#btn-unsub-saveProfile{background:#039CC4 !important;}
+					#btn-my-profile,#btn-my-list{color:#039CC4 !important;  height:auto!important;}
+					#btn-unsub-saveProfile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
+					#btn-save-list{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
 					#haggarCaUnsub {width:100%!important;margin-left:0px!important;margin-top:20px!important;margin-bottom:20px!important;padding-left:10px!important;padding-top: 0px!important;padding-bottom: 0px!important;}
 					.haggarDropdown {width:100%!important; text-align:left!important}
 					.haggarRadio {vertical-align: middle!important; margin-bottom: -30px!important;}
@@ -396,9 +397,9 @@
 					.header {text-align: left!important;padding-bottom: 10px;}
 					.separator {padding-top: 30px!important;}
 					</style>
-					<fieldset class="haggarDropdown"> 
+					<fieldset class="haggarDropdown">
 						<select id="haggarCaUnsub">
-							<option type="dropdown" class="list-input" value="Not specified" data-property="properties.unsub_reason" selected> Please select a reason</option>	
+							<option type="dropdown" class="list-input" value="Not specified" data-property="properties.unsub_reason" selected> Please select a reason</option>
 							<% lists.forEach(function(list, index) { %>
 							<% if(list.type == 'unsub_reason') { %>
 									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.description %></option><br>
@@ -415,10 +416,10 @@
 					<div class="header">
 						<%= subHeader %>
 					</div>
-					<fieldset class="haggarRadio"> 
+					<fieldset class="haggarRadio">
 							<% lists.forEach(function(list, index) { %>
 							<% if(list.type == 'preference') { %>
-									
+
 									<input type="radio"  class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency" value="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> ><label for="list-input">  <%= list.description %></label>
 							<% } %>
 							<% }); %>
@@ -435,7 +436,7 @@
 						//DH - set vars for relevant query elements
 						var message_uid = getQueryString("message_uid");
 						var user_email = atob(getQueryString("email"))
-						
+
 						window.onload=function() {
 						//var url = "/unsub/<%= customerId %>/users/<%= userId %>";
 						//DH - use the unsubscribeAll route to set all user props to blank/remove
@@ -456,7 +457,7 @@
 						error: function(xhr, status, error) {
 							alert("An error occurred updating your preferences(" + error.message + ").  Please try again.");
 						}
-						});	
+						});
 					}
 					</script>
 <!-- END LAYOUT FOR ONLY Haggar-DEV-EN-UNSUB -->
@@ -464,12 +465,13 @@
 <!-- SET LAYOUT FOR ONLY Haggar-DEV-FR-UNSUB' -->
 				<% } else if ( name == 'Haggar-DEV-FR-UNSUB'){ %>
 				<style>
-					body{background:#FFFFFF;text-align:center!important;}
+					body{background:#FFFFFF;font-family: 'Montserrat', sans-serif; text-align:center!important;}
 					#left-menu {width:0px!important;}
 					.menu-items {display:none!important;}
 					#btn-unsub-all{display:none !important;}
-					#btn-my-profile,#btn-my-list{color:#039CC4 !important; height:auto!important;}
-					#btn-unsub-saveProfile{background:#039CC4 !important;}
+					#btn-my-profile,#btn-my-list{color:#039CC4 !important;  height:auto!important;}
+					#btn-unsub-saveProfile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
+					#btn-save-list{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
 					#haggarCaUnsub {width:100%!important;margin-left:0px!important;margin-top:20px!important;margin-bottom:20px!important;padding-left:10px!important;padding-top: 0px!important;padding-bottom: 0px!important;}
 					.haggarDropdown {width:100%!important; text-align:left!important;}
 					.haggarRadio {vertical-align: middle!important; margin-bottom: -30px!important;}
@@ -479,9 +481,9 @@
 					.header {text-align: left!important;padding-bottom: 10px;}
 					.separator {padding-top: 30px!important;}
 					</style>
-					<fieldset class="haggarDropdown"> 
+					<fieldset class="haggarDropdown">
 						<select name="unsub_reason" id="haggarCaUnsub">
-							<option type="dropdown" class="list-input" value="" data-property="" selected> Veuillez sélectionner une raison</option>	
+							<option type="dropdown" class="list-input" value="" data-property="" selected> Veuillez sélectionner une raison</option>
 							<% lists.forEach(function(list, index) { %>
 							<% if(list.type == 'unsub_reason') { %>
 									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.description %></option>
@@ -495,11 +497,11 @@
 					<div class="separator">
 					<hr>
 					</div>
-					
+
 					<div class="header">
 						<%= subHeader %>
 					</div>
-					<fieldset class="haggarRadio"> 
+					<fieldset class="haggarRadio">
 							<% lists.forEach(function(list, index) { %>
 							<% if(list.type == 'preference') { %>
 									<input type="radio"  class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency" value="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> ><label for="list-input">  <%= list.description %></label>
@@ -821,7 +823,7 @@
 							<% } %>
 						<% }); %>
 					</fieldset>
-          
+
 <!-- END LAYOUT FOR IDG -->
 
 <!-- SET LAYOUT FOR NUTRICIA -->
@@ -853,7 +855,7 @@
                 error: function(xhr, status, error) {
                   $('#error-message').show()
                 }
-              });	
+              });
             }
             </script>
 
@@ -863,7 +865,7 @@
               <div><p>We're sad to see you go! </p><p>You've been successfully unsubscribed from NUTRICIA emails.</p><p>Made a mistake? You can always sign up again at <a href="www.everydaycounts.nutricia.com.hk">www.everydaycounts.nutricia.com.hk</a></p></div></div>
               <div id="error-message"><p>An error occurred updating your preferences. Please try again.</p></div>
             </div>
-            
+
 <!-- END LAYOUT FOR NUTRICIA -->
 
 <!-- SET LAYOUT FOR EVERYONE ELSE -->
@@ -911,9 +913,9 @@
 				<% } else { %>
 				<input id="btn-save-list" class="btn btn-save" type="submit" value="Save My Preferences">
 				<% } %>
-			
+
 			</div>
-			
+
 			<div class="unsub">
 				<!--Localise Unsub from all  - based on account property-->
 				<% if (langPref == 'ES'){ %>
@@ -927,7 +929,7 @@
 				<% } else { %>
 				<a id="btn-unsub-all">Unsubscribe from All</a>
 				<% } %>
-				
+
 
 			</div>
 			<div class="message_uid"></div>
@@ -1211,7 +1213,7 @@ function getParameterByName(name, url) {
 		if (!results) return null;
 		if (!results[2]) return '';
 		return decodeURIComponent(results[2].replace(/\+/g, " "));
-}	
+}
 
 
 

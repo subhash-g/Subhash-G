@@ -3648,7 +3648,7 @@ module.exports = {
     },
     "5424_EN_UNSUB": {
         "name": "Haggar-DEV-EN-UNSUB",
-        "logo": "/images/logos/Haggar.png",
+        "logo": "/images/logos/haggar-logo-new.jpg",
         "bmeApiKey": "1b44efa71ece15d7c1bebcb9fa155e4b",
         "header": "You have successfully unsubscribed from the Haggar Canada email list.  Please let us know why you no longer want to receive communications from us.",
         "subHeader": "If you prefer to continue receiving emails from Haggar Canada but less frequently, please indicate how often you prefer to hear from us:",
@@ -3704,7 +3704,7 @@ module.exports = {
     },
     "5424_FR_UNSUB": {
         "name": "Haggar-DEV-FR-UNSUB",
-        "logo": "/images/logos/Haggar.png",
+        "logo": "/images/logos/haggar-logo-new.jpg",
         "langPref":"FR",
         "bmeApiKey": "1b44efa71ece15d7c1bebcb9fa155e4b",
         "header": "Votre adresse a été retirée de la liste de diffusion de Haggar Canada.  Veuillez nous dire pourquoi vous ne voulez plus recevoir de messages de notre part.",
@@ -3765,7 +3765,7 @@ module.exports = {
         "bmeApiKey": "744ce7f6ef767f18f89d5e7a41a40a38",
         "header": "",
         "userProperties": [
-            
+
         ],
         "userLists": [
         ]
