@@ -895,27 +895,32 @@ module.exports = {
             {
                 "name": "CIO Weekly Digest",
                 "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days.",
-                "property": "properties.in_newsletter_daily"
+                "property": "properties.cio_newsletter"
+            },
+            {
+                "name": "CIO Interviews",
+                "description": "Receive CIO interviews from the UK's most transformative and disruptive technology executives.",
+                "property": "properties.cio_interviews"
             },
            {
                 "name": "CIO Insight",
                 "description": "Each month you will receive an exclusive piece of market analysis compiled by the CIO UK Editorial Team.",
-                "property": "properties.in_cio_insight"
+                "property": "properties.cio_insights"
             },
             {
                 "name": "Networking Events",
                 "description": "Invitations to register for CIO networking events, roundtable dinners, executive breakfasts, evening seminars and half day summits.",
-                "property": "properties.in_events_networking"
+                "property": "properties.cio_events"
             },
             {
                 "name": "Surveys",
                 "description": "The opportunity to participate in CIO and carefully selected third party surveys.",
-                "property": "properties.in_mktg_surveys"
+                "property": "properties.cio_surveys"
             },
             {
                 "name": "Partner Emails",
                 "description": "Communications from carefully selected third parties.",
-                "property": "properties.in_mktg_partner_emails"
+                "property": "properties.cio_partner"
             }
         ]
     },
@@ -986,32 +991,32 @@ module.exports = {
             {
                 "name": "Techworld Weekly Digest",
                 "description": "A weekly email containing the most read and interesting articles that we've published during the previous seven days.",
-                "property": "properties.in_newsletter_daily"
+                "property": "properties.tw_newsletter"
             },
             {
                 "name": "Networking Events",
                 "description": "Invitations to register for Techworld networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
-                "property": "properties.in_events_networking"
+                "property": "properties.tw_events"
             },
             {
                 "name": "Techworld Insight",
                 "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts.",
-                "property": "properties.in_techworld_insight"
+                "property": "properties.tw_insights"
             },
             {
                 "name": "Surveys",
                 "description": "The opportunity to participate in Techworld and carefully selected third party surveys.",
-                "property": "properties.in_mktg_surveys"
+                "property": "properties.tw_surveys"
             },
             {
                 "name": "Partner Emails",
                 "description": "Communications from carefully selected third parties.",
-                "property": "properties.in_mktg_partner_emails"
+                "property": "properties.tw_partner"
             },
             {
                 "name": "Techworld Jobs",
                 "description": "Bespoke careers-oriented content to help you further your career.",
-                "property": "properties.in_techworld_jobs"
+                "property": "properties.tw_jobs"
             }
         ]
     },
