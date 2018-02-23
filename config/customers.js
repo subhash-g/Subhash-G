@@ -2731,23 +2731,11 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Morning News",
-                "property": "properties.newsletter_time"
+                "name": "Daily Email Newsletter",
+                "property": "properties.daily_newsletter"
             },
             {
-                "name": "Afternoon News",
-                "property": "properties.newsletter_time"
-            },
-            {
-                "name": "Evening News",
-                "property": "properties.newsletter_time"
-            },
-            {
-                "name": "All Three",
-                "property": "properties.newsletter_time"
-            },
-            {
-                "name": "Send Me Breaking News Alerts",
+                "name": "Breaking News Email Alerts",
                 "property": "properties.opt_in"
             }
         ]
