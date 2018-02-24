@@ -943,32 +943,32 @@ module.exports = {
             {
                 "name": "ComputerworldUK Insight",
                 "description": "Each month you will receive an exclusive piece of market analysis compiled by our Editorial experts. ",
-                "property": "properties.in_computerworlduk_insight"
+                "property": "properties.cw_insights"
             },
             {
                 "name": "ComputerworldUK Jobs",
                 "description": "Bespoke careers-oriented content to help you further your career.",
-                "property": "properties.in_computerworld_uk_jobs"
+                "property": "properties.cw_jobs"
             },
             {
                 "name": "Surveys",
                 "description": "The opportunity to participate in Computerworld UK carefully selected third party surveys.",
-                "property": "properties.in_mktg_surveys"
+                "property": "properties.cw_surveys"
             },
             {
                 "name": "Partner Emails",
                 "description": "Communications from carefully selected third parties.",
-                "property": "properties.in_mktg_partner_emails"
+                "property": "properties.cw_partner"
             },
             {
                 "name": "ComputerworldUK Weekly Digest",
                 "description": "A weekly email containing the most read and interesting articles that we've published during \n the previous seven days.",
-                "property": "properties.in_newsletter_daily"
+                "property": "properties.cw_newsletter"
             },
             {
                 "name": "Networking Events",
                 "description": "Invitations to register for Computerworld UK networking events, roundtable dinners, executive breakfasts, awards, evening seminars and half day summits.",
-                "property": "properties.in_events_networking"
+                "property": "properties.cw_events"
             }
         ]
     },
