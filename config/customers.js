@@ -1988,7 +1988,7 @@ module.exports = {
             },
             {
                 "name": "Vail Daily: Weekly Entertainment & Outdoors",
-                "property": "properties.vaildaily_headlines_entertainment_outdoors"
+                "property": "properties.vaildaily_weekly_entertainment_outdoors"
             },
             {
                 "name": "Vail Daily: Contests, Promotions & Offers",
