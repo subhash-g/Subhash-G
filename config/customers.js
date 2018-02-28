@@ -1022,7 +1022,7 @@ module.exports = {
     },
     "5098": {
         "name": "PC Advisor",
-        "logo": "/images/logos/pc_advisor_uk.png",
+        "logo": "/images/logos/pc_advisor.jpg",
         "header": "Manage your email Preferences or Unsubscribe from all PC Advisor and TechAdvisor emails",
         "bmeApiKey": "b94faf95b7f75db5d7980af30cb73c32",
         "userProperties": [
@@ -1036,19 +1036,15 @@ module.exports = {
             }
         ],
         "userLists": [
+            
             {
-                "name": "PC Advisor Daily Newsletter",
-                "description": "Our daily newsletter including the latest news, reviews, how to's, user forums and free downloads.",
-                "property": "properties.in_newsletter_daily"
-            },
-            {
-                "name": "PC Advisor Weekly Newsletter",
+                "name": "Tech Advisor Weekly Newsletter",
                 "description": "Our weekly newsletter including a roundup of the week’s news, reviews, how to's, forums and downloads.",
                 "property": "properties.in_newsletter_weekly"
             },
             {
                 "name": "Surveys",
-                "description": "The opportunity to participate in PC Advisor and carefully selected third party surveys.",
+                "description": "The opportunity to participate in Tech Advisor and carefully selected third party surveys.",
                 "property": "properties.in_mktg_surveys"
             },
             {
@@ -1060,17 +1056,8 @@ module.exports = {
                 "name": "Technology deals from TechAdvisor",
                 "description": "The best deals on technology purchases when the biggest discounts are announced (e.g. Black Friday, Boxing Day)",
                 "property": "properties.pca_deals"
-            },
-            {
-                "name": "Samsung Galaxy Rumours",
-                "description": "The latest news, rumours & deals for the Samsung Galaxy flagship phone, as soon as they're announced",
-                "property": "properties.pca_galaxy_deals"
-            },
-            {
-                "name": "Apple iPhone Rumours",
-                "description": "The latest news, rumours & deals for the next iPhone, as soon as they're announced",
-                "property": "properties.pca_iphone_deals"
             }
+            
         ]
     },
     "5099": {
