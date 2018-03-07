@@ -510,7 +510,7 @@
 					</fieldset>
 					<script type="text/javascript">
 						window.onload=function() {
-						var url = "/unsub/<%= customerId %>/users/<%= userId %>";
+						var url = "/unsub/<%= customerId %>/users/<%= originalUserId %>";
 						$.ajax({
 						url: url,
 						method: 'POST',
@@ -841,7 +841,7 @@
             <script type="text/javascript">
 
               window.onload=function() {
-              var url = "/unsub/<%= customerId %>/users/<%= userId %>";
+              var url = "/unsub/<%= customerId %>/users/<%= originalUserId %>";
 
               $.ajax({
                 url: url,
@@ -1031,16 +1031,15 @@ var updatePreferences = function() {
 			}
 		}
 	});
-
 	if (getParameterByName("message_uid")) {
 		if (getParameterByName("email")) {
-			var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid") + "&email=" + getParameterByName("email");
+			var url = "/preferences/<%= customerId %>/users/<%= originalUserId %>?message_uid=" + getParameterByName("message_uid") + "&email=" + getParameterByName("email");
 		} else {
-			var url = "/preferences/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid");
+			var url = "/preferences/<%= customerId %>/users/<%= originalUserId %>?message_uid=" + getParameterByName("message_uid");
 		}
 
 	} else {
-		var url = "/preferences/<%= customerId %>/users/<%= userId %>";
+		var url = "/preferences/<%= customerId %>/users/<%= originalUserId %>";
 	}
 
 	//DH -  Set confirmation message by language
@@ -1161,13 +1160,13 @@ var unsubUpdatePreferences = function() {
 
 	if (getParameterByName("message_uid")) {
 		if (getParameterByName("email")) {
-			var url = "/unsub/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid") + "&email=" + getParameterByName("email");
+			var url = "/unsub/<%= customerId %>/users/<%= originalUserId %>?message_uid=" + getParameterByName("message_uid") + "&email=" + getParameterByName("email");
 		} else {
-			var url = "/unsub/<%= customerId %>/users/<%= userId %>?message_uid=" + getParameterByName("message_uid");
+			var url = "/unsub/<%= customerId %>/users/<%= originalUserId %>?message_uid=" + getParameterByName("message_uid");
 		}
 
 	} else {
-		var url = "/unsub/<%= customerId %>/users/<%= userId %>";
+		var url = "/unsub/<%= customerId %>/users/<%= originalUserId %>";
 	}
 
 	//DH - Set confirmation messages by language

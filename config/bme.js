@@ -1,3 +1,3 @@
 module.exports = {
-	hostname: 'api.nudgespot.com'
+	hostname: 'api.boomtrain.net',
 };

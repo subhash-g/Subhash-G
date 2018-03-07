@@ -17,9 +17,6 @@ module.exports = {
 
 		var userId = req.params.userId || queryObject.userId || queryObject.email;
 		var originalUserId = userId;
-
-		//console.log(queryObject)
-
 		if (userId && validator.isBase64(userId)) {
 			userId = new Buffer(userId, 'base64').toString("ascii");
 		}
@@ -47,7 +44,6 @@ module.exports = {
 			barStatus = false;
 
 		if (customer) {
-
 			bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 				if (error == null) {
 					var userProperties = [];
@@ -117,89 +113,84 @@ module.exports = {
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
-		console.log(queryObject);
-
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
-				for (var x = 0; x < data.contacts.length; x++) {
-					if (data.contacts[x].contact_type === 'email') {
-						var userSubscriber = data.contacts[x];
-						break;
+				var newContacts = data.contacts.map(function(item, index) {
+					var status = item.subscription_status;					
+					if(item.contact_type == 'email') {
+						status = 'inactive';
 					}
+					return {
+						'contact_type': item.contact_type,
+					  'subscription_status': status,
+					  'contact_value': item.contact_value				
+					}
+				});
+			
+				var preferences = {
+					'uid': data.uid,
+					'properties': {},
+					'contacts': newContacts
 				}
 
-				var subscriberProps = {
-					'subscriber_contact': {
-						'contact_type': 'email',
-						'contact_value': userSubscriber.contact_value,
-						'subscription_status': 'inactive'
-					}
-				}
+				customer.userLists.forEach(function(item) {
+					var prop = item.property.split(".");
+					//preferences[prop[0]][prop[1]] = 'false';
+					//DH - set all properties to '' on unsub - not all props are true/false
+					preferences[prop[0]][prop[1]] = '';						
+				});
 
-				bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error) {
+				bme.identifyUser(customer.bmeApiKey, preferences, function(data, error) {
 					if (error == null) {
-
-						var preferences = {
-							'properties': {}
+						req.flash("message", "Unsubscribed successfully.");
+						if (queryObject.message_uid) {
+							module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
+							userPreferences = module.exports.buildPreferenceValues(preferences);
+							return res.redirect(`/preferences/${customerId}/users/${originalUserId}?message_uid=${queryObject.message_uid}`);
+						} else {
+							return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 						}
-
-						customer.userLists.forEach(function(item) {
-							var prop = item.property.split(".");
-							//preferences[prop[0]][prop[1]] = 'false';
-							//DH - set all properties to '' on unsub - not all props are true/false
-							preferences[prop[0]][prop[1]] = '';						});
-						req.flash("message", "Preferences successfully updated.");
-						bme.updateUser(data.subscriber.id, customer.bmeApiKey, preferences, function(data, error) {
-							if (queryObject.message_uid) {
-								module.exports.unsubscribeCount(queryObject.message_uid, customer.name, true);
-								userPreferences = module.exports.buildPreferenceValues(preferences);
-								return res.redirect(`/preferences/${customerId}/users/${originalUserId}?message_uid=${queryObject.message_uid}`);
-							} else {
-								return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
-							}
-						});
-
 					} else {
 						req.flash("message", "Error: problem with updating preferences.");
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 					}
 				});
-
 			} else {
 				return res.redirect(`/preferences/${customerId}/users/${originalUserId}`);
 			}
 		});
 	},
+
 	update: function(req, res) {
 		var queryObject = url.parse(req.url, true).query
 		if (queryObject.email) {
 			var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
 		}
-
-		var userId = req.params.userId || queryObject.userId;
+		var userUid = req.params.userId || queryObject.userId;
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
 		var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-		bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
+	
+    bme.getUser(userUid, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
-
-				for (var x = 0; x < data.contacts.length; x++) {
-					if (data.contacts[x].contact_type === 'email') {
-						var userSubscriber = data.contacts[x];
-						break;
+				var activate = true;	
+				var newContacts = data.contacts.map(function(item) {
+					var status = item.subscription_status;		
+					if(item.contact_type == 'email' && activate) {
+						status = 'active';
+						activate = false;
 					}
-				}
-				var subscriberProps = {
-					'subscriber_contact': {
-						'contact_type': 'email',
-						'contact_value': preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
-						'subscription_status': 'active'
+					return {
+						'contact_type': item.contact_type,
+					  'subscription_status': status,
+					  'contact_value': preferences.contact_email != undefined ? preferences.contact_email : item.contact_value,		
 					}
-				}
+				});
+				preferences['uid'] = userUid;
+				preferences['contacts'] = newContacts
 
-				bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error) {
-
+				bme.identifyUser(customer.bmeApiKey, preferences, function(data, error) {
 					if (error == null) {
 						res.json({});
 					} else {
@@ -214,13 +205,10 @@ module.exports = {
 				}
 
 				var newPreferences = module.exports.buildPreferenceValues(preferences);
-				//console.log(userPreferences);
-				//console.log(newPreferences);
-				//console.log(module.exports.changeInPreferences(userPreferences, newPreferences));
 				if (module.exports.changeInPreferences(userPreferences, newPreferences)) {
 					module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
 				}
-				userPreferences = newPreferences;
+				userPreferences = newPreferences;				
 			} else {
 				res.json(400, {
 					error: error.message
@@ -228,62 +216,62 @@ module.exports = {
 			}
 		});
 	},
-		//DH - add function to update user prefs and set status to inactive
-		unsubUpdatePreferences: function(req, res) {
-		var queryObject = url.parse(req.url, true).query
-		if (queryObject.email) {
-			var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
-		}
+	//DH - add function to update user prefs and set status to inactive
+	unsubUpdatePreferences: function(req, res) {
+    var queryObject = url.parse(req.url, true).query
+    if (queryObject.email) {
+      var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
+    }
 
-		var userId = req.params.userId || queryObject.userId;
-		var customerId = req.params.customerId;
-		var customer = customers[customerId];
+    var userUid = req.params.userId || queryObject.userId;
+    var customerId = req.params.customerId;
+    var customer = customers[customerId];
+    var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
 
-		var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
-		bme.updateUser(userId, customer.bmeApiKey, preferences, function(data, error) {
-			if (error == null) {
+     bme.getUser(userUid, customer.bmeApiKey, function(data, error) {
+      if (error == null) {
+      	var inactivate = true;
+        var newContacts = data.contacts.map(function(item, index) {
+          var status = item.subscription_status;        
+          if(item.contact_type == 'email' && inactivate) {
+            status = 'inactive';
+            inactivate = false;
+          }
+          return {
+            'contact_type': item.contact_type,
+            'subscription_status': status,
+            'contact_value': preferences.contact_email != undefined ? preferences.contact_email : item.contact_value,      
+          }
+        });
 
-				for (var x = 0; x < data.contacts.length; x++) {
-					if (data.contacts[x].contact_type === 'email') {
-						var userSubscriber = data.contacts[x];
-						break;
-					}
-				}
+        preferences['uid'] = userUid;
+				preferences['contacts'] = newContacts
 
-				var subscriberProps = {
-					'subscriber_contact': {
-						'contact_type': 'email',
-						'contact_value': preferences.contact_email != undefined ? preferences.contact_email : userSubscriber.contact_value,
-						'subscription_status': 'inactive'
-					}
-				}
+        bme.identifyUser(customer.bmeApiKey, preferences, function(data, error) {
+          if (error == null) {
+            res.json({});
+          } else {
+            res.json(400, {
+              error: error.message
+            });
+          }
+        });
 
-				bme.updateSubscriber(userSubscriber.id, customer.bmeApiKey, subscriberProps, function(data, error) {
+        if (originalUserId) {
+          module.exports.trackUnsubUpdate(customer, originalUserId, req);
+        }
 
-					if (error == null) {
-						res.json({});
-					} else {
-						res.json(400, {
-							error: error.message
-						});
-					}
-				});
+      } else {
+        res.json(400, {
+          error: error.message
+        });
+      }
+    });
+  },
 
-				if (originalUserId) {
-					module.exports.trackUnsubUpdate(customer, originalUserId, req);
-				}
-
-			} else {
-				res.json(400, {
-					error: error.message
-				});
-			}
-		});
-	},
 	singleUnsubscribe: function(req, res) {
-
 		var queryObject = url.parse(req.url, true).query;
-		console.log("singleUnsubscribe");
+		console.log("singleUnsubscribe");	
 		console.log(queryObject);
 
 		var userId = req.params.userId || queryObject.userId;
@@ -305,17 +293,18 @@ module.exports = {
 		if (!correctURL) {
 			return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=error`);
 		}
-
+	
 		bme.getUser(userId, customer.bmeApiKey, function(data, error) {
 			if (error == null) {
 				var preferences = {
+					'uid': data.uid,
 					'properties': {}
 				}
 
 				var prop = customer.userLists[userListNumber].property.split(".");
 				preferences[prop[0]][prop[1]] = 'false';
 
-				bme.updateUser(data.id, customer.bmeApiKey, preferences, function(data, error) {
+				bme.identifyUser(customer.bmeApiKey, preferences, function(data, error) {
 					if(queryObject.message_uid) {
 						module.exports.unsubscribeCount(queryObject.message_uid, customer.name, false);
 						return res.redirect(`/preferences/${customerId}/users/${originalUserId}?unsubscribe=${listProp}&message_uid=${queryObject.message_uid}`);
@@ -331,6 +320,7 @@ module.exports = {
 			}
 		});
 	},
+
 	buildPreferences: function(data, userProperties, userLists) {
 		var result = {};
 
@@ -424,7 +414,6 @@ module.exports = {
 				if (error) {
 					throw new Error(error);
 				}
-				//console.log(response);
 				console.log('Success');
 			});
 		}
