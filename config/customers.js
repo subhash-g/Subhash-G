@@ -1036,7 +1036,7 @@ module.exports = {
             }
         ],
         "userLists": [
-            
+
             {
                 "name": "Tech Advisor Weekly Newsletter",
                 "description": "Our weekly newsletter including a roundup of the week’s news, reviews, how to's, forums and downloads.",
@@ -1057,7 +1057,7 @@ module.exports = {
                 "description": "The best deals on technology purchases when the biggest discounts are announced (e.g. Black Friday, Boxing Day)",
                 "property": "properties.pca_deals"
             }
-            
+
         ]
     },
     "5099": {
@@ -3743,6 +3743,106 @@ module.exports = {
                 "description":"Une fois par mois",
                 "property": "properties.newsletter_frequency_monthly",
                 "type":"preference"
+            }
+        ]
+    },
+    "5424_EN": {
+        "name": "Haggar-DEV-EN",
+        "logo": "/images/logos/haggar-logo-new.jpg",
+        "bmeApiKey": "1b44efa71ece15d7c1bebcb9fa155e4b",
+        "header": "If you would like to remain on our mailing list, only at a lower frequency, please select a desired frequency.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            },
+            {
+                "name": "Email Address",
+                "property": "contact_email"
+            },
+            {
+                "name": "City",
+                "property": "properties.city"
+            },
+            {
+                "name": "Province",
+                "property": "properties.state_province"
+            },
+            {
+                "name": "Country",
+                "property": "properties.country"
+            },
+            {
+                "name": "Language Preference",
+                "property": "properties.language",
+                "listType":"dropDown"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Once per week",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            },
+            {
+                "name": "Once per month",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            }
+        ]
+    },
+    "5424_FR": {
+        "name": "Haggar-DEV-FR",
+        "logo": "/images/logos/haggar-logo-new.jpg",
+        "langPref":"FR",
+        "bmeApiKey": "1b44efa71ece15d7c1bebcb9fa155e4b",
+        "header": "Si vous aimeriez rester sur notre liste de distribution mais à une fréquence plus basse, veuillez choisir une fréquence désirée",
+
+        "userProperties": [
+            {
+                "name": "Prénom",
+                "property": "first_name"
+            },
+            {
+                "name": "Nom de famille",
+                "property": "last_name"
+            },
+            {
+                "name": "Courriel",
+                "property": "contact_email"
+            },
+            {
+                "name": "Ville",
+                "property": "properties.city"
+            },
+            {
+                "name": "Province",
+                "property": "properties.state_province"
+            },
+            {
+                "name": "Pays",
+                "property": "properties.country"
+            },
+            {
+                "name": "Langue Préférée",
+                "property": "properties.language"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Une fois par semaine",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            },
+            {
+                "name": "Une fois par mois",
+                "property": "properties.cadence",
+                "listType":"dropDown"
             }
         ]
     },
