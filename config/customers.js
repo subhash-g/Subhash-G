@@ -1077,11 +1077,6 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Macworld Daily Newsletter",
-                "description": "Our daily newsletter including the latest news, reviews, how to's and free downloads.",
-                "property": "properties.in_newsletter_daily"
-            },
-            {
                 "name": "Macworld Weekly Newsletter",
                 "description": "Our weekly newsletter including a roundup of the week’s news, reviews, how to's and downloads.",
                 "property": "properties.in_newsletter_weekly"
@@ -1100,11 +1095,6 @@ module.exports = {
                 "name": "Technology Deals from Macworld",
                 "description": "The best deals on Apple and related products when the biggest discounts are announced (e.g. Black Friday, Boxing Day)",
                 "property": "properties.mw_deals"
-            },
-            {
-                "name": "Apple iPhone Rumours",
-                "description": "The latest news, rumours & deals for the next iPhone, as soon as they're announced",
-                "property": "properties.mw_iphone_deals"
             }
         ]
     },
