@@ -3903,7 +3903,7 @@ module.exports = {
             },
             {
                 "name": "Quarterly Newsletters",
-                "property": "properties.pref_referafriend"
+                "property": "properties.pref_quarterlynewsletter"
             },
             {
                 "name": "Special Offerings for Customers",
