@@ -575,6 +575,55 @@
 							<% }); %>
 						</select>
 					</fieldset>
+<!-- END LAYOUT FOR ONLY Haggar-DEV-EN -->
+
+<!-- SET LAYOUT FOR ONLY Haggar-PROD-EN -->
+				<% } else if ( name == 'Haggar-PROD-EN')  { %>
+					<style>
+						#powered_by{display:none !important;}
+						#haggar-cadence {width:100%!important;margin-left:0px!important;margin-top:20px!important;margin-bottom:20px!important;padding-left:10px!important;padding-top: 0px!important;padding-bottom: 0px!important;}
+						body{background:#FFFFFF;font-family: 'Montserrat', sans-serif; text-align:center!important;}
+						#btn-save-profile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
+						#btn-save-list{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
+						#btn-unsub-all{color:#1f2a44 !important;}
+					</style>
+					<fieldset class="dropdown"> <!-- ALL HAGGAR USER PROPS PRESENTED AS DROPDOWN -->
+						<select id="haggar-cadence">
+							<% lists.forEach(function(list, index) { %>
+								<% if(list.value ==  list.name) { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
+								<% } else { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
+								<% } %>
+							<% }); %>
+						</select>
+					</fieldset>
+<!-- END LAYOUT FOR ONLY Haggar-PROD-EN -->
+
+<!-- SET LAYOUT FOR ONLY Haggar-PROD-FR -->
+				<% } else if ( name == 'Haggar-PROD-FR')  { %>
+					<style>
+						#powered_by{display:none !important;}
+						#haggar-cadence {width:100%!important;margin-left:0px!important;margin-top:20px!important;margin-bottom:20px!important;padding-left:10px!important;padding-top: 0px!important;padding-bottom: 0px!important;}
+						body{background:#FFFFFF;font-family: 'Montserrat', sans-serif; text-align:center!important;}
+						#btn-save-profile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
+						#btn-save-list{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
+						#btn-unsub-all{color:#1f2a44 !important;}
+					</style>
+					<fieldset class="dropdown"> <!-- ALL Haggar-DEV-FR USER PROPS PRESENTED AS DROPDOWN -->
+						<select id="haggar-cadence">
+							<% lists.forEach(function(list, index) { %>
+								<% if(list.value ==  list.name) { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>" selected> <%= list.name %></option>
+								<% } else { %>
+									<option type="dropdown" class="list-input" value="<%= list.name %>" data-property="<%= list.property %>"> <%= list.name %></option>
+								<% } %>
+							<% }); %>
+						</select>
+					</fieldset>
+<!-- END LAYOUT FOR ONLY Haggar-PROD-EN -->
+
+
 <!-- SET LAYOUT FOR ONLY GolfLogix -->
 				<% } else if ( name == 'GolfLogix')  { %>
 					<style>
