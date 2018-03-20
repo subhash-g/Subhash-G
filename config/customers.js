@@ -1970,10 +1970,6 @@ module.exports = {
             {
                 "name": "Vail Daily: Contests, Promotions & Offers",
                 "property": "properties.vaildaily_contests_promos"
-            },
-            {
-                "name": "Vail Daily: Breaking News",
-                "property": "properties.vaildaily_breaking_news"
             }
         ]
     },
