@@ -3836,6 +3836,106 @@ module.exports = {
             }
         ]
     },
+        "5422_EN": {
+        "name": "Haggar-PROD-EN",
+        "logo": "/images/logos/haggar-logo-new.jpg",
+        "bmeApiKey": "80c8f1fd6f1fb0d88d5405820a906cfc",
+        "header": "If you would like to remain on our mailing list, only at a lower frequency, please select a desired frequency.",
+
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            },
+            {
+                "name": "Email Address",
+                "property": "contact_email"
+            },
+            {
+                "name": "City",
+                "property": "properties.city"
+            },
+            {
+                "name": "Province",
+                "property": "properties.state_province"
+            },
+            {
+                "name": "Country",
+                "property": "properties.country"
+            },
+            {
+                "name": "Language Preference",
+                "property": "properties.language",
+                "listType":"dropDown"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Once per week",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            },
+            {
+                "name": "Once per month",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            }
+        ]
+    },
+    "5422_FR": {
+        "name": "Haggar-PROD-FR",
+        "logo": "/images/logos/haggar-logo-new.jpg",
+        "langPref":"FR",
+        "bmeApiKey": "80c8f1fd6f1fb0d88d5405820a906cfc",
+        "header": "Si vous aimeriez rester sur notre liste de distribution mais à une fréquence plus basse, veuillez choisir une fréquence désirée",
+
+        "userProperties": [
+            {
+                "name": "Prénom",
+                "property": "first_name"
+            },
+            {
+                "name": "Nom de famille",
+                "property": "last_name"
+            },
+            {
+                "name": "Courriel",
+                "property": "contact_email"
+            },
+            {
+                "name": "Ville",
+                "property": "properties.city"
+            },
+            {
+                "name": "Province",
+                "property": "properties.state_province"
+            },
+            {
+                "name": "Pays",
+                "property": "properties.country"
+            },
+            {
+                "name": "Langue Préférée",
+                "property": "properties.language"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Une fois par semaine",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            },
+            {
+                "name": "Une fois par mois",
+                "property": "properties.cadence",
+                "listType":"dropDown"
+            }
+        ]
+    },
     "5428": {
         "name": "GolfLogix",
         "logo": "/images/logos/golf_logix_logo.png",
