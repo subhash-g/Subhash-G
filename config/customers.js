@@ -3880,5 +3880,43 @@ module.exports = {
         ],
         "userLists": [
         ]
-    }
+    },
+    "5423": {
+        "name": "Champion Energy Dev",
+        "logo": "/images/logos/champion_logo.png",
+        "bmeApiKey": "8d89e18056bd70611126642cc98bd79c",
+        "header": "Please use the form below to update your subscription settings.",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Refer a Friend",
+                "property": "properties.pref_referafriend"
+            },
+            {
+                "name": "Quarterly Newsletters",
+                "property": "properties.pref_referafriend"
+            },
+            {
+                "name": "Special Offerings for Customers",
+                "property": "properties.pref_specialofferings"
+            },
+            {
+                "name": "Energy Tips",
+                "property": "properties.pref_energytips"
+            },
+            {
+                "name": "Company news",
+                "property": "properties.pref_companynews"
+            }
+        ]
+    },
   };
