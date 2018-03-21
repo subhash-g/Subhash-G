@@ -1115,11 +1115,6 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "Digital Arts Daily Newsletter",
-                "description": "Our daily newsletter including the latest news, features, reviews, tutorials and guides.",
-                "property": "properties.in_newsletter_daily"
-            },
-            {
                 "name": "Digital Arts Weekly Newsletter",
                 "description": "Our weekly newsletter including the latest news, features, reviews, tutorials and guides.",
                 "property": "properties.in_newsletter_weekly"
