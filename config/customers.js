@@ -3373,6 +3373,11 @@ module.exports = {
                 "name": "Personalised Webinar Alerts",
                 "description": "Occasional Webinar Alerts recommended for you based on your browsing history",
                 "property": "properties.personalisedupdate"
+            },
+            {
+                "name": "Engerati Meets Updates",
+                "description": "Regular updates on Engerati Meets and occasional personalised alerts based on your browsing history",
+                "property": "properties.meetsupdate"
             }
         ]
     },
@@ -4015,4 +4020,184 @@ module.exports = {
             }
         ]
     },
+    "5389_TRADE": {
+        "name": "Clippings-dev-trade",
+        "logo": "/images/logos/clippings_logo.png",
+        "bmeApiKey": "9dec991cf2d764d337e5797abc58e0bb",
+        "header": "",
+        "userProperties": [
+            { 
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Briefing",
+                "description":"Weekly interior design news, trends and insights.",
+                "property": "properties.newsletter_trade_briefing",
+                "type":"preference"
+            },
+            {
+                "name": "Offers",
+                "description":"Seasonal sales, voucher codes and special deals.",
+                "property": "properties.newsletter_trade_offers",
+                "type":"preference"
+            },
+            {
+                "name": "Events",
+                "description":"Invitations to design events in London.",
+                "property": "properties.newsletter_trade_events",
+                "type":"preference"
+            },
+            {
+                "name": "Trending products",
+                "description":"A look at what other people are buying each week.",
+                "property": "properties.newsletter_trade_trending",
+                "type":"preference"
+            },
+            {
+                "name": "Personal rewards",
+                "description":"Your monthly personal reward points balance.",
+                "property": "properties.newsletter_trade_rewards",
+                "type":"preference"
+            }
+        ]
+    },
+    "5389_CUST": {
+        "name": "Clippings-dev-customer",
+        "logo": "/images/logos/clippings_logo.png",
+        "bmeApiKey": "9dec991cf2d764d337e5797abc58e0bb",
+        "header": "",
+        "userProperties": [
+            { 
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Trending products",
+                "description":"A look at what other people are buying each week.",
+                "property": "properties.newsletter_customer_trending",
+                "type":"preference"
+            },
+            {
+                "name": "Events",
+                "description":"Invitations to design events in London.",
+                "property": "properties.newsletter_customer_events",
+                "type":"preference"
+            },
+            {
+                "name": "Offers",
+                "description":"Seasonal sales, voucher codes and special deals.",
+                "property": "properties.newsletter_customer_offers",
+                "type":"preference"
+            },
+            {
+                "name": "The Briefing",
+                "description":"Weekly interior design news, trends and insights.",
+                "property": "properties.newsletter_customer_briefing",
+                "type":"preference"
+            }
+        ]
+    },
+    "5378_TRADE": {
+        "name": "Clippings-prod-trade",
+        "logo": "/images/logos/clippings_logo.png",
+        "bmeApiKey": "656776cb29a0b2b67bd42f9ee62acb9e",
+        "header": "",
+        "userProperties": [
+            { 
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "The Briefing",
+                "description":"Weekly interior design news, trends and insights.",
+                "property": "properties.newsletter_trade_briefing",
+                "type":"preference"
+            },
+            {
+                "name": "Offers",
+                "description":"Seasonal sales, voucher codes and special deals.",
+                "property": "properties.newsletter_trade_offers",
+                "type":"preference"
+            },
+            {
+                "name": "Events",
+                "description":"Invitations to design events in London.",
+                "property": "properties.newsletter_trade_events",
+                "type":"preference"
+            },
+            {
+                "name": "Trending products",
+                "description":"A look at what other people are buying each week.",
+                "property": "properties.newsletter_trade_trending",
+                "type":"preference"
+            },
+            {
+                "name": "Personal rewards",
+                "description":"Your monthly personal reward points balance.",
+                "property": "properties.newsletter_trade_rewards",
+                "type":"preference"
+            }
+        ]
+    },
+    "5378_CUST": {
+        "name": "Clippings-pro-customer",
+        "logo": "/images/logos/clippings_logo.png",
+        "bmeApiKey": "656776cb29a0b2b67bd42f9ee62acb9e",
+        "header": "",
+        "userProperties": [
+            { 
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Trending products",
+                "description":"A look at what other people are buying each week.",
+                "property": "properties.newsletter_customer_trending",
+                "type":"preference"
+            },
+            {
+                "name": "Events",
+                "description":"Invitations to design events in London.",
+                "property": "properties.newsletter_customer_events",
+                "type":"preference"
+            },
+            {
+                "name": "Offers",
+                "description":"Seasonal sales, voucher codes and special deals.",
+                "property": "properties.newsletter_customer_offers",
+                "type":"preference"
+            },
+            {
+                "name": "The Briefing",
+                "description":"Weekly interior design news, trends and insights.",
+                "property": "properties.newsletter_customer_briefing",
+                "type":"preference"
+            }
+        ]
+    }
   };
