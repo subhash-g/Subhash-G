@@ -17,12 +17,7 @@ module.exports = {
 
 		var userId = req.params.userId || queryObject.userId || queryObject.email;
 		var originalUserId = userId;
-		if (userId && validator.isBase64(userId)) {
-			userId = new Buffer(userId, 'base64').toString("ascii");
-		}
-		if (userId.includes('uid_')) {
-			userId = userId.replace('uid_', '');
-		}
+		userId = module.exports.decodeUid(userId);
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 		if (customer == null) {
@@ -102,14 +97,8 @@ module.exports = {
 		var queryObject = url.parse(req.url, true).query
 		var userId = req.params.userId || queryObject.userId;
 		var originalUserId = userId;
+		userId = module.exports.decodeUid(userId);
 
-		if (userId && validator.isBase64(userId)) {
-			userId = new Buffer(userId, 'base64').toString("ascii");
-		}
-
-		if (userId.includes('uid_')) {
-			userId = userId.replace('uid_', '');
-		}
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
 
@@ -167,9 +156,10 @@ module.exports = {
 			var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
 		}
 		var userUid = req.params.userId || queryObject.userId;
+		userUid = module.exports.decodeUid(userUid);
+
 		var customerId = req.params.customerId;
 		var customer = customers[customerId];
-
 		var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
 	
     bme.getUser(userUid, customer.bmeApiKey, function(data, error) {
@@ -222,8 +212,9 @@ module.exports = {
     if (queryObject.email) {
       var originalUserId = new Buffer(queryObject.email, 'base64').toString("ascii");
     }
+    var userUid = req.params.userId || queryObject.userId;    
+    userUid = module.exports.decodeUid(userUid);
 
-    var userUid = req.params.userId || queryObject.userId;
     var customerId = req.params.customerId;
     var customer = customers[customerId];
     var preferences = this.buildPreferences(req.body, customer.userProperties, customer.userLists);
@@ -275,6 +266,7 @@ module.exports = {
 		console.log(queryObject);
 
 		var userId = req.params.userId || queryObject.userId;
+		userId = module.exports.decodeUid(userId);
 		var originalUserId = userId;
 
 		var customerId = req.params.customerId;
@@ -458,6 +450,20 @@ module.exports = {
 
 			bme.postSubscriberActivity(customer.bmeApiKey, updatePreferenceActivity, function (data, error) { })
 		}
+	}, 
+	decodeUid: function(uid) {
+		var sanitizedUid = uid;
+		if (uid) {
+			if (uid.includes('uid_')) {
+				sanitizedUid = uid.replace('uid_', '');
+			}
+
+			if (validator.isBase64(sanitizedUid)) {
+				sanitizedUid = new Buffer(sanitizedUid, 'base64').toString("ascii");
+			}
+		}
+
+		return sanitizedUid;
 	}
 
 };
