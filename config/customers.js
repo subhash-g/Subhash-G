@@ -3938,32 +3938,7 @@ module.exports = {
         "bmeApiKey": "03738036a23fa60bdb200df212965a1e",
         "header": "If you would prefer not to receive emails in the future, simply remove yourself from our email list by confirming below.",
 
-        "userProperties": [
-            {
-                "name": "First Name",
-                "property": "first_name"
-            },
-            {
-                "name": "Last Name",
-                "property": "last_name"
-            },
-            {
-                "name": "Email Address",
-                "property": "contact_email"
-            },
-            {
-                "name": "City",
-                "property": "properties.city"
-            },
-            {
-                "name": "State",
-                "property": "properties.state_province"
-            },
-            {
-                "name": "Country",
-                "property": "properties.country"
-            }
-        ],
+        "userProperties": [],
         "userLists": []
     },
     "5442": {
@@ -4021,7 +3996,7 @@ module.exports = {
         "bmeApiKey": "9dec991cf2d764d337e5797abc58e0bb",
         "header": "",
         "userProperties": [
-            { 
+            {
                 "name": "First Name",
                 "property": "first_name"
             },
@@ -4069,7 +4044,7 @@ module.exports = {
         "bmeApiKey": "9dec991cf2d764d337e5797abc58e0bb",
         "header": "",
         "userProperties": [
-            { 
+            {
                 "name": "First Name",
                 "property": "first_name"
             },
@@ -4111,7 +4086,7 @@ module.exports = {
         "bmeApiKey": "656776cb29a0b2b67bd42f9ee62acb9e",
         "header": "",
         "userProperties": [
-            { 
+            {
                 "name": "First Name",
                 "property": "first_name"
             },
@@ -4159,7 +4134,7 @@ module.exports = {
         "bmeApiKey": "656776cb29a0b2b67bd42f9ee62acb9e",
         "header": "",
         "userProperties": [
-            { 
+            {
                 "name": "First Name",
                 "property": "first_name"
             },
