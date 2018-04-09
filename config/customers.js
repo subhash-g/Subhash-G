@@ -3360,7 +3360,7 @@ module.exports = {
                 "property": "properties.webinaralerts"
             },
             {
-                "name": "Engerati Meets Updates",
+                "name": "Engerati Knowledge and Meets",
                 "description": "Regular updates on Engerati Meets, independent webinars, articles, presentations and interviews.",
                 "property": "properties.meetsupdates"
             }
