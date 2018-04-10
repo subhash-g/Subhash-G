@@ -3405,7 +3405,7 @@ module.exports = {
             {
                 "name": "Article Newsletter",
                 "description": "You will receive emails featuring our language learning articles.    (1 per week)",
-                "property": "properties.subscribe_article_news"
+                "property": "properties.subscribe_article_newsletter"
             },
             {
                 "name": "Recommended Teacher Newsletter",
