@@ -3350,6 +3350,21 @@ module.exports = {
         ],
         "userLists": [
             {
+                 "name": "Engerati Weekly Newsletter",
+                 "description": "Weekly updates on articles, webinars, PDF Resources, blogs, quarterly digital publications and Engerati Meets",
+                 "property": "properties.engeratinewsletter"
+             },
+             {
+                 "name": "Engerati Webinar Updates",
+                 "description": "Weekly round up of all new or recent webinars",
+                 "property": "properties.webinarupdate"
+             },
+             {
+                 "name": "Engerati Community Update",
+                 "description": "Periodic alerts on new feature updates on engerati.com",
+                 "property": "properties.communityupdate"
+             },
+            {
                 "name": "Engerati on Sunday",
                 "description": "Editor’s selection of industry case studies, reports and white papers delivered to your inbox every Sunday.",
                 "property": "properties.sundaynewsletter"
@@ -3360,7 +3375,7 @@ module.exports = {
                 "property": "properties.webinaralerts"
             },
             {
-                "name": "Engerati Meets Updates",
+                "name": "Engerati Knowledge and Meets",
                 "description": "Regular updates on Engerati Meets, independent webinars, articles, presentations and interviews.",
                 "property": "properties.meetsupdates"
             }
@@ -3390,7 +3405,7 @@ module.exports = {
             {
                 "name": "Article Newsletter",
                 "description": "You will receive emails featuring our language learning articles.    (1 per week)",
-                "property": "properties.subscribe_article_news"
+                "property": "properties.subscribe_article_newsletter"
             },
             {
                 "name": "Recommended Teacher Newsletter",
