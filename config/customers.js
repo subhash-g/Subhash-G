@@ -774,6 +774,64 @@ module.exports = {
     //         }
     //     ]
     // },
+    "4055": {
+        "name": "WDDTY",
+        "logo": "/images/logos/wddty_logo.png",
+        "bmeApiKey": "5033dad9b14e79c298b3d191be39c280",
+        "userProperties": [
+            {
+                "name": "First Name",
+                "property": "first_name"
+            },
+            {
+                "name": "Last Name",
+                "property": "last_name"
+            }
+        ],
+        "userLists": [
+            {
+                "name": "Regular e-news bulletins",
+                "The latest health news and revelations – 4 times a week",
+                "property": "properties.regulare_news_bulletin"
+            },
+            {
+                "name": "WDDTY Products and services",
+                "description":"Get updates on our latest products and services",
+                "property": "properties.products_services"
+            },
+            {
+                "name": "WDDTY Magazine news",
+                "description":"Be informed about the latest issue – once a month",
+                "property": "properties.magazine_news"
+            },
+            {
+                "name": "WDDTY Podcast news",
+                "description":"Get notified when the latest episode is released – bi-weekly",
+                "property": "properties.podcast_news"
+            },
+            {
+                "name": "WDDTY Promotions and offers",
+                "description":"Be up-to-date with the latest WDDTY deals and promotions",
+                "property": "properties.promotions_offers"
+            },
+            {
+                "name": "WDDTY Reader offers and competitions",
+                "description":"Take advantage of our special reader offers, hand-picked for you",
+                "property": "properties.offers_competitions"
+            },
+            {
+                "name": "Lynne McTaggart offers and services",
+                "description":"Get the latest news from WDDTY Editor and best-selling author, Lynne McTaggart",
+                "property": "properties.lynne_offers_services"
+            },
+            {
+                "name": "WDDTY partner offers and competitions",
+                "description":"Receive special offers from our carefully selected partners",
+                "property": "properties.partner_offers_competitions"
+            }
+
+        ]
+    },
     "4133": {
         "name": "Exame",
         "logo": "/images/logos/exame.jpg",
