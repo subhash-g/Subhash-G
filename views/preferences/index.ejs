@@ -630,12 +630,12 @@
 					#left-menu {width:0px!important;}
 					#title-bar {background-color:#cff1fa;}
 					.menu-items {display:none!important;}
-					#btn-unsub-all{display:none !important;}
 					#content{background-color:#ffffff; border:2px solid #349ccf; margin:0 25% !important; padding:0!important;}
 					#list-form{padding:0!important;}
 					#btn-my-profile,#btn-my-list{color:#039CC4 !important;  height:auto!important;}
 					#btn-unsub-saveProfile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
 					#btn-save-list{border-radius:25px !important; background:#f36c24 !important; font-family: 'Montserrat', sans-serif;}
+					#btn-unsub-all{display:none !important;}
 					.championRadio {padding:0 10px!important; width: 100% !important; vertical-align: middle!important; margin-bottom: -30px!important;}
 					input[type="radio"]{display: table-cell!important;height:40px!important; width: 20px!important;float:left!important; padding:10px!important;vertical-align: middle!important;}
 					label{display: table-cell!important;height:40px;width: calc(100%-60px)!important;padding-left: 10px!important;vertical-align: middle!important;}
@@ -646,7 +646,11 @@
 					</style>
 					<div>
 					<div class="subHeader">
-						<%= subHeader %>
+						<% profile.forEach(function(prop, index) { %>
+							<% if (prop.name == 'Email') { %>
+								Please select email preference for <span style="color:#349ccf;"><%= prop.value %></span> below
+							<% } %>
+						<% }); %>
 					</div>
 					</div>
 					<div class="separator">
@@ -662,42 +666,6 @@
 							<% } %>
 							<% }); %>
 					</fieldset>
-					<script type="text/javascript">
-						//DH - get query params from window
-						var getQueryString = function ( field, url ) {
-					    var href = url ? url : window.location.href;
-					    var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
-					    var string = reg.exec(href);
-					    return string ? string[1] : null;
-						};
-
-						//DH - set vars for relevant query elements
-						var message_uid = getQueryString("message_uid");
-						var user_email = atob(getQueryString("email"))
-
-						window.onload=function() {
-						//var url = "/unsub/<%= customerId %>/users/<%= userId %>";
-						//DH - use the unsubscribeAll route to set all user props to blank/remove
-						var url = "/unsub/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll?message_uid="+message_uid;
-
-						$.ajax({
-						url: url,
-						method: 'POST',
-						data: '',
-						beforeSend: function(xhr, settings) {
-							xhr.setRequestHeader("Content-Type", "application/json");
-							xhr.setRequestHeader("Accept", "application/json");
-						},
-						success: function(data, status, xhr) {
-							//DH - console.log to confirm success
-							console.log("Subscriber " + <%= userId %> + " has been unsubscribed");
-						},
-						error: function(xhr, status, error) {
-							alert("An error occurred updating your preferences(" + error.message + ").  Please try again.");
-						}
-						});
-					}
-					</script>
 <!-- END LAYOUT FOR ONLY Champion-DEV-UNSUB -->
 
 <!-- SET LAYOUT FOR ONLY GolfLogix -->

@@ -4000,21 +4000,25 @@ module.exports = {
         "logo": "/images/logos/champion_logo.png",
         "bmeApiKey": "8d89e18056bd70611126642cc98bd79c",
         "header": "Unsubscribe completely",
-        "subHeader": "You have been unsubscribed. If you've changed your mind, please update your preference below.",
-        "userProperties": [],
+        "userProperties": [
+            {
+                "name": "Email",
+                "property": "contact_email"
+            }
+        ],
         "userLists": [
+            {
+                "name": "status",
+                "description":"Please unsubscribe my email address from all promotional emails.",
+                "property": "properties.status",
+                "type":"preference"
+            },
             {
                 "name": "status",
                 "description":"On second thought, it's okay to keep my email address on your email list. Thanks!",
                 "property": "properties.status",
                 "type":"preference"
             }
-            // {
-            //     "name": "status",
-            //     "description":"Please unsubscribe my email address from all promotional emails.",
-            //     "property": "properties.status",
-            //     "type":"preference"
-            // }
         ]
     },
 
