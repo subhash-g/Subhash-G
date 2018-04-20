@@ -791,7 +791,7 @@ module.exports = {
         "userLists": [
             {
                 "name": "Regular e-news bulletins",
-                "The latest health news and revelations – 4 times a week",
+                "description":"The latest health news and revelations – 4 times a week",
                 "property": "properties.regulare_news_bulletin"
             },
             {
@@ -3995,12 +3995,11 @@ module.exports = {
             }
         ]
     },
-    "5428": {
+    "5427": {
         "name": "GolfLogix",
-        "logo": "/images/logos/golf_logix_logo.png",
-        "bmeApiKey": "03738036a23fa60bdb200df212965a1e",
+        "logo": "/images/logos/puttbreakslogo.png",
+        "bmeApiKey": "6e925a6ac5ce85ecb080eafe27ef47b3",
         "header": "If you would prefer not to receive emails in the future, simply remove yourself from our email list by confirming below.",
-
         "userProperties": [],
         "userLists": []
     },
