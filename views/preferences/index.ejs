@@ -626,26 +626,27 @@
 <!-- SET LAYOUT FOR ONLY Champion-DEV-UNSUB -->
 				<% } else if ( name == 'Champion Energy Dev - UNSUB'){ %>
 				<style>
-					body{background-color:#cff1fa;font-family: 'Montserrat', sans-serif; text-align:center!important;}
+					body{background-color:#f0f0f0;font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; text-align:center!important;}
 					#left-menu {width:0px!important;}
-					#title-bar {background-color:#cff1fa;}
+					#title-bar {background-color:#f0f0f0;border-bottom:0px;}
 					.menu-items {display:none!important;}
-					#content{background-color:#ffffff; border:2px solid #349ccf; margin:0 25% !important; padding:0!important;}
+					#content{background-color:#ffffff; border:2px solid #d8dadc; margin:0 25% !important; padding:0!important;}
 					#list-form{padding:0!important;}
-					#btn-my-profile,#btn-my-list{color:#039CC4 !important;  height:auto!important;}
+					#btn-my-profile,#btn-my-list{color:#404040 !important;  height:auto!important;}
 					#champ-unsub{margin:0 !important;}
-					#btn-unsub-saveProfile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
-					#champ-save-list{margin:0 auto !important;border-radius:25px !important; background:#f36c24 !important; font-family: 'Montserrat', sans-serif;display:block;}
-					#champ-unsub-all{text-decoration:none !important;margin:100px auto 0 auto !important;font-family: 'Montserrat', sans-serif; border-radius:25px !important;padding: 10px 55px; width: 300px !important;height: 42px !important; background:#f36c24 !important; border: 0px;font-weight: 700;font-size: 1.125em;color: #ffffff !important;line-height: 24px;display:none;}
+					#btn-unsub-saveProfile{background:#1f2a44 !important; font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;}
+					#list-form{color:#404040 !important;}
+					#champ-save-list{margin:0 auto !important;border-radius:25px !important; background:#005daa!important; font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;display:block;}
+					#champ-unsub-all{text-decoration:none !important;margin:100px auto 0 auto !important;font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; border-radius:25px !important;padding: 10px 55px; width: 300px !important;height: 42px !important; background:#005daa !important; border: 0px;font-weight: 700;font-size: 1.125em;color: #ffffff !important;line-height: 24px;display:none;}
 					#btn-unsub-all{display:none !important;}
 					#btn-save-list{display:none !important;}
-					.championRadio {font-family: 'Montserrat', sans-serif !important; padding:0 10px!important; width: 100% !important; vertical-align: middle!important; margin-bottom: 20px!important;}
+					.championRadio {font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; padding:0 10px!important; width: 100% !important; vertical-align: middle!important; margin-bottom: 20px!important;}
 					input[type="radio"]{display: table-cell;height:40px!important; width: 20px!important;float:left!important; padding:10px!important;vertical-align: middle!important;}
 					label{display: table-cell!important;height:40px;width: calc(100%-60px)!important;padding-left: 10px!important;vertical-align: middle!important;}
 					.btn-unsub {margin-bottom: 0px!important;margin-top: 30px!important;}
-					.header {font-size:30px!important;padding-bottom: 10px;}
+					.header {color:#2fac2c !important;font-size:40px!important;padding-bottom: 10px;}
 					.separator {padding:20px 10px !important;}
-					.subHeader {font-size: 1.125em; color: #536266;}
+					.subHeader {font-size: 1.125em; color: #404040;}
 					</style>
 
 <script type="text/javascript">
@@ -668,7 +669,7 @@ function show2(){
 					<div class="subHeader">
 						<% profile.forEach(function(prop, index) { %>
 							<% if (prop.name == 'Email') { %>
-								Please select email preference for <span style="color:#349ccf;"><%= prop.value %></span> below
+								Please select email preference for <span style="color:#005daa;"><%= prop.value %></span> below
 							<% } %>
 						<% }); %>
 					</div>
@@ -683,12 +684,12 @@ function show2(){
 								<% if(list.type == 'preference') { %>
 									<% if (list.name == 'activate') { %>
 										<input checked id="activate" type="radio" onload="hide2()"; onclick="show1();" class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency">
-										<label for="list-input">
+										<label for="list-input" style="color:#404040 !important;">
 											<%= list.description %>
 										</label>
 									<% } else if (list.name == 'unsubscribe') { %>
 										<input id="unsubscribe" type="radio"  onload="hide2()"; onclick="show2();" class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency">
-										<label for="list-input">
+										<label for="list-input" style="color:#404040 !important;">
 											<%= list.description %>
 										</label>
 									<% } %>
