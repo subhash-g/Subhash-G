@@ -4056,7 +4056,7 @@ module.exports = {
         "name": "Champion Energy Dev - UNSUB",
         "logo": "/images/logos/champion_logo.png",
         "bmeApiKey": "8d89e18056bd70611126642cc98bd79c",
-        "header": "Unsubscribe completely",
+        "header": "Unsubscribe Completely",
         "userProperties": [
             {
                 "name": "Email",
@@ -4065,13 +4065,13 @@ module.exports = {
         ],
         "userLists": [
             {
-                "name": "status",
+                "name": "unsubscribe",
                 "description":"Please unsubscribe my email address from all promotional emails.",
                 "property": "properties.status",
                 "type":"preference"
             },
             {
-                "name": "status",
+                "name": "activate",
                 "description":"On second thought, it's okay to keep my email address on your email list. Thanks!",
                 "property": "properties.status",
                 "type":"preference"

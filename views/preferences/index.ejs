@@ -633,17 +633,37 @@
 					#content{background-color:#ffffff; border:2px solid #349ccf; margin:0 25% !important; padding:0!important;}
 					#list-form{padding:0!important;}
 					#btn-my-profile,#btn-my-list{color:#039CC4 !important;  height:auto!important;}
+					#champ-unsub{margin:0 !important;}
 					#btn-unsub-saveProfile{background:#1f2a44 !important; font-family: 'Montserrat', sans-serif;}
-					#btn-save-list{border-radius:25px !important; background:#f36c24 !important; font-family: 'Montserrat', sans-serif;}
+					#champ-save-list{margin:0 auto !important;border-radius:25px !important; background:#f36c24 !important; font-family: 'Montserrat', sans-serif;display:block;}
+					#champ-unsub-all{text-decoration:none !important;margin:100px auto 0 auto !important;font-family: 'Montserrat', sans-serif; border-radius:25px !important;padding: 10px 55px; width: 300px !important;height: 42px !important; background:#f36c24 !important; border: 0px;font-weight: 700;font-size: 1.125em;color: #ffffff !important;line-height: 24px;display:none;}
 					#btn-unsub-all{display:none !important;}
-					.championRadio {padding:0 10px!important; width: 100% !important; vertical-align: middle!important; margin-bottom: -30px!important;}
-					input[type="radio"]{display: table-cell!important;height:40px!important; width: 20px!important;float:left!important; padding:10px!important;vertical-align: middle!important;}
+					#btn-save-list{display:none !important;}
+					.championRadio {font-family: 'Montserrat', sans-serif !important; padding:0 10px!important; width: 100% !important; vertical-align: middle!important; margin-bottom: 20px!important;}
+					input[type="radio"]{display: table-cell;height:40px!important; width: 20px!important;float:left!important; padding:10px!important;vertical-align: middle!important;}
 					label{display: table-cell!important;height:40px;width: calc(100%-60px)!important;padding-left: 10px!important;vertical-align: middle!important;}
 					.btn-unsub {margin-bottom: 0px!important;margin-top: 30px!important;}
 					.header {font-size:30px!important;padding-bottom: 10px;}
 					.separator {padding:20px 10px !important;}
 					.subHeader {font-size: 1.125em; color: #536266;}
 					</style>
+
+<script type="text/javascript">
+
+function hide2(){
+	document.getElementById('champ-unsub-all').style.display ='none';
+}
+
+function show1(){
+  document.getElementById('champ-save-list').style.display ='block';
+  document.getElementById('champ-unsub-all').style.display ='none';
+}
+function show2(){
+  document.getElementById('champ-unsub-all').style.display ='block';
+  document.getElementById('champ-save-list').style.display = 'none';
+}
+</script>
+
 					<div>
 					<div class="subHeader">
 						<% profile.forEach(function(prop, index) { %>
@@ -660,12 +680,28 @@
 
 					<fieldset class="championRadio">
 							<% lists.forEach(function(list, index) { %>
-							<% if(list.type == 'preference') { %>
-
-									<input type="radio"  class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency" value="<%= list.property %>" <%= list.value.toLowerCase() == 'true' ? 'checked' : '' %> ><label for="list-input">  <%= list.description %></label>
-							<% } %>
+								<% if(list.type == 'preference') { %>
+									<% if (list.name == 'activate') { %>
+										<input checked id="activate" type="radio" onload="hide2()"; onclick="show1();" class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency">
+										<label for="list-input">
+											<%= list.description %>
+										</label>
+									<% } else if (list.name == 'unsubscribe') { %>
+										<input id="unsubscribe" type="radio"  onload="hide2()"; onclick="show2();" class="list-input" data-property="<%= list.property %>" data-property-value="<%= list.name %>" data-property-type="<%= list.type %>" name="frequency">
+										<label for="list-input">
+											<%= list.description %>
+										</label>
+									<% } %>
+								<% } %>
 							<% }); %>
 					</fieldset>
+					<div id="champ-unsub">
+						<a id="champ-unsub-all">Unsubscribe From All</a>
+						<input id="champ-save-list" class="btn btn-save" type="submit" value="Save My Preferences">
+					</div>
+
+
+
 <!-- END LAYOUT FOR ONLY Champion-DEV-UNSUB -->
 
 <!-- SET LAYOUT FOR ONLY GolfLogix -->
@@ -1405,6 +1441,7 @@ $("#btn-my-profile").click(selectMyProfile);
 $("#btn-my-list").click(selectMyList);
 $("#btn-save-profile").click(updatePreferences);
 $("#btn-save-list").click(updatePreferences);
+$("#champ-save-list").click(updatePreferences);
 
 //$("#btn-unsub-all").click(unsubscribeAll);
 
@@ -1419,6 +1456,13 @@ if (getParameterByName("message_uid")) {
 	$("#btn-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll?message_uid=" + getParameterByName("message_uid"));
 } else {
 	$("#btn-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll");
+}
+
+if (getParameterByName("message_uid")) {
+	$(".message_uid").attr("id", getParameterByName("message_uid"));
+	$("#champ-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll?message_uid=" + getParameterByName("message_uid"));
+} else {
+	$("#champ-unsub-all").attr("href", "/preferences/<%= customerId %>/users/<%= originalUserId %>/unsubscribeAll");
 }
 
 var message = '<%- req.flash('message') %>';
