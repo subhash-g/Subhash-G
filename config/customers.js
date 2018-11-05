@@ -1893,6 +1893,10 @@ module.exports = {
                 "property": "properties.greeleytribune_circulation"
             },
             {
+                "name": "Greeley Tribune: Todays Obituaries",
+                "property": "properties.greeleytribune_todays_obituaries"
+            },
+            {
                 "name": "Lahontan Valley News: Circulation",
                 "property": "properties.lahontanvalley_circulation"
             },
